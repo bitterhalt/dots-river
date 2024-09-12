@@ -70,6 +70,7 @@ riverctl map normal Super+Shift Delete spawn "$fterm -W 120x35 -e htop"
 riverctl map normal Super+Shift C spawn "bemenu_clipboard"
 riverctl map normal Super+Control C spawn "bemenu_clipboard wipe"
 riverctl map normal Super F12 spawn "$HOME/.config/river/scripts/dot-settings.sh"
+riverctl map normal Super B spawn "$HOME/.config/river/scripts/waybar-toggle.sh"
 
 #### BINDS ####
 
@@ -150,9 +151,9 @@ riverctl map normal Super+Alt F9 send-layout-cmd rivertile "main-location left"
 riverctl map -repeat normal None XF86AudioRaiseVolume spawn "$HOME/.config/river/scripts/volume-thing.sh up"
 riverctl map -repeat normal None XF86AudioLowerVolume spawn "$HOME/.config/river/scripts/volume-thing.sh down"
 riverctl map normal None XF86AudioMute spawn "$HOME.config/river/scripts/volume-thing.sh mute"
-riverctl map normal None XF86AudioPlay spawn "playerctl play-pause"
-riverctl map normal None XF86AudioPrev spawn "playerctl previous"
-riverctl map normal None XF86AudioNext spawn "playerctl next"
+riverctl map normal None XF86AudioPlay spawn "$HOME/.config/river/scripts/mediactrl.sh --play"
+riverctl map normal None XF86AudioPrev spawn "$HOME/.config/river/scripts/mediactrl.sh --prv"
+riverctl map normal None XF86AudioNext spawn "$HOME/.config/river/scripts/mediactrl.sh --nxt"
 riverctl map normal None XF86Calculator spawn "galculator"
 
 #### TAGS ####
@@ -204,6 +205,20 @@ riverctl map normal Super+Shift Minus set-view-tags "${dyn_tag}"
 riverctl map normal Super Minus toggle-focused-tags "${dyn_tag}"
 riverctl map normal Super C toggle-focused-tags "${chat_tag}"
 #riverctl map normal Super C toggle-focused-tags "${secrets_tag}"
+
+#### STICKY TAG ####
+sticky_tag=$((1 << 31))
+all_but_sticky_tag=$(($all_tags ^ $sticky_tag))
+
+riverctl map normal Super+Shift Y toggle-view-tags $sticky_tag
+riverctl spawn-tagmask ${all_but_sticky_tag}
+
+# modify the normal keybind to always select the sticky tag
+for i in $(seq 1 9); do
+  tags=$((1 << ($i - 1)))
+  # Super+[1-9] to focus tag [0-8]
+  riverctl map normal Super $i set-focused-tags $(($sticky_tag + $tags))
+done
 
 #### COLORS ####
 
