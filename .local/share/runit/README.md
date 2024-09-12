@@ -1,7 +1,5 @@
-# My Runit user services
-
-- These are more like examples how to make Runit user services. To able to run them, you must add and enable **runsdir-user** service.
-
+# Runit user services
+#### These are more like examples how to make Runit user services. To able to run them, you must add and enable **runsdir-user** service:
 ```
 export USER="<username>"
 export HOME="/home/<username>"
@@ -11,5 +9,12 @@ svdir="$HOME/service"
 
 exec chpst -u "$USER:$groups" runsvdir "$svdir"
 ```
+#### Start services
+- Make dir for services: `mkdir -p dir $HOME/.local/share/runit/service`
+- Make symlinks: `ln -s ~/.local/share/runit/sv/<your_service> ~/.local/share/runit/service/`
+
+
 
 [More in Void docs](https://docs.voidlinux.org/config/services/user-services.html)
+
+
