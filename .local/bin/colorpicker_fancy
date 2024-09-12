@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+LOCK_FILE="/tmp/hyprpicker.lock"
+
+if [ -f "$LOCK_FILE" ]; then
+  echo "Script is already running."
+  exit 1
+fi
+
+touch "$LOCK_FILE"
+
+color=$(hyprpicker -a)
+wl-copy "$color"
+notify-send 'Color to Clipboard' "$color"
+
+rm "$LOCK_FILE"

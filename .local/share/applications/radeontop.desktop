@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Radeontop
+Exec=foot -e radeontop -c %u

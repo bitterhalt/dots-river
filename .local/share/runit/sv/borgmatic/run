@@ -1,0 +1,5 @@
+#!/bin/sh
+exec 2>&1
+exec snooze -w1 -H17 -M50  borgmatic --verbosity -1 --syslog-verbosity 1
+
+

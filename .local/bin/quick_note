@@ -1,0 +1,16 @@
+#!/bin/sh
+
+tempFile=$(mktemp /tmp/note.XXXXXX)
+noteFilename="$HOME/Documents/personal/notes/daily_note/$(date +%d-%m-%Y).md"
+
+nvim -c "norm Go## $(date +%H:%M)" \
+  -c "norm G2o" \
+  -c "norm zz" \
+  -c "startinsert" $tempFile
+
+if [ -s $tempFile ]; then
+  cat $tempFile >>$noteFilename
+  notify-send "Quick note" "Saved to $noteFilename"
+fi
+
+rm $tempFile

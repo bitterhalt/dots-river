@@ -1,0 +1,69 @@
+# Aliases
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias vpm='vpm --color=yes'
+alias df='df -h'
+alias free='free -m'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -vI'
+alias mkdir='mkdir -pv'
+
+# Pacman
+#alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+#alias pacs='sudo pacman -S'                      # Install standard pkg
+#alias pacsyu='sudo pacman -Syu'                  # Update the system and upgrade all system packages
+#alias pacsyy='sudo pacman -Syy'                  # update the software database
+#alias pacsyyu='sudo pacman -Syyu'                # synchronize with the repositories and update the system
+#alias pacdifc='sudo DIFFPROG=meld pacdiff'       # merge or remove pacnew files
+#alias yep='yay -Pw && yay'                       # Show Arch news before update
+
+# Flatpak
+alias flatclean='flatpak uninstall --unused'    #cleans unused packages
+
+alias ..='cd ..'
+alias history='fc -l 1'
+
+# Vim
+alias vi='nvim'
+alias vim='nvim'
+
+# Dir / eza
+alias ls='eza -al --group-directories-first --color=always'
+alias la='eza -a --group-directories-first --color=always'
+alias ll='eza -l --group-directories-first --color=always'
+
+# Trash-cli
+alias tp='trash-put'
+alias tpe='trash-empty'
+alias tpr='trash-restore'
+
+# Weather
+alias weather='curl wttr.in/'
+
+# System Journal
+alias loger='journalctl -p 3 -xb'
+alias logf='journalctl -f'
+alias logr='sudo journalctl --rotate'
+alias logs='journalctl --disk-usage'
+alias logv='journalctl --verify'
+alias logw='sudo journalctl --vacuum-time=1s'
+
+# yt-dlp
+alias yta-mp3='yt-dlp --extract-audio --audio-format mp3 '
+alias ytv-best='yt-dlp -f bestvideo+bestaudio '
+
+# Random
+alias nvm='sudo nvme smart-log /dev/nvme0'
+alias sudoe='sudoedit'
+#alias dot='/usr/bin/git --git-dir=$HOME/Documents/Projects/dots-sway.git/ --work-tree=$HOME'
+alias dot='/usr/bin/git --git-dir=$HOME/Documents/Projects/dots-river.git/ --work-tree=$HOME'
+alias hg='history | grep '
+
+# XBPS
+alias xcu='xbps-install -nuM | awk "{print $1}"'
+alias xiu='sudo xbps-install -Su && flatpak update'
+alias xir='sudo xbps-remove'
+alias xbs='xbps-query -Rs'
+alias xblist='xpkg -m > ~/.local/share/void-packages'

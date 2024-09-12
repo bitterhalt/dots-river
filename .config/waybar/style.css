@@ -1,0 +1,172 @@
+/* -----------------------------------------------------
+ *                      General
+ * ----------------------------------------------------- */
+/* Colors */
+@define-color bg  #161616;
+@define-color bg2 #525252;
+@define-color bg3 #393939;
+@define-color fg  #D8D8D8;
+@define-color red #DA1E28;
+@define-color blue #78A9FF;
+@define-color purple #BE95FF;
+
+* {
+    font-family: JetBrains Mono, Symbols Nerd Font, sans-serif;
+    font-size: 14px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* -----------------------------------------------------
+ *                      Tooltip
+ * ----------------------------------------------------- */
+
+tooltip {
+    background: @bg;
+    border: solid 1px @bg3;
+}
+tooltip label {
+    color: @fg;
+}
+
+/* -----------------------------------------------------
+ *                      Window
+ * ----------------------------------------------------- */
+
+window#waybar {
+   /* background-color: rgba(16, 20, 25,0.5); */
+    background-color: @bg;
+
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#window {
+    color: @fg;
+    padding: 0 10px;
+}
+
+/* -----------------------------------------------------
+ *                  River Tags
+ * ----------------------------------------------------- */
+
+#tags {
+    padding: 2px 10px;
+}
+
+#tags button {
+    color: @bg2;
+    padding: 0px 5px;
+    font-weight: normal;
+    margin: 0 2px;
+}
+#tags button.occupied {
+    color: @fg;
+}
+
+#tags button.focused {
+     color: @fg;
+  background: @bg3;
+  font-weight: normal;
+  border-radius: 2px;
+}
+
+#tags button.urgent {
+    color: @purple;
+}
+
+/* -----------------------------------------------------
+ *                 Sway Workspaces
+ * ----------------------------------------------------- */
+
+#workspaces {
+  background-color: @bg;
+  padding: 2px 5px;
+}
+
+#workspaces button {
+    min-width: 20px;
+    color: @bg2;
+    padding: 0px 5px;
+    font-weight: normal;
+}
+
+#workspaces button.focused {
+    color: @fg;
+    background-color: @bg;
+}
+
+#workspaces button.urgent {
+    color: @purple;
+    background-color: @bg;
+}
+
+/* -----------------------------------------------------
+ *                      Modules
+ * ----------------------------------------------------- */
+
+#cpu,
+#memory ,
+#battery,
+#pulseaudio,
+#wireplumber,
+#custom-mic,
+#custom-mako,
+#custom-todo,
+#custom-discord,
+#custom-swayidle,
+#custom-autotile,
+#tray,
+#battery.charging,
+#battery.plugged,
+#network {
+    color: @fg;
+    padding: 0 6px;
+}
+
+#network.disconnected {
+    color: @purple;
+}
+
+#clock {
+    color: @fg;
+    padding: 0 5px;
+}
+
+#mode {
+    color: @bg;
+    background-color: @purple;
+    padding: 0 10px;
+    margin: 2px 2px 2px 2px;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @red;
+    color: @fg;
+    margin: 2px 2px 2px 2px;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#custom-useless {
+    color: @fg;
+    padding-left: 10px;
+}
+#custom-power {
+    color: @fg;
+    padding: 0 10px;
+}
+
+#custom-sep,
+#custom-sep2,
+#custom-sep3 {
+    color: @fg2;
+}

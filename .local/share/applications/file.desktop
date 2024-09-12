@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=File Manager
+Exec=foot -e lfub %u

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+BEMENU_ARGS=(--ch 18 --cw 2 -i -H28 --hp 8 --fn 'JetBrains Mono 16px' --tb '#161616' --tf '#BE95FF' --fb '#161616' --ff '#FFFFFF' --cb '#161616' --cf '#525252' --nb '#161616' --nf '#DDE1E6' --ab '#161616' --af '#DDE1E6' --hb '#161616' --hf '#78A9FF' --bdr '#262626' --cf '#323232' "$@" --single-instance)
+
+if [ "$1" = 'run' ]; then
+  bemenu-run "${BEMENU_ARGS[@]}"
+else
+  bemenu "${BEMENU_ARGS[@]}"
+fi

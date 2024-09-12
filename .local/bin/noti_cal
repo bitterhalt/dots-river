@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+TODAY=$(date '+%-d')
+HEAD=$(cal | head -n1)
+BODY=$(cal -m | tail -n7 | sed -z "s|$TODAY|<b><span foreground='#AA759F'>$TODAY</span></b>|1")
+notify-send -t 5000 -a cal_notify "$HEAD" "$BODY"

@@ -1,0 +1,142 @@
+{
+  "layer": "bottom",
+  "position": "top",
+  //"spacing": 4,
+  //"height": 30, // (Remove for auto height)
+  // Modules
+  "modules-left": [
+    "custom/useless",
+    "river/tags"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "wireplumber",
+    "custom/mic",
+    "custom/mako",
+    "custom/todo",
+    "custom/discord",
+    "network",
+    "custom/swayidle",
+    "custom/power"
+  ],
+  // Modules configuration
+  "battery": {
+    "bat": "BAT0",
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "max-length": 25
+  },
+  //  Sway workspaces
+  "sway/workspaces": {
+    "disable-scroll": true
+  },
+  "cpu": {
+    "format": "CPU: {usage}%",
+    "tooltip": false,
+    "on-click": "$TERMINAL -a floatterm -e htop",
+    "on-click-right": "~/.config/waybar/custom/usage.sh cpu"
+  },
+  "memory": {
+    "format": "RAM: {used:0.1f}GB",
+    "tooltip": false,
+    "on-click": "$TERMINAL -a floatterm -e htop",
+    "on-click-right": "~/.config/waybar/custom/usage.sh ram"
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "({signalStrength}%) ",
+    "format-ethernet": "󰈀",
+    "tooltip-format": "{ipaddr}\n<b>up:</b> {bandwidthUpBytes} <b>down:</b> {bandwidthDownBytes}",
+    "format-linked": "{ifname} (No IP) ?",
+    "format-disconnected": "No connection",
+    "on-click": "networkmanager_dmenu",
+    "on-click-right": "$TERMINAL -a floatterm -e nethogs"
+  },
+  "wireplumber": {
+    "format": "{icon}",
+    "format-muted": "",
+    "format-icons": [
+      "",
+    ],
+    "on-click-right": "pavucontrol",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  },
+  "clock": {
+    "format": "{:%b %d %H:%M}",
+    "tooltip": false,
+    "on-click": "~/.local/bin/noti_cal",
+    "on-click-right": "~/.local/bin/noti_weather"
+  },
+  "custom/power": {
+    "interval": "once",
+    "format": "",
+    "tooltip": false,
+    "on-click": "~/.local/bin/bemenu_power"
+  },
+  "custom/swayidle": {
+    "interval": "once",
+    "return-type": "json",
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/swayidle.sh",
+    "signal": 1,
+    "on-click": "~/.config/river/scripts/swayidle-toggle.sh; pkill -RTMIN+1 waybar"
+  },
+  "custom/mako": {
+    "interval": "once",
+    "return-type": "json",
+    "format": "{}{icon}",
+    "format-icons": {
+      "default": "󰂚",
+      "dnd": "󰂛"
+    },
+    "on-click": "makoctl mode | grep 'dnd' && makoctl mode -r dnd || makoctl mode -a dnd; pkill -RTMIN+3 waybar",
+    "exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\"}' $(makoctl mode | grep -q 'dnd' && echo dnd || echo default) $(makoctl mode | tail -1)",
+    "signal": 3
+  },
+  "custom/todo": {
+    "exec": "~/.config/waybar/scripts/todo.sh",
+    "return-type": "json",
+    "format": "󰅍",
+    "on-click": "$TERMINAL -a floatterm -e nvim $HOME/Documents/personal/notes/todo.md",
+    "interval": "once"
+  },
+  "custom/useless": {
+    "interval": "once",
+    "format": "",
+    "tooltip-format": " left or  + D opens appmenu\n middle checks updates\n right or  + F12 opens setting menu",
+    "on-click": "j4-dmenu-desktop --dmenu='bemenu_runner -B1 -n -l10 -p drun:'",
+    "on-click-right": "~/.config/river/scripts/dot-settings.sh",
+    "on-click-middle": "$TERMINAL -a floatterm -e ~/.local/bin/popupgrade"
+  },
+  "custom/mic": {
+    "exec": "~/.config/waybar/scripts/mic.sh",
+    "interval": "once",
+    "format": "{}",
+    "tooltip": false,
+    "signal": 2,
+    "on-click": "pavucontrol",
+    "on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle"
+  },
+  // Not sure will I leave this here... :p
+  "custom/discord": {
+    "interval": 10,
+    "return-type": "json",
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/discord.sh",
+    "on-click": "~/.config/river/scripts/scratchpads.sh discord",
+    "on-click-middle": "pkill Discord;"
+  }
+}

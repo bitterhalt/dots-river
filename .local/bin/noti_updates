@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+
+cupd=$(xbps-install -nuM | wc -l)
+updates=$(xbps-install -nuM | awk '{print $1}')
+
+if [ -z "$updates" ]; then
+  notify-send -t 8000 -a fat_notify "No updates available"
+else
+  notify-send -t 8000 -a fat_notify "$cupd Updates Available:" "$updates"
+fi

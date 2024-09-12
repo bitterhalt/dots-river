@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Best to reap any existing daemons and only then try to start a new set.
+pkill -u "${USER}" -x pipewire\|wireplumber\|pipewire-pulse 1>/dev/null 2>&1
+
+pipewire &
+#pipewire-pulse &

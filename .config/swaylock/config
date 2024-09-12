@@ -1,0 +1,28 @@
+# indicator
+# no-unlock-indicator
+# daemonize
+color=#1a1a1a
+indicator-caps-lock
+show-failed-attempts
+#image=$HOME/.wall/bg
+image=$HOME/.config/swaylock/lock.png
+scaling=fill
+font=JetBrains Mono
+font-size=20
+indicator-radius=100
+bs-hl-color=#DA1E29
+inside-color=#000000af
+inside-clear-color=#F1C21B
+inside-ver-color=#61AFEF
+inside-wrong-color=#DA1E28
+key-hl-color=#BE95FF
+line-color=#000000
+line-clear-color=#000000
+line-caps-lock-color=#000000
+line-ver-color=#000000
+line-wrong-color=#000000
+ring-color=#1a1a1a
+ring-clear-color=#F1C21B
+ring-ver-color=#61AFEF
+ring-wrong-color=#DA1E28
+separator-color=#000000

@@ -1,0 +1,37 @@
+[Default Applications]
+x-scheme-handler/mailto=userapp-Thunderbird-CRVNW1.desktop
+message/rfc822=userapp-Thunderbird-CRVNW1.desktop
+x-scheme-handler/mid=userapp-Thunderbird-CRVNW1.desktop
+text/x-chdr=nvim.desktop
+x-scheme-handler/https=userapp-Firefox-ZGQGT2.desktop
+x-scheme-handler/http=userapp-Firefox-ZGQGT2.desktop
+text/plain=text.desktop
+x-scheme-handler/chrome=userapp-Firefox-ZGQGT2.desktop
+text/html=userapp-Firefox-ZGQGT2.desktop
+application/x-extension-htm=userapp-Firefox-ZGQGT2.desktop
+application/x-extension-html=userapp-Firefox-ZGQGT2.desktop
+application/x-extension-shtml=userapp-Firefox-ZGQGT2.desktop
+application/xhtml+xml=userapp-Firefox-ZGQGT2.desktop
+application/x-extension-xhtml=userapp-Firefox-ZGQGT2.desktop
+inode/directory=thunar.desktop
+application/x-extension-xht=userapp-Firefox-ZGQGT2.desktop
+application/x-zerosize=text.desktop
+image/jpeg=imv-dir.desktop
+image/png=imv-dir.desktop
+image/gif=imv-dir.desktop
+text/x-lua=text.desktop
+application/pdf=org.pwmt.zathura-pdf-poppler.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Firefox-2443O2.desktop;userapp-Firefox-NH1HQ2.desktop;userapp-Firefox-3GHMS2.desktop;userapp-Firefox-ZGQGT2.desktop;
+x-scheme-handler/https=userapp-Firefox-2443O2.desktop;userapp-Firefox-NH1HQ2.desktop;userapp-Firefox-3GHMS2.desktop;userapp-Firefox-ZGQGT2.desktop;
+x-scheme-handler/chrome=userapp-Firefox-2443O2.desktop;userapp-Firefox-NH1HQ2.desktop;userapp-Firefox-3GHMS2.desktop;userapp-Firefox-ZGQGT2.desktop;
+text/html=userapp-Firefox-2443O2.desktop;userapp-Firefox-NH1HQ2.desktop;userapp-Firefox-3GHMS2.desktop;userapp-Firefox-ZGQGT2.desktop;
+application/x-extension-htm=userapp-Firefox-2443O2.desktop;userapp-Firefox-NH1HQ2.desktop;userapp-Firefox-3GHMS2.desktop;userapp-Firefox-ZGQGT2.desktop;
+application/x-extension-html=userapp-Firefox-2443O2.desktop;userapp-Firefox-NH1HQ2.desktop;userapp-Firefox-3GHMS2.desktop;userapp-Firefox-ZGQGT2.desktop;
+application/x-extension-shtml=userapp-Firefox-2443O2.desktop;userapp-Firefox-NH1HQ2.desktop;userapp-Firefox-3GHMS2.desktop;userapp-Firefox-ZGQGT2.desktop;
+application/xhtml+xml=userapp-Firefox-2443O2.desktop;userapp-Firefox-NH1HQ2.desktop;userapp-Firefox-3GHMS2.desktop;userapp-Firefox-ZGQGT2.desktop;
+application/x-extension-xhtml=userapp-Firefox-2443O2.desktop;userapp-Firefox-NH1HQ2.desktop;userapp-Firefox-3GHMS2.desktop;userapp-Firefox-ZGQGT2.desktop;
+application/x-extension-xht=userapp-Firefox-2443O2.desktop;userapp-Firefox-NH1HQ2.desktop;userapp-Firefox-3GHMS2.desktop;userapp-Firefox-ZGQGT2.desktop;
+application/x-shellscript=text.desktop;
+image/jpeg=gimp.desktop;

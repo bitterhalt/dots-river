@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+selection=$(fc-list |
+  grep -ioE ": [^:]*$1[^:]+:" |
+  sed -E 's/(^: |:)//g' |
+  tr , \\n |
+  sort |
+  uniq |
+  bemenu_runner -n -l10 -p "Find installed fonts")
+
+if [ -n "$selection" ]; then
+  echo -n "$selection" | wl-copy
+  notify-send "Copied to clipboard" "$selection"
+fi
