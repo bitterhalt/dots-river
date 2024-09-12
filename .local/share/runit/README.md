@@ -1,7 +1,6 @@
 # My Runit user services
 
 - These are more like examples how to make Runit user services. To able to run them, you must add and enable **runsdir-user** service.
-  `#!/bin/sh
 
 ```
 export USER="<username>"
