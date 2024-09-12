@@ -1,17 +1,15 @@
 #!/usr/bin/env bash
 
-#### Many of the ideas are stolen from: https://github.com/SwayKh/dotfiles/blob/main/river/init
-## So if you like the way this works, consider dropping a *star* on the original author ^
+#### RIVER INIT ####
 
+#### Many of the ideas are stolen from: https://github.com/SwayKh/dotfiles/blob/main/river/init
+# So if you like the way this works, consider dropping a *star* on the original author ^
 # Links to default init and wiki if you get lost
 # https://codeberg.org/river/river/src/branch/master/example/init
 # https://codeberg.org/river/wiki
-
 # HAVE FUN!
 
-#########
-# OPTIONS
-#########
+##### SETTINGS #####
 
 browser="firefox"
 mail="thunderbird"
@@ -30,9 +28,7 @@ screenshot="$HOME/.local/bin/wl-shot"
 sig_1="pkill -RTMIN+1 waybar"
 sig_2="pkill -RTMIN+2 waybar"
 
-########
-# INPUTS
-########
+#### INPUTS ####
 
 # Find your inputs by typing "riverctl list-inputs"
 mouse="pointer-9610-54-Glorious_Model_O"
@@ -42,9 +38,7 @@ riverctl focus-follows-cursor normal
 riverctl input "$mouse" accel-profile flat
 riverctl input "$mouse" pointer-accel 0
 
-########
-# LAUNCH
-########
+#### LAUNCH ####
 
 riverctl map normal Super D spawn "$drun"
 riverctl map normal Super P spawn "$run"
@@ -77,9 +71,7 @@ riverctl map normal Super+Shift C spawn "bemenu_clipboard"
 riverctl map normal Super+Control C spawn "bemenu_clipboard wipe"
 riverctl map normal Super F12 spawn "$HOME/.config/river/scripts/dot-settings.sh"
 
-#############
-# RIVER BINDS
-#############
+#### BINDS ####
 
 # Close the focused view
 riverctl map -repeat normal Super Q close
@@ -163,9 +155,7 @@ riverctl map normal None XF86AudioPrev spawn "playerctl previous"
 riverctl map normal None XF86AudioNext spawn "playerctl next"
 riverctl map normal None XF86Calculator spawn "galculator"
 
-######
-# TAGS
-######
+#### TAGS ####
 
 # Focus between tags
 for i in $(seq 1 9); do
@@ -189,9 +179,7 @@ all_tags=$(((1 << 32) - 1))
 riverctl map normal Super 0 set-focused-tags $all_tags
 riverctl map normal Super+Shift 0 set-view-tags $all_tags
 
-#############
-# SCRATCHPADS
-#############
+#### SCRATCHPADS ####
 
 terminal_tag=$((1 << 11))
 secrets_tag=$((1 << 12))
@@ -217,9 +205,7 @@ riverctl map normal Super Minus toggle-focused-tags "${dyn_tag}"
 riverctl map normal Super C toggle-focused-tags "${chat_tag}"
 #riverctl map normal Super C toggle-focused-tags "${secrets_tag}"
 
-########
-# COLORS
-########
+#### COLORS ####
 
 riverctl background-color 0x000000
 riverctl border-color-focused 0xBE95FF
@@ -227,9 +213,7 @@ riverctl border-color-urgent 0xa2191f
 riverctl border-color-unfocused 0x262626
 riverctl border-width 1
 
-#######
-# RULES
-#######
+#### RULES ####
 
 # Spawn to
 riverctl rule-add -app-id "Thunderbird" tags $((1 << (3 - 1)))
@@ -274,9 +258,7 @@ riverctl rule-add -app-id "float-*" float
 riverctl rule-add ssd
 riverctl rule-add -app-id "steam" csd
 
-#######
-# START
-#######
+#### START ####
 
 riverctl spawn "dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY"
 
