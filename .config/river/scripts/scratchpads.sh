@@ -9,7 +9,7 @@ if [ -z "$1" ]; then
 fi
 term="foot"
 term="$term --app-id special-term"
-yazu="$term --app-id special-yazi -e yazi"
+yazi="$term --app-id special-yazi -e yazi"
 nvim="$term --app-id special-nvim -e nvim"
 
 terminal_tag=$((1 << 11))
