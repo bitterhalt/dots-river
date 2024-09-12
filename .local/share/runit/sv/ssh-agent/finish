@@ -1,4 +1,0 @@
-#!/bin/sh
-
-rm -f "${XDG_CACHE_HOME:-$HOME/.cache}"/ssh-agent.sock
-exit 0
