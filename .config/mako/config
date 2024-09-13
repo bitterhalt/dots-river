@@ -52,7 +52,7 @@ width=150
 text-alignment=center
 
 [app-name=sysnfo_notify]
-font=JetBrains Mono Font 12
+font=JetBrains Mono 12
 width=250
 group-by=app-name
 default-timeout=10000
