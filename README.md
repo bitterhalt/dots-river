@@ -22,7 +22,8 @@ There are no install scripts and things are bit messy, so I wouldn't recommend c
 - Filemanager: [Yazi](https://yazi-rs.github.io/)
 - Launcher [bemenu](https://github.com/Cloudef/bemenu)
 
-### Inspiration
-- [See my stars](https://github.com/bitterhalt?tab=stars)
+#### Inspiration
+- [My stars](https://github.com/bitterhalt?tab=stars)
 
-### Huge thanks for: [fesowowako](https://github.com/fesowowako)
+#### Special thanks
+- [fesowowako](https://github.com/fesowowako)
