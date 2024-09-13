@@ -112,10 +112,10 @@ riverctl map normal Super+Shift Prior send-layout-cmd rivertile "main-count +1"
 riverctl map normal Super+Shift Next send-layout-cmd rivertile "main-count -1"
 
 # Move views
-riverctl map -repeat normal Super+Control Left move left 100
-riverctl map -repeat normal Super+Control Down move down 100
-riverctl map -repeat normal Super+Control Up move up 100
-riverctl map -repeat normal Super+Control Right move right 100
+riverctl map -repeat normal Super+Control Left move left 25
+riverctl map -repeat normal Super+Control Down move down 25
+riverctl map -repeat normal Super+Control Up move up 25
+riverctl map -repeat normal Super+Control Right move right 25
 
 # Resize views
 riverctl map -repeat normal Super+Alt Left resize horizontal -25
