@@ -2,7 +2,7 @@
   "layer": "bottom",
   "position": "top",
   //"spacing": 4,
-  //"height": 30, // (Remove for auto height)
+  "height": 28, // (Remove for auto height)
   // Modules
   "modules-left": [
     "custom/useless",

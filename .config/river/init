@@ -195,14 +195,14 @@ riverctl spawn-tagmask ${all_but_scratch_tag}
 riverctl map normal Super+Shift E spawn "$scratchpad nvim"
 riverctl map normal Super F5 spawn "$scratchpad keepassxc"
 riverctl map normal Super F6 spawn "$scratchpad discord"
-riverctl map normal Super F7 spawn "$scratchpad yazi"
-riverctl map normal Super F8 spawn "$scratchpad term"
+riverctl map normal Super+Shift R spawn "$scratchpad yazi"
+riverctl map normal Super+Shift T spawn "$scratchpad term"
 # Toggle the scratchpad(s)
-riverctl map normal Super+Shift Minus set-view-tags "${dyn_tag}"
-riverctl map normal Super Minus toggle-focused-tags "${dyn_tag}"
 riverctl map normal Super C toggle-focused-tags "${chat_tag}"
 riverctl map normal Super R toggle-focused-tags "${tfm_tag}"
 riverctl map normal Super T toggle-focused-tags "${terminal_tag}"
+riverctl map normal Super+Shift Minus set-view-tags "${dyn_tag}"
+riverctl map normal Super Minus toggle-focused-tags "${dyn_tag}"
 
 # Sticky tag
 sticky_tag=$((1 << 31))
