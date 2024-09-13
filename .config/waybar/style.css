@@ -3,8 +3,9 @@
  * ----------------------------------------------------- */
 /* Colors */
 @define-color bg  #161616;
-@define-color bg2 #525252;
+@define-color bg2 #262626;
 @define-color bg3 #393939;
+@define-color bg4 #525252;
 @define-color fg  #D8D8D8;
 @define-color red #DA1E28;
 @define-color blue #78A9FF;
@@ -58,7 +59,7 @@ window#waybar.hidden {
 }
 
 #tags button {
-    color: @bg2;
+    color: @bg4;
     padding: 0px 5px;
     font-weight: normal;
     margin: 0 2px;
@@ -69,9 +70,8 @@ window#waybar.hidden {
 
 #tags button.focused {
      color: @fg;
-  background: @bg3;
+  background: @bg2;
   font-weight: normal;
-  border-radius: 2px;
 }
 
 #tags button.urgent {

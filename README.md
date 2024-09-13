@@ -21,5 +21,8 @@ There are no install scripts and things are bit messy, so I wouldn't recommend c
 - Editor: [neovim](https://neovim.io/)
 - Filemanager: [Yazi](https://yazi-rs.github.io/)
 - Launcher [bemenu](https://github.com/Cloudef/bemenu)
+
 ### Inspiration
 - [See my stars](https://github.com/bitterhalt?tab=stars)
+
+### Huge thanks for: [fesowowako](https://github.com/fesowowako)

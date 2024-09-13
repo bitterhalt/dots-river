@@ -15,7 +15,6 @@
     "wireplumber",
     "custom/mic",
     "custom/mako",
-    "custom/todo",
     "custom/discord",
     "network",
     "custom/swayidle",
@@ -69,7 +68,7 @@
     "format": "{icon}",
     "format-muted": "",
     "format-icons": [
-      "",
+      ""
     ],
     "on-click-right": "pavucontrol",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
@@ -105,13 +104,6 @@
     "on-click": "makoctl mode | grep 'dnd' && makoctl mode -r dnd || makoctl mode -a dnd; pkill -RTMIN+3 waybar",
     "exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\"}' $(makoctl mode | grep -q 'dnd' && echo dnd || echo default) $(makoctl mode | tail -1)",
     "signal": 3
-  },
-  "custom/todo": {
-    "exec": "~/.config/waybar/scripts/todo.sh",
-    "return-type": "json",
-    "format": "󰅍",
-    "on-click": "$TERMINAL -a floatterm -e nvim $HOME/Documents/personal/notes/todo.md",
-    "interval": "once"
   },
   "custom/useless": {
     "interval": "once",

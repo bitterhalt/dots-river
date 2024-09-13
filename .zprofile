@@ -21,7 +21,6 @@ export HISTFILE="$XDG_DATA_HOME/history"
 export SSH_AUTH_SOCK="$XDG_CACHE_HOME/ssh-agent.sock"
 export DOTBARE_BACKUP="${XDG_DATA_HOME:-$HOME/.local/share}/dotbare"
 export DOTBARE_DIR="$HOME/Documents/.dots/"
-export DOTBARE_TREE="$HOME"
 
 # Start River environment
 if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then

@@ -12,9 +12,11 @@ term="$term --app-id special-term"
 yazi="$term --app-id special-yazi -e yazi"
 nvim="$term --app-id special-nvim -e nvim"
 
-terminal_tag=$((1 << 11))
+editor_tag=$((1 << 11))
 secrets_tag=$((1 << 12))
 chat_tag=$((1 << 13))
+tfm_tag=$((1 << 15))
+terminal_tag=$((1 << 16))
 case "$1" in
 "term")
   search="special-term"
@@ -23,12 +25,12 @@ case "$1" in
   ;;
 "yazi")
   search="special-yazi"
-  tag="$terminal_tag"
+  tag="$tfm_tag"
   cmd="$yazi"
   ;;
 "nvim")
   search="special-nvim"
-  tag="$terminal_tag"
+  tag="$editor_tag"
   cmd="$nvim"
   ;;
 "keepassxc")

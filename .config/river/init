@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 #### RIVER INIT ####
-
 #### Many of the ideas are stolen from: https://github.com/SwayKh/dotfiles/blob/main/river/init
 # So if you like the way this works, consider dropping a *star* on the original author ^
 # Links to default init and wiki if you get lost
@@ -10,7 +9,6 @@
 # HAVE FUN!
 
 ##### SETTINGS #####
-
 browser="firefox"
 mail="thunderbird"
 term="footclient" # If you want single instance change: "footclient" > "foot"
@@ -23,6 +21,7 @@ emoji="$HOME/.local/bin/bemenu_emoji"
 fontserch="$HOME/.local/bin/bemenu_font"
 powermenu="$HOME/.local/bin/bemenu_power"
 screenshot="$HOME/.local/bin/wl-shot"
+recmenu="$HOME/.local/bin/bemenu_screenshot"
 
 # Waybar signals
 sig_1="pkill -RTMIN+1 waybar"
@@ -39,7 +38,6 @@ riverctl input "$mouse" accel-profile flat
 riverctl input "$mouse" pointer-accel 0
 
 #### LAUNCH ####
-
 riverctl map normal Super D spawn "$drun"
 riverctl map normal Super P spawn "$run"
 riverctl map normal Super R spawn "$tfm"
@@ -51,7 +49,7 @@ riverctl map normal Super+Control E spawn "$emoji"
 riverctl map normal Super+Control F spawn "$fontserch"
 riverctl map normal Super F3 spawn "noti_usage cpu"
 riverctl map normal Super F4 spawn "bemenu_killer"
-riverctl map normal Super F7 spawn "bemenu_screenshot"
+riverctl map normal Super+Control Print spawn "bemenu_screenshot"
 riverctl map normal Super F9 spawn "$HOME/.config/river/scripts/mic-toggle.sh && $sig_2"
 riverctl map normal Super F11 spawn "$HOME/.config/river/scripts/locker.sh"
 riverctl map normal Super+Shift F11 spawn "$HOME/.config/river/scripts/swayidle-toggle.sh && $sig_1"
@@ -65,7 +63,7 @@ riverctl map normal Super+Control W spawn "noti_weather"
 riverctl map normal Super+Control T spawn "noti_date"
 riverctl map normal Super N spawn "foot -e nvim ~/Documents/personal/notes/index.md"
 riverctl map normal Super+Shift N spawn "$term -e ~/.local/bin/quick_note"
-riverctl map normal Super T spawn "$fterm -W 100x30 -e nvim ~/Documents/personal/notes/todo.md"
+riverctl map normal Super+Control T spawn "$fterm -W 100x30 -e nvim ~/Documents/personal/notes/todo.md"
 riverctl map normal Super+Shift Delete spawn "$fterm -W 120x35 -e htop"
 riverctl map normal Super+Shift C spawn "bemenu_clipboard"
 riverctl map normal Super+Control C spawn "bemenu_clipboard wipe"
@@ -73,7 +71,6 @@ riverctl map normal Super F12 spawn "$HOME/.config/river/scripts/dot-settings.sh
 riverctl map normal Super B spawn "$HOME/.config/river/scripts/waybar-toggle.sh"
 
 #### BINDS ####
-
 # Close the focused view
 riverctl map -repeat normal Super Q close
 
@@ -148,16 +145,16 @@ riverctl map normal Super+Alt F11 send-layout-cmd rivertile "main-location botto
 riverctl map normal Super+Alt F9 send-layout-cmd rivertile "main-location left"
 
 # Media keys
-riverctl map -repeat normal None XF86AudioRaiseVolume spawn "$HOME/.config/river/scripts/volume-thing.sh up"
-riverctl map -repeat normal None XF86AudioLowerVolume spawn "$HOME/.config/river/scripts/volume-thing.sh down"
-riverctl map normal None XF86AudioMute spawn "$HOME.config/river/scripts/volume-thing.sh mute"
+riverctl map -repeat normal None XF86AudioRaiseVolume spawn "$HOME/.config/river/scripts/volume.sh up"
+riverctl map -repeat normal None XF86AudioLowerVolume spawn "$HOME/.config/river/scripts/volume.sh down"
+riverctl map normal None XF86AudioMute spawn "$HOME/.config/river/scripts/volume.sh mute"
 riverctl map normal None XF86AudioPlay spawn "$HOME/.config/river/scripts/mediactrl.sh --play"
 riverctl map normal None XF86AudioPrev spawn "$HOME/.config/river/scripts/mediactrl.sh --prv"
 riverctl map normal None XF86AudioNext spawn "$HOME/.config/river/scripts/mediactrl.sh --nxt"
+riverctl map normal Super+Control M spawn "$HOME/.config/river/scripts/mediactrl.sh --noti"
 riverctl map normal None XF86Calculator spawn "galculator"
 
 #### TAGS ####
-
 # Focus between tags
 for i in $(seq 1 9); do
   tags=$((1 << ($i - 1)))
@@ -180,34 +177,36 @@ all_tags=$(((1 << 32) - 1))
 riverctl map normal Super 0 set-focused-tags $all_tags
 riverctl map normal Super+Shift 0 set-view-tags $all_tags
 
-#### SCRATCHPADS ####
+# Scratchpad tags
 
-terminal_tag=$((1 << 11))
+scratchpad="$HOME/.config/river/scripts/scratchpads.sh"
+editor_tag=$((1 << 11))
 secrets_tag=$((1 << 12))
 chat_tag=$((1 << 13))
+tfm_tag=$((1 << 15))
 dyn_tag=$((1 << 14))
+terminal_tag=$((1 << 16))
 
-scratch_tags=$((terminal_tag | secrets_tag | dyn_tag | chat_tag))
-all_but_scratch_tag=$((((1 << 32) - 1) ^ $scratch_tags))
+scratch_tags=$((terminal_tag | editor_tag | secrets_tag | dyn_tag | chat_tag))
+all_but_scratch_tag=$((all_tags ^ scratch_tags))
 riverctl spawn-tagmask ${all_but_scratch_tag}
 
 # Spawn hidden workspaces
-scratchpad="$HOME/.config/river/scripts/scratchpads.sh"
-riverctl map normal Super+Shift R spawn "$scratchpad yazi"
 riverctl map normal Super+Shift E spawn "$scratchpad nvim"
-riverctl map normal Super+Shift T spawn "$scratchpad term"
 riverctl map normal Super F5 spawn "$scratchpad keepassxc"
 riverctl map normal Super F6 spawn "$scratchpad discord"
-
-# Send windows to the scratchpad
-riverctl map normal Super+Shift Minus set-view-tags "${dyn_tag}"
+riverctl map normal Super F7 spawn "$scratchpad yazi"
+riverctl map normal Super F8 spawn "$scratchpad term"
 # Toggle the scratchpad(s)
+riverctl map normal Super+Shift Minus set-view-tags "${dyn_tag}"
 riverctl map normal Super Minus toggle-focused-tags "${dyn_tag}"
 riverctl map normal Super C toggle-focused-tags "${chat_tag}"
-#riverctl map normal Super C toggle-focused-tags "${secrets_tag}"
+riverctl map normal Super R toggle-focused-tags "${tfm_tag}"
+riverctl map normal Super T toggle-focused-tags "${terminal_tag}"
 
-#### STICKY TAG ####
+# Sticky tag
 sticky_tag=$((1 << 31))
+all_tags=$(((1 << 32) - 1))
 all_but_sticky_tag=$(($all_tags ^ $sticky_tag))
 
 riverctl map normal Super+Shift Y toggle-view-tags $sticky_tag
@@ -221,7 +220,6 @@ for i in $(seq 1 9); do
 done
 
 #### COLORS ####
-
 riverctl background-color 0x000000
 riverctl border-color-focused 0xBE95FF
 riverctl border-color-urgent 0xa2191f
@@ -229,7 +227,6 @@ riverctl border-color-unfocused 0x262626
 riverctl border-width 1
 
 #### RULES ####
-
 # Spawn to
 riverctl rule-add -app-id "Thunderbird" tags $((1 << (3 - 1)))
 riverctl rule-add -app-id "Signal" tags $((1 << (3 - 1)))
@@ -242,17 +239,16 @@ riverctl rule-add -app-id "org.keepassxc.KeePassXC" tags $secrets_tag
 
 # Floaters
 riverctl rule-add -app-id "Choose User Profile" float
-riverctl rule-add -app-id "Firefox" -title "Picture-in-Picture" float
 riverctl rule-add -app-id "Firefox" -title "About Mozilla Firefox" float
 riverctl rule-add -app-id "Firefox" -title "Library" float
-riverctl rule-add -app-id "thunar" -title "File Operation Progress" float
-riverctl rule-add -app-id "thunar" -title "Confirm to replace files" float
-riverctl rule-add -app-id "brave-mail.*" float
-riverctl rule-add -app-id "brave-calendar.*" float
+riverctl rule-add -app-id "Firefox" -title "Picture-in-Picture" float
 riverctl rule-add -app-id "GParted" float
 riverctl rule-add -app-id "KeePassXC" -title "Browser Access Request" float
 riverctl rule-add -app-id "KeePassXC" -title "Passkey credentials" float
 riverctl rule-add -app-id "blueman-manager" float
+riverctl rule-add -app-id "brave-calendar.*" float
+riverctl rule-add -app-id "brave-mail.*" float
+riverctl rule-add -app-id "float-*" float
 riverctl rule-add -app-id "floatterm" float
 riverctl rule-add -app-id "galculator" float
 riverctl rule-add -app-id "imv" float
@@ -262,50 +258,17 @@ riverctl rule-add -app-id "nwg-look" float
 riverctl rule-add -app-id "org.pulseaudio.pavucontrol" float
 riverctl rule-add -app-id "quick_note" float
 riverctl rule-add -app-id "steam" float
+riverctl rule-add -app-id "thunar" -title "Confirm to replace files" float
+riverctl rule-add -app-id "thunar" -title "File Operation Progress" float
 riverctl rule-add -app-id "xdg-desktop-portal-gtk" float
 riverctl rule-add -title "Picture-in-Picture" float
 riverctl rule-add -title "gtk*" float
 riverctl rule-add -title "popup title with spaces" float
 riverctl rule-add -title "zoom" float
-riverctl rule-add -app-id "float-*" float
 
 # Decorations
 riverctl rule-add ssd
 riverctl rule-add -app-id "steam" csd
 
 #### START ####
-
-riverctl spawn "dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY"
-
-executes="kanshi swayidle foot pipewire mako wl-paste swaybg /usr/libexec/polkit-gnome-authentication-agent-1"
-
-for execute in $executes; do
-  pidof -q "$execute" && continue
-  case $execute in
-  "foot") "$execute" -s & ;;
-  "wl-paste")
-    "$execute" --watch cliphist -max-items 100 store &
-    ;;
-  "swaybg")
-    "$execute" -m fill -i ~/.local/share/wall/bg &
-    ;;
-  "swayidle")
-    "$execute" -w \
-      timeout 1800 "swaylock" \
-      timeout 3600 "wlopm --off '*'" resume "wlopm --on '*'" \
-      before-sleep "swaylock" &
-    ;;
-  *)
-    "$execute" &
-    ;;
-  esac
-done >/dev/null 2>&1
-
-pkill -f waybar
-waybar &
-
-riverctl default-attach-mode bottom
-riverctl default-layout rivertile
-if ! pgrep -x "rivertile" >/dev/null; then
-  rivertile -view-padding 5 -outer-padding 0 &
-fi
+bash "$HOME/.config/river/autostart.sh"
