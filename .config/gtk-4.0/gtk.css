@@ -1,0 +1,121 @@
+
+/* Global color definitions */
+
+@define-color window_bg_color #1b1b1b;
+@define-color window_fg_color #cecece;
+@define-color view_bg_color #181818;
+@define-color view_fg_color #cecece;
+@define-color accent_bg_color #6A9FB5;
+@define-color accent_color @accent_bg_color;
+@define-color sidebar_bg_color @view_bg_color;
+@define-color sidebar_fg_color @window_fg_color;
+@define-color headerbar_bg_color @window_bg_color;
+@define-color headerbar_fg_color @window_fg_color;
+@define-color popover_bg_color #393939;
+@define-color popover_fg_color @view_fg_color;
+@define-color dialog_bg_color @popover_bg_color;
+@define-color dialog_fg_color @popover_fg_color;
+@define-color card_bg_color @view_bg_color;
+@define-color card_fg_color @window_fg_color;
+
+/* More customizations */
+
+button.titlebutton { /* GTK3 */
+  color: transparent;
+  min-width: 18px;
+  min-height: 18px;
+}
+button.titlebutton:backdrop {
+  opacity: 0.5;
+}
+
+windowcontrols > button { /* GTK4 */
+  color: transparent;
+  min-width: 2px;
+  min-height: 2px;
+  border-radius: 100%;
+  padding: 0;
+  margin: 0 5px;
+}
+
+windowcontrols > button > image {
+  padding: 0;
+}
+
+button.titlebutton.close,
+windowcontrols > button.close {
+  background-color: #393939;
+}
+
+button.titlebutton.close:hover,
+windowcontrols > button.close:hover {
+  opacity: 0.8;
+}
+
+button.titlebutton.maximize,
+windowcontrols > button.maximize {
+  background-color: #393939;
+}
+
+button.titlebutton.maximize:hover,
+windowcontrols > button.maximize:hover {
+  opacity: 0.8;
+}
+
+button.titlebutton.minimize,
+windowcontrols > button.minimize {
+  background-color: #393939;
+}
+
+button.titlebutton.minimize:hover,
+windowcontrols > button.minimize:hover {
+  opacity: 0.8;
+}
+
+/** General tweaks for WM:s */
+
+.titlebar,
+window {
+	border-radius: 0;
+	box-shadow: none;
+}
+.window-frame {
+    box-shadow: 0 0 0 0;
+    margin: 0;
+}
+/** also remove shaddows */
+decoration {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+decoration:backdrop {
+	box-shadow: none;
+}
+window decoration {
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+.navigation-sidebar {
+background-color: #1b1b1b;
+}
+
+/** River */
+
+/* No (default) title bar on wayland */
+headerbar.default-decoration {
+  /* You may need to tweak these values depending on your GTK theme */
+  margin-bottom: 50px;
+  margin-top: -100px;
+}
+
+/* rm -rf window shadows */
+window.csd,             /* gtk4? */
+window.csd decoration { /* gtk3 */
+  box-shadow: none;
+}
+
