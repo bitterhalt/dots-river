@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-#### RIVER INIT ####
-#### Many of the ideas are stolen from: https://github.com/SwayKh/dotfiles/blob/main/river/init
+#### INIT ####
+
+# Most of the ideas are stolen from: https://github.com/SwayKh/dotfiles/blob/main/river/init
 # So if you like the way this works, consider dropping a *star* on the original author ^
 # Links to default init and wiki if you get lost
 # https://codeberg.org/river/river/src/branch/master/example/init
 # https://codeberg.org/river/wiki
-# HAVE FUN!
 
 ##### SETTINGS #####
 browser="firefox"
@@ -14,11 +14,9 @@ mail="thunderbird"
 term="footclient" # If you want single instance change: "footclient" > "foot"
 fterm="$term -a float-term"
 tfm="foot -e yazi"
-gfm="/usr/bin/thunar"
 drun="j4-dmenu-desktop --dmenu='bemenu_runner -B1 -n -l10 -p drun:'"
 run="bemenu_runner run --no-exec -B1 -n -p run: -l10 | xargs riverctl spawn >/dev/null 2>&1"
 emoji="$HOME/.local/bin/bemenu_emoji"
-fontserch="$HOME/.local/bin/bemenu_font"
 powermenu="$HOME/.local/bin/bemenu_power"
 screenshot="$HOME/.local/bin/wl-shot"
 recmenu="$HOME/.local/bin/bemenu_screenshot"
@@ -28,7 +26,6 @@ sig_1="pkill -RTMIN+1 waybar"
 sig_2="pkill -RTMIN+2 waybar"
 
 #### INPUTS ####
-
 # Find your inputs by typing "riverctl list-inputs"
 mouse="pointer-9610-54-Glorious_Model_O"
 
@@ -48,12 +45,12 @@ riverctl map normal Super F2 spawn "noti_usage cpu"
 riverctl map normal Super+Shift F2 spawn "noti_usage ram"
 riverctl map normal Super+Control E spawn "$emoji"
 riverctl map normal Super F4 spawn "bemenu_killer"
-riverctl map normal Super+Control Print spawn "bemenu_screenshot"
+riverctl map normal Super+Control Print spawn "$recmenu"
 riverctl map normal Super F9 spawn "$HOME/.config/river/scripts/mic-toggle.sh && $sig_2"
 riverctl map normal Super F11 spawn "$HOME/.config/river/scripts/locker.sh"
 riverctl map normal Super+Shift F11 spawn "$HOME/.config/river/scripts/swayidle-toggle.sh && $sig_1"
 riverctl map normal Super W spawn "$browser"
-riverctl map normal Super E spawn "$gfm"
+riverctl map normal Super Y spawn "$tfm"
 riverctl map normal Super M spawn "$mail"
 riverctl map normal Super Print spawn "$screenshot -f"
 riverctl map normal Super+Shift Print spawn "$screenshot -re"
@@ -72,77 +69,60 @@ riverctl map normal Super B spawn "$HOME/.config/river/scripts/waybar-toggle.sh"
 #### BINDS ####
 # Close the focused view
 riverctl map -repeat normal Super Q close
-
 # Reload config
 riverctl map normal Super+Control R spawn "$HOME/.config/river/init && notify-send -a center_notify 'River' 'Config reloaded'"
-
 # Focus the next/previous view in the layout stack
 riverctl map normal Super J focus-view next
 riverctl map normal Super K focus-view previous
 riverctl map normal Super Down focus-view next
 riverctl map normal Super Up focus-view previous
-
 # Swap the focused view with the next/previous view in the layout stack
 riverctl map normal Super+Shift J swap next
 riverctl map normal Super+Shift K swap previous
 riverctl map normal Super+Shift Down swap next
 riverctl map normal Super+Shift Up swap previous
-
 # Focus the next/previous output
 riverctl map normal Super Period focus-output next
 riverctl map normal Super Comma focus-output previous
-
 # Send the focused view to the next/previous output
 riverctl map normal Super+Shift Period send-to-output next
 riverctl map normal Super+Shift Comma send-to-output previous
-
 # Bump the focused view to the top of the layout stack
 riverctl map normal Super BackSpace zoom
 riverctl map normal Super z zoom
-
 # Decrease/increase the main ratio of rivertile(1)
 riverctl map normal Super L send-layout-cmd rivertile "main-ratio +0.05"
 riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
 riverctl map normal Super Right send-layout-cmd rivertile "main-ratio +0.05"
 riverctl map normal Super Left send-layout-cmd rivertile "main-ratio -0.05"
-
 # Increment/decrement the main count of rivertile(1)
 riverctl map normal Super+Shift Prior send-layout-cmd rivertile "main-count +1"
 riverctl map normal Super+Shift Next send-layout-cmd rivertile "main-count -1"
-
 # Move views
 riverctl map -repeat normal Super+Control Left move left 25
 riverctl map -repeat normal Super+Control Down move down 25
 riverctl map -repeat normal Super+Control Up move up 25
 riverctl map -repeat normal Super+Control Right move right 25
-
 # Resize views
 riverctl map -repeat normal Super+Alt Left resize horizontal -25
 riverctl map -repeat normal Super+Alt Down resize vertical 25
 riverctl map -repeat normal Super+Alt Up resize vertical -25
 riverctl map -repeat normal Super+Alt Right resize horizontal 25
-
 # Super + Left Mouse Button to move views
 riverctl map-pointer normal Super BTN_LEFT move-view
-
 # Super + Right Mouse Button to resize views
 riverctl map-pointer normal Super BTN_RIGHT resize-view
-
 # Super + Middle Mouse Button to toggle float
 riverctl map-pointer normal Super BTN_MIDDLE toggle-float
-
 # Super+Space to toggle float
 riverctl map normal Super Space toggle-float
-
 # Super+F to toggle fullscreen
 riverctl map normal Super F toggle-fullscreen
-
 # Use cursed arrow keys: Super+Alt{F10,F12,F11,F9} to change layout orientation
 riverctl map normal Super+Alt F10 send-layout-cmd rivertile "main-location top"
 riverctl map normal Super+Alt F12 send-layout-cmd rivertile "main-location right"
 riverctl map normal Super+Alt F11 send-layout-cmd rivertile "main-location bottom"
 riverctl map normal Super+Alt F9 send-layout-cmd rivertile "main-location left"
-
 # Media keys
 riverctl map -repeat normal None XF86AudioRaiseVolume spawn "$HOME/.config/river/scripts/volume.sh up"
 riverctl map -repeat normal None XF86AudioLowerVolume spawn "$HOME/.config/river/scripts/volume.sh down"
@@ -156,19 +136,19 @@ riverctl map normal None XF86Calculator spawn "galculator"
 #### TAGS ####
 # Focus between tags
 for i in $(seq 1 9); do
-    tags=$((1 << ($i - 1)))
+  tags=$((1 << ($i - 1)))
 
-    # Super+[1-9] to focus tag [0-8]
-    riverctl map normal Super $i set-focused-tags $tags
+  # Super+[1-9] to focus tag [0-8]
+  riverctl map normal Super $i set-focused-tags $tags
 
-    # Super+Shift+[1-9] to tag focused view with tag [0-8]
-    riverctl map normal Super+Shift $i set-view-tags $tags
+  # Super+Shift+[1-9] to tag focused view with tag [0-8]
+  riverctl map normal Super+Shift $i set-view-tags $tags
 
-    # Super+Control+[1-9] to toggle focus of tag [0-8]
-    riverctl map normal Super+Control $i toggle-focused-tags $tags
+  # Super+Control+[1-9] to toggle focus of tag [0-8]
+  riverctl map normal Super+Control $i toggle-focused-tags $tags
 
-    # Super+Shift+Control+[1-9] to toggle tag [0-8] of focused view
-    riverctl map normal Super+Shift+Control $i toggle-view-tags $tags
+  # Super+Shift+Control+[1-9] to toggle tag [0-8] of focused view
+  riverctl map normal Super+Shift+Control $i toggle-view-tags $tags
 done
 
 all_tags=$(((1 << 32) - 1))
@@ -177,7 +157,6 @@ riverctl map normal Super 0 set-focused-tags $all_tags
 riverctl map normal Super+Shift 0 set-view-tags $all_tags
 
 # Scratchpad tags
-
 scratchpad="$HOME/.config/river/scripts/scratchpads.sh"
 editor_tag=$((1 << 11))
 secrets_tag=$((1 << 12))
@@ -200,6 +179,7 @@ riverctl map normal Super+Shift T spawn "$scratchpad term"
 riverctl map normal Super C toggle-focused-tags "${chat_tag}"
 riverctl map normal Super R toggle-focused-tags "${tfm_tag}"
 riverctl map normal Super T toggle-focused-tags "${terminal_tag}"
+# Sway-like dynamic warkspace(tag)
 riverctl map normal Super+Shift Minus set-view-tags "${dyn_tag}"
 riverctl map normal Super Minus toggle-focused-tags "${dyn_tag}"
 
@@ -211,11 +191,11 @@ all_but_sticky_tag=$(($all_tags ^ $sticky_tag))
 riverctl map normal Super+Shift Y toggle-view-tags $sticky_tag
 riverctl spawn-tagmask ${all_but_sticky_tag}
 
-# modify the normal keybind to always select the sticky tag
+# Modify the normal keybind to always select the sticky tag
 for i in $(seq 1 9); do
-    tags=$((1 << ($i - 1)))
-    # Super+[1-9] to focus tag [0-8]
-    riverctl map normal Super $i set-focused-tags $(($sticky_tag + $tags))
+  tags=$((1 << ($i - 1)))
+  # Super+[1-9] to focus tag [0-8]
+  riverctl map normal Super $i set-focused-tags $(($sticky_tag + $tags))
 done
 
 #### COLORS ####
@@ -235,7 +215,6 @@ riverctl rule-add -app-id "com.discordapp.Discord" tags $chat_tag
 riverctl rule-add -app-id "virt-manager" tags $((1 << (8 - 1)))
 riverctl rule-add -app-id "com.transmissionbt.transmission_*" tags $((1 << (4 - 1)))
 riverctl rule-add -app-id "org.keepassxc.KeePassXC" tags $secrets_tag
-
 # Floaters
 riverctl rule-add -app-id "Choose User Profile" float
 riverctl rule-add -app-id "Firefox" -title "About Mozilla Firefox" float
@@ -264,7 +243,6 @@ riverctl rule-add -title "Picture-in-Picture" float
 riverctl rule-add -title "gtk*" float
 riverctl rule-add -title "popup title with spaces" float
 riverctl rule-add -title "zoom" float
-
 # Decorations
 riverctl rule-add ssd
 riverctl rule-add -app-id "steam" csd
