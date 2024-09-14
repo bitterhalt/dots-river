@@ -7,15 +7,20 @@
         }
     },
     "modules": [
-        "title",
-        "separator",
+        {
+            "type": "custom", // HardwareStart
+            // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
+            "format": " {#1}──────────── System ───────────  {#} "
+        },
         "os",
         "host",
-        {
-            "type": "kernel",
-            "format": "{release}"
-        },
+        "kernel",
         "uptime",
+        {
+            "type": "command",
+            "key": "OS Age",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+        },
         "packages",
         "shell",
         {
@@ -25,14 +30,7 @@
         },
         "de",
         "wm",
-        "wmtheme",
-        "theme",
-        "icons",
         "terminal",
-        {
-            "type": "terminalfont",
-            "format": "{/name}{-}{/}{name}"
-        },
         "cpu",
         {
             "type": "gpu",
@@ -40,7 +38,26 @@
         },
         {
             "type": "memory",
-            "format": "{} / {}"
+            "format": "{/1}{-}{/}{/2}{-}{/}{} / {}"
+        },
+        {
+            "type": "custom", // HardwareStart
+            // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
+            "format": " {#1}──────── Void Challenge ────── {#} ",
+        },
+        {
+            "type": "command",
+            "shell": "/bin/bash",
+            "key": "Days done",
+            "text": "~/.config/fastfetch/progress.sh",
+            "keyColor": "white"
+        },
+        {
+            "type": "command",
+            "shell": "/bin/bash",
+            "key": "Days left",
+            "text": "~/.config/fastfetch/difference.sh",
+            "keyColor": "white"
         },
         "break",
         "colors"
