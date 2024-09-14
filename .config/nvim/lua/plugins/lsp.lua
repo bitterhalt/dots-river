@@ -47,11 +47,9 @@ return {
     "williamboman/mason-lspconfig.nvim",
     lazy = true,
     opts = {
-      ensure_installed = { "bashls", "html", "lua_ls", "pylsp", "tsserver" },
+      ensure_installed = { "bashls", "html", "lua_ls", "pylsp", "ts_ls" },
       handlers = {
         function(server_name)
-          -- Fixes https://github.com/neovim/nvim-lspconfig/pull/3232
-          server_name = server_name == "tsserver" and "ts_ls" or server_name
           require("lspconfig")[server_name].setup({})
         end,
 

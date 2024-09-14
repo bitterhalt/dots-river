@@ -1,29 +1,31 @@
--- Opts
-vim.g.loaded_netrwPlugin = 1
-vim.g.loaded_netrw = 1
-vim.opt.termguicolors = true
-vim.opt.scrolloff = 4
-vim.opt.number = true
-vim.opt.numberwidth = 2
-vim.opt.signcolumn = "yes"
+-- Interface
+vim.opt.colorcolumn = "80"
 vim.opt.cursorline = true
-vim.opt.expandtab = true
-vim.opt.smarttab = true
-vim.opt.cindent = true
-vim.opt.autoindent = true
-vim.opt.wrap = true
-vim.opt.textwidth = 300
-vim.opt.list = true
+vim.opt.laststatus = 2
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.syntax = "on"
+vim.opt.termguicolors = true
+
+-- Behavior
 vim.opt.clipboard = "unnamedplus"
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.backup = false
-vim.opt.writebackup = false
-vim.opt.swapfile = false
-vim.opt.history = 50
+vim.opt.confirm = true
+vim.opt.scrolloff = 4
 vim.opt.splitright = true
 vim.opt.splitbelow = true
-vim.opt.mouse = "a"
+
+-- Indentation
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = -1
+vim.opt.expandtab = true
+
+-- Line wrapping
+vim.opt.breakindent = true
+vim.opt.linebreak = true
+
+-- Searching
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- Remove trailing whitespace on save
 vim.api.nvim_create_autocmd("BufWritePre", {
