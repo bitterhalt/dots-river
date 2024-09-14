@@ -2,45 +2,55 @@
  *                      General
  * ----------------------------------------------------- */
 /* Colors */
-@define-color bg  #161616;
+@define-color bg #161616;
 @define-color bg2 #262626;
 @define-color bg3 #393939;
 @define-color bg4 #525252;
-@define-color fg  #D8D8D8;
+@define-color fg #D8D8D8;
 @define-color red #DA1E28;
 @define-color blue #78A9FF;
 @define-color purple #BE95FF;
 
 * {
-    font-family: JetBrains Mono, Symbols Nerd Font, sans-serif;
-    font-size: 14px;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
+  font-family:
+    JetBrains Mono,
+    Symbols Nerd Font,
+    sans-serif;
+  font-size: 14px;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
 }
 
 /* -----------------------------------------------------
  *                      Tooltip
  * ----------------------------------------------------- */
 
+tooltip {
+  background: @bg;
+  border: solid 1px @bg3;
+}
+
+tooltip label {
+  color: @fg;
+}
 
 /* -----------------------------------------------------
  *                      Window
  * ----------------------------------------------------- */
 
 window#waybar {
-   /* background-color: rgba(16, 20, 25,0.5); */
-    background-color: @bg;
-
+  /* background-color: rgba(16, 20, 25,0.5); */
+  background-color: @bg;
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+  opacity: 0.2;
 }
 
 #window {
-    color: @fg;
-    padding: 0 10px;
+  color: @fg;
+  padding: 0 10px;
 }
 
 /* -----------------------------------------------------
@@ -48,28 +58,29 @@ window#waybar.hidden {
  * ----------------------------------------------------- */
 
 #tags {
-    padding: 0px 10px;
+  padding: 0px 10px;
 }
 
 #tags button {
-    color: @bg4;
-    padding: 0px 5px;
-    font-weight: normal;
-    margin: 0 2px;
+  color: @bg4;
+  padding: 0px 5px;
+  font-weight: normal;
+  margin: 0 2px;
 }
+
 #tags button.occupied {
-    color: @fg;
+  color: @fg;
 }
 
 #tags button.focused {
-     color: @fg;
+  color: @fg;
   background: @bg2;
   font-weight: normal;
   /*box-shadow: inset 0 -1px @purple; */
 }
 
 #tags button.urgent {
-    color: @purple;
+  color: @purple;
 }
 
 /* -----------------------------------------------------
@@ -82,20 +93,20 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-    min-width: 20px;
-    color: @bg2;
-    padding: 0px 5px;
-    font-weight: normal;
+  min-width: 20px;
+  color: @bg2;
+  padding: 0px 5px;
+  font-weight: normal;
 }
 
 #workspaces button.focused {
-    color: @fg;
-    background-color: @bg;
-  }
+  color: @fg;
+  background-color: @bg;
+}
 
 #workspaces button.urgent {
-    color: @purple;
-    background-color: @bg;
+  color: @purple;
+  background-color: @bg;
 }
 
 /* -----------------------------------------------------
@@ -103,7 +114,7 @@ window#waybar.hidden {
  * ----------------------------------------------------- */
 
 #cpu,
-#memory ,
+#memory,
 #battery,
 #pulseaudio,
 #wireplumber,
@@ -117,44 +128,45 @@ window#waybar.hidden {
 #battery.charging,
 #battery.plugged,
 #network {
-    color: @fg;
-    padding: 0 6px;
-    margin: 0 2px;
+  color: @fg;
+  padding: 0 6px;
+  margin: 0 2px;
 }
 
 #network.disconnected {
-    color: @purple;
+  color: @purple;
 }
 
 #clock {
-    color: @fg;
-    padding: 0 5px;
+  color: @fg;
+  padding: 0 5px;
 }
 
 #mode {
-    color: @bg;
-    background-color: @purple;
-    padding: 0 10px;
-    margin: 0 2px;
+  color: @bg;
+  background-color: @purple;
+  padding: 0 10px;
+  margin: 0 2px;
 }
 
 #battery.critical:not(.charging) {
-    background-color: @red;
-    color: @fg;
+  background-color: @red;
+  color: @fg;
 }
 
 @keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
 }
 
 #custom-useless {
-    color: @fg;
-    padding-left: 10px;
+  color: @fg;
+  padding-left: 10px;
 }
+
 #custom-power {
-    color: @fg;
-    padding: 0 10px;
+  color: @fg;
+  padding: 0 10px;
 }
