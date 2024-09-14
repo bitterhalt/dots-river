@@ -125,7 +125,7 @@ return {
     config = true,
     keys = {
       {
-        "<leader>s",
+        "<leader>ss",
         function()
           return require("persistence").load({ last = true })
         end,
