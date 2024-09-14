@@ -1,5 +1,5 @@
 [plugin]
-deps = [{ use = "yazi-rs/plugins:full-border", rev = "5e65389" }, { use = "yazi-rs/plugins:chmod", rev = "5e65389" }]
+deps = [{ use = "yazi-rs/plugins:full-border", rev = "5e65389" }, { use = "yazi-rs/plugins:chmod", rev = "5e65389" }, { use = "yazi-rs/plugins:diff", rev = "5e65389" }]
 
 [flavor]
 deps = []
