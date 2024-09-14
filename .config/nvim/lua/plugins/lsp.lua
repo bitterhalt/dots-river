@@ -1,6 +1,10 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+    },
     init = function()
       vim.api.nvim_create_autocmd("BufWritePre", {
         callback = function()
@@ -37,71 +41,5 @@ return {
         desc = "Formats a buffer using the attached language server",
       },
     },
-    dependencies = {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
-    },
-  },
-
-  {
-    "williamboman/mason-lspconfig.nvim",
-    lazy = true,
-    opts = {
-      ensure_installed = { "bashls", "html", "lua_ls", "pylsp", "ts_ls" },
-      handlers = {
-        function(server_name)
-          require("lspconfig")[server_name].setup({})
-        end,
-
-        ["html"] = function()
-          require("lspconfig").html.setup({
-            filetypes = { "html", "htmldjango" },
-          })
-        end,
-
-        -- Run :PylspInstall python-lsp-isort
-        ["pylsp"] = function()
-          require("lspconfig").pylsp.setup({
-            settings = {
-              pylsp = {
-                plugins = {
-                  rope_autoimport = {
-                    enabled = true,
-                  },
-                },
-              },
-            },
-          })
-        end,
-
-        ["lua_ls"] = function()
-          local lspconfig = require("lspconfig")
-          lspconfig.lua_ls.setup({
-            settings = {
-              Lua = {
-                diagnostics = {
-                  globals = { "vim" },
-                },
-              },
-            },
-          })
-        end,
-      },
-    },
-  },
-
-  {
-    "nvimtools/none-ls.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      local null_ls = require("null-ls")
-
-      null_ls.setup({
-        sources = {
-          null_ls.builtins.completion.spell,
-        },
-      })
-    end,
-    lazy = true,
   },
 }

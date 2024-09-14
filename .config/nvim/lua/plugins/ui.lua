@@ -45,34 +45,6 @@ return {
       require("oxocarbon")
     end,
   },
-  -- Telescope
-  {
-    "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = function()
-      return {
-        defaults = {
-          layout_strategy = "horizontal",
-          layout_config = {
-            horizontal = {
-              prompt_position = "bottom",
-              preview_width = 0.5,
-            },
-            width = 0.7,
-            height = 0.7,
-          },
-        },
-      }
-    end,
-    keys = {
-      { "<leader>ff", "<CMD>Telescope find_files <CR>", desc = "Find Files" },
-      { "<leader>fa", "<CMD>Telescope find_files hidden=true <CR>", desc = "Find Also Hidden Files" },
-      { "<leader><tab>", "<CMD>Telescope buffers <CR>", desc = "List buffers" },
-      { "<leader>fr", "<CMD>Telescope oldfiles <CR>", desc = "Find recent files" },
-      { "<leader>fw", "<CMD>Telescope live_grep <CR>", desc = "Live Grep" },
-      { "<leader>ht", "<CMD>Telescope colorscheme <CR>", desc = "Browse themes" },
-    },
-  },
 
   -- Lualine
   {

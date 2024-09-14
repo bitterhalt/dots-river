@@ -2,34 +2,34 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- Interface
-vim.opt.colorcolumn = "80"
-vim.opt.cursorline = true
-vim.opt.laststatus = 2
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.syntax = "on"
-vim.opt.termguicolors = true
+-- line numbers
+vim.opt.relativenumber = true -- show relative line numbers
+vim.opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 
--- Behavior
+-- tabs & indentation
+vim.opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
+vim.opt.shiftwidth = 2 -- 2 spaces for indent width
+vim.opt.expandtab = true -- expand tab to spaces
+vim.opt.autoindent = true -- copy indent from current line when starting new one
+
+-- line wrapping
+vim.opt.wrap = false -- disable line wrapping
+
+-- search settings
+vim.opt.ignorecase = true -- ignore case when searching
+vim.opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
+
+-- cursor line
+vim.opt.cursorline = true -- highlight the current cursor line
+
+-- appearance
+vim.opt.signcolumn = "yes" -- show sign column so that text doesn't shift
+
+-- backspace
+vim.opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
+
+-- clipboard
 vim.opt.clipboard = "unnamedplus"
-vim.opt.confirm = true
-vim.opt.scrolloff = 4
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-
--- Indentation
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = -1
-vim.opt.expandtab = true
-
--- Line wrapping
-vim.opt.breakindent = true
-vim.opt.linebreak = true
-
--- Searching
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
 
 -- Remove trailing whitespace on save
 vim.api.nvim_create_autocmd("BufWritePre", {
