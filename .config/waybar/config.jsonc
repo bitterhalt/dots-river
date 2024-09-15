@@ -75,11 +75,11 @@
   },
   "custom/pipewire": {
     "interval": "once",
+    "return-type": "json",
     "format": "{}",
     "exec": "~/.config/waybar/scripts/pipewire.sh",
     "on-click-right": "pavucontrol",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "tooltip-format": " left mutes audio\n right Opens Pavucontrol",
     "signal": 3
   },
   "clock": {
@@ -124,10 +124,10 @@
   },
   "custom/mic": {
     "exec": "~/.config/waybar/scripts/mic.sh",
-    "interval": "once",
     "format": "{}",
-    "tooltip": false,
+    "interval": "once",
     "signal": 2,
+    "tooltip": false,
     "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
     "on-click-right": "pavucontrol"
   },
