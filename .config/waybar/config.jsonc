@@ -12,7 +12,7 @@
     "clock"
   ],
   "modules-right": [
-    "wireplumber",
+    "custom/pipewire",
     "custom/mic",
     "custom/mako",
     "custom/discord",
@@ -73,6 +73,15 @@
     "on-click-right": "pavucontrol",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
   },
+  "custom/pipewire": {
+    "interval": "once",
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/pipewire.sh",
+    "on-click-right": "pavucontrol",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "tooltip-format": " left mutes audio\n right Opens Pavucontrol",
+    "signal": 3
+  },
   "clock": {
     "format": "{:%b %d %H:%M}",
     "tooltip": false,
@@ -101,9 +110,9 @@
       "default": "󰂚",
       "dnd": "󰂛"
     },
-    "on-click": "makoctl mode | grep 'dnd' && makoctl mode -r dnd || makoctl mode -a dnd; pkill -RTMIN+3 waybar",
+    "on-click": "makoctl mode | grep 'dnd' && makoctl mode -r dnd || makoctl mode -a dnd; pkill -RTMIN+4 waybar",
     "exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\"}' $(makoctl mode | grep -q 'dnd' && echo dnd || echo default) $(makoctl mode | tail -1)",
-    "signal": 3
+    "signal": 4
   },
   "custom/useless": {
     "interval": "once",
@@ -119,8 +128,8 @@
     "format": "{}",
     "tooltip": false,
     "signal": 2,
-    "on-click": "pavucontrol",
-    "on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle"
+    "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+    "on-click-right": "pavucontrol"
   },
   // Not sure will I leave this here... :p
   "custom/discord": {

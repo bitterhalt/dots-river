@@ -1,6 +1,7 @@
 /* -----------------------------------------------------
  *                      General
  * ----------------------------------------------------- */
+
 /* Colors */
 @define-color bg #161616;
 @define-color bg2 #262626;
@@ -40,7 +41,6 @@ tooltip label {
  * ----------------------------------------------------- */
 
 window#waybar {
-  /* background-color: rgba(16, 20, 25,0.5); */
   background-color: @bg;
 }
 
@@ -116,7 +116,7 @@ window#waybar.hidden {
 #cpu,
 #memory,
 #battery,
-#pulseaudio,
+#custom-pipewire,
 #wireplumber,
 #custom-mic,
 #custom-mako,
