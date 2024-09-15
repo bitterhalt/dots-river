@@ -8,7 +8,6 @@ if [ -z "$1" ]; then
   exit 1
 fi
 term="foot"
-term="$term --app-id special-term"
 yazi="$term --app-id special-yazi -e yazi"
 nvim="$term --app-id special-nvim -e nvim"
 
@@ -16,13 +15,7 @@ editor_tag=$((1 << 11))
 secrets_tag=$((1 << 12))
 chat_tag=$((1 << 13))
 tfm_tag=$((1 << 15))
-terminal_tag=$((1 << 16))
 case "$1" in
-"term")
-  search="special-term"
-  tag="$terminal_tag"
-  cmd="$term"
-  ;;
 "yazi")
   search="special-yazi"
   tag="$tfm_tag"
