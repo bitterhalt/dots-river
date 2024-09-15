@@ -23,6 +23,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 - Launcher [bemenu](https://github.com/Cloudef/bemenu)
 
 #### Sources that I find helpfull on my journey 
+- [SwayKh](https://github.com/SwayKh/dotfiles/tree/main)
 - [Official install guide](https://docs.voidlinux.org/installation/index.html)
 - [Mind's Forge](https://mindsforge.com/Notes/VoidInstall)
 - [kennydodrill.com/blog](https://kennydodrill.com/blog/stable-void-linux-setup-guide/)
