@@ -345,8 +345,22 @@ on   = [ "c", "m" ]
 run  = "plugin chmod"
 desc = "Chmod on selected files"
 
+# Dragon-drop
+[[manager.prepend_keymap]]
+on  = "<C-n>"
+run = '''
+	shell 'dragon-drop -x -i -T "$1"' --confirm
+'''
+
+[[manager.prepend_keymap]]
+on  = "y"
+run = [ '''
+	shell 'for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list' --confirm
+''', "yank" ]
+
 # Diff yazi
 [[manager.prepend_keymap]]
 on   = "<C-d>"
 run  = "plugin diff"
 desc = "Diff the selected with the hovered file"
+
