@@ -1,4 +1,10 @@
 [Desktop Entry]
 Type=Application
 Name=Yazi
-Exec=foot -a Yazi -e yazi %u
+GenericName=File manager
+Comment=Launches the lf file manager
+Icon=system-file-manager
+Exec=foot -a yazi -e yazi %u
+Keywords=ConsoleOnly;System;FileTools;FileManager
+MimeType=inode/directory;
+Categories=ConsoleOnly;System;FileTools;FileManager
