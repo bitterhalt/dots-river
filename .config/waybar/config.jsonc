@@ -131,7 +131,6 @@
     "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
     "on-click-right": "pavucontrol"
   },
-  // Not sure will I leave this here... :p
   "custom/discord": {
     "interval": 10,
     "return-type": "json",

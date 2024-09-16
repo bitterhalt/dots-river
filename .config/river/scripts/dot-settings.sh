@@ -4,7 +4,7 @@
 ARCHIVE="RIVER
 FOOT
 BEMENU
-LF
+YAZI
 WAYBAR
 SWAYLOCK
 ZSH
@@ -20,7 +20,7 @@ case $CHOICE in
 BEMENU) $TERMCMD -e nvim $HOME/.local/bin/bemenu_runner ;;
 FOOT) $TERMCMD -e nvim $HOME/.config/foot/foot.ini ;;
 GTK-SETTINGS) nwg-look ;;
-LF) $TERMCMD -e nvim $HOME/.config/lf/lfrc ;;
+YAZI) $TERMCMD -e nvim $HOME/.config/yazi/yazi.toml ;;
 MAKO) $TERMCMD -e nvim $HOME/.config/mako/config ;;
 NEOVIM) $TERMCMD -e nvim $HOME/.config/nvim/init.lua ;;
 RIVER) $TERMCMD -e nvim $HOME/.config/river/init ;;
