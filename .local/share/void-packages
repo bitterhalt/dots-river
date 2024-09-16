@@ -22,6 +22,7 @@ cronie
 cryptsetup
 dbus
 dmenu
+dragon
 duf
 elogind
 exiftool
@@ -133,6 +134,7 @@ wf-recorder
 wget
 wl-clipboard
 wlopm
+wlr-randr
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xdg-user-dirs
