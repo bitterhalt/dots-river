@@ -1,43 +1,4 @@
 return {
-  --Base - 16 - nvim
-  --  {
-  --      "RRethy/base16-nvim",
-  --      config = function()
-  --          require('base16-colorscheme').with_config({
-  --              telescope = false,
-  --              telescope_borders = false,
-  --              indentblankline = false,
-  --              notify = true,
-  --              ts_rainbow = false,
-  --              cmp = false,
-  --              illuminate = false,
-  --              lsp_semantic = false,
-  --              mini_completion = false,
-  --              dapui = false,
-  --          })
-  --      end,
-  --      init = function()
-  --          require("base16-colorscheme").setup({
-  --              base00 = '#161616',
-  --              base01 = '#262626',
-  --              base02 = '#393939',
-  --              base03 = '#525252',
-  --              base04 = '#b4b7b4',
-  --              base05 = '#c5c8c6',
-  --              base06 = '#e0e0e0',
-  --              base07 = '#ffffff',
-  --              base08 = '#AC4242',
-  --              base09 = '#F4BF75',
-  --              base0A = '#F4BF75',
-  --              base0B = '#90A959',
-  --              base0C = '#75B5AA',
-  --              base0D = '#6A9FB5',
-  --              base0E = '#AA759F',
-  --              base0F = '#C28CB8'
-  --          })
-  --      end,
-  --  },
-  --
   -- Oxocarbon
   {
     "nyoom-engineering/oxocarbon.nvim",
@@ -51,7 +12,14 @@ return {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      require("lualine").setup({ options = { theme = "auto" } })
+      require("lualine").setup({
+        options = {
+          theme = "auto",
+          disabled_filetypes = {
+            statusline = { "dashboard", "alpha", "ministarter" },
+          },
+        },
+      })
     end,
   },
 
@@ -119,6 +87,25 @@ return {
     end,
     keys = {
       { "<f8>", "<CMD>NvimTreeToggle<CR>", desc = "Toggle nvim tree" },
+    },
+  },
+
+  -- Mini starter
+  {
+    "echasnovski/mini.starter",
+    lazy = false,
+    config = true,
+    opts = {
+      header = "⚡ Neovim",
+      footer = "",
+      items = {
+        { name = "n New file", action = ":ene | startinsert", section = "" },
+        { name = "r Recent files", action = ":Telescope oldfiles", section = "" },
+        { name = "f Find files", action = ":Telescope find_files", section = "" },
+        { name = "l Lazy", action = ":Lazy", section = "" },
+        { name = "s Restore session", action = ":lua require('persistence').load()", section = "" },
+        { name = "q Quit", action = ":qa!", section = "" },
+      },
     },
   },
 }

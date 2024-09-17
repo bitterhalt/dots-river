@@ -52,7 +52,11 @@ return {
     main = "ibl",
     ---@module "ibl"
     ---@type ibl.config
-    opts = {},
+    opts = {
+      exclude = {
+        filetypes = { "help", "alpha", "dashboard", "Trouble", "lazy", "neo-tree" },
+      },
+    },
     event = "VeryLazy",
   },
 }

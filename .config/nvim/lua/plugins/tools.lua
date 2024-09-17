@@ -92,6 +92,7 @@ return {
   -- Telescope
   {
     "nvim-telescope/telescope.nvim",
+    cmd = "Telescope",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = function()
       return {
@@ -127,7 +128,7 @@ return {
       {
         "<leader>ss",
         function()
-          return require("persistence").load({ last = true })
+          return require("persistence").load()
         end,
         desc = "Restore the last session",
       },
