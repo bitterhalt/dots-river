@@ -214,7 +214,7 @@ done
 #-----------------------------------------------------#
 
 riverctl background-color 0x000000
-riverctl border-color-focused 0xBE95FF
+riverctl border-color-focused 0x525252
 riverctl border-color-urgent 0xa2191f
 riverctl border-color-unfocused 0x262626
 riverctl border-width 1
