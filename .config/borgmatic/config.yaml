@@ -1,0 +1,79 @@
+source_directories:
+  - /home
+  - /etc
+
+repositories:
+  - path: /mnt/nv1tb/Backup/borg
+    label: local
+
+one_file_system: true
+
+encryption_passcommand:
+  sh -c "cat ~/Documents/credentials/.borg-passphrase"
+  #encryption_passcommand: pass Borg/borgmatic
+
+keep_daily: 7
+keep_weekly: 4
+keep_monthly: 6
+
+exclude_if_present:
+  - .nobackup
+  - .NOBACKUP
+
+exclude_patterns:
+  - "- [Tt]rash"
+  - "- [Cc]ache"
+  - "*.pyc"
+  - "*/.vim*.tmp"
+  - /etc/ssl
+  - /home/*/.var
+  - /home/*/Applications
+  - /home/*/.local/share/libvirt
+  - /home/*/Music
+  - /home/*/Sync
+  - /home/*/.playonlinux
+  - /home/*/.cache
+  - /home/*/.grsync
+  - /home/*/.lesshst
+  - /home/*/.nv
+  - /home/*/.nvidia-settings-rc
+  - /home/*/.pki
+  - /home/*/.ssr
+  - /home/*/.npm
+  - /home/*/Documents
+  - /home/*/.steam
+  - /home/*/.steampath
+  - /home/*/Videos
+  - /home/*/.steampid
+  - /home/*/.themes
+  - /home/*/.wget-hsts
+  - /home/*/.wine
+  - /home/*/applications
+  - /home/*/Downloads
+  - /home/*/public
+  - /home/*/recentdocuments
+  - /home/*/steam*
+  - /home/*/temp
+  - /home/*/vortex
+  - /home/*/baloo
+  - /home/*/dropbox
+  - /home/*/gdrive
+  - /home/*/icons
+  - /home/*/onedrive
+  - /home/*/trash
+  - /etc/libvirt
+  - /etc/credstore
+  - /etc/pacman.d
+  - /etc/gshadow
+  - /etc/gshadow-
+  - /etc/audit/audit
+  - /etc/libaudit.conf
+  - /etc/libvirt
+  - /etc/qemu
+  - /etc/credstore.encrypted
+  - /home/*/.local/share/Steam
+  - /home/*/.local/share/Trash
+
+exclude_caches: true
+
+borgmatic_source_directory: ~/.local/share/borgmatic
