@@ -9,19 +9,6 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -vI'
 alias mkdir='mkdir -pv'
-
-# Pacman
-#alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
-#alias pacs='sudo pacman -S'                      # Install standard pkg
-#alias pacsyu='sudo pacman -Syu'                  # Update the system and upgrade all system packages
-#alias pacsyy='sudo pacman -Syy'                  # update the software database
-#alias pacsyyu='sudo pacman -Syyu'                # synchronize with the repositories and update the system
-#alias pacdifc='sudo DIFFPROG=meld pacdiff'       # merge or remove pacnew files
-#alias yep='yay -Pw && yay'                       # Show Arch news before update
-
-# Flatpak
-alias flatclean='flatpak uninstall --unused'    #cleans unused packages
-
 alias ..='cd ..'
 alias history='fc -l 1'
 
@@ -65,5 +52,6 @@ alias hg='history | grep '
 alias xcu='xbps-install -nuM | awk "{print $1}"'
 alias xiu='sudo xbps-install -Su && flatpak update'
 alias xir='sudo xbps-remove'
-alias xbs='xbps-query -Rs'
+alias xbq='xbps-query -Rs'
 alias xblist='xpkg -m > ~/.local/share/void-packages'
+
