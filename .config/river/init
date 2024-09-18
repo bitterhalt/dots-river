@@ -22,6 +22,7 @@ powermenu="$HOME/.local/bin/bemenu_power"
 screenshot="$HOME/.local/bin/wl-shot"
 recmenu="$HOME/.local/bin/bemenu_screenshot"
 calendar="foot -a float-call -e calcure"
+clip="bemenu_clipboard"
 
 # Waybar signals
 sig_1="pkill -RTMIN+1 waybar"
@@ -29,7 +30,7 @@ sig_2="pkill -RTMIN+2 waybar"
 sig_3="pkill -RTMIN+3 waybar"
 #sig_4="pkill -RTMIN+4 waybar"
 
-#### INPUTS ####
+# Inputs
 # Find your inputs by typing "riverctl list-inputs"
 mouse="pointer-9610-54-Glorious_Model_O"
 
@@ -37,6 +38,16 @@ riverctl keyboard-layout -options caps:escape "fi"
 riverctl focus-follows-cursor normal
 riverctl input "$mouse" accel-profile flat
 riverctl input "$mouse" pointer-accel 0
+
+#-----------------------------------------------------#
+#                      Look                         #
+#-----------------------------------------------------#
+
+riverctl background-color 0x000000
+riverctl border-color-focused 0x525252
+riverctl border-color-urgent 0xa2191f
+riverctl border-color-unfocused 0x262626
+riverctl border-width 1
 
 #-----------------------------------------------------#
 #                      LAUNCH                         #
@@ -69,8 +80,8 @@ riverctl map normal Super N spawn "foot -e nvim ~/Documents/personal/notes/index
 riverctl map normal Super+Shift N spawn "$term -e ~/.local/bin/quick_note"
 riverctl map normal Super T spawn "$fterm -W 100x30 -e nvim ~/Documents/personal/notes/todo.md"
 riverctl map normal Super+Shift Delete spawn "$fterm -W 120x35 -e htop"
-riverctl map normal Super+Shift C spawn "bemenu_clipboard"
-riverctl map normal Super+Control C spawn "bemenu_clipboard wipe"
+riverctl map normal Super+Shift C spawn "$clip"
+riverctl map normal Super+Control C spawn "$clip wipe"
 riverctl map normal Super F12 spawn "$HOME/.config/river/scripts/dot-settings.sh"
 riverctl map normal Super B spawn "$HOME/.config/river/scripts/waybar-toggle.sh"
 
@@ -141,6 +152,7 @@ riverctl map normal None XF86AudioMute spawn "$HOME/.config/river/scripts/volume
 riverctl map normal None XF86AudioPlay spawn "$HOME/.config/river/scripts/mediactrl.sh --play"
 riverctl map normal None XF86AudioPrev spawn "$HOME/.config/river/scripts/mediactrl.sh --prv"
 riverctl map normal None XF86AudioNext spawn "$HOME/.config/river/scripts/mediactrl.sh --nxt"
+riverctl map normal None XF86AudioStop spawn "$HOME/.config/river/scripts/mediactrl.sh --stop"
 riverctl map normal Super+Control M spawn "$HOME/.config/river/scripts/mediactrl.sh --noti"
 riverctl map normal None XF86Calculator spawn "galculator"
 
@@ -208,16 +220,6 @@ for i in $(seq 1 9); do
   # Super+[1-9] to focus tag [0-8]
   riverctl map normal Super $i set-focused-tags $(($sticky_tag + $tags))
 done
-
-#-----------------------------------------------------#
-#                      COLORS                         #
-#-----------------------------------------------------#
-
-riverctl background-color 0x000000
-riverctl border-color-focused 0x525252
-riverctl border-color-urgent 0xa2191f
-riverctl border-color-unfocused 0x262626
-riverctl border-width 1
 
 #-----------------------------------------------------#
 #                      RULES                          #

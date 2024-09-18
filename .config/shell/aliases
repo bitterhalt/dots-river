@@ -26,8 +26,6 @@ alias tp='trash-put'
 alias tpe='trash-empty'
 alias tpr='trash-restore'
 
-# Weather
-alias weather='curl wttr.in/'
 
 # System Journal
 alias loger='journalctl -p 3 -xb'

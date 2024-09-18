@@ -14,7 +14,7 @@ suppress_default_binds = true
 
 [binds]
 # Define some key bindings
-<Shift+W> = exec setbg "$imv_current_file" &
+<Shift+W> = exec setbg "$imv_current_file"
 q = quit
 y = exec echo working!
 
