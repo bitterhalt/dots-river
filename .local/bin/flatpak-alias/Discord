@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+exec flatpak run --branch=stable --arch=x86_64 --command=startvesktop dev.vencord.Vesktop --disable-gpu-memory-buffer-video-frames "$@"
