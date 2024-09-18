@@ -37,7 +37,6 @@ fzf
 galculator
 gcc
 gdu
-gimp
 gnome-themes-extra
 gnome-themes-standard
 gparted
@@ -48,7 +47,6 @@ gtk-engine-murrine
 htop
 hyprpicker
 imv
-j4-dmenu-desktop
 jq
 kanshi
 keepassxc
@@ -147,6 +145,7 @@ xorg-input-drivers
 xorg-minimal
 xtools
 xz
+yad
 yazi
 zathura
 zathura-pdf-poppler

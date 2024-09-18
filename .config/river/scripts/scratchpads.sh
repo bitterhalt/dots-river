@@ -34,7 +34,7 @@ case "$1" in
 "discord")
   search="discord"
   tag="$chat_tag"
-  cmd="flatpak run --branch=stable --arch=x86_64 --command=startvesktop dev.vencord.Vesktop"
+  cmd="Discord"
   ;;
 esac
 

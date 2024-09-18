@@ -15,8 +15,7 @@ mail="thunderbird"
 term="footclient" # If you want single instance change: "footclient" > "foot"
 fterm="$term -a float-term"
 tfm="foot -e yazi"
-drun="j4-dmenu-desktop --dmenu='bemenu_runner -B1 -n -l10 -p drun:'"
-run="bemenu_runner run --no-exec -B1 -n -p run: -l10 | xargs riverctl spawn >/dev/null 2>&1"
+run="bemenu_runner run --no-exec -B1 -n -p run: -l10 | xargs riverctl spawn"
 emoji="$HOME/.local/bin/bemenu_emoji"
 powermenu="$HOME/.local/bin/bemenu_power"
 screenshot="$HOME/.local/bin/wl-shot"
@@ -53,8 +52,7 @@ riverctl border-width 1
 #                      LAUNCH                         #
 #-----------------------------------------------------#
 
-riverctl map normal Super D spawn "$drun"
-riverctl map normal Super P spawn "$run"
+riverctl map normal Super D spawn "$run"
 riverctl map normal Super R spawn "$tfm"
 riverctl map normal Super+Shift p spawn "$powermenu"
 riverctl map normal Super Return spawn "$term"

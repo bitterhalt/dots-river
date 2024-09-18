@@ -1,5 +1,6 @@
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin/flatpak-alias/:$PATH"
 
 # XDG Base Directory
 export XDG_CONFIG_HOME="$HOME/.config"
