@@ -1,6 +1,10 @@
-/* -----------------------------------------------------
- *                      General
- * ----------------------------------------------------- */
+/* ------------------------------------------------------------------
+ *                      Style config
+ * If some of the icons looks blurry you can try to fix font size
+ * per block. Usually non fa-icons (Font Awesome) wont scale well with font size
+ * You can also just use pathed nerd font instead of icons,
+ * but that can lead spacing issues.
+ * ----------------------------------------------------------------- */
 
 /* Colors */
 @define-color bg #161616;
@@ -131,6 +135,10 @@ window#waybar.hidden {
   color: @fg;
   padding: 0 6px;
   margin: 0 2px;
+}
+#custom-swayidle {
+  font-size: 16px;
+  color: @fg;
 }
 
 #network.disconnected {
