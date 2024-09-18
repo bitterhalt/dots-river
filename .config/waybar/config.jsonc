@@ -138,6 +138,7 @@
     "format": "{}",
     "exec": "~/.config/waybar/scripts/discord.sh",
     "on-click": "~/.config/river/scripts/scratchpads.sh discord",
-    "on-click-middle": "pkill Discord;"
+    // "on-click-middle": "pkill Discord;"
+    "on-click-middle": "pkill vesktop;"
   }
 }
