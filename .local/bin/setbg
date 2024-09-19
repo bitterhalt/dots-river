@@ -19,5 +19,5 @@ if [ "${1:-}" ]; then
   esac
 fi
 
-pidof swaybg && pkill swaybg
-swaybg -m fill -i "${bg}" &
+pkill swaybg
+setsid -f swaybg -m fill -i "${bg}"
