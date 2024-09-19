@@ -21,7 +21,6 @@ cmus
 cronie
 cryptsetup
 dbus
-dmenu
 dragon
 duf
 elogind
@@ -107,7 +106,6 @@ snooze
 socklog-void
 steam
 swappy
-sway
 swaybg
 swayidle
 swaylock
