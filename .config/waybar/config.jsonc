@@ -85,7 +85,7 @@
     "tooltip": false,
     "on-click": "~/.local/bin/noti_cal",
     "on-click-middle": "~/.local/bin/noti_weather",
-    "on-click-right": "foot -a float-call -e calcure"
+    "on-click-right": "foot -W 125x30 -a float-call -e calcure"
   },
   "custom/power": {
     "interval": "once",

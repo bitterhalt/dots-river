@@ -20,7 +20,7 @@ emoji="$HOME/.local/bin/bemenu_emoji"
 powermenu="$HOME/.local/bin/bemenu_power"
 screenshot="$HOME/.local/bin/wl-shot"
 recmenu="$HOME/.local/bin/bemenu_screenshot"
-calendar="foot -a float-call -e calcure"
+calendar="foot -W 125x30 -a float-call -e calcure"
 clip="bemenu_clipboard"
 
 # Waybar signals
@@ -250,9 +250,8 @@ riverctl rule-add -app-id "KeePassXC" -title "Browser Access Request" float
 riverctl rule-add -app-id "KeePassXC" -title "Passkey credentials" float
 riverctl rule-add -app-id "vesktop" float
 riverctl rule-add -app-id "blueman-manager" float
-riverctl rule-add -app-id "brave-calendar.*" float
-riverctl rule-add -app-id "brave-mail.*" float
 riverctl rule-add -app-id "float-*" float
+riverctl rule-add -app-id "Gimp" float
 riverctl rule-add -app-id "floatterm" float
 riverctl rule-add -app-id "galculator" float
 riverctl rule-add -app-id "imv" float
