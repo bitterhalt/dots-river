@@ -1,9 +1,7 @@
-
 /* Global color definitions */
-
 @define-color window_bg_color #1b1b1b;
 @define-color window_fg_color #cecece;
-@define-color view_bg_color #181818;
+@define-color view_bg_color #161616;
 @define-color view_fg_color #cecece;
 @define-color accent_bg_color #6A9FB5;
 @define-color accent_color @accent_bg_color;
@@ -20,7 +18,8 @@
 
 /* More customizations */
 
-button.titlebutton { /* GTK3 */
+button.titlebutton {
+  /* GTK3 */
   color: transparent;
   min-width: 18px;
   min-height: 18px;
@@ -29,7 +28,8 @@ button.titlebutton:backdrop {
   opacity: 0.5;
 }
 
-windowcontrols > button { /* GTK4 */
+windowcontrols > button {
+  /* GTK4 */
   color: transparent;
   min-width: 2px;
   min-height: 2px;
@@ -76,32 +76,24 @@ windowcontrols > button.minimize:hover {
 
 .titlebar,
 window {
-	border-radius: 0;
-	box-shadow: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 .window-frame {
-    box-shadow: 0 0 0 0;
-    margin: 0;
+  box-shadow: 0 0 0 0;
+  margin: 0;
 }
-/** also remove shaddows */
-decoration {
-    margin: 0;
-    padding: 0;
-    border: none;
-    box-shadow: none;
-}
-
 decoration:backdrop {
-	box-shadow: none;
+  box-shadow: none;
 }
 window decoration {
-    margin: 0;
-    border: none;
-    padding: 0;
+  margin: 0;
+  border: none;
+  padding: 0;
 }
 
 .navigation-sidebar {
-background-color: #1b1b1b;
+  background-color: #1b1b1b;
 }
 
 /** River */
@@ -115,7 +107,7 @@ headerbar.default-decoration {
 
 /* rm -rf window shadows */
 window.csd,             /* gtk4? */
-window.csd decoration { /* gtk3 */
+window.csd decoration {
+  /* gtk3 */
   box-shadow: none;
 }
-

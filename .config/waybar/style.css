@@ -88,32 +88,6 @@ window#waybar.hidden {
 }
 
 /* -----------------------------------------------------
- *                 Sway Workspaces
- * ----------------------------------------------------- */
-
-#workspaces {
-  background-color: @bg;
-  padding: 0px 5px;
-}
-
-#workspaces button {
-  min-width: 20px;
-  color: @bg2;
-  padding: 0px 5px;
-  font-weight: normal;
-}
-
-#workspaces button.focused {
-  color: @fg;
-  background-color: @bg;
-}
-
-#workspaces button.urgent {
-  color: @purple;
-  background-color: @bg;
-}
-
-/* -----------------------------------------------------
  *                      Modules
  * ----------------------------------------------------- */
 
@@ -124,7 +98,6 @@ window#waybar.hidden {
 #wireplumber,
 #custom-mic,
 #custom-mako,
-#custom-todo,
 #custom-discord,
 #custom-swayidle,
 #custom-autotile,
@@ -148,13 +121,6 @@ window#waybar.hidden {
 #clock {
   color: @fg;
   padding: 0 5px;
-}
-
-#mode {
-  color: @bg;
-  background-color: @purple;
-  padding: 0 10px;
-  margin: 0 2px;
 }
 
 #battery.critical:not(.charging) {

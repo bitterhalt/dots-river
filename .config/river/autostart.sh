@@ -28,9 +28,3 @@ done >/dev/null 2>&1
 
 pkill -x waybar
 waybar &
-
-riverctl default-attach-mode bottom
-riverctl default-layout rivertile
-if ! pgrep -x "rivertile" >/dev/null; then
-  rivertile -view-padding 5 -outer-padding 0 &
-fi
