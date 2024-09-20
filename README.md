@@ -8,7 +8,6 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 
 ![image](https://github.com/user-attachments/assets/9beb3cd8-5aa3-4d73-be88-5b2d515ac0d7)
 
-
 ### Software I use
 
 - Distro: [Void](https://voidlinux.org/)
@@ -22,6 +21,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 - Media Player: [mpv](https://mpv.io/)
 - Notification daemon: [mako](https://github.com/emersion/mako)
 - Terminal [foot](https://codeberg.org/dnkl/foot)
+- Cron daemon [snooze](https://github.com/leahneukirchen/snooze)
 - Shell: [zsh](https://www.zsh.org/)
 - Editor: [neovim](https://neovim.io/)
 - Calendar: [Calcure](https://github.com/anufrievroman/calcure)
