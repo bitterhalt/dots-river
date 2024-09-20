@@ -56,7 +56,10 @@ play = [
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
 imgedit = [
-  { run = 'gimp "$@"',  desc = "Edit image",  for = "unix" },
+  { run = 'gimp "$@"',  desc = "Edit", orphan = true,  for = "unix" },
+]
+imv = [
+	{ run = 'imv-dir "$@"', desc = "Open" , orphan = true, for = "unix" },
 ]
 
 [open]
@@ -66,7 +69,7 @@ rules = [
 	# Text
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
 	# Image
-	{ mime = "image/*", use = [ "open", "reveal", "imgedit" ] },
+	{ mime = "image/*", use = [ "imv", "imgedit", "open", "reveal"  ] },
 	# Media
 	{ mime = "{audio,video}/*", use = [ "play", "reveal" ] },
 	# Archive

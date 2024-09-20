@@ -20,4 +20,4 @@ if [ "${1:-}" ]; then
 fi
 
 pkill swaybg
-setsid -f swaybg -m fill -i "${bg}"
+swaybg -m fill -i "${bg}" &
