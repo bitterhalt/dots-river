@@ -31,9 +31,11 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 
 ### Main Keybindings
 
-Here is a list of the main key combinations, mostly default ones
-The rest can be found in **$HOME/.config/river/init**
-If you have used DWM before you are allready home
+> Here is a list of the main key combinations, mostly default ones
+>
+>  The rest can be found in **$HOME/.config/river/init**
+>
+> If you have used DWM before you are allready home
 
 | Keybind                              | Description                                          |
 | ------------------------------------ | ---------------------------------------------------- |
