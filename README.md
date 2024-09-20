@@ -43,7 +43,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 | Super + D                            | Open Bemenu                                          |
 | Super + W                            | Open Web Browser                                     |
 | Super + {1,2,3,4,5,6,7,8,9}          | View another tag                                     |
-| Super + Shift + {1,2,3,4,5,6,7,8,9}a | Move fogused tags to another tag view                |
+| Super + Shift + {1,2,3,4,5,6,7,8,9}a | Move focused tags to another tag view                |
 | Super + 0                            | View all tags                                        |
 | Super + Alt + {1,2,3,4,5,6,7,8,9}    | Toggle/"combine" different tag views                 |
 | Super + Shift + P                    | Open Powermenu                                       |
