@@ -33,7 +33,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 
 > Here is a list of the main key combinations, mostly default ones
 >
->  The rest can be found in **$HOME/.config/river/init**
+> The rest can be found in **$HOME/.config/river/init**
 >
 > If you have used DWM before you are allready home
 
@@ -56,7 +56,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 | Super + Shift + {Prior,Next}         | Increment/decrement the main count of Rivertile      |
 | Super + F                            | Toggle fullscreen                                    |
 | Super + Left + Mouse                 | Float and move the window                            |
-| Super + Alt + {F10,F12,F11,F9}       | Change layout orientation                            |
+| Super + Alt + {H,J,K,L}              | Change layout orientation {left,bottom,top,right}    |
 
 #### Sources that I find helpful on my journey
 

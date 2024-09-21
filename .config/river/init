@@ -147,10 +147,10 @@ riverctl map normal Super Space toggle-float
 # Super+F to toggle fullscreen
 riverctl map normal Super F toggle-fullscreen
 # Use cursed arrow keys: Super+Alt{F10,F12,F11,F9} to change layout orientation
-riverctl map normal Super+Alt F10 send-layout-cmd rivertile "main-location top"
-riverctl map normal Super+Alt F12 send-layout-cmd rivertile "main-location right"
-riverctl map normal Super+Alt F11 send-layout-cmd rivertile "main-location bottom"
-riverctl map normal Super+Alt F9 send-layout-cmd rivertile "main-location left"
+riverctl map normal Super+Alt J send-layout-cmd rivertile "main-location bottom"
+riverctl map normal Super+Alt K send-layout-cmd rivertile "main-location top"
+riverctl map normal Super+Alt H send-layout-cmd rivertile "main-location left"
+riverctl map normal Super+Alt L send-layout-cmd rivertile "main-location right"
 # Media keys
 riverctl map -repeat normal None XF86AudioRaiseVolume spawn "$HOME/.config/river/scripts/volume.sh up && $sig_3"
 riverctl map -repeat normal None XF86AudioLowerVolume spawn "$HOME/.config/river/scripts/volume.sh down && $sig_3"
