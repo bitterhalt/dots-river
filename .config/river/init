@@ -15,6 +15,7 @@ mail="thunderbird"
 term="footclient" # <- If you want single instance change: "footclient" > "foot"
 fterm="$term -a float-term"
 tfm="foot -e yazi"
+drun="j4-dmenu-desktop --dmenu='bemenu_runner -B1 -n -l10 -p drun:'"
 run="bemenu_runner run --no-exec -B1 -n -p run: -l10 | xargs riverctl spawn"
 emoji="$HOME/.local/bin/bemenu_emoji"
 powermenu="$HOME/.local/bin/bemenu_power"
@@ -59,7 +60,8 @@ rivertile -view-padding 5 -outer-padding 0 &
 #                      LAUNCH                         #
 #-----------------------------------------------------#
 
-riverctl map normal Super D spawn "$run"
+riverctl map normal Super D spawn "$drun"
+riverctl map normal Super+Shift D spawn "$run"
 riverctl map normal Super R spawn "$tfm"
 riverctl map normal Super+Shift p spawn "$powermenu"
 riverctl map normal Super Return spawn "$term"
@@ -87,7 +89,7 @@ riverctl map normal Super+Shift N spawn "$term -e ~/.local/bin/quick_note"
 riverctl map normal Super T spawn "$fterm -W 100x30 -e nvim ~/Documents/personal/notes/todo.md"
 riverctl map normal Super+Shift Delete spawn "$fterm -W 120x35 -e htop"
 riverctl map normal Super+Shift C spawn "$clip"
-riverctl map normal Super+Control C spawn "$clip wipe"
+riverctl map normal Super+Control spawn- "$calendar"
 riverctl map normal Super F12 spawn "$HOME/.config/river/scripts/dot-settings.sh"
 riverctl map normal Super B spawn "$HOME/.config/river/scripts/waybar-toggle.sh"
 

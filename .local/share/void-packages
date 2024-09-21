@@ -28,7 +28,6 @@ exiftool
 eza
 fastfetch
 ffmpegthumbnailer
-file-roller
 firefox
 flatpak
 foot
@@ -47,6 +46,7 @@ gtk-engine-murrine
 htop
 hyprpicker
 imv
+j4-dmenu-desktop
 jq
 kanshi
 keepassxc
@@ -126,6 +126,7 @@ void-live-audio
 void-repo-multilib
 void-repo-multilib-nonfree
 void-repo-nonfree
+waylock
 wev
 wf-recorder
 wget
