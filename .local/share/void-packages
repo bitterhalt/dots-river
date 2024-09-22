@@ -3,6 +3,7 @@ ImageMagick
 MangoHud
 NetworkManager
 Signal-Desktop
+Thunar
 Waybar
 alsa-pipewire
 alsa-plugins
@@ -126,7 +127,6 @@ void-live-audio
 void-repo-multilib
 void-repo-multilib-nonfree
 void-repo-nonfree
-waylock
 wev
 wf-recorder
 wget
