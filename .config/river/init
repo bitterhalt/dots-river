@@ -190,23 +190,22 @@ all_tags=$(((1 << 32) - 1))
 riverctl map normal Super 0 set-focused-tags $all_tags
 riverctl map normal Super+Shift 0 set-view-tags $all_tags
 
-# Scratchpad tags
+## Scratchpad tags
 scratchpad="$HOME/.config/river/scripts/scratchpads.sh"
-editor_tag=$((1 << 11))
-secrets_tag=$((1 << 12))
-chat_tag=$((1 << 13))
-tfm_tag=$((1 << 15))
+zen_tag=$((1 << 11))
+chat_tag=$((1 << 12))
+tfm_tag=$((1 << 13))
 dyn_tag=$((1 << 14))
 
-scratch_tags=$((terminal_tag | editor_tag | secrets_tag | dyn_tag | chat_tag))
+scratch_tags=$((zen_tag | dyn_tag | chat_tag))
 all_but_scratch_tag=$((all_tags ^ scratch_tags))
 riverctl spawn-tagmask ${all_but_scratch_tag}
 
 # Spawn hidden workspaces
 riverctl map normal Super+Shift E spawn "$scratchpad nvim"
-riverctl map normal Super F5 spawn "$scratchpad keepassxc"
 riverctl map normal Super F6 spawn "$scratchpad discord"
 riverctl map normal Super+Shift R spawn "$scratchpad yazi"
+riverctl map normal Super+Shift T spawn "$scratchpad term"
 # Toggle the scratchpad(s)
 riverctl map normal Super C toggle-focused-tags "${chat_tag}"
 riverctl map normal Super R toggle-focused-tags "${tfm_tag}"
@@ -214,7 +213,7 @@ riverctl map normal Super R toggle-focused-tags "${tfm_tag}"
 riverctl map normal Super+Shift Minus set-view-tags "${dyn_tag}"
 riverctl map normal Super Minus toggle-focused-tags "${dyn_tag}"
 
-# Sticky tag
+## Sticky tag
 sticky_tag=$((1 << 31))
 all_tags=$(((1 << 32) - 1))
 all_but_sticky_tag=$(($all_tags ^ $sticky_tag))
@@ -242,7 +241,7 @@ riverctl rule-add -app-id "com.discordapp.Discord" tags $chat_tag
 riverctl rule-add -app-id "vesktop" tags $chat_tag
 riverctl rule-add -app-id "virt-manager" tags $((1 << (8 - 1)))
 riverctl rule-add -app-id "com.transmissionbt.transmission_*" tags $((1 << (4 - 1)))
-riverctl rule-add -app-id "org.keepassxc.KeePassXC" tags $secrets_tag
+riverctl rule-add -app-id "org.keepassxc.KeePassXC" tags $((1 << (6 - 1)))
 # Floaters
 riverctl rule-add -app-id "Choose User Profile" float
 riverctl rule-add -app-id "Firefox" -title "About Mozilla Firefox" float

@@ -1,20 +1,21 @@
 #!/usr/bin/env bash
 # Riverctl script to open scratchpads, and open programs if Scratchpads are
-# empty. Usage "./scratchpads.sh <term|lf|nvim|keepassxc|discord>"
+# empty. Usage "./scratchpads.sh <term|yazi|nvim|discord>"
 # Check if an argument is provided
 
 if [ -z "$1" ]; then
   echo "Error: No argument provided."
   exit 1
 fi
+
 term="foot"
 yazi="$term --app-id special-yazi -e yazi"
-nvim="$term --app-id special-nvim -e nvim"
+nvim="$term --app-id zen-nvim -e nvim"
+zerminal="$term --app-id zen-term"
 
-editor_tag=$((1 << 11))
-secrets_tag=$((1 << 12))
-chat_tag=$((1 << 13))
-tfm_tag=$((1 << 15))
+zen_tag=$((1 << 11))
+chat_tag=$((1 << 12))
+tfm_tag=$((1 << 13))
 case "$1" in
 "yazi")
   search="special-yazi"
@@ -22,14 +23,14 @@ case "$1" in
   cmd="$yazi"
   ;;
 "nvim")
-  search="special-nvim"
-  tag="$editor_tag"
+  search="zen-nvim"
+  tag="$zen_tag"
   cmd="$nvim"
   ;;
-"keepassxc")
-  search="keepassxc"
-  tag="$secrets_tag"
-  cmd="keepassxc"
+"term")
+  search="zen-term"
+  tag="$zen_tag"
+  cmd="$zerminal"
   ;;
 "discord")
   search="discord"
