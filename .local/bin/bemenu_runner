@@ -16,25 +16,6 @@ BEMENU_ARGS=(--ch 18
   --single-instance
   "$@")
 
-#RUNNER_ARGS=(
-#  -i
-#  --fn 'jetbrains mono 14px'
-#  --ch '20'
-#  --center --width-factor '0.25'
-#  --list '14'
-#  --line-height '26'
-#  --fixed-height
-#  --border '1'
-#  --tb '#161616' --tf '#be95ff'
-#  --fb '#161616' --ff '#ffffff'
-#  --cb '#161616' --cf '#525252'
-#  --nb '#161616' --nf '#dde1e6'
-#  --ab '#161616' --af '#dde1e6'
-#  --hb '#161616' --hf '#78a9ff'
-#  --bdr '#262626' --cf '#323232'
-#  --single-instance
-#  "$@")
-
 if [ "$1" = 'run' ]; then
   bemenu-run "${BEMENU_ARGS[@]}"
 else
