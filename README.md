@@ -6,7 +6,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 
 ![2024-09-06-00-06-03_screenshot](https://github.com/user-attachments/assets/9869ce42-c56e-4ca0-a9d5-87495a6f4150)
 
-![image](https://github.com/user-attachments/assets/9beb3cd8-5aa3-4d73-be88-5b2d515ac0d7)
+![image](https://github.com/user-attachments/assets/3452cd64-a435-4818-a1e5-c70b0ee5537f)
 
 ### Software I use
 
