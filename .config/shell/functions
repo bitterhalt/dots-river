@@ -35,9 +35,9 @@ function fzind(){
   fi
 }
 
-# fkill - kill processes 
+# fkill - kill processes
 fzkill() {
-    local pid 
+    local pid
     if [ "$UID" != "0" ]; then
         pid=$(ps -f -u $UID | sed 1d | fzf -m | awk '{print $2}')
     else
@@ -48,4 +48,9 @@ fzkill() {
     then
         echo $pid | xargs kill -${1:-9}
     fi
+}
+
+# Quick cd using fzf
+fcd() {
+  cd "$(find -type d | fzf --preview 'tree -C {} | head -200' --preview-window 'up:60%')"
 }

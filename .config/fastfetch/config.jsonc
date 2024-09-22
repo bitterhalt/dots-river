@@ -1,65 +1,48 @@
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-    "display": {
-        "size": {
-            "maxPrefix": "MB",
-            "ndigits": 0
-        }
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "display": {
+    "size": {
+      "maxPrefix": "MB",
+      "ndigits": 0
+    }
+  },
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "host",
+    {
+      "type": "kernel",
+      "format": "{release}"
     },
-    "modules": [
-        {
-            "type": "custom", // HardwareStart
-            // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
-            "format": " {#1}──────────── System ───────────  {#} "
-        },
-        "os",
-        "host",
-        "kernel",
-        "uptime",
-        {
-            "type": "command",
-            "key": "OS Age",
-            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
-        },
-        "packages",
-        "shell",
-        {
-            "type": "display",
-            "compactType": "original",
-            "key": "Resolution"
-        },
-        "de",
-        "wm",
-        "terminal",
-        "cpu",
-        {
-            "type": "gpu",
-            "key": "GPU"
-        },
-        {
-            "type": "memory",
-            "format": "{/1}{-}{/}{/2}{-}{/}{} / {}"
-        },
-        {
-            "type": "custom", // HardwareStart
-            // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
-            "format": " {#1}──────── Void Challenge ────── {#} ",
-        },
-        {
-            "type": "command",
-            "shell": "/bin/bash",
-            "key": "Days done",
-            "text": "~/.config/fastfetch/progress.sh",
-            "keyColor": "white"
-        },
-        {
-            "type": "command",
-            "shell": "/bin/bash",
-            "key": "Days left",
-            "text": "~/.config/fastfetch/difference.sh",
-            "keyColor": "white"
-        },
-        "break",
-        "colors"
-    ]
+    "uptime",
+    "packages",
+    "shell",
+    {
+      "type": "display",
+      "compactType": "original",
+      "key": "Resolution"
+    },
+    "de",
+    "wm",
+    "wmtheme",
+    "theme",
+    "icons",
+    "terminal",
+    {
+      "type": "terminalfont",
+      "format": "{/name}{-}{/}{name}"
+    },
+    "cpu",
+    {
+      "type": "gpu",
+      "key": "GPU"
+    },
+    {
+      "type": "memory",
+      "format": "{} / {}"
+    },
+    "break",
+    "colors"
+  ]
 }

@@ -1,7 +1,7 @@
 [Default Applications]
-x-scheme-handler/mailto=userapp-Thunderbird-CRVNW1.desktop
-message/rfc822=userapp-Thunderbird-CRVNW1.desktop
-x-scheme-handler/mid=userapp-Thunderbird-CRVNW1.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-ZDABU2.desktop
+message/rfc822=userapp-Thunderbird-ZDABU2.desktop
+x-scheme-handler/mid=userapp-Thunderbird-ZDABU2.desktop
 text/x-chdr=nvim.desktop
 x-scheme-handler/https=userapp-Firefox-ZGQGT2.desktop
 x-scheme-handler/http=userapp-Firefox-ZGQGT2.desktop
@@ -35,3 +35,5 @@ application/x-extension-xhtml=userapp-Firefox-2443O2.desktop;userapp-Firefox-NH1
 application/x-extension-xht=userapp-Firefox-2443O2.desktop;userapp-Firefox-NH1HQ2.desktop;userapp-Firefox-3GHMS2.desktop;userapp-Firefox-ZGQGT2.desktop;
 application/x-shellscript=text.desktop;
 image/jpeg=gimp.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-ZDABU2.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-ZDABU2.desktop;

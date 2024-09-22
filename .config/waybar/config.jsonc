@@ -18,7 +18,6 @@
     "custom/swayidle",
     "custom/power"
   ],
-  // Modules configuration
   "battery": {
     "bat": "BAT0",
     "interval": 60,
@@ -36,10 +35,6 @@
     ],
     "max-length": 25
   },
-  //  Sway workspaces
-  "sway/workspaces": {
-    "disable-scroll": true
-  },
   "cpu": {
     "format": "CPU: {usage}%",
     "tooltip": false,
@@ -53,7 +48,6 @@
     "on-click-right": "~/.config/waybar/custom/usage.sh ram"
   },
   "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": "({signalStrength}%) ",
     "format-ethernet": "󰈀",
     "tooltip-format": "  {ipaddr}\n  {bandwidthUpBytes}  {bandwidthDownBytes}",

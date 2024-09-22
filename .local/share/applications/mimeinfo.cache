@@ -8,6 +8,7 @@ image/png=img.desktop;
 image/tiff=img.desktop;
 image/webp=img.desktop;
 image/x-tga=img.desktop;
+inode/directory=yazi.desktop;
 text/english=text.desktop;
 text/plain=text.desktop;
 text/x-c=text.desktop;
