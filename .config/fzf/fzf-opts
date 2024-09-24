@@ -2,5 +2,5 @@
   --color=hl:#08BDBA,hl+:#BE95FF,info:#F1C21B,marker:#EE5396
   --color=prompt:#BE95FF,spinner:#EE5396,pointer:#EE5396,header:#08BDBA
   --color=border:#262626,label:#DDE1E6,query:#DDE1E6
-  --border="sharp" --border-label="" --preview-window="border-sharp" --prompt="❯ "
+  --border="none" --border-label="none" --preview-window="border-sharp" --prompt="> "
   --marker=">" --pointer="*" --separator="" --scrollbar=""

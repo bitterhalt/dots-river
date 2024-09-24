@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 BEMENU_ARGS=(-i
-  -H '28'
+  -H '26'
   -P '*'
   --cw '2'
   --ch '18'
   --hp '8'
-  --fn 'jetbrains mono 16px'
+  --fn 'JetBrains Mono 16px'
   --tb '#161616' --tf '#78a9ff'
   --fb '#161616' --ff '#ffffff'
   --cb '#161616' --cf '#525252'
