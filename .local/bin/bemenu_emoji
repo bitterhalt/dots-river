@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-chosen=$(cut -d ';' -f1 ~/.local/share/emoji/emoji | bemenu_runner -B1 --bdr '#d02670' -l 15 -n -p "select emoji:" | sed "s/ .*//")
+chosen=$(cut -d ';' -f1 ~/.local/share/emoji/emoji | bemenu_runner -c -W 0.20 -B1 --bdr '#d02670' -l 15 -n -p "select:" | sed "s/ .*//")
 
 [ -z "$chosen" ] && exit
 

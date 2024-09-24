@@ -40,7 +40,7 @@ riverctl input "$mouse" accel-profile flat
 riverctl input "$mouse" pointer-accel 0
 
 #-----------------------------------------------------#
-#                      Look                           #
+#                      LOOK                           #
 #-----------------------------------------------------#
 
 riverctl background-color 0x000000
@@ -50,7 +50,7 @@ riverctl border-color-unfocused 0x262626
 riverctl border-width 1
 
 #-----------------------------------------------------#
-#                      lauout                         #
+#                      LAYOUT                         #
 #-----------------------------------------------------#
 
 riverctl default-attach-mode bottom

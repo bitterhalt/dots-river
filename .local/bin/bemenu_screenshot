@@ -13,7 +13,7 @@ get_options() {
 
 main() {
 
-  choice=$( (get_options) | bemenu_runner -n -B1 -p "Screenshot:" -l 6)
+  choice=$( (get_options) | bemenu_runner -n -B1 -p "Select:" -l 6)
 
   if [[ -z "${choice// /}" ]]; then
     exit 1
