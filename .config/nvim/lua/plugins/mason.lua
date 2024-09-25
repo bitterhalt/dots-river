@@ -2,10 +2,10 @@ return {
   -- Mason.nvim
   {
     "williamboman/mason.nvim",
+    event = { "BufReadPost", "BufWritePost", "BufNewFile" },
     dependencies = {
       "WhoIsSethDaniel/mason-tool-installer.nvim",
     },
-    event = { "BufReadPost", "BufWritePost", "BufNewFile" },
     config = function()
       local mason = require("mason")
       local mason_tool_installer = require("mason-tool-installer")
@@ -25,10 +25,8 @@ return {
           "stylua", -- lua formatter
           "isort", -- python formatter
           "black", -- python formatter
-          "pylint", -- python linter
           "eslint_d", -- js linter
-          "shellcheck",
-          "shfmt",
+          "shfmt", -- Shell formatter
         },
       })
     end,
@@ -39,10 +37,8 @@ return {
     lazy = true,
     opts = {
       ensure_installed = {
-        "bashls",
         "html",
-        "lua_ls",
-        "pylsp",
+        --"lua_ls",
         "ts_ls",
       },
       handlers = {
@@ -53,21 +49,6 @@ return {
         ["html"] = function()
           require("lspconfig").html.setup({
             filetypes = { "html", "htmldjango" },
-          })
-        end,
-
-        -- Run :PylspInstall python-lsp-isort
-        ["pylsp"] = function()
-          require("lspconfig").pylsp.setup({
-            settings = {
-              pylsp = {
-                plugins = {
-                  rope_autoimport = {
-                    enabled = true,
-                  },
-                },
-              },
-            },
           })
         end,
 
