@@ -2,13 +2,8 @@
   "layer": "bottom",
   "position": "top",
   "height": 28,
-  "modules-left": [
-    "custom/useless",
-    "river/tags"
-  ],
-  "modules-center": [
-    "clock"
-  ],
+  "modules-left": ["custom/useless", "river/tags"],
+  "modules-center": ["clock"],
   "modules-right": [
     "custom/pipewire",
     "custom/mic",
@@ -16,36 +11,30 @@
     "custom/discord",
     "network",
     "custom/swayidle",
-    "custom/power"
+    "custom/power",
   ],
   "battery": {
     "bat": "BAT0",
     "interval": 60,
     "states": {
       "warning": 30,
-      "critical": 15
+      "critical": 15,
     },
     "format": "{capacity}% {icon}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "max-length": 25
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25,
   },
   "cpu": {
     "format": "CPU: {usage}%",
     "tooltip": false,
     "on-click": "$TERMINAL -a floatterm -e htop",
-    "on-click-right": "~/.config/waybar/custom/usage.sh cpu"
+    "on-click-right": "~/.config/waybar/custom/usage.sh cpu",
   },
   "memory": {
     "format": "RAM: {used:0.1f}GB",
     "tooltip": false,
     "on-click": "$TERMINAL -a floatterm -e htop",
-    "on-click-right": "~/.config/waybar/custom/usage.sh ram"
+    "on-click-right": "~/.config/waybar/custom/usage.sh ram",
   },
   "network": {
     "format-wifi": "({signalStrength}%) ",
@@ -54,16 +43,14 @@
     "format-linked": "{ifname} (No IP) ?",
     "format-disconnected": "No connection",
     "on-click": "networkmanager_dmenu",
-    "on-click-right": "$TERMINAL -a floatterm -e nethogs"
+    "on-click-right": "$TERMINAL -a floatterm -e nethogs",
   },
   "wireplumber": {
     "format": "{icon}",
     "format-muted": "",
-    "format-icons": [
-      ""
-    ],
+    "format-icons": [""],
     "on-click-right": "pavucontrol",
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
   },
   "custom/pipewire": {
     "interval": "once",
@@ -72,20 +59,20 @@
     "exec": "~/.config/waybar/scripts/pipewire.sh",
     "on-click-right": "pavucontrol",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "signal": 3
+    "signal": 3,
   },
   "clock": {
     "format": "{:%b %d %H:%M}",
     "tooltip": false,
     "on-click": "~/.local/bin/noti_cal",
     "on-click-middle": "~/.local/bin/noti_weather",
-    "on-click-right": "foot -W 125x30 -a float-call -e calcure"
+    "on-click-right": "foot -W 125x30 -a float-call -e calcure",
   },
   "custom/power": {
     "interval": "once",
     "format": "",
     "tooltip": false,
-    "on-click": "~/.local/bin/bemenu_power"
+    "on-click": "~/.local/bin/bemenu_power",
   },
   "custom/swayidle": {
     "interval": "once",
@@ -93,7 +80,7 @@
     "format": "{}",
     "exec": "~/.config/waybar/scripts/swayidle.sh",
     "signal": 1,
-    "on-click": "~/.config/river/scripts/swayidle-toggle.sh; pkill -RTMIN+1 waybar"
+    "on-click": "~/.config/river/scripts/swayidle-toggle.sh; pkill -RTMIN+1 waybar",
   },
   "custom/mako": {
     "interval": "once",
@@ -101,11 +88,11 @@
     "format": "{}{icon}",
     "format-icons": {
       "default": "󰂚",
-      "dnd": "󰂛"
+      "dnd": "󰂛",
     },
     "on-click": "makoctl mode | grep 'dnd' && makoctl mode -r dnd || makoctl mode -a dnd; pkill -RTMIN+4 waybar",
     "exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\"}' $(makoctl mode | grep -q 'dnd' && echo dnd || echo default) $(makoctl mode | tail -1)",
-    "signal": 4
+    "signal": 4,
   },
   "custom/useless": {
     "interval": "once",
@@ -113,7 +100,7 @@
     "tooltip-format": " left or  + D opens appmenu\n middle checks updates\n right or  + F12 opens setting menu",
     "on-click": "bemenu_runner run --no-exec -B1 -n -p run: -l10 | xargs riverctl spawn",
     "on-click-right": "~/.config/river/scripts/dot-settings.sh",
-    "on-click-middle": "$TERMINAL -a floatterm -e ~/.local/bin/popupgrade"
+    "on-click-middle": "$TERMINAL -a floatterm -e ~/.local/bin/popupgrade",
   },
   "custom/mic": {
     "exec": "~/.config/waybar/scripts/mic.sh",
@@ -122,7 +109,7 @@
     "signal": 2,
     "tooltip": false,
     "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
-    "on-click-right": "pavucontrol"
+    "on-click-right": "pavucontrol",
   },
   "custom/discord": {
     "interval": 10,
@@ -131,6 +118,6 @@
     "exec": "~/.config/waybar/scripts/discord.sh",
     "on-click": "~/.config/river/scripts/scratchpads.sh discord",
     // "on-click-middle": "pkill Discord;"
-    "on-click-middle": "pkill vesktop;"
-  }
+    "on-click-middle": "pkill vesktop;",
+  },
 }
