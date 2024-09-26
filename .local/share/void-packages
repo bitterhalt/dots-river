@@ -44,6 +44,7 @@ grim
 grub-i386-efi
 grub-x86_64-efi
 gtk-engine-murrine
+gvfs
 htop
 hyprpicker
 imv
@@ -103,6 +104,7 @@ ripgrep
 river
 rsync
 sassc
+sheldon
 slurp
 snooze
 socklog-void
@@ -118,7 +120,6 @@ transmission-gtk
 trash-cli
 tty-clock
 tumbler
-udiskie
 unrar
 unzip
 vim
@@ -127,6 +128,7 @@ void-live-audio
 void-repo-multilib
 void-repo-multilib-nonfree
 void-repo-nonfree
+vulkan-loader-32bit
 wev
 wf-recorder
 wget
