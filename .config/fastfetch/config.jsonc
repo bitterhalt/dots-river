@@ -32,7 +32,7 @@
 
     {
       "type": "packages",
-      "format": "{} (pacman)",
+      "format": "{}",
       "key": "PKG  ",
       "keyColor": "35",
     },
