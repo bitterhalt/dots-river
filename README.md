@@ -72,7 +72,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 
 > Nothing is perfect but here are some important reminders what needs to be done
 
-- [ ] Add Install script to setup environment after Void install
+- [ ] Add install script to setup environment after Void install
 - [ ] Fix: Neovim to lazyload formatters after install, atm you need to run `:MasonToolsInstall` to get formatters running
 - [ ] Add list of all the key binds, for this I need to make some sort of parser script because things live in the river init
 
