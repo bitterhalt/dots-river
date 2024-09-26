@@ -27,7 +27,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 - Filemanager: [Yazi](https://yazi-rs.github.io/)
 - Launcher [bemenu](https://github.com/Cloudef/bemenu)
 
-### Main Keybindings
+### Main key bindings
 
 > Here is a list of the main key combinations, mostly default ones
 >
@@ -61,15 +61,27 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 
 #### Sources that I find helpful on my journey
 
-- [SwayKh](https://github.com/SwayKh/dotfiles/tree/main)
-- [Official install guide](https://docs.voidlinux.org/installation/index.html)
-- [Mind's Forge](https://mindsforge.com/Notes/VoidInstall)
-- [kennydodrill.com/blog](https://kennydodrill.com/blog/stable-void-linux-setup-guide/)
+- [SwayKh](https://github.com/SwayKh/dotfiles/tree/main) - Showed me how to configure River 😍
+- [Official install guide](https://docs.voidlinux.org/installation/index.html) - Helped me to setup Void 👍
+- [kennydodrill.com/blog](https://kennydodrill.com/blog/stable-void-linux-setup-guide/) - Helped me to setup Void 👍
+- [Mind's Forge](https://mindsforge.com/Notes/VoidInstall) - Helped me setup Wayland ⭐
+
+---
+
+### Todo
+
+> Nothing is perfect but here are some important reminders what needs to be done
+
+- [ ] Add Install script to setup environment after Void install
+- [ ] Fix: Neovim to lazyload formatters after install, atm you need to run `:MasonToolsInstall` to get formatters running
+- [ ] Add list of all the key binds, for this I need to make some sort of parser script because things live in the river init
+
+---
 
 #### Inspiration
 
 - [My stars](https://github.com/bitterhalt?tab=stars)
 
-#### Special thanks
+#### Special thanks ⭐
 
 - [fesowowako](https://github.com/fesowowako) and his commits from [My Sway-dotfiles](https://github.com/bitterhalt/dots-sway)
