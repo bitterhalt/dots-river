@@ -35,29 +35,29 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 >
 > If you have used DWM before you are allready home
 
-| Keybind                              | Description                                                                          |
-| ------------------------------------ | ------------------------------------------------------------------------------------ |
-| Super + Enter                        | Open Terminal                                                                        |
-| Super + D                            | Open Bemenu as drun node with [j4-dmenu](https://github.com/enkore/j4-dmenu-desktop) |
-| Super +Shift + D                     | Open Bemenu as run mode                                                              |
-| Super + W                            | Open Web Browser                                                                     |
-| Super + E                            | Open TUI Filemanager                                                                 |
-| Super Shift + E                      | Open GUI Filemanager                                                                 |
-| Super + {1,2,3,4,5,6,7,8,9}          | View another tag                                                                     |
-| Super + Shift + {1,2,3,4,5,6,7,8,9} | Move focused tags to another tag view                                                |
-| Super + 0                            | View all tags                                                                        |
-| Super + Alt + {1,2,3,4,5,6,7,8,9}    | Toggle/"combine" different tag views                                                 |
-| Super + Shift + P                    | Open Powermenu                                                                       |
-| Super + {J,K}                        | Focus the next/previous view                                                         |
-| Super + Shift + {J,K}                | Swap the focused view                                                                |
-| Super + {, .}                        | Focus next/previous output                                                           |
-| Super + Shift {, .}                  | Send focused view to the next/previous output                                        |
-| Super + BackSpace                    | Bump the focused view to the top of the layout stack                                 |
-| Super + {L,H}                        | Decrease/increase the main ratio of Rivertile                                        |
-| Super + Shift + {Prior,Next}         | Increment/decrement the main count of Rivertile                                      |
-| Super + F                            | Toggle fullscreen                                                                    |
-| Super + Left + Mouse                 | Float and move the window                                                            |
-| Super + Alt + {H,J,K,L}              | Change layout orientation {left,bottom,top,right}                                    |
+| Keybind                               | Description                                                                          |
+| ------------------------------------- | ------------------------------------------------------------------------------------ |
+| Super + Enter                         | Open Terminal                                                                        |
+| Super + D                             | Open Bemenu as drun node with [j4-dmenu](https://github.com/enkore/j4-dmenu-desktop) |
+| Super +Shift + D                      | Open Bemenu as run mode                                                              |
+| Super + W                             | Open Web Browser                                                                     |
+| Super + E                             | Open TUI Filemanager                                                                 |
+| Super Shift + E                       | Open GUI Filemanager                                                                 |
+| Super + {1,2,3,4,5,6,7,8,9}           | View another tag                                                                     |
+| Super + Shift + {1,2,3,4,5,6,7,8,9}   | Move focused tags to another tag view                                                |
+| Super + 0                             | View all tags                                                                        |
+| Super + Control + {1,2,3,4,5,6,7,8,9} | Toggle/"combine" different tag views                                                 |
+| Super + Shift + P                     | Open Powermenu                                                                       |
+| Super + {J,K}                         | Focus the next/previous view                                                         |
+| Super + Shift + {J,K}                 | Swap the focused view                                                                |
+| Super + {, .}                         | Focus next/previous output                                                           |
+| Super + Shift {, .}                   | Send focused view to the next/previous output                                        |
+| Super + BackSpace                     | Bump the focused view to the top of the layout stack                                 |
+| Super + {L,H}                         | Decrease/increase the main ratio of Rivertile                                        |
+| Super + Shift + {Prior,Next}          | Increment/decrement the main count of Rivertile                                      |
+| Super + F                             | Toggle fullscreen                                                                    |
+| Super + Left + Mouse                  | Float and move the window                                                            |
+| Super + Alt + {H,J,K,L}               | Change layout orientation {left,bottom,top,right}                                    |
 
 #### Sources that I find helpful on my journey
 
