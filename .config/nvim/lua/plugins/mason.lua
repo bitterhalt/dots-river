@@ -2,7 +2,7 @@ return {
   -- Mason.nvim
   {
     "williamboman/mason.nvim",
-    event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+    cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate", "MasonToolsInstall" },
     dependencies = {
       "WhoIsSethDaniel/mason-tool-installer.nvim",
     },
