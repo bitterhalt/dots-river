@@ -6,10 +6,12 @@ case "${1:-}" in
 up)
   wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
   wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SINK@ 5%+
+  #  annoying_sound --volume
   ;;
 down)
   wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
   wpctl set-volume -l 1.1 @DEFAULT_AUDIO_SINK@ 5%-
+  #  annoying_sound --volume
   ;;
 mute)
   wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
