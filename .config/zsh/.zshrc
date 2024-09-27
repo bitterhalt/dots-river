@@ -15,7 +15,7 @@ if [[ -f "/opt/homebrew/bin/brew" ]] then
 fi
 
 # Check if Oh My Posh is installed
-if [ ! -f "$HOME/.local/bin/oh-my-posh" ]; then
+if ! command -v oh-my-posh &> /dev/null; then
     echo "Oh My Posh not found. Installing..."
     curl -s https://ohmyposh.dev/install.sh | bash -s
 fi
