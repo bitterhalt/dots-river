@@ -22,8 +22,6 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 - Cron daemon [snooze](https://github.com/leahneukirchen/snooze)
 - Shell: [zsh](https://www.zsh.org/)
 - Editor: [neovim](https://neovim.io/)
-- Calendar: [Calcure](https://github.com/anufrievroman/calcure)
-  - You need **pipx** to install this on **Void** `pipx install calcure`
 - Filemanager: [Yazi](https://yazi-rs.github.io/)
 - Launcher [bemenu](https://github.com/Cloudef/bemenu)
 
