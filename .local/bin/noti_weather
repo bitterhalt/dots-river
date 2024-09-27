@@ -15,11 +15,9 @@ APIKEY=$(cat "$HOME/Documents/credentials/open_weather_apikey")
 # Search for your city and copy the ID from the URL inside the browser
 CITY_ID="643492"
 URL="http://api.openweathermap.org/data/2.5/weather?id=${CITY_ID}&units=metric&APPID=${APIKEY}"
-SUN_URL="http://api.openweathermap.org/data/2.5/weather?id=${CITY_ID}&APPID=${APIKEY}"
 
 # Check if the service is reachable before making the request
 WEATHER_RESPONSE=$(curl -s "${URL}")
-SUN_RESPONSE=$(curl -s "${SUN_URL}")
 
 CITY_NAME=$(echo "$WEATHER_RESPONSE" | jq '.name' | sed 's/"//g')
 WEATHER_CONDITION=$(echo "$WEATHER_RESPONSE" | jq '.weather[0].main' | sed 's/"//g')
