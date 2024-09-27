@@ -21,7 +21,7 @@
       "critical": 15,
     },
     "format": "{capacity}% {icon}",
-    "format-icons": ["", "", "", "", ""],
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     "max-length": 25,
   },
   "cpu": {
@@ -44,13 +44,6 @@
     "format-disconnected": "No connection",
     "on-click": "networkmanager_dmenu",
     "on-click-right": "$TERMINAL -a floatterm -e nethogs",
-  },
-  "wireplumber": {
-    "format": "{icon}",
-    "format-muted": "",
-    "format-icons": [""],
-    "on-click-right": "pavucontrol",
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
   },
   "custom/pipewire": {
     "interval": "once",
