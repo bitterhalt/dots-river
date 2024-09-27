@@ -14,6 +14,12 @@ if [[ -f "/opt/homebrew/bin/brew" ]] then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# Check if Oh My Posh is installed
+if [ ! -f "$HOME/.local/bin/oh-my-posh" ]; then
+    echo "Oh My Posh not found. Installing..."
+    curl -s https://ohmyposh.dev/install.sh | bash -s
+fi
+
 # Load sheldon plugin manager
 eval "$(sheldon source)"
 
@@ -58,3 +64,4 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --group-directories-fir
 
 # Shell integrations
 eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
