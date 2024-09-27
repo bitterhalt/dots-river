@@ -34,6 +34,7 @@ flatpak
 foot
 fzf
 galculator
+gamemode
 gcc
 gdu
 gimp
@@ -70,6 +71,7 @@ mesa-dri-32bit
 mesa-vaapi
 mesa-vdpau
 mesa-vulkan-radeon
+mesa-vulkan-radeon-32bit
 mpc
 mpd
 mpv
