@@ -14,12 +14,14 @@ fullscreen() {
   grim "$FILENAME"
   notify-send "Screenshot" "File saved as $SAVEDIR" -i "$FILENAME"
   wl-copy <"$FILENAME"
+  annoying_sound --screenshot
 }
 
 region() {
   grim -g "$(slurp)" "$FILENAME"
   notify-send "Screenshot" "File saved as $SAVEDIR" -i "$FILENAME"
   wl-copy <"$FILENAME"
+  annoying_sound --screenshot
 }
 
 region-edit() {
