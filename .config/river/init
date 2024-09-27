@@ -22,7 +22,6 @@ emoji="$HOME/.local/bin/bemenu_emoji"
 powermenu="$HOME/.local/bin/bemenu_power"
 screenshot="$HOME/.local/bin/wl-shot"
 recmenu="$HOME/.local/bin/bemenu_screenshot"
-calendar="foot -W 125x30 -a float-call -e calcure"
 clip="bemenu_clipboard"
 
 # Waybar signals
@@ -79,7 +78,6 @@ riverctl map normal Super N spawn "foot -e nvim ~/Documents/personal/notes/index
 riverctl map normal Super Print spawn "$screenshot -f"
 riverctl map normal Super T spawn "$fterm -W 100x30 -e nvim ~/Documents/personal/notes/todo.md"
 riverctl map normal Super W spawn "$browser"
-riverctl map normal Super+Control C spawn "$calendar"
 riverctl map normal Super+Control E spawn "$emoji"
 riverctl map normal Super+Control P spawn "colorpicker_fancy"
 riverctl map normal Super+Control Print spawn "$recmenu"
@@ -253,7 +251,7 @@ riverctl rule-add -app-id "KeePassXC" -title "Passkey credentials" float
 riverctl rule-add -app-id "vesktop" float
 riverctl rule-add -app-id "blueman-manager" float
 riverctl rule-add -app-id "float-*" float
-riverctl rule-add -app-id "Gimp" float
+riverctl rule-add -app-id "Gimp-*" float
 riverctl rule-add -app-id "floatterm" float
 riverctl rule-add -app-id "galculator" float
 riverctl rule-add -app-id "imv" float
@@ -270,6 +268,7 @@ riverctl rule-add -title "Picture-in-Picture" float
 riverctl rule-add -title "gtk*" float
 riverctl rule-add -title "popup title with spaces" float
 riverctl rule-add -title "zoom" float
+riverctl rule-add -title "ProtonUp-Qt - Wine/Proton Installer" float
 # Decorations
 riverctl rule-add ssd
 riverctl rule-add -app-id "steam" csd
