@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Get current swap usage for all running processes
 
 SUM=0
 OVERALL=0
