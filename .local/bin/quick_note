@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 tempFile=$(mktemp /tmp/note.XXXXXX)
 noteFilename="$HOME/Documents/personal/notes/daily_note/$(date +%d-%m-%Y).md"
