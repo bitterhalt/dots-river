@@ -12,7 +12,7 @@ sort=-time
 #       Style       #
 #####################
 anchor=top-center
-border-radius=4
+border-radius=0
 max-history=20
 max-icon-size=64
 border-size=1
