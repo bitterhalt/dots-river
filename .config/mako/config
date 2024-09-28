@@ -32,10 +32,11 @@ progress-color=#262626
 # Urgency levels #
 ##################
 [urgency=high]
-background-color=#161616
-border-color=#E25D56
+background-color=#000000
+border-color=#FF0000
 text-color=#E9BF57
 default-timeout=0
+on-notify=exec ~/.local/bin/annoying_sound --error
 
 ###############################
 ## Custom notification rules ##
