@@ -1,0 +1,3 @@
+runit(user)	/home/bazz/.local/share/runit/sv/	1
+runit(sudo)	/etc/sv/	0
+Desktop	/home/bazz/Desktop/	d
