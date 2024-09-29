@@ -85,7 +85,7 @@ return {
       { "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", desc = "Open Obsidian Quick Switch menu" },
       { "<leader>ot", "<cmd>ObsidianTags<CR>", desc = "Open obsidian tag finder" },
       { "<leader>obl", "<Cmd>ObsidianBacklinks<CR>", desc = "Open backlinks menu for current note" },
-      { "<leader>obr", "<Cmd>ObsidianRename<CR>", desc = "Rename Note" },
+      { "<leader>or", "<Cmd>ObsidianRename<CR>", desc = "Rename Path" },
     },
   },
 }
