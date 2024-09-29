@@ -24,20 +24,8 @@
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     "max-length": 25,
   },
-  "cpu": {
-    "format": "CPU: {usage}%",
-    "tooltip": false,
-    "on-click": "$TERMINAL -a floatterm -e htop",
-    "on-click-right": "~/.config/waybar/custom/usage.sh cpu",
-  },
-  "memory": {
-    "format": "RAM: {used:0.1f}GB",
-    "tooltip": false,
-    "on-click": "$TERMINAL -a floatterm -e htop",
-    "on-click-right": "~/.config/waybar/custom/usage.sh ram",
-  },
   "network": {
-    "format-wifi": "({signalStrength}%) ",
+    "format-wifi": "({signalStrength}%) 󰖩",
     "format-ethernet": "󰈀",
     "tooltip-format": "  {ipaddr}\n  {bandwidthUpBytes}  {bandwidthDownBytes}",
     "format-linked": "{ifname} (No IP) ?",
@@ -62,7 +50,7 @@
   },
   "custom/power": {
     "interval": "once",
-    "format": "",
+    "format": "󰐥",
     "tooltip": false,
     "on-click": "~/.local/bin/bemenu_power",
   },

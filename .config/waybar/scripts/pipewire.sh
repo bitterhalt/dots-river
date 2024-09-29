@@ -4,7 +4,7 @@ vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
 
 # Check if muted
 if [[ "$vol" == *"[MUTED]"* ]]; then
-  echo '{"text": "", "tooltip": "Muted"}'
+  echo '{"text": "󰝟", "tooltip": "Muted"}'
   exit
 fi
 
@@ -18,10 +18,11 @@ split() {
 
 vol="$(printf "%.0f" "$(split "$vol" ".")")"
 
-if ((vol >= 1)); then
-  icon=""
-else
-  icon=""
-fi
+case 1 in
+$((vol >= 50))) icon="󰕾" ;;
+$((vol >= 30))) icon="󰖀" ;;
+$((vol >= 1))) icon="󰕿" ;;
+*) icon="󰝟" ;;
+esac
 
 echo "{\"text\": \"$icon\", \"tooltip\": \"Volume: $vol%\"}"

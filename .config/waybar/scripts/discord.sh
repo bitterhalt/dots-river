@@ -4,7 +4,7 @@
 
 #if pgrep -x "com.discordapp." >/dev/null; then
 if pgrep -x "vesktop.bin" >/dev/null; then
-  echo "{\"text\": \"\", \"tooltip\": \"<b>Discord is running in hidden workspace</b>\n left or  + F5 to open workspace\n middle to close Discord\"}"
+  echo "{\"text\": \"󰭹\", \"tooltip\": \"<b>Discord is running in hidden workspace</b>\n left or  + F5 to open workspace\n middle to close Discord\"}"
 else
   echo ""
 fi

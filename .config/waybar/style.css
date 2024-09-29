@@ -19,7 +19,7 @@
 * {
   font-family:
     JetBrains Mono,
-    Symbols Nerd Font,
+    Symbols Nerd Font Mono,
     sans-serif;
   font-size: 14px;
   border-radius: 0;
@@ -88,8 +88,6 @@ tooltip label {
  *                      Modules
  * ----------------------------------------------------- */
 
-#cpu,
-#memory,
 #battery,
 #custom-pipewire,
 #wireplumber,
@@ -105,10 +103,6 @@ tooltip label {
   color: @fg;
   padding: 0 6px;
   margin: 0 2px;
-}
-#custom-swayidle {
-  font-size: 16px;
-  color: @fg;
 }
 
 #network.disconnected {
