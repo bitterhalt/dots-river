@@ -67,7 +67,6 @@ riverctl map normal Super Return spawn "$term"
 riverctl map normal Super B spawn "$HOME/.config/river/scripts/waybar-toggle.sh"
 riverctl map normal Super E spawn "$tfm"
 riverctl map normal Super F1 spawn "noti_sysnfo"
-riverctl map normal Super F10 spawn "foot -a float-u -e popupgrade"
 riverctl map normal Super F11 spawn "$HOME/.config/river/scripts/locker.sh"
 riverctl map normal Super F12 spawn "$HOME/.config/river/scripts/dot-settings.sh"
 riverctl map normal Super F2 spawn "noti_usage cpu"
@@ -154,6 +153,9 @@ riverctl map normal Super+Alt L send-layout-cmd rivertile "main-location right"
 # Media keys
 riverctl map -repeat normal None XF86AudioRaiseVolume spawn "$HOME/.config/river/scripts/volume.sh up && $sig_3"
 riverctl map -repeat normal None XF86AudioLowerVolume spawn "$HOME/.config/river/scripts/volume.sh down && $sig_3"
+riverctl map -repeat normal Alt Up spawn "$HOME/.config/river/scripts/volume.sh up && $sig_3"
+riverctl map -repeat normal Alt Down spawn "$HOME/.config/river/scripts/volume.sh down && $sig_3"
+riverctl map normal Alt M spawn "$HOME/.config/river/scripts/volume.sh mute && $sig_3"
 riverctl map normal None XF86AudioMute spawn "$HOME/.config/river/scripts/volume.sh mute && $sig_3"
 riverctl map normal None XF86AudioPlay spawn "$HOME/.config/river/scripts/mediactrl.sh --play"
 riverctl map normal None XF86AudioPrev spawn "$HOME/.config/river/scripts/mediactrl.sh --prv"
@@ -199,15 +201,11 @@ scratch_tags=$((zen_tag | dyn_tag | chat_tag))
 all_but_scratch_tag=$((all_tags ^ scratch_tags))
 riverctl spawn-tagmask ${all_but_scratch_tag}
 
-# Spawn hidden workspaces
-riverctl map normal Super F5 spawn "$scratchpad discord"
-riverctl map normal Super F6 spawn "$scratchpad yazi"
-riverctl map normal Super F7 spawn "$scratchpad nvim"
-riverctl map normal Super F8 spawn "$scratchpad term"
-# Toggle the scratchpad(s) if open
-riverctl map normal Super C toggle-focused-tags "${chat_tag}"
+riverctl map normal Super F5 spawn "$scratchpad nvim"
+riverctl map normal Super F6 spawn "$scratchpad term"
+riverctl map normal Super+Shift R spawn "$scratchpad yazi"
 riverctl map normal Super R toggle-focused-tags "${tfm_tag}"
-# Sway-like dynamic warkspace(tag)
+riverctl map normal Super C toggle-focused-tags "${chat_tag}"
 riverctl map normal Super+Shift Minus set-view-tags "${dyn_tag}"
 riverctl map normal Super Minus toggle-focused-tags "${dyn_tag}"
 
