@@ -11,8 +11,8 @@ BEMENU_ARGS=(
   --tb '#161616' --tf '#be95ff'
   --fb '#161616' --ff '#ffffff'
   --cb '#161616' --cf '#525252'
-  --nb '#161616' --nf '#dde1e6'
-  --ab '#161616' --af '#dde1e6'
+  --nb '#161616' --nf '#e0e0e0'
+  --ab '#161616' --af '#e0e0e0'
   --hb '#161616' --hf '#be95ff'
   --bdr '#262626' --cf '#323232'
   --single-instance

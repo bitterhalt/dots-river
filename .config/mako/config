@@ -24,7 +24,7 @@ padding=10
 #   Colors       #
 ##################
 background-color=#161616
-text-color=#D8D8D8
+text-color=#e0e0e0
 border-color=#262626
 progress-color=#262626
 
@@ -33,8 +33,8 @@ progress-color=#262626
 ##################
 [urgency=high]
 background-color=#000000
-border-color=#FF0000
-text-color=#E9BF57
+border-color=#da1e28
+text-color=#f1c21b
 default-timeout=0
 on-notify=exec ~/.local/bin/annoying_sound --error
 

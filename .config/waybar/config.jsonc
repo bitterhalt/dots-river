@@ -80,7 +80,7 @@
     "interval": "once",
     "format": "",
     "tooltip-format": " left or  + D opens appmenu\n middle checks updates\n right or  + F12 opens setting menu",
-    "on-click": "bemenu_runner run --no-exec -B1 -n -p run: -l10 | xargs riverctl spawn",
+    "on-click": "j4-dmenu-desktop --dmenu='bemenu_runner --fixed-height -B1 -n -l10 -p drun:'",
     "on-click-right": "~/.config/river/scripts/dot-settings.sh",
     "on-click-middle": "$TERMINAL -a floatterm -e ~/.local/bin/popupgrade",
   },

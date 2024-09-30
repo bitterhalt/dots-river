@@ -33,6 +33,7 @@ timer() {
   grim "$FILENAME"
   notify-send "Screenshot" "File saved as $SAVEDIR" -i "$FILENAME"
   wl-copy <"$FILENAME"
+  annoying_sound --screenshot
 }
 
 print_help() {

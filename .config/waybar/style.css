@@ -95,7 +95,6 @@ tooltip label {
 #custom-mako,
 #custom-discord,
 #custom-swayidle,
-#custom-autotile,
 #tray, /* Placeholder if you need this */
 #battery.charging,
 #battery.plugged,
@@ -103,10 +102,6 @@ tooltip label {
   color: @fg;
   padding: 0 6px;
   margin: 0 2px;
-}
-
-#network.disconnected {
-  color: @purple;
 }
 
 #clock {
