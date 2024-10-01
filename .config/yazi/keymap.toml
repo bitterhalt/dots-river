@@ -377,6 +377,18 @@ on   = [ "c", "a" ]
 run  = "plugin compress"
 desc = "Archive selected files"
 
+# Rotate image 90 degrees (does not refresh preview - bug or I am stupid)
+[[manager.prepend_keymap]]
+on = [ "<" ]
+run = ['shell "for file in "$@"; do magick "$file" -rotate 90 "${file%}"; done" --confirm', "refresh" ]
+desc = "Rotate selected images clockwise"
+
+# Rotate image 270 degrees (does not refresh preview - bug or I am stupid)
+[[manager.prepend_keymap]]
+on = [ ">" ]
+run = ['shell "for file in \"$@\"; do magick \"$file\" -rotate 270 \"${file%}\"; done" --confirm', "refresh" ]
+desc = "Rotate selected images counter-clockwise"
+
 # Bookmark keys
 [[manager.prepend_keymap]]
 on = [ "u", "a" ]
