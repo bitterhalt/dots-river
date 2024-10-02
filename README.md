@@ -31,7 +31,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 >
 > The rest can be found in **$HOME/.config/river/init**
 >
-> If you have used DWM before you are allready home
+> If you have used DWM before you are already home
 
 | Keybind                               | Description                                                                          |
 | ------------------------------------- | ------------------------------------------------------------------------------------ |
