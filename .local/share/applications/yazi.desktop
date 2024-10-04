@@ -1,10 +1,9 @@
 [Desktop Entry]
 Type=Application
 Name=Yazi
-GenericName=File manager
-Comment=Launches the lf file manager
-Icon=system-file-manager
+Comment=Blazing fast terminal file manager written in Rust, based on async I/O
+Icon=yazi
 Exec=foot -a yazi -e yazi %u
-Keywords=ConsoleOnly;System;FileTools;FileManager
+Keywords=File;Manager;Explorer;Browser;Launcher
 MimeType=inode/directory;
-Categories=ConsoleOnly;System;FileTools;FileManager
+Categories=Utility;Core;System;FileTools;FileManager;ConsoleOnly

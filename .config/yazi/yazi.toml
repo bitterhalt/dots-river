@@ -61,6 +61,10 @@ imgedit = [
 imv = [
 	{ run = 'imv-dir "$@"', desc = "Open" , orphan = true, for = "unix" },
 ]
+appimage = [
+{ run = '"$0"', orphan = true, desc = "Run AppImage", for = "unix" }
+]
+
 
 [open]
 rules = [
@@ -80,6 +84,8 @@ rules = [
 	{ mime = "*/javascript", use = [ "edit", "reveal" ] },
 	# Empty file
 	{ mime = "inode/x-empty", use = [ "edit", "reveal" ] },
+  # AppImage
+  { name = "*.AppImage", use = [ "appimage", "reveal" ]},
 	# Fallback
 	{ name = "*", use = [ "open", "reveal" ] },
 ]
