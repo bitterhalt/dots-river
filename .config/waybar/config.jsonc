@@ -45,7 +45,7 @@
     "signal": 3,
   },
   "clock": {
-    "format": "{:%b %d %H:%M}",
+    "format": "{:%a, %d %b %H:%M}",
     "tooltip": false,
     "on-click": "~/.local/bin/noti_cal",
     "on-click-middle": "~/.local/bin/noti_weather",
@@ -78,7 +78,7 @@
   },
   "custom/useless": {
     "interval": "once",
-    "format": "",
+    "format": "",
     "tooltip-format": " left or  + D opens appmenu\n middle checks updates\n right or  + F12 opens setting menu",
     "on-click": "j4-dmenu-desktop --dmenu='bemenu_runner --fixed-height -B1 -n -l10 -p drun:'",
     "on-click-right": "~/.config/river/scripts/dot-settings.sh",
