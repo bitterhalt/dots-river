@@ -16,7 +16,7 @@ suppress_default_binds = true
 # Define some key bindings
 <Shift+W> = exec setbg "$imv_current_file"
 q = quit
-y = exec echo working!
+e = exec gimp $imv_current_file > /dev/null 2>&1 &
 
 # Image navigation
 <Left> = prev
