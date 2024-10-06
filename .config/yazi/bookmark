@@ -2,5 +2,6 @@ runit(user)	/home/bazz/.local/share/runit/sv/	1
 runit(sudo)	/etc/sv/	0
 flatpak(home)	/home/bazz/.var/app/	2
 Screenshots	/home/bazz/Pictures/Screenshots/	3
+Projects	/home/bazz/Documents/Projects/	5
 Desktop	/home/bazz/Desktop/	d
 Camera	/home/bazz/Pictures/Camera/	4

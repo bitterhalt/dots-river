@@ -54,7 +54,9 @@ riverctl border-width 1
 
 riverctl default-attach-mode bottom
 riverctl default-layout rivertile
-rivertile -view-padding 5 -outer-padding 0 &
+
+# Adjust gaps between views if you want
+rivertile="rivertile -view-padding 5 -outer-padding 0"
 
 #-----------------------------------------------------#
 #                      LAUNCH                         #
@@ -88,8 +90,8 @@ riverctl map normal Super+Shift Delete spawn "$fterm -W 120x35 -e htop"
 riverctl map normal Super+Shift E spawn "$gfm"
 riverctl map normal Super+Shift F11 spawn "$HOME/.config/river/scripts/swayidle-toggle.sh && $sig_1"
 riverctl map normal Super+Shift F2 spawn "noti_usage ram"
-riverctl map normal Super+Shift N spawn "$term -e ~/.local/bin/quick_note"
 riverctl map normal Super+Shift Print spawn "$screenshot -re"
+
 #-----------------------------------------------------#
 #                      BINDS                          #
 #-----------------------------------------------------#
@@ -145,24 +147,26 @@ riverctl map-pointer normal Super BTN_MIDDLE toggle-float
 riverctl map normal Super Space toggle-float
 # Super+F to toggle fullscreen
 riverctl map normal Super F toggle-fullscreen
-# Use cursed arrow keys: Super+Alt{F10,F12,F11,F9} to change layout orientation
+# Use Super+Alt{H,J,K,L} to change layout orientation
 riverctl map normal Super+Alt J send-layout-cmd rivertile "main-location bottom"
 riverctl map normal Super+Alt K send-layout-cmd rivertile "main-location top"
 riverctl map normal Super+Alt H send-layout-cmd rivertile "main-location left"
 riverctl map normal Super+Alt L send-layout-cmd rivertile "main-location right"
-# Media keys
-riverctl map -repeat normal None XF86AudioRaiseVolume spawn "$HOME/.config/river/scripts/volume.sh up && $sig_3"
+# XF86
+riverctl map -repeat normal Control+Shift Down spawn "$HOME/.config/river/scripts/volume.sh down && $sig_3"
+riverctl map -repeat normal Control+Shift Up spawn "$HOME/.config/river/scripts/volume.sh up && $sig_3"
 riverctl map -repeat normal None XF86AudioLowerVolume spawn "$HOME/.config/river/scripts/volume.sh down && $sig_3"
-riverctl map -repeat normal Control+Alt Up spawn "$HOME/.config/river/scripts/volume.sh up && $sig_3"
-riverctl map -repeat normal Control+Alt Down spawn "$HOME/.config/river/scripts/volume.sh down && $sig_3"
-riverctl map normal Control+Alt M spawn "$HOME/.config/river/scripts/volume.sh mute && $sig_3"
+riverctl map -repeat normal None XF86AudioRaiseVolume spawn "$HOME/.config/river/scripts/volume.sh up && $sig_3"
+riverctl map normal Control+Shift M spawn "$HOME/.config/river/scripts/volume.sh mute && $sig_3"
+riverctl map normal Control+Shift Left spawn "brightnessctl set +5%"
+riverctl map normal Control+Shift Right spawn "brightnessctl set +5%"
 riverctl map normal None XF86AudioMute spawn "$HOME/.config/river/scripts/volume.sh mute && $sig_3"
+riverctl map normal None XF86AudioNext spawn "$HOME/.config/river/scripts/mediactrl.sh --nxt"
 riverctl map normal None XF86AudioPlay spawn "$HOME/.config/river/scripts/mediactrl.sh --play"
 riverctl map normal None XF86AudioPrev spawn "$HOME/.config/river/scripts/mediactrl.sh --prv"
-riverctl map normal None XF86AudioNext spawn "$HOME/.config/river/scripts/mediactrl.sh --nxt"
 riverctl map normal None XF86AudioStop spawn "$HOME/.config/river/scripts/mediactrl.sh --stop"
-riverctl map normal Super+Control M spawn "$HOME/.config/river/scripts/mediactrl.sh --noti"
 riverctl map normal None XF86Calculator spawn "galculator"
+riverctl map normal Super+Control M spawn "$HOME/.config/river/scripts/mediactrl.sh --noti"
 
 #-----------------------------------------------------#
 #                      TAGS                           #
@@ -258,6 +262,7 @@ riverctl rule-add -app-id "nm-connection-editor" float
 riverctl rule-add -app-id "nwg-look" float
 riverctl rule-add -app-id "org.pulseaudio.pavucontrol" float
 riverctl rule-add -app-id "quick_note" float
+riverctl rule-add -app-id "YouTube Music" float
 riverctl rule-add -app-id "steam" float
 riverctl rule-add -app-id "thunar" -title "Confirm to replace files" float
 riverctl rule-add -app-id "thunar" -title "File Operation Progress" float
@@ -275,4 +280,34 @@ riverctl rule-add -app-id "steam" csd
 #                      START                           #
 #-----------------------------------------------------#
 
-bash "$HOME/.config/river/autostart.sh"
+dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY
+
+executes="kanshi swayidle foot mako pipewire wl-paste swaybg /usr/libexec/polkit-gnome-authentication-agent-1"
+
+for execute in $executes; do
+  pidof -q "$execute" && continue
+  case $execute in
+  "foot") "$execute" -s & ;;
+  "wl-paste")
+    "$execute" --watch cliphist -max-items 100 store &
+    ;;
+  "swaybg")
+    "$execute" -m fill -i ~/.local/share/wall/bg &
+    ;;
+  "swayidle")
+    "$execute" -w \
+      timeout 1800 "swaylock -f" \
+      timeout 3600 "wlopm --off '*'" resume "wlopm --on '*'" \
+      before-sleep "swaylock -f" &
+    ;;
+  *)
+    "$execute" &
+    ;;
+  esac
+done >/dev/null 2>&1
+
+pkill -x waybar
+waybar &
+
+pkill -x rivertile
+$rivertile &
