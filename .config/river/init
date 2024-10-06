@@ -32,7 +32,7 @@ sig_3="pkill -RTMIN+3 waybar"
 
 # Inputs
 mouse="pointer-9610-54-Glorious_Model_O" # <- Find your inputs by typing "riverctl list-inputs"
-riverctl set-repeat 30 300
+riverctl set-repeat 50 300
 riverctl keyboard-layout -options caps:escape "fi" # <- caps as escape + lang
 riverctl focus-follows-cursor normal
 riverctl input "$mouse" accel-profile flat
@@ -43,7 +43,7 @@ riverctl input "$mouse" pointer-accel 0
 #-----------------------------------------------------#
 
 riverctl background-color 0x000000
-riverctl border-color-focused 0x525252
+riverctl border-color-focused 0x6f6f6f
 riverctl border-color-urgent 0xa2191f
 riverctl border-color-unfocused 0x262626
 riverctl border-width 1
