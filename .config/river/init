@@ -206,8 +206,8 @@ scratch_tags=$((zen_tag | dyn_tag | chat_tag))
 all_but_scratch_tag=$((all_tags ^ scratch_tags))
 riverctl spawn-tagmask ${all_but_scratch_tag}
 
-riverctl map normal Super F5 spawn "$scratchpad nvim"
-riverctl map normal Super F6 spawn "$scratchpad term"
+riverctl map normal Super F5 spawn "$scratchpad term"
+riverctl map normal Super F6 spawn "$scratchpad discord"
 riverctl map normal Super+Shift R spawn "$scratchpad yazi"
 riverctl map normal Super R toggle-focused-tags "${tfm_tag}"
 riverctl map normal Super C toggle-focused-tags "${chat_tag}"
