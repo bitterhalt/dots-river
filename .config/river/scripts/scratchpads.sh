@@ -10,7 +10,6 @@ fi
 
 term="foot"
 yazi="$term --app-id special-yazi -e yazi"
-nvim="$term --app-id zen-nvim -e nvim"
 zerminal="$term --app-id zen-term"
 
 zen_tag=$((1 << 11))
@@ -21,11 +20,6 @@ case "$1" in
   search="special-yazi"
   tag="$tfm_tag"
   cmd="$yazi"
-  ;;
-"nvim")
-  search="zen-nvim"
-  tag="$zen_tag"
-  cmd="$nvim"
   ;;
 "term")
   search="zen-term"
