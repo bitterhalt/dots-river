@@ -1,5 +1,6 @@
 runit(user)	/home/bazz/.local/share/runit/sv/	1
 runit(sudo)	/etc/sv/	0
+flatpak-exports	/var/lib/flatpak/exports/bin/	6
 flatpak(home)	/home/bazz/.var/app/	2
 Screenshots	/home/bazz/Pictures/Screenshots/	3
 Projects	/home/bazz/Documents/Projects/	5

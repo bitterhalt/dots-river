@@ -56,7 +56,7 @@ riverctl default-attach-mode bottom
 riverctl default-layout rivertile
 
 # Adjust gaps between views if you want
-rivertile="rivertile -view-padding 4 -outer-padding 0"
+rivertile="rivertile -view-padding 4 -outer-padding 4"
 
 #-----------------------------------------------------#
 #                      LAUNCH                         #
@@ -71,6 +71,7 @@ riverctl map normal Super E spawn "$tfm"
 riverctl map normal Super F1 spawn "noti_sysnfo"
 riverctl map normal Super F11 spawn "$HOME/.config/river/scripts/locker.sh"
 riverctl map normal Super F12 spawn "$HOME/.config/river/scripts/dot-settings.sh"
+riverctl map normal Super F8 spawn "bemenu_sound"
 riverctl map normal Super F2 spawn "noti_usage cpu"
 riverctl map normal Super F4 spawn "bemenu_killer"
 riverctl map normal Super F9 spawn "$HOME/.config/river/scripts/mic-toggle.sh && $sig_2"

@@ -15,11 +15,9 @@ bash-completion
 bat
 bemenu
 borgmatic
-btop
 chafa
 chrony
 cliphist
-cmus
 cronie
 cryptsetup
 dbus
@@ -150,6 +148,7 @@ xmirror
 xorg-fonts
 xorg-input-drivers
 xorg-minimal
+xterm
 xtools
 xz
 yazi

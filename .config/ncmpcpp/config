@@ -178,7 +178,7 @@ progressbar_look = "━━─"
 # progressbar_look = "◈◆◇"
 # progressbar_look = "→→"
 [ui]
-header_visibility = "yes" # For classic interface
+header_visibility = "no" # For classic interface
 user_interface = classic
 # alternative
 enable_window_title = no
