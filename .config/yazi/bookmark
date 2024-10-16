@@ -1,3 +1,4 @@
+usb	/run/media/bazz/	7
 runit(user)	/home/bazz/.local/share/runit/sv/	1
 runit(sudo)	/etc/sv/	0
 flatpak-exports	/var/lib/flatpak/exports/bin/	6

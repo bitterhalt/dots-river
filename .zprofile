@@ -22,6 +22,6 @@ export HISTFILE="$XDG_DATA_HOME/history"
 export SSH_AUTH_SOCK="$XDG_CACHE_HOME/ssh-agent.sock"
 
 # Start River environment
-if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
+if [ -z "$WAYLAND_DISPLAY" ] && [ $(tty) = "/dev/tty1" ]; then
   exec $HOME/.local/bin/river-start
 fi

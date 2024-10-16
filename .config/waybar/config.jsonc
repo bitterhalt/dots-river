@@ -7,7 +7,7 @@
   "modules-right": [
     "custom/pipewire",
     "custom/mic",
-    "custom/mako",
+    //"custom/mako",
     "custom/discord",
     "network",
     "custom/swayidle",
