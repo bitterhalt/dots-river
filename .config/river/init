@@ -66,7 +66,7 @@ riverctl map normal Super D spawn "$drun"
 riverctl map normal Super+Shift D spawn "$run"
 riverctl map normal Super+Shift p spawn "$powermenu"
 riverctl map normal Super Return spawn "$term"
-riverctl map normal Super B spawn "$HOME/.config/river/scripts/waybar-toggle.sh"
+riverctl map normal Super B spawn "$HOME/.config/river/scripts/barhider.sh"
 riverctl map normal Super E spawn "$tfm"
 riverctl map normal Super F1 spawn "noti_sysnfo"
 riverctl map normal Super F11 spawn "$HOME/.config/river/scripts/locker.sh"
@@ -265,6 +265,7 @@ riverctl rule-add -app-id "nwg-look" float
 riverctl rule-add -app-id "org.pulseaudio.pavucontrol" float
 riverctl rule-add -app-id "quick_note" float
 riverctl rule-add -app-id "steam" float
+riverctl rule-add -app-id "swayimg" float
 riverctl rule-add -app-id "thunar" -title "Confirm to replace files" float
 riverctl rule-add -app-id "thunar" -title "File Operation Progress" float
 riverctl rule-add -app-id "vesktop" float
