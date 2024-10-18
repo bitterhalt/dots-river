@@ -16,9 +16,9 @@ application/x-extension-xhtml=userapp-Firefox-ZGQGT2.desktop
 inode/directory=yazi.desktop
 application/x-extension-xht=userapp-Firefox-ZGQGT2.desktop
 application/x-zerosize=text.desktop
-image/jpeg=imv-dir.desktop
-image/png=imv-dir.desktop
-image/gif=imv-dir.desktop
+image/jpeg=img.desktop
+image/png=img.desktop
+image/gif=img.desktop
 text/x-lua=text.desktop
 application/pdf=org.pwmt.zathura-pdf-poppler.desktop
 

@@ -15,7 +15,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 - Symbols and icons: [Nerd Font Symbols](https://www.nerdfonts.com/)
 - GTK-theme: [adw-gtk3](https://github.com/lassekongo83/adw-gtk3)
 - Icons: [Papirus Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
-- Image Viewer: [imv](https://sr.ht/~exec64/imv/)
+- Image Viewer: [swayimg](https://github.com/artemsen/swayimg)
 - Media Player: [mpv](https://mpv.io/)
 - Notification daemon: [mako](https://github.com/emersion/mako)
 - Terminal [foot](https://codeberg.org/dnkl/foot)

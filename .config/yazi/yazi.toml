@@ -59,7 +59,10 @@ imgedit = [
   { run = 'gimp "$@"',  desc = "Edit", orphan = true,  for = "unix" },
 ]
 imv = [
-	{ run = 'imv-dir "$@"', desc = "Open" , orphan = true, for = "unix" },
+	{ run = 'imv-dir "$@"', desc = "Open with imv" , orphan = true, for = "unix" },
+]
+swayimg = [
+	{ run = 'swayimg "$@"', desc = "Open with swayimg" , orphan = true, for = "unix" },
 ]
 appimage = [
 { run = '"$0"', orphan = true, desc = "Run AppImage", for = "unix" }
@@ -73,7 +76,7 @@ rules = [
 	# Text
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
 	# Image
-	{ mime = "image/*", use = [ "imv", "imgedit", "open", "reveal"  ] },
+	{ mime = "image/*", use = [ "swayimg", "imgedit", "open", "reveal"  ] },
 	# Media
 	{ mime = "{audio,video}/*", use = [ "play", "reveal" ] },
 	# Archive
