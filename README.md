@@ -10,7 +10,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 
 - Distro: [Void](https://voidlinux.org/)
 - WM: [River](https://codeberg.org/river/river)
-- Bar: [Waybar](https://github.com/Alexays/Waybar)
+- Bar: [i3status-river](https://github.com/MaxVerevkin/i3bar-river)
 - Fonts: JetBrains Mono
 - Symbols and icons: [Nerd Font Symbols](https://www.nerdfonts.com/)
 - GTK-theme: [adw-gtk3](https://github.com/lassekongo83/adw-gtk3)
