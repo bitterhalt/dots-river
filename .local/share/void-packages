@@ -48,6 +48,8 @@ gtk-engine-murrine
 gvfs
 htop
 hyprpicker
+i3bar-river
+i3status-rust
 imv
 j4-dmenu-desktop
 jq
@@ -92,6 +94,7 @@ pavucontrol
 perf
 pinentry-gnome
 pipewire
+pkg-config
 polkit
 polkit-gnome
 ps_mem
@@ -115,6 +118,7 @@ steam
 swappy
 swaybg
 swayidle
+swayimg
 swaylock
 syncthing
 thunderbird
