@@ -1,0 +1,96 @@
+[icons]
+icons = "material-nf"
+
+[theme]
+theme = "native"
+[theme.overrides]
+
+# Focused window
+#[[block]]
+#block = "focused_window"
+#driver = "wlr_toplevel_management"
+## if_command = 'ps aux | rg "\d river"'
+#[block.format]
+#full = " $title.str(max_w:30) | "
+
+# MPD
+#[[block]]
+#block = "music"
+#format = " {[ $play $combo.str(max_w:20) ]|}"
+#interface_name_exclude = [".*kdeconnect.*", "mpd"]
+
+# Swayidle toggle
+[[block]]
+block = "custom"
+command = "$HOME/.config/i3status-rust/scripts/swayidle.sh"
+hide_when_empty = true
+interval = "once"
+signal = 1
+[[block.click]]
+button = "left"
+cmd = "~/.config/river/scripts/swayidle-toggle.sh; pkill -RTMIN+1 i3status-rs"
+
+# Pipewire
+[[block]]
+block = "custom"
+command = "$HOME/.config/i3status-rust/scripts/pipewire.sh"
+interval = "once"
+signal = 3
+[[block.click]]
+button = "left"
+cmd = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; pkill -RTMIN+3 i3status-rs"
+[[block.click]]
+button = "right"
+cmd = "pavucontrol"
+
+# Mic toggle
+[[block]]
+block = "custom"
+command = "$HOME/.config/i3status-rust/scripts/mic.sh"
+interval = "once"
+hide_when_empty = true
+signal = 2
+[[block.click]]
+button = "left"
+cmd = "wpctl set-mute @DEFAULT_SOURCE@ toggle; pkill -RTMIN+2 i3status-rs"
+
+# Battery
+[[block]]
+block = "battery"
+format = " $icon "
+missing_format = ""
+
+# Network
+[[block]]
+block = "net"
+interval = 5
+format = " $icon "
+missing_format = "x"
+inactive_format = "Network disconnected"
+[[block.click]]
+button = "right"
+cmd = "networkmanager_dmenu"
+
+# Clock
+[[block]]
+block = "time"
+interval = 60
+format = " $timestamp.datetime(f:'%d.%m %H:%M') "
+[[block.click]]
+button = "left"
+cmd = "noti_cal"
+[[block.click]]
+button = "right"
+cmd = "noti_weather"
+[block.theme_overrides]
+#idle_bg = "#262626"
+# Power
+[[block]]
+block = "custom"
+interval = "once"
+format = "󰐥  "
+command = "$icon"
+[[block.click]]
+button = "left"
+cmd = "bemenu_power"
+

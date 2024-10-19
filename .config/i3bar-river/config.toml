@@ -1,0 +1,41 @@
+# command = "slstatus -s"
+command = "i3status-rs"
+
+### Light Colors
+background      = "#161616"
+color           = "#D8D8D8"
+separator       = "#D8D8D8"
+tag_fg          = "#D8D8D8"
+tag_bg          = "#161616"
+tag_focused_fg  = "#D8D8D8"
+tag_focused_bg  = "#393939"
+tag_urgent_fg   = "#a56eff"
+tag_urgent_bg   = "#161616"
+tag_inactive_fg = "#393939"
+tag_inactive_bg = "#161616"
+
+
+font = "JetBrains Mono, Symbols Nerd Font Mono 11"
+height = 28
+margin_top = 0
+margin_bottom = 0
+margin_left = 0
+margin_right = 0
+separator_width = 0
+tags_r = 0.0
+tags_padding = 10.0
+blocks_r = 4.0
+blocks_overlap = 0.0
+
+position = "top"
+hide_inactive_tags = true
+invert_touchpad_scrolling = false
+show_layout_name = false
+
+# Per output overrides
+# [output.your-output-name]
+# enable = false
+
+# You can have any number of overrides
+# [output.eDP-1]
+# enable = false
