@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 
 if pgrep i3bar-river >/dev/null; then
   pkill i3bar-river
