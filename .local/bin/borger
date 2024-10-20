@@ -28,22 +28,18 @@ if [[ -n "$selected" ]]; then
     notify-send -t 8000 -a center_notify "Borg is taking backup" "This could take a while.."
     borgmatic --verbosity -1 --syslog-verbosity 1
     notify-send "Borg snapshot ready" "$(date '+%d.%m-%H:%M')"
-    annoying_sound --complete
     ;;
   "Mount latest snapshot")
     borgmatic mount --archive latest --mount-point $HOME/temp
     notify-send -t 8000 -a center_notify "Borg" "Latest snapshot mounted at $HOME/temp/"
-    annoying_sound --device-added
     ;;
   "Mount all archives")
     borgmatic mount --mount-point $HOME/temp
     notify-send -t 8000 -a center_notify "Borg" "Snapshots mounted at $HOME/temp/"
-    annoying_sound --device-added
     ;;
   "Umount snapshot")
     borgmatic umount --mount-point $HOME/temp
     notify-send -t 8000 -a center_notify "Borg" "Umount complete!"
-    annoying_sound --device-removed
     ;;
   esac
 fi
