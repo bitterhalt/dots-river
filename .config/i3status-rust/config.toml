@@ -97,7 +97,7 @@ cmd = "noti_weather"
 block = "custom"
 interval = "once"
 format = "󰐥  "
-command = "none"
+command = ""
 [[block.click]]
 button = "left"
 cmd = "bemenu_power"
