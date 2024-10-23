@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-exec flatpak run app.moosync.moosync "$@" >/dev/null 2>&1
