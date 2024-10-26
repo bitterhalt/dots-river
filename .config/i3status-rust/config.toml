@@ -4,6 +4,17 @@ icons = "material-nf"
 [theme]
 theme = "native"
 
+# Weather
+#[[block]]
+#block = "weather"
+#autolocate = true
+#interval = 3600
+#format = " $location $temp "
+#format_alt = " (forecast) {$temp_favg ({$temp_fmin}-{$temp_fmax})|Unavailable} "
+#[block.service]
+#name = "metno"
+#forecast_hours = 6
+
 # Swayidle toggle
 [[block]]
 block = "custom"
@@ -38,6 +49,15 @@ signal = 2
 [[block.click]]
 button = "left"
 cmd = "wpctl set-mute @DEFAULT_SOURCE@ toggle; pkill -RTMIN+2 i3status-rs"
+
+#[[block]]
+#block = "custom"
+#command = "$HOME/.config/i3status-rust/scripts/discord.sh"
+#interval = 10
+#hide_when_empty = true
+#[[block.click]]
+#button = "left"
+#cmd = "$HOME/.config/river/scripts/scratchpads.sh discord"
 
 # Battery
 [[block]]
