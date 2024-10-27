@@ -5,7 +5,6 @@ ARCHIVE="RIVER
 FOOT
 BEMENU
 YAZI
-I3STATUS-RUST
 WAYBAR
 SWAYLOCK
 ZSH
@@ -27,6 +26,5 @@ NEOVIM) $TERMCMD -e nvim $HOME/.config/nvim/init.lua ;;
 RIVER) $TERMCMD -e nvim $HOME/.config/river/init ;;
 SWAYLOCK) $TERMCMD -e nvim $HOME/.config/swaylock/config ;;
 WAYBAR) $TERMCMD -e nvim $HOME/.config/waybar/config.jsonc ;;
-I3STATUS-RUST) $TERMCMD -e nvim $HOME/.config/i3status-rust/config.toml ;;
 ZSH) $TERMCMD -e nvim $HOME/.config/zsh/.zshrc ;;
 esac
