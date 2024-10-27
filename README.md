@@ -10,9 +10,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 
 - Distro: [Void](https://voidlinux.org/)
 - WM: [River](https://codeberg.org/river/river)
-- Bar: [i3bar-river](https://github.com/MaxVerevkin/i3bar-river)
-  - Note: ATM this is not in Void repos so you need to install it with Cargo or make local xbps package
-  - There is also **Waybar** but I prefer **i3bar-river**, because it hides inactive workspaces
+- Bar: [Waybar](https://github.com/Alexays/Waybar)
 - Fonts: JetBrains Mono
 - Symbols and icons: [Nerd Font Symbols](https://www.nerdfonts.com/)
 - GTK-theme: [adw-gtk3](https://github.com/lassekongo83/adw-gtk3)
