@@ -25,9 +25,9 @@ recmenu="$HOME/.local/bin/bemenu_screenshot"
 clip="bemenu_clipboard"
 
 # Waybar signals
-sig_1="pkill -SIGRTMIN+1 i3status-rs"
-sig_2="pkill -SIGRTMIN+2 i3status-rs"
-sig_3="pkill -SIGRTMIN+3 i3status-rs"
+sig_1="pkill -SIGRTMIN+1 wwaybar"
+sig_2="pkill -SIGRTMIN+2 wwaybar"
+sig_3="pkill -SIGRTMIN+3 wwaybar"
 #sig_4="pkill -RTMIN+4 i3status-rs"
 
 # Inputs
@@ -309,8 +309,8 @@ for execute in $executes; do
   esac
 done >/dev/null 2>&1
 
-pkill -x i3bar-river
-i3bar-river &
+pkill -x waybar
+waybar &
 
 pkill -x rivertile
 $rivertile &
