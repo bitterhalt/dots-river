@@ -25,9 +25,9 @@ recmenu="$HOME/.local/bin/bemenu_screenshot"
 clip="bemenu_clipboard"
 
 # Waybar signals
-sig_1="pkill -SIGRTMIN+1 wwaybar"
-sig_2="pkill -SIGRTMIN+2 wwaybar"
-sig_3="pkill -SIGRTMIN+3 wwaybar"
+sig_1="pkill -SIGRTMIN+1 waybar"
+sig_2="pkill -SIGRTMIN+2 waybar"
+sig_3="pkill -SIGRTMIN+3 waybar"
 #sig_4="pkill -RTMIN+4 i3status-rs"
 
 # Inputs
