@@ -64,7 +64,7 @@
     "format": "{}",
     "exec": "~/.config/waybar/scripts/swayidle.sh",
     "signal": 1,
-    "on-click": "~/.config/river/scripts/swayidle-toggle.sh; pkill -RTMIN+1 waybar",
+    "on-click": "~/.config/river/scripts/swayidle-toggle.sh; pkill -SIGRTMIN+1 waybar",
   },
   "custom/mako": {
     "interval": "once",
@@ -74,7 +74,7 @@
       "default": "󰂚",
       "dnd": "󰂛",
     },
-    "on-click": "makoctl mode | grep 'dnd' && makoctl mode -r dnd || makoctl mode -a dnd; pkill -RTMIN+4 waybar",
+    "on-click": "makoctl mode | grep 'dnd' && makoctl mode -r dnd || makoctl mode -a dnd; pkill -SIGRTMIN+4 waybar",
     "exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\"}' $(makoctl mode | grep -q 'dnd' && echo dnd || echo default) $(makoctl mode | tail -1)",
     "signal": 4,
   },
