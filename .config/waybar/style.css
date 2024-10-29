@@ -110,7 +110,6 @@ tooltip label {
 #custom-mic,
 #custom-discord,
 #custom-swayidle,
-#custom-weather,
 #tray, /* Placeholder if you need this */
 #battery.charging,
 #battery.plugged,
@@ -118,6 +117,14 @@ tooltip label {
   color: @fg;
   padding: 0 6px;
   margin: 0 2px;
+}
+
+#custom-weather,
+#custom-moon,
+#custom-sep,
+#custom-mark {
+  color: @fg2;
+  padding: 0 6px;
 }
 
 #mpris {
@@ -128,7 +135,6 @@ tooltip label {
 
 #clock {
   color: @fg;
-  padding: 0 5px;
 }
 
 #battery.critical:not(.charging) {

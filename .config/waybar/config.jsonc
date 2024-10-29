@@ -3,7 +3,7 @@
   "position": "top",
   "height": 28,
   "modules-left": ["river/tags"],
-  "modules-center": ["group/clock"],
+  "modules-center": ["clock", "group/info"],
   "modules-right": [
     //"mpris",
     "custom/pipewire",
@@ -63,23 +63,17 @@
   },
   "clock": {
     "format": "{:%a, %d %b %H:%M}",
-    "tooltip-format": "<span color='#e0e0e0'><tt>{calendar}</tt></span>",
-    "calendar": {
-      "format": {
-        "months": "<span color='#e0e0e0'><b>{}</b></span>",
-        "weeks": "<span color='#e0e0e0'><b>{}</b></span>",
-        "weekdays": "<span color='#e0e0e0'><b>{}</b></span>",
-        "today": "<span color='#BE95FF' background='#161616'><b>{}</b></span>",
-      },
-    },
+    "tooltip": false,
+    "on-click": "~/.local/bin/noti_cal",
   },
-  "group/clock": {
+  "group/info": {
+    "transition-left-to-right": false,
     "orientation": "inherit",
     "drawer": {
       "click-to-reveal": true,
       "transition-duration": 500,
     },
-    "modules": ["clock", "custom/weather"],
+    "modules": ["custom/mark", "custom/weather", "custom/sep", "custom/moon"],
   },
   "custom/power": {
     "interval": "once",
@@ -120,6 +114,13 @@
     "exec": "~/.local/bin/wttrbar --date-format '%d.%m'",
     "return-type": "json",
   },
+  "custom/moon": {
+    "exec": "~/.config/waybar/scripts/moon.sh",
+    "format": "Moon: {}",
+    "interval": 3600,
+    "return-type": "json",
+    "tooltip": true,
+  },
   "custom/discord": {
     "interval": 10,
     "return-type": "json",
@@ -127,5 +128,13 @@
     "exec": "~/.config/waybar/scripts/discord.sh",
     "on-click": "~/.config/river/scripts/scratchpads.sh discord",
     "on-click-middle": "pkill vesktop;",
+  },
+  "custom/mark": {
+    "format": "",
+    "tooltip": false,
+  },
+  "custom/sep": {
+    "format": "::",
+    "tooltip": false,
   },
 }
