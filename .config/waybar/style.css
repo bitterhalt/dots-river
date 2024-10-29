@@ -61,7 +61,7 @@ tooltip label {
  * ----------------------------------------------------- */
 
 #tags {
-  padding: 0px 10px;
+  padding: 0px 5px;
 }
 
 #tags button {
@@ -69,6 +69,7 @@ tooltip label {
   padding: 0px 5px;
   font-weight: normal;
   margin: 2px 2px;
+  border: solid 1px @bg;
 }
 
 #tags button.occupied {
@@ -77,16 +78,15 @@ tooltip label {
 
 #tags button.focused {
   color: @fg;
-  background: @bg3;
+  background-color: @bg3;
   font-weight: normal;
   border-radius: 2px;
-  /*box-shadow: inset 0 -1px @fg; */
+  border: solid 1px @bg4;
 }
 
 #tags button.urgent {
   color: @purple;
 }
-
 /* Dirty hack to hide vacant tags in River */
 #tags button:not(.occupied):not(.focused) {
   font-size: 0;
@@ -108,15 +108,21 @@ tooltip label {
 #custom-pipewire,
 #wireplumber,
 #custom-mic,
-#custom-mako,
 #custom-discord,
 #custom-swayidle,
+#custom-weather,
 #tray, /* Placeholder if you need this */
 #battery.charging,
 #battery.plugged,
 #network {
   color: @fg;
   padding: 0 6px;
+  margin: 0 2px;
+}
+
+#mpris {
+  color: @fg2;
+  padding: 0 10px;
   margin: 0 2px;
 }
 

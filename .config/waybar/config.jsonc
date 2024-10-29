@@ -2,9 +2,10 @@
   "layer": "bottom",
   "position": "top",
   "height": 28,
-  "modules-left": ["custom/useless", "river/tags"],
-  "modules-center": ["clock"],
+  "modules-left": ["river/tags"],
+  "modules-center": ["group/clock"],
   "modules-right": [
+    //"mpris",
     "custom/pipewire",
     "custom/mic",
     //"custom/mako",
@@ -23,6 +24,20 @@
     "format": "{capacity}% {icon}",
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     "max-length": 25,
+  },
+  "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} {dynamic}",
+    "player-icons": {
+      "default": "",
+      "spotifyd": "",
+      "spotify": "",
+    },
+    "dynamic-order": ["title", "artist"],
+    "status-icons": {
+      "paused": "",
+    },
+    "ignored-players": ["firefox"],
   },
   "network": {
     "format-wifi": "{icon}",
@@ -48,9 +63,23 @@
   },
   "clock": {
     "format": "{:%a, %d %b %H:%M}",
-    "tooltip": false,
-    "on-click": "~/.local/bin/noti_cal",
-    "on-click-middle": "~/.local/bin/noti_weather",
+    "tooltip-format": "<span color='#e0e0e0'><tt>{calendar}</tt></span>",
+    "calendar": {
+      "format": {
+        "months": "<span color='#e0e0e0'><b>{}</b></span>",
+        "weeks": "<span color='#e0e0e0'><b>{}</b></span>",
+        "weekdays": "<span color='#e0e0e0'><b>{}</b></span>",
+        "today": "<span color='#BE95FF' background='#161616'><b>{}</b></span>",
+      },
+    },
+  },
+  "group/clock": {
+    "orientation": "inherit",
+    "drawer": {
+      "click-to-reveal": true,
+      "transition-duration": 500,
+    },
+    "modules": ["clock", "custom/weather"],
   },
   "custom/power": {
     "interval": "once",
@@ -65,18 +94,6 @@
     "exec": "~/.config/waybar/scripts/swayidle.sh",
     "signal": 1,
     "on-click": "~/.config/river/scripts/swayidle-toggle.sh; pkill -SIGRTMIN+1 waybar",
-  },
-  "custom/mako": {
-    "interval": "once",
-    "return-type": "json",
-    "format": "{}{icon}",
-    "format-icons": {
-      "default": "󰂚",
-      "dnd": "󰂛",
-    },
-    "on-click": "makoctl mode | grep 'dnd' && makoctl mode -r dnd || makoctl mode -a dnd; pkill -SIGRTMIN+4 waybar",
-    "exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"mode: %s\"}' $(makoctl mode | grep -q 'dnd' && echo dnd || echo default) $(makoctl mode | tail -1)",
-    "signal": 4,
   },
   "custom/useless": {
     "interval": "once",
@@ -95,13 +112,20 @@
     "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
     "on-click-right": "pavucontrol",
   },
+  "custom/weather": {
+    "format": "{}°C",
+    "tooltip": true,
+    "interval": 3600,
+    //  Uses this script: https://github.com/bjesus/wttrbar
+    "exec": "~/.local/bin/wttrbar --date-format '%d.%m'",
+    "return-type": "json",
+  },
   "custom/discord": {
     "interval": 10,
     "return-type": "json",
     "format": "{}",
     "exec": "~/.config/waybar/scripts/discord.sh",
     "on-click": "~/.config/river/scripts/scratchpads.sh discord",
-    // "on-click-middle": "pkill Discord;"
     "on-click-middle": "pkill vesktop;",
   },
 }
