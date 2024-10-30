@@ -1,11 +1,6 @@
-/* ------------------------------------------------------------------
- *                      Style config
- * If some of the icons looks blurry you can try to fix font size
- * per block. Usually non fa-icons (Font Awesome) wont scale well with font size
- * You can also just use pathed nerd font instead of icons,
- * but that can lead spacing issues.
- * ----------------------------------------------------------------- */
-
+/* -----------------------------------------------------
+ *                      Config
+ * ----------------------------------------------------- */
 /* Colors */
 @define-color bg #161616;
 @define-color bg2 #262626;
