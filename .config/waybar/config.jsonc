@@ -67,13 +67,13 @@
     "on-click": "~/.local/bin/noti_cal",
   },
   "group/info": {
-    "transition-left-to-right": false,
-    "orientation": "inherit",
+    "orientation": "horizontal",
     "drawer": {
+      "transition-left-to-right": false,
       "click-to-reveal": true,
       "transition-duration": 500,
     },
-    "modules": ["custom/mark", "custom/weather", "custom/sep", "custom/moon"],
+    "modules": ["custom/mark", "custom/weather", "custom/moon"],
   },
   "custom/power": {
     "interval": "once",
@@ -107,7 +107,7 @@
     "on-click-right": "pavucontrol",
   },
   "custom/weather": {
-    "format": "{}°C",
+    "format": " {}°C",
     "tooltip": true,
     "interval": 3600,
     //  Uses this script: https://github.com/bjesus/wttrbar
@@ -116,7 +116,7 @@
   },
   "custom/moon": {
     "exec": "~/.config/waybar/scripts/moon.sh",
-    "format": "Moon: {}",
+    "format": "{}",
     "interval": 3600,
     "return-type": "json",
     "tooltip": true,
@@ -130,11 +130,13 @@
     "on-click-middle": "pkill vesktop;",
   },
   "custom/mark": {
+    "interval": "once",
     "format": "",
     "tooltip": false,
   },
   "custom/sep": {
-    "format": "::",
+    "interval": "once",
+    "format": ":",
     "tooltip": false,
   },
 }

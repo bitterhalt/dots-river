@@ -28,7 +28,6 @@ clip="bemenu_clipboard"
 sig_1="pkill -SIGRTMIN+1 waybar"
 sig_2="pkill -SIGRTMIN+2 waybar"
 sig_3="pkill -SIGRTMIN+3 waybar"
-#sig_4="pkill -RTMIN+4 i3status-rs"
 
 # Inputs
 mouse="pointer-9610-54-Glorious_Model_O" # <- Find your inputs by typing "riverctl list-inputs"
@@ -285,7 +284,7 @@ riverctl rule-add -app-id "steam" csd
 
 dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY
 
-executes="kanshi swayidle foot mako wl-paste swaybg /usr/libexec/polkit-gnome-authentication-agent-1"
+executes="kanshi waybar swayidle foot mako wl-paste swaybg /usr/libexec/polkit-gnome-authentication-agent-1"
 
 for execute in $executes; do
   pidof -q "$execute" && continue
@@ -308,9 +307,6 @@ for execute in $executes; do
     ;;
   esac
 done >/dev/null 2>&1
-
-pkill -x waybar
-waybar &
 
 pkill -x rivertile
 $rivertile &

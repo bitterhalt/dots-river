@@ -16,7 +16,7 @@
 @define-color fg2 #c6c6c6;
 @define-color red #DA1E28;
 @define-color blue #78A9FF;
-@define-color purple #a56eff;
+@define-color purple #BE95FF;
 
 * {
   font-family:
@@ -69,7 +69,6 @@ tooltip label {
   padding: 0px 5px;
   font-weight: normal;
   margin: 2px 2px;
-  border: solid 1px @bg;
 }
 
 #tags button.occupied {
@@ -81,7 +80,6 @@ tooltip label {
   background-color: @bg3;
   font-weight: normal;
   border-radius: 2px;
-  border: solid 1px @bg4;
 }
 
 #tags button.urgent {
