@@ -3,17 +3,41 @@
   "position": "top",
   "height": 28,
   "modules-left": ["river/tags"],
-  "modules-center": ["clock", "group/info"],
+  "modules-center": ["clock#1", "group/clock"],
   "modules-right": [
-    //"mpris",
+    // "mpris",
+    "group/sys",
     "custom/pipewire",
     "custom/mic",
-    //"custom/mako",
-    "custom/discord",
     "network",
     "custom/swayidle",
     "custom/power",
   ],
+  "cpu": {
+    "format": "󱐋 {usage}%",
+    "tooltip": false,
+    "on-click": "$TERMINAL -a floatterm -e htop",
+    "on-click-right": "~/.local/bin/noti_usage cpu",
+  },
+  "memory": {
+    "format": "󰍛 {used:0.1f}GB",
+    "tooltip": false,
+    "on-click": "$TERMINAL -a floatterm -e htop",
+    "on-click-right": "~/.local/bin/noti_usage ram",
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+  },
+  "group/sys": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-left-to-right": true,
+      "click-to-reveal": true,
+      "transition-duration": 500,
+    },
+    "modules": ["custom/markl", "cpu", "memory", "tray"],
+  },
   "battery": {
     "bat": "BAT0",
     "interval": 60,
@@ -61,19 +85,23 @@
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "signal": 3,
   },
-  "clock": {
-    "format": "{:%a, %d %b %H:%M}",
+  "clock#1": {
+    "format": "{:%a, %d %b}",
     "tooltip": false,
     "on-click": "~/.local/bin/noti_cal",
   },
-  "group/info": {
+  "clock#2": {
+    "format": "{:%H:%M}",
+    "tooltip": false,
+  },
+  "group/clock": {
     "orientation": "horizontal",
     "drawer": {
-      "transition-left-to-right": false,
+      "transition-left-to-right": true,
       "click-to-reveal": true,
       "transition-duration": 500,
     },
-    "modules": ["custom/mark", "custom/weather", "custom/moon"],
+    "modules": ["clock#2", "custom/weather", "custom/moon"],
   },
   "custom/power": {
     "interval": "once",
@@ -89,14 +117,6 @@
     "signal": 1,
     "on-click": "~/.config/river/scripts/swayidle-toggle.sh; pkill -SIGRTMIN+1 waybar",
   },
-  "custom/useless": {
-    "interval": "once",
-    "format": "",
-    "tooltip-format": " left or  + D opens appmenu\n middle checks updates\n right or  + F12 opens setting menu",
-    "on-click": "j4-dmenu-desktop --dmenu='bemenu_runner --fixed-height -B1 -n -l10 -p drun:'",
-    "on-click-right": "~/.config/river/scripts/dot-settings.sh",
-    "on-click-middle": "$TERMINAL -a floatterm -e ~/.local/bin/popupgrade",
-  },
   "custom/mic": {
     "exec": "~/.config/waybar/scripts/mic.sh",
     "format": "{}",
@@ -107,11 +127,11 @@
     "on-click-right": "pavucontrol",
   },
   "custom/weather": {
-    "format": " {}°C",
+    "format": "{}°C",
     "tooltip": true,
     "interval": 3600,
     //  Uses this script: https://github.com/bjesus/wttrbar
-    "exec": "~/.local/bin/wttrbar --date-format '%d.%m'",
+    "exec": "~/.config/waybar/scripts/wttrbar --date-format '%d.%m'",
     "return-type": "json",
   },
   "custom/moon": {
@@ -121,17 +141,15 @@
     "return-type": "json",
     "tooltip": true,
   },
-  "custom/discord": {
-    "interval": 10,
-    "return-type": "json",
-    "format": "{}",
-    "exec": "~/.config/waybar/scripts/discord.sh",
-    "on-click": "~/.config/river/scripts/scratchpads.sh discord",
-    "on-click-middle": "pkill vesktop;",
-  },
-  "custom/mark": {
+  "custom/markr": {
     "interval": "once",
     "format": "",
+    "tooltip": false,
+  },
+
+  "custom/markl": {
+    "interval": "once",
+    "format": "",
     "tooltip": false,
   },
   "custom/sep": {

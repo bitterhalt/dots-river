@@ -6,7 +6,6 @@
 @define-color bg2 #262626;
 @define-color bg3 #393939;
 @define-color bg4 #525252;
-@define-color bg5 #6f6f6f;
 @define-color fg #D8D8D8;
 @define-color fg2 #c6c6c6;
 @define-color red #DA1E28;
@@ -101,9 +100,11 @@ tooltip label {
 #custom-pipewire,
 #wireplumber,
 #custom-mic,
-#custom-discord,
+#cpu,
+#user,
+#memory,
 #custom-swayidle,
-#tray, /* Placeholder if you need this */
+#tray,
 #battery.charging,
 #battery.plugged,
 #network {
@@ -114,20 +115,25 @@ tooltip label {
 
 #custom-weather,
 #custom-moon,
-#custom-sep,
-#custom-mark {
+#custom-sep {
   color: @fg2;
   padding: 0 6px;
 }
-
+#custom-markl,
+#custom-markr {
+  color: @bg4;
+  padding: 0 6px;
+}
 #mpris {
   color: @fg2;
   padding: 0 10px;
   margin: 0 2px;
 }
 
-#clock {
+#clock.1,
+#clock.2 {
   color: @fg;
+  padding: 0 6px;
 }
 
 #battery.critical:not(.charging) {
@@ -140,11 +146,6 @@ tooltip label {
     background-color: #ffffff;
     color: #000000;
   }
-}
-
-#custom-useless {
-  color: @fg;
-  padding-left: 10px;
 }
 
 #custom-power {
