@@ -13,8 +13,10 @@ autotiling
 base-system
 bash-completion
 bat
+bc
 bemenu
 borgmatic
+cargo
 chafa
 chrony
 cliphist
@@ -30,6 +32,7 @@ fastfetch
 ffmpegthumbnailer
 firefox
 flatpak
+font-ibm-plex-ttf
 foot
 fzf
 galculator
@@ -47,9 +50,6 @@ grub-x86_64-efi
 gtk-engine-murrine
 gvfs
 htop
-hyprpicker
-i3bar-river
-i3status-rust
 imv
 j4-dmenu-desktop
 jq
@@ -77,6 +77,7 @@ mesa-vulkan-radeon-32bit
 mpc
 mpd
 mpv
+mpv-mpris
 ncmpcpp
 neovim
 nethogs
