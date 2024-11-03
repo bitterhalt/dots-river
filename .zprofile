@@ -19,7 +19,7 @@ export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_DATA_HOME/history"
-export SSH_AUTH_SOCK="$XDG_CACHE_HOME/ssh-agent.sock"
+export SSH_AUTH_SOCK="$XDG_DATA_HOME/ssh-agent.sock"
 
 # Start River environment
 if [ -z "$WAYLAND_DISPLAY" ] && [ $(tty) = "/dev/tty1" ]; then

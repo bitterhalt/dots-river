@@ -1,4 +1,4 @@
 #!/bin/sh
 
 exec >/dev/null
-exec ssh-agent -Da "${XDG_CACHE_HOME:-$HOME/.cache}"/ssh-agent.sock
+exec ssh-agent -Da "${XDG_DATA_HOME:-$HOME/.local/share}"/ssh-agent.sock
