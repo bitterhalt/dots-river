@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Small helper script to record your desktop on sway
-# Depends on: wf-recoder, and slurp
+# Depends on: wf-recoder, slurp, vaapi
 # Github @ bitterhalt
 
 set -e
@@ -12,16 +12,14 @@ FILENAME="$SAVEDIR/${TIMESTAMP}_capture.mp4"
 
 fullscreen() {
   wf-recorder \
-    -r 30 \
-    -c libx264rgb \
+    -c h264_vaapi \
     -f "$FILENAME"
   notify-send "Screen record" "File saved as $SAVEDIR" -i "$FILENAME"
 }
 
 region() {
   wf-recorder \
-    -r 30 \
-    -c libx264rgb \
+    -c h264_vaapi \
     -g "$(slurp)" \
     -f "$FILENAME"
   notify-send "Screen record" "File saved as $SAVEDIR" -i "$FILENAME"
