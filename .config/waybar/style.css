@@ -98,7 +98,6 @@ tooltip label {
 
 #battery,
 #custom-pipewire,
-#wireplumber,
 #custom-mic,
 #cpu,
 #user,
@@ -109,8 +108,7 @@ tooltip label {
 #battery.plugged,
 #network {
   color: @fg;
-  padding: 0 6px;
-  margin: 0 2px;
+  padding: 0 8px;
 }
 
 #custom-weather,
@@ -127,25 +125,12 @@ tooltip label {
 #mpris {
   color: @fg2;
   padding: 0 10px;
-  margin: 0 2px;
 }
 
 #clock.1,
 #clock.2 {
   color: @fg;
   padding: 0 6px;
-}
-
-#battery.critical:not(.charging) {
-  background-color: @red;
-  color: @fg;
-}
-
-@keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: #000000;
-  }
 }
 
 #custom-power {

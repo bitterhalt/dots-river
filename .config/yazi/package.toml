@@ -1,5 +1,5 @@
 [plugin]
-deps = [{ use = "yazi-rs/plugins:full-border", rev = "35100e7" }, { use = "yazi-rs/plugins:chmod", rev = "35100e7" }, { use = "yazi-rs/plugins:diff", rev = "35100e7" }, { use = "KKV9/compress", rev = "60b24af" }, { use = "h-hg/yamb", rev = "0598b8d" }, { use = "pirafrank/what-size", rev = "f08f7f2" }]
+deps = [{ use = "yazi-rs/plugins:full-border", rev = "102a0cd" }, { use = "yazi-rs/plugins:chmod", rev = "102a0cd" }, { use = "yazi-rs/plugins:diff", rev = "102a0cd" }, { use = "KKV9/compress", rev = "60b24af" }, { use = "h-hg/yamb", rev = "0598b8d" }, { use = "pirafrank/what-size", rev = "f08f7f2" }]
 
 [flavor]
 deps = []
