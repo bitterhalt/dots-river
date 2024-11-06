@@ -269,6 +269,7 @@ riverctl rule-add -app-id "thunar" -title "Confirm to replace files" float
 riverctl rule-add -app-id "thunar" -title "File Operation Progress" float
 riverctl rule-add -app-id "vesktop" float
 riverctl rule-add -app-id "xdg-desktop-portal-gtk" float
+riverctl rule-add -app-id "yad" float
 riverctl rule-add -title "Picture-in-Picture" float
 riverctl rule-add -title "ProtonUp-Qt - Wine/Proton Installer" float
 riverctl rule-add -title "gtk*" float
