@@ -55,7 +55,7 @@ riverctl default-attach-mode bottom
 riverctl default-layout rivertile
 
 # Adjust gaps between views if you want
-rivertile="rivertile -view-padding 4 -outer-padding 4"
+rivertile="rivertile -main-ratio 0.55 -view-padding 4 -outer-padding 4"
 
 #-----------------------------------------------------#
 #                      LAUNCH                         #
