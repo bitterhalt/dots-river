@@ -9,7 +9,7 @@ if [ -z "$1" ]; then
 fi
 
 term="foot"
-yazi="$term --app-id special-yazi -e yazi"
+yazi="$term -W 120x40 --app-id special-yazi -e yazi"
 zerminal="$term --app-id zen-term"
 
 zen_tag=$((1 << 11))

@@ -243,6 +243,7 @@ riverctl rule-add -app-id "virt-manager" tags $((1 << (8 - 1)))
 riverctl rule-add -app-id "com.transmissionbt.transmission_*" tags $((1 << (4 - 1)))
 riverctl rule-add -app-id "org.keepassxc.KeePassXC" tags $((1 << (6 - 1)))
 # Floaters
+riverctl rule-add -app-id "special-yazi" float
 riverctl rule-add -app-id "Choose User Profile" float
 riverctl rule-add -app-id "Firefox" -title "About Mozilla Firefox" float
 riverctl rule-add -app-id "Firefox" -title "Library" float
