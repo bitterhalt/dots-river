@@ -4,6 +4,6 @@ swayidle \
   timeout 120 "wlopm --off '*'" \
   resume "wlopm --on '*'" &
 # Locks the screen immediately
-swaylock -f
+swaylock
 # Kills last background task so idle timer doesn't keep running
 kill %%
