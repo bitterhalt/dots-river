@@ -36,7 +36,7 @@ main() {
     grim -g "$(slurp -b '#00000000' -p)" - >$IMAGE
     magick $IMAGE -colors 1 txt: | awk 'NR==2 {print $3}'
   )
-  magick convert $IMAGE -filter point -resize 96x96 $ICON
+  magick $IMAGE -filter point -resize 96x96 $ICON
   notify-send -i $ICON "$HEXCODE"
   wl-copy -n $HEXCODE
   rm -f $IMAGE $ICON
