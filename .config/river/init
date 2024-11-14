@@ -300,9 +300,9 @@ for execute in $executes; do
     ;;
   "swayidle")
     "$execute" -w \
-      timeout 1800 "swaylock" \
+      timeout 1800 "swaylock -f" \
       timeout 3600 "wlopm --off '*'" resume "wlopm --on '*'" \
-      before-sleep "swaylock" &
+      before-sleep "swaylock -f" &
     ;;
   *)
     "$execute" &
