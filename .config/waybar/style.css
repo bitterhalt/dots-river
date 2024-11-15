@@ -112,7 +112,6 @@ tooltip label {
 }
 
 #custom-weather,
-#custom-moon,
 #custom-sep {
   color: @fg2;
   padding: 0 6px;

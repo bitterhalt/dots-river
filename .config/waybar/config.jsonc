@@ -133,13 +133,6 @@
     "exec": "~/.config/waybar/scripts/wttr.sh",
     "return-type": "json",
   },
-  "custom/moon": {
-    "exec": "~/.config/waybar/scripts/moon.sh",
-    "format": "{}",
-    "interval": 3600,
-    "return-type": "json",
-    "tooltip": true,
-  },
   "custom/markr": {
     "interval": "once",
     "format": "",
