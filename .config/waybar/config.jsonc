@@ -101,7 +101,7 @@
       "click-to-reveal": true,
       "transition-duration": 500,
     },
-    "modules": ["clock#2", "custom/weather", "custom/moon"],
+    "modules": ["clock#2", "custom/weather"],
   },
   "custom/power": {
     "interval": "once",
