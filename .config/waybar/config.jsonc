@@ -127,11 +127,10 @@
     "on-click-right": "pavucontrol",
   },
   "custom/weather": {
-    "format": "{}°C",
+    "format": "{}",
     "tooltip": true,
     "interval": 3600,
-    //  Uses this script: https://github.com/bjesus/wttrbar
-    "exec": "~/.config/waybar/scripts/wttrbar --date-format '%d.%m'",
+    "exec": "~/.config/waybar/scripts/wttr.sh",
     "return-type": "json",
   },
   "custom/moon": {
