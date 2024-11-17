@@ -47,7 +47,7 @@ case "$1" in
 "--prv")
   play_previous
   ;;
-"--play")
+"--pause")
   toggle_play_pause
   ;;
 "--stop")
