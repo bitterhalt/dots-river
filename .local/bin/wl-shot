@@ -14,14 +14,14 @@ fullscreen() {
   grim "$FILENAME"
   notify-send "Screenshot" "File saved as $SAVEDIR" -i "$FILENAME"
   wl-copy <"$FILENAME"
-  pw-play /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
+  pw-play "$HOME/.local/share/Sounds/camera-shutter.oga"
 }
 
 region() {
   grim -g "$(slurp)" "$FILENAME"
   notify-send "Screenshot" "File saved as $SAVEDIR" -i "$FILENAME"
   wl-copy <"$FILENAME"
-  pw-play /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
+  pw-play "$HOME/.local/share/Sounds/camera-shutter.oga"
 }
 
 region-edit() {
@@ -33,7 +33,7 @@ timer() {
   grim "$FILENAME"
   notify-send "Screenshot" "File saved as $SAVEDIR" -i "$FILENAME"
   wl-copy <"$FILENAME"
-  pw-play /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
+  pw-play "$HOME/.local/share/Sounds/camera-shutter.oga"
 }
 
 print_help() {
