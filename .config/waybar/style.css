@@ -100,22 +100,19 @@ tooltip label {
 #custom-pipewire,
 #custom-mic,
 #cpu,
-#user,
 #memory,
 #custom-swayidle,
 #tray,
-#battery.charging,
-#battery.plugged,
 #network {
   color: @fg;
   padding: 0 8px;
 }
 
-#custom-weather,
-#custom-sep {
+#custom-weather {
   color: @fg2;
-  padding: 0 6px;
+  padding-left: 10px;
 }
+#custom-sep,
 #custom-markl,
 #custom-markr {
   color: @bg4;
@@ -126,10 +123,9 @@ tooltip label {
   padding: 0 10px;
 }
 
-#clock.1,
-#clock.2 {
+#clock {
   color: @fg;
-  padding: 0 6px;
+  padding: 0 4px;
 }
 
 #custom-power {

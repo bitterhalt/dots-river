@@ -3,7 +3,7 @@
   "position": "top",
   "height": 28,
   "modules-left": ["river/tags"],
-  "modules-center": ["clock#1", "group/clock"],
+  "modules-center": ["clock#date", "group/clock"],
   "modules-right": [
     // "mpris",
     "group/sys",
@@ -85,14 +85,14 @@
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "signal": 3,
   },
-  "clock#1": {
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip": false,
+  },
+  "clock#date": {
     "format": "{:%a, %d %b}",
     "tooltip": false,
     "on-click": "~/.local/bin/noti_cal",
-  },
-  "clock#2": {
-    "format": "{:%H:%M}",
-    "tooltip": false,
   },
   "group/clock": {
     "orientation": "horizontal",
@@ -101,7 +101,7 @@
       "click-to-reveal": true,
       "transition-duration": 500,
     },
-    "modules": ["clock#2", "custom/weather"],
+    "modules": ["clock", "custom/weather"],
   },
   "custom/power": {
     "interval": "once",
@@ -129,7 +129,7 @@
   "custom/weather": {
     "format": "{}",
     "tooltip": true,
-    "interval": 3600,
+    "restart-interval": 3600,
     "exec": "~/.config/waybar/scripts/wttr.sh",
     "return-type": "json",
   },
@@ -138,7 +138,6 @@
     "format": "",
     "tooltip": false,
   },
-
   "custom/markl": {
     "interval": "once",
     "format": "",
