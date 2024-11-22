@@ -108,6 +108,10 @@ tooltip label {
   padding: 0 8px;
 }
 
+#tray menu {
+  background-color: @bg;
+  border: solid 1px @bg3;
+}
 #custom-weather {
   color: @fg2;
   padding-left: 10px;
