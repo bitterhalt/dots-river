@@ -2,7 +2,7 @@
 
 set -e
 
-MENU="bemenu_runner   --fixed-height --bdr #DA1E28 -c -W 0.30 -B1 -l18"
+MENU="bemenu_runner -n -B1 --bdr #DA1E28 -l 10 "
 
 selected="$(ps -a -u $USER |
   $MENU --prompt "Kill process:" |
