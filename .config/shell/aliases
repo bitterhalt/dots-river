@@ -43,7 +43,7 @@ alias ytv-best='yt-dlp -f bestvideo+bestaudio '
 alias nvm='sudo nvme smart-log /dev/nvme0'
 alias sudoe='sudoedit'
 #alias dot='/usr/bin/git --git-dir=$HOME/Documents/Projects/dots-sway.git/ --work-tree=$HOME'
-alias dot='/usr/bin/git --git-dir=$HOME/Documents/Projects/dots-river.git/ --work-tree=$HOME'
+alias dot='/usr/bin/git --git-dir=$HOME/Documents/projects/dots-river.git/ --work-tree=$HOME'
 alias hg='history | grep '
 
 # XBPS
