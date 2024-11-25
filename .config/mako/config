@@ -42,19 +42,18 @@ on-notify=exec ~/.local/bin/annoying_sound --error
 ## Custom notification rules ##
 ###############################
 [app-name=vol_notify]
+font=JetBrains Mono 12
 anchor=top-center
 border-size=1
-font=JetBrains Mono 13
 group-by=app-name
 text-alignment=center
-width=150
+width=130
 
 [app-name=playerctrl_notify]
 text-alignment=center
 
 [app-name=sysnfo_notify]
-font=JetBrains Mono 12
-width=250
+width=200
 group-by=app-name
 default-timeout=10000
 padding=20
@@ -65,7 +64,6 @@ height=800
 group-by=app-name
 
 [app-name=date_notify]
-font=JetBrains Mono 12
 width=160
 group-by=app-name
 text-alignment=center
@@ -82,18 +80,15 @@ group-by=app-name
 padding=20
 
 [app-name=center_notify]
-font=JetBrains Mono 12
-width=260
+width=200
 anchor=top-center
 group-by=app-name
 text-alignment=center
 
 [app-name=center_notify_s]
-font=JetBrains Mono 12
-width=130
+width=100
 anchor=top-center
 group-by=app-name
 text-alignment=center
-
 [mode=dnd]
 invisible=1
