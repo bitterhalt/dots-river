@@ -248,7 +248,7 @@ riverctl rule-add -app-id "Firefox" -title "About Mozilla Firefox" float
 riverctl rule-add -app-id "Firefox" -title "Library" float
 riverctl rule-add -app-id "Firefox" -title "Picture-in-Picture" float
 riverctl rule-add -app-id "GParted" float
-riverctl rule-add -app-id "Gimp-*" float
+riverctl rule-add -app-id "gimp-*" float
 riverctl rule-add -app-id "KeePassXC" -title "Browser Access Request" float
 riverctl rule-add -app-id "KeePassXC" -title "Passkey credentials" float
 riverctl rule-add -app-id "YouTube Music" float
