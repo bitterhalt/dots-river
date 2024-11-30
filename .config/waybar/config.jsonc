@@ -130,6 +130,7 @@
     "format": "{}",
     "tooltip": true,
     "restart-interval": 3600,
+    "exec-if": "ping wttr.in -c1",
     "exec": "~/.config/waybar/scripts/wttr.sh",
     "return-type": "json",
   },
