@@ -127,11 +127,11 @@
     "on-click-right": "pavucontrol",
   },
   "custom/weather": {
-    "format": "{}",
+    // Needs this: https://github.com/bjesus/wttrbar
+    "format": "{}°C",
     "tooltip": true,
     "restart-interval": 3600,
-    "exec-if": "ping wttr.in -c1",
-    "exec": "~/.config/waybar/scripts/wttr.sh",
+    "exec": "wttrbar --date-format '%d.%m'",
     "return-type": "json",
   },
   "custom/markr": {
