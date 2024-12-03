@@ -1,4 +1,5 @@
 7zip
+CPU-X
 ImageMagick
 MangoHud
 NetworkManager
@@ -50,6 +51,8 @@ grub-x86_64-efi
 gtk-engine-murrine
 gvfs
 htop
+innoextract
+iotop
 j4-dmenu-desktop
 jq
 kanshi
@@ -61,6 +64,7 @@ libglvnd-32bit
 libnotify
 libsixel
 libstdc++-32bit
+linux-mainline
 lm_sensors
 lsdvd
 lswt
@@ -97,6 +101,7 @@ pipewire
 pkg-config
 polkit
 polkit-gnome
+protontricks
 ps_mem
 python3-gobject
 python3-i3ipc
@@ -113,7 +118,6 @@ sheldon
 slurp
 snooze
 socklog-void
-sound-theme-freedesktop
 steam
 swappy
 swaybg
@@ -129,6 +133,7 @@ tty-clock
 tumbler
 unrar
 unzip
+vesktop
 vim
 void-docs-browse
 void-live-audio
@@ -139,6 +144,7 @@ vulkan-loader-32bit
 wev
 wf-recorder
 wget
+wine
 wl-clipboard
 wlopm
 wlr-randr
