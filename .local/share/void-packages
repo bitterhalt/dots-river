@@ -5,6 +5,7 @@ MangoHud
 NetworkManager
 Signal-Desktop
 Thunar
+Vulkan-Tools
 Waybar
 alsa-pipewire
 alsa-plugins
@@ -64,14 +65,17 @@ libglvnd-32bit
 libnotify
 libsixel
 libstdc++-32bit
+libunrar
 linux-mainline
 lm_sensors
 lsdvd
 lswt
+lutris
 lvm2
 mako
 mdadm
 meld
+mesa-demos
 mesa-dri-32bit
 mesa-vaapi
 mesa-vdpau
@@ -91,6 +95,7 @@ noto-fonts-emoji
 noto-fonts-ttf
 nvme-cli
 nwg-look
+p7zip
 papirus-folders
 papirus-icon-theme
 pass
@@ -144,6 +149,7 @@ wev
 wf-recorder
 wget
 wine
+wine-32bit
 wl-clipboard
 wlopm
 wlr-randr
