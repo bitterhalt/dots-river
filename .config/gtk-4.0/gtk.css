@@ -1,5 +1,5 @@
 /* Global color definitions */
-@define-color window_bg_color #1b1b1b;
+@define-color window_bg_color #161616;
 @define-color window_fg_color #cecece;
 @define-color view_bg_color #161616;
 @define-color view_fg_color #cecece;
@@ -7,7 +7,7 @@
 @define-color accent_color @accent_bg_color;
 @define-color sidebar_bg_color @view_bg_color;
 @define-color sidebar_fg_color @window_fg_color;
-@define-color headerbar_bg_color @window_bg_color;
+@define-color headerbar_bg_color #1b1b1b;
 @define-color headerbar_fg_color @window_fg_color;
 @define-color popover_bg_color #393939;
 @define-color popover_fg_color @view_fg_color;
@@ -36,18 +36,9 @@ window decoration {
   padding: 0;
 }
 
-/** River */
-
 /* No (default) title bar on wayland */
 headerbar.default-decoration {
   /* You may need to tweak these values depending on your GTK theme */
   margin-bottom: 50px;
   margin-top: -100px;
-}
-
-/* rm -rf window shadows */
-window.csd,             /* gtk4? */
-window.csd decoration {
-  /* gtk3 */
-  box-shadow: none;
 }
