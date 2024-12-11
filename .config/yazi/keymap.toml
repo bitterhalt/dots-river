@@ -56,7 +56,7 @@ keymap = [
 	# Operation
 	{ on = "o",         run = "open",                        desc = "Open selected files" },
 	{ on = "O",         run = "open --interactive",          desc = "Open selected files interactively" },
-#	{ on = "<Enter>",   run = "open",                        desc = "Open selected files" },
+	{ on = "<Enter>",   run = "open",                        desc = "Open selected files" },
 	{ on = "<S-Enter>", run = "open --interactive",          desc = "Open selected files interactively" },
 	{ on = "y",         run = "yank",                        desc = "Yank selected files (copy)" },
 	{ on = "x",         run = "yank --cut",                  desc = "Yank selected files (cut)" },
@@ -333,15 +333,14 @@ keymap = [
 	{ on = "f", run = "filter", desc = "Apply a filter for the help items" },
 ]
 
-# Fast-enter
+# Smart-enter
+
 [[manager.prepend_keymap]]
-on   = [ "l" ]
-run  = "plugin --sync fast-enter"
-desc = "Enter the subfolder faster, or open the file directly"
-[[manager.prepend_keymap]]
-on   = [ "<Enter>" ]
-run  = "plugin --sync fast-enter"
-desc = "Enter the subfolder faster, or open the file directly"
+on   = "l"
+run  = "plugin smart-enter"
+# For upcoming Yazi 0.4 (nightly version):
+# run  = "plugin smart-enter"
+desc = "Enter the child directory, or open the file"
 
 # Open shell
 [[manager.prepend_keymap]]
