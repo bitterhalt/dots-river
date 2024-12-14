@@ -383,12 +383,6 @@ on   = "<C-d>"
 run  = "plugin diff"
 desc = "Diff the selected with the hovered file"
 
-# Show size of current selection
-[[manager.prepend_keymap]]
-on   = [ "=" ]
-run  = "plugin what-size"
-desc = "Calc size of selection or cwd"
-
 # Archive selected files
 [[manager.prepend_keymap]]
 on   = [ "c", "a" ]

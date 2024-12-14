@@ -59,7 +59,7 @@ syntect_theme = ""
 [mode]
 
 
-normal_main = { bg = "blue", bold = true }
+normal_main = { bg = "blue",  fg = "black" }
 normal_alt  = { fg = "black", bg = "grey" }
 
 
