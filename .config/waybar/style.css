@@ -120,7 +120,7 @@ tooltip label {
 #custom-markl,
 #custom-markr {
   color: @bg4;
-  padding: 0 6px;
+  padding: 0 4px;
 }
 #mpris {
   color: @fg2;

@@ -3,7 +3,7 @@
   "position": "top",
   "height": 28,
   "modules-left": ["river/tags"],
-  "modules-center": ["clock#date", "group/clock"],
+  "modules-center": ["clock", "group/weather"],
   "modules-right": [
     // "mpris",
     "group/sys",
@@ -86,22 +86,19 @@
     "signal": 3,
   },
   "clock": {
-    "format": "{:%H:%M}",
-    "tooltip": false,
-  },
-  "clock#date": {
-    "format": "{:%a, %d %b}",
+    "format": "{:%b, %d %H:%M}",
     "tooltip": false,
     "on-click": "~/.local/bin/noti_cal",
   },
-  "group/clock": {
+
+  "group/weather": {
     "orientation": "horizontal",
     "drawer": {
-      "transition-left-to-right": true,
+      "transition-left-to-right": false,
       "click-to-reveal": true,
       "transition-duration": 500,
     },
-    "modules": ["clock", "custom/weather"],
+    "modules": ["custom/markr", "custom/weather"],
   },
   "custom/power": {
     "interval": "once",
