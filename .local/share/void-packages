@@ -11,7 +11,6 @@ alsa-pipewire
 alsa-plugins
 apulse
 atool
-autotiling
 base-system
 bash-completion
 bat
@@ -138,7 +137,6 @@ tty-clock
 tumbler
 unrar
 unzip
-vim
 void-docs-browse
 void-live-audio
 void-repo-multilib
