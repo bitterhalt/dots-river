@@ -65,9 +65,8 @@
   },
   "network": {
     "format-wifi": "{icon}",
-    "format-ethernet": "󰈀",
+    "format-ethernet": "",
     "tooltip-format-wifi": "{essid} {signalStrength}%",
-    "tooltip-format-ethernet": " {ifname}\n  {bandwidthUpBytes}  {bandwidthDownBytes}",
     "tooltip-format-disconnected": "No connection",
     "format-linked": "{ifname} (No IP) ?",
     "format-disconnected": "󰅛",
