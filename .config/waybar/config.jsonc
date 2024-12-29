@@ -14,14 +14,12 @@
     "custom/power",
   ],
   "cpu": {
-    "format": "󱐋 {usage}%",
-    "tooltip": false,
+    "format": "{usage}%",
     "on-click": "$TERMINAL -a floatterm -e htop",
     "on-click-right": "~/.local/bin/noti_usage cpu",
   },
   "memory": {
-    "format": "󰍛 {used:0.1f}GB",
-    "tooltip": false,
+    "format": "{used:0.1f}GB",
     "on-click": "$TERMINAL -a floatterm -e htop",
     "on-click-right": "~/.local/bin/noti_usage ram",
   },
