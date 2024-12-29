@@ -26,7 +26,7 @@
     "on-click-right": "~/.local/bin/noti_usage ram",
   },
   "tray": {
-    "icon-size": 18,
+    "icon-size": 16,
     "spacing": 10,
   },
   "group/sys": {
