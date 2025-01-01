@@ -7,6 +7,7 @@ Signal-Desktop
 Thunar
 Vulkan-Tools
 Waybar
+adw-gtk3
 alsa-pipewire
 alsa-plugins
 apulse
@@ -143,6 +144,8 @@ void-repo-multilib
 void-repo-multilib-nonfree
 void-repo-nonfree
 vulkan-loader-32bit
+wayland-devel
+wayland-protocols
 wev
 wf-recorder
 wget
@@ -167,5 +170,6 @@ xz
 yazi
 zathura
 zathura-pdf-poppler
+zig
 zoxide
 zsh
