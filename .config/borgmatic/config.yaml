@@ -74,10 +74,8 @@ exclude_patterns:
   - /home/*/.local/share/Steam
   - /home/*/.local/share/Trash
 
-exclude_caches: true
-
-borgmatic_source_directory:
-  ~/.local/share/borgmatic
+exclude_caches:
+  true
 
   # List of one or more shell commands or scripts to execute before
   # creating a backup, run once per repository.
