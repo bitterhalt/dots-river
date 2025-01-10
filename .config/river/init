@@ -263,6 +263,8 @@ riverctl rule-add -app-id "nm-connection-editor" float
 riverctl rule-add -app-id "nwg-look" float
 riverctl rule-add -app-id "org.pulseaudio.pavucontrol" float
 riverctl rule-add -app-id "quick_note" float
+riverctl rule-add -app-id "signal" float
+riverctl rule-add -app-id "signal-desktop" -title "Save File" float
 riverctl rule-add -app-id "special-yazi" float
 riverctl rule-add -app-id "steam" float
 riverctl rule-add -app-id "swayimg" float
