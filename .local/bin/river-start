@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Logging
-LOGFILE=~/.local/state/.riverlog
+LOGFILE=~/.local/state/riverlog
 exec 1>$LOGFILE 2>&1
 echo "River Starting: $(date)"
 set -x
