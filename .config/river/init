@@ -73,7 +73,7 @@ riverctl map normal Super F12 spawn "$HOME/.config/river/scripts/dot-settings.sh
 riverctl map normal Super F8 spawn "bemenu_sound"
 riverctl map normal Super F2 spawn "noti_usage cpu"
 riverctl map normal Super F4 spawn "bemenu_killer"
-riverctl map normal Super F9 spawn "$HOME/.config/river/scripts/mic-toggle.sh && $sig_2"
+riverctl map normal Super F10 spawn "$HOME/.config/river/scripts/mic-toggle.sh && $sig_2"
 riverctl map normal Super M spawn "$mail"
 riverctl map normal Super N spawn "foot -e nvim ~/Documents/personal/notes/index.md"
 riverctl map normal Super Print spawn "$screenshot -f"
