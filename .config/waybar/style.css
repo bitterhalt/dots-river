@@ -127,6 +127,7 @@ tooltip label {
   padding: 0 10px;
 }
 
+#custom-clock,
 #clock {
   color: @fg;
   padding: 0 4px;

@@ -3,7 +3,7 @@
   "position": "top",
   "height": 28,
   "modules-left": ["river/tags"],
-  "modules-center": ["clock", "group/weather"],
+  "modules-center": ["custom/clock", "group/weather"],
   "modules-right": [
     // "mpris",
     "group/sys",
@@ -87,7 +87,14 @@
     "tooltip": false,
     "on-click": "~/.local/bin/noti_cal",
   },
-
+  // "in case tzdata update fucks up your clock",
+  "custom/clock": {
+    "format": "{}",
+    "tooltip": false,
+    "exec": "date +'%b, %d %H:%M'",
+    "interval": 60,
+    "on-click": "~/.local/bin/noti_cal",
+  },
   "group/weather": {
     "orientation": "horizontal",
     "drawer": {
