@@ -3,11 +3,11 @@
 @define-color window_fg_color #cecece;
 @define-color view_bg_color #161616;
 @define-color view_fg_color #cecece;
-@define-color accent_bg_color #6A9FB5;
-@define-color accent_color @accent_bg_color;
+@define-color accent_bg_color #525252;
+@define-color accent_color @window_fg_color;
 @define-color sidebar_bg_color @view_bg_color;
 @define-color sidebar_fg_color @window_fg_color;
-@define-color headerbar_bg_color #1b1b1b;
+@define-color headerbar_bg_color #262626;
 @define-color headerbar_fg_color @window_fg_color;
 @define-color popover_bg_color #393939;
 @define-color popover_fg_color @view_fg_color;
