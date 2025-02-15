@@ -60,9 +60,11 @@ tooltip label {
 
 #tags button {
   color: @bg4;
-  padding: 0px 5px;
   font-weight: normal;
+  padding: 0px 5px;
   margin: 2px 2px;
+  border-radius: 2px;
+  border: 1px solid @bg;
 }
 
 #tags button.occupied {
@@ -71,9 +73,9 @@ tooltip label {
 
 #tags button.focused {
   color: @fg;
-  background-color: @bg3;
+  background-color: @bg2;
   font-weight: normal;
-  border-radius: 2px;
+  border: 1px solid @bg3;
 }
 
 #tags button.urgent {
