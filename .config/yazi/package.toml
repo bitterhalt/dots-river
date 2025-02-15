@@ -1,5 +1,32 @@
-[plugin]
-deps = [{ use = "yazi-rs/plugins:full-border", rev = "600614a" }, { use = "yazi-rs/plugins:chmod", rev = "600614a" }, { use = "yazi-rs/plugins:diff", rev = "600614a" }, { use = "KKV9/compress", rev = "60b24af" }, { use = "h-hg/yamb", rev = "108347b" }, { use = "yazi-rs/plugins:smart-enter", rev = "600614a" }]
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "02d18be"
+hash = "882ed23839778f82dc137248979c8681"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "02d18be"
+hash = "4c7e8fd0266eedee7b619d966bd2d025"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:diff"
+rev = "02d18be"
+hash = "284f6694e3b1a4afd686acf1052acd90"
+
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "60b24af"
+hash = "ee025be766240cc98e671754ac836da3"
+
+[[plugin.deps]]
+use = "h-hg/yamb"
+rev = "3f7c51f"
+hash = "e11b980e5635f0fbabd80931b1a1347e"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "02d18be"
+hash = "c1a2739e9ef2d837030ccb4267be3ed1"
 
 [flavor]
 deps = []
