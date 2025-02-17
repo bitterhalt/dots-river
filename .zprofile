@@ -24,5 +24,5 @@ export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 
 # Start River environment
 if [ -z "$WAYLAND_DISPLAY" ] && [ $(tty) = "/dev/tty1" ]; then
-  exec $HOME/.local/bin/river-start
+  $HOME/.local/bin/river-start
 fi
