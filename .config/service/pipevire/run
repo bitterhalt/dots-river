@@ -1,0 +1,4 @@
+#!/bin/sh
+
+SVDIR=".." sv start dbus || exit 1
+exec chpst -P -e "$TURNSTILE_ENV_DIR" pipewire
