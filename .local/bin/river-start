@@ -21,8 +21,5 @@ export XDG_SESSION_TYPE=wayland
 export XDG_CURRENT_DESKTOP=river
 export XDG_SESSION_DESKTOP=river
 
-# Start Pipewire before new session (delete if your're running systemd!)
-#pkill -u "${USER}" -x pipewire\|wireplumber 1>/dev/null 2>&1
-#pipewire &
 # Start River
 exec river

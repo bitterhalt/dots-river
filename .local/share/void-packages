@@ -18,6 +18,7 @@ bat
 bc
 bemenu
 borgmatic
+breeze-cursors
 cargo
 chafa
 chrony
@@ -86,6 +87,7 @@ mpc
 mpd
 mpv
 mpv-mpris
+musikcube
 ncmpcpp
 neovim
 nethogs
@@ -140,6 +142,7 @@ transmission-gtk
 trash-cli
 tty-clock
 tumbler
+turnstile
 unrar
 unzip
 void-docs-browse
