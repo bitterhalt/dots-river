@@ -1,0 +1,3 @@
+#!/bin/sh
+
+vlogger -t borgmatic-$(id -u) -p daemon
