@@ -24,6 +24,7 @@ case $(printf "%s\n" "Lock" "Logout" "Suspend" "Reboot" "Shutdown" | bemenu_runn
   $HOME/.config/river/scripts/locker.sh
   ;;
 "Logout")
-  loginctl terminate-session "${XDG_SESSION_ID-}"
+  #loginctl terminate-session "${XDG_SESSION_ID-}"
+  riverctl exit
   ;;
 esac
