@@ -1,0 +1,14 @@
+#!/bin/bash
+set -eo pipefail
+
+mode=$(makoctl mode)
+if [[ "$mode" == "default" ]]; then
+  # hide notifications
+  notify-send "System" "Notifications are now hidden!"
+  sleep 2
+  makoctl mode -a dnd
+else
+  # show notifications
+  makoctl mode -r dnd
+  notify-send "System" "Notifications are visible!"
+fi
