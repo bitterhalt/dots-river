@@ -1,2 +1,0 @@
-#!/bin/sh
-exec chpst -e "$TURNSTILE_ENV_DIR" snooze -w1 -H17 -M15 borgmatic --verbosity 1
