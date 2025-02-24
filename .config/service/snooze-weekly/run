@@ -1,0 +1,4 @@
+#!/bin/sh
+mkdir -p "$HOME/.cache/snooze"
+exec snooze -s 1d -t "$HOME/.cache/snooze/weekly" -- sh -c \
+  "test -d $HOME/.config/cron.weekly && run-parts --lsbsysinit $HOME/.config/cron.weekly; : > $HOME/.cache/snooze/weekly"
