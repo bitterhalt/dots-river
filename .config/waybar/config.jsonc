@@ -3,7 +3,7 @@
   "position": "top",
   "height": 28,
   "modules-left": ["river/tags"],
-  "modules-center": ["custom/clock", "group/weather"],
+  "modules-center": ["clock", "group/weather"],
   "modules-right": [
     // "mpris",
     "group/sys",
