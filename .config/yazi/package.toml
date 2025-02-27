@@ -1,17 +1,17 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "02d18be"
-hash = "882ed23839778f82dc137248979c8681"
+rev = "5186af7"
+hash = "ae9e1d0c6bfd68cdebc98cc684c22b45"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "02d18be"
-hash = "4c7e8fd0266eedee7b619d966bd2d025"
+rev = "5186af7"
+hash = "f28138c2e11e87962b66d583fef724c3"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:diff"
-rev = "02d18be"
-hash = "284f6694e3b1a4afd686acf1052acd90"
+rev = "5186af7"
+hash = "7a08e303167d5b655c06da6d570f0333"
 
 [[plugin.deps]]
 use = "KKV9/compress"
@@ -25,8 +25,8 @@ hash = "e11b980e5635f0fbabd80931b1a1347e"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "02d18be"
-hash = "c1a2739e9ef2d837030ccb4267be3ed1"
+rev = "5186af7"
+hash = "aef2b1a805b80cce573bb766f1459d88"
 
 [flavor]
 deps = []
