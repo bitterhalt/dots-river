@@ -50,6 +50,10 @@ tooltip label {
   color: @fg;
 }
 
+button:hover {
+  background: @bg2;
+}
+
 /* -----------------------------------------------------
  *                  River Tags
  * ----------------------------------------------------- */
@@ -81,6 +85,7 @@ tooltip label {
 #tags button.urgent {
   color: @purple;
 }
+
 /* Dirty hack to hide vacant tags in River */
 #tags button:not(.occupied):not(.focused) {
   font-size: 0;
