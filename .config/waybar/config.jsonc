@@ -1,7 +1,6 @@
 {
   "layer": "bottom",
   "position": "top",
-  "height": 28,
   "modules-left": ["river/tags"],
   "modules-center": ["clock", "group/weather"],
   "modules-right": [
@@ -13,6 +12,10 @@
     "custom/swayidle",
     "custom/power",
   ],
+
+  "river/tags": {
+    "hide-vacant": true,
+  },
   "cpu": {
     "format": "{usage}%",
     "on-click": "$TERMINAL -a floatterm -e htop",

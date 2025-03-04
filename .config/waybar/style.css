@@ -29,12 +29,8 @@
  * ----------------------------------------------------- */
 
 window#waybar {
-  background-color: @bg;
-}
-
-#window {
   color: @fg;
-  padding: 0 10px;
+  background-color: @bg;
 }
 
 /* -----------------------------------------------------
@@ -63,7 +59,6 @@ button:hover {
 }
 
 #tags button {
-  color: @bg4;
   font-weight: normal;
   padding: 0px 5px;
   margin: 2px 2px;
@@ -84,19 +79,6 @@ button:hover {
 
 #tags button.urgent {
   color: @purple;
-}
-
-/* Dirty hack to hide vacant tags in River */
-#tags button:not(.occupied):not(.focused) {
-  font-size: 0;
-  min-width: 0;
-  min-height: 0;
-  margin: -17px;
-  padding: 0;
-  border: 0;
-  opacity: 0;
-  box-shadow: none;
-  background-color: transparent;
 }
 
 /* -----------------------------------------------------
