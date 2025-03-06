@@ -8,9 +8,7 @@ repositories:
 
 one_file_system: true
 
-encryption_passcommand:
-  sh -c "cat ~/Documents/credentials/.borg-passphrase"
-  #encryption_passcommand: pass Borg/borgmatic
+encryption_passcommand: sh -c "cat ~/Documents/credentials/.borg-passphrase"
 
 keep_daily: 7
 keep_weekly: 4
@@ -26,7 +24,6 @@ exclude_patterns:
   - "*.pyc"
   - "*/.vim*.tmp"
   - /etc/ssl
-  - /home/*/.var
   - /home/*/Applications
   - /home/*/.local/share/libvirt
   - /home/*/Music
