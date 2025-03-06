@@ -67,13 +67,6 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 - [newmanls](https://github.com/newmanls/dotfiles) - Helped me with TONS of stuff ⭐
 - [classabbyanp](https://github.com/classabbyamp) - Helped me with TONS of stuff ⭐
 
-### Todo
-
-> Nothing is perfect but here are some important reminders what needs to be done
-
-- [ ] Add install script to setup environment after Void install
-- [ ] Add list of all the key binds, for this I need to make some sort of parser script because things live in the river init
-
 #### Inspiration
 
 - [My stars](https://github.com/bitterhalt?tab=stars)
