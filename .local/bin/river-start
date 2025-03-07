@@ -10,7 +10,7 @@ set -x
 export EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="foot"
-export BROWSER="librewol"
+export BROWSER="librewolf"
 
 # Wayland
 export MOZ_ENABLE_WAYLAND=1
