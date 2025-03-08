@@ -1,6 +1,12 @@
-# PATH
+# Path
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin/flatpak-alias/:$PATH"
+
+# Defaults
+export EDITOR="nvim"
+export VISUAL="nvim"
+export TERMINAL="foot"
+export BROWSER="librewolf"
 
 # XDG Base Directory
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -8,7 +14,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-# Path
+# Tidy ~/
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export FZF_DEFAULT_OPTS_FILE="$XDG_CONFIG_HOME/fzf/fzf-opts"
@@ -22,7 +28,16 @@ export HISTFILE="$XDG_DATA_HOME/history"
 export SSH_AUTH_SOCK="$XDG_DATA_HOME/ssh-agent.sock"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 
+# Wayland
+export MOZ_ENABLE_WAYLAND=1
+export QT_QPA_PLATFORM=wayland
+export ELECTRON_OZONE_PLATFORM_HINT=wayland
+export BEMENU_BACKEND=wayland
+export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_DESKTOP=river
+export XDG_SESSION_DESKTOP=river
+
 # Start River environment
 if [ -z "$WAYLAND_DISPLAY" ] && [ $(tty) = "/dev/tty1" ]; then
-  $HOME/.local/bin/river-start
+  exec river > ~/.local/state/riverlog 2>&1
 fi
