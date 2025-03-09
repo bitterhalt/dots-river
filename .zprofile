@@ -28,16 +28,8 @@ export HISTFILE="$XDG_DATA_HOME/history"
 export SSH_AUTH_SOCK="$XDG_DATA_HOME/ssh-agent.sock"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 
-# Wayland
-export MOZ_ENABLE_WAYLAND=1
-export QT_QPA_PLATFORM=wayland
-export ELECTRON_OZONE_PLATFORM_HINT=wayland
-export BEMENU_BACKEND=wayland
-export XDG_SESSION_TYPE=wayland
-export XDG_CURRENT_DESKTOP=river
-export XDG_SESSION_DESKTOP=river
 
 # Start River environment
 if [ -z "$WAYLAND_DISPLAY" ] && [ $(tty) = "/dev/tty1" ]; then
-  exec river > ~/.local/state/riverlog 2>&1
+  $HOME/.local/bin/river-start
 fi
