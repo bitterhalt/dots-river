@@ -58,7 +58,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 | Super + Left + Mouse                  | Float and move the window                                                            |
 | Super + Alt + {H,J,K,L}               | Change layout orientation {left,bottom,top,right}                                    |
 
-#### Sources that I find helpful on my journey
+#### Sources where I stole most of my cool stuff
 
 - [SwayKh](https://github.com/SwayKh/dotfiles/tree/main) - Showed me how to configure River 😍
 - [Official install guide](https://docs.voidlinux.org/installation/index.html) - Helped me to setup Void 👍
@@ -66,10 +66,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 - [Mind's Forge](https://mindsforge.com/Notes/VoidInstall) - Helped me setup Wayland ⭐
 - [newmanls](https://github.com/newmanls/dotfiles) - Helped me with TONS of stuff ⭐
 - [classabbyanp](https://github.com/classabbyamp) - Helped me with TONS of stuff ⭐
-
-#### Inspiration
-
-- [My stars](https://github.com/bitterhalt?tab=stars)
+- [aellas](https://github.com/aellas) - For TONS of ideas and ispiration ⭐ ❤️ 🐐
 
 #### Special thanks ⭐
 
