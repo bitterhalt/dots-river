@@ -25,6 +25,18 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 - Filemanager: [Yazi](https://yazi-rs.github.io/)
 - Launcher [bemenu](https://github.com/Cloudef/bemenu)
 
+---
+
+### ! ! ! IMPORTANT ! ! !
+
+> If you have just installed Void and copy pasted everything from here, you won't get working system just yet!
+>
+> Check out ~/.local/bin/void/void_kickstart.sh to get the idea what services are needed!
+>
+> Good luck!
+
+---
+
 ### Main key bindings
 
 > Here is a list of the main key combinations, mostly default ones
