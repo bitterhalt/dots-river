@@ -31,7 +31,6 @@ configuration() {
   $ADDCMD dbus NetworkManager polkit
   $DOAS ln -sv /etc/sv/dbus /var/service/
   $DOAS ln -sv /etc/sv/NetworkManager /var/service/
-  $ADDCMD socklog-void
 
   $ADDCMD seatd
   $DOAS ln -sv /etc/sv/seatd /var/service/
