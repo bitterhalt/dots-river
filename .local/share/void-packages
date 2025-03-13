@@ -7,7 +7,7 @@ Signal-Desktop
 Thunar
 Vulkan-Tools
 Waybar
-adw-gtk3
+acpi
 alsa-pipewire
 alsa-plugins
 apulse
@@ -28,7 +28,6 @@ cryptsetup
 dbus
 dragon
 duf
-elogind
 exiftool
 eza
 fastfetch
@@ -52,7 +51,6 @@ grim
 grub-i386-efi
 grub-x86_64-efi
 gtk-engine-murrine
-gvfs
 htop
 innoextract
 iotop
@@ -100,6 +98,7 @@ noto-fonts-emoji
 noto-fonts-ttf
 nvme-cli
 nwg-look
+opendoas
 p7zip
 papirus-folders
 papirus-icon-theme
@@ -110,7 +109,6 @@ pinentry-gnome
 pipewire
 pkg-config
 polkit
-polkit-gnome
 protontricks
 ps_mem
 python3-devel
@@ -127,6 +125,7 @@ ripgrep
 river
 rsync
 sassc
+seatd
 sheldon
 slurp
 snooze
@@ -144,6 +143,7 @@ trash-cli
 tty-clock
 tumbler
 turnstile
+udiskie
 unrar
 unzip
 void-docs-browse
