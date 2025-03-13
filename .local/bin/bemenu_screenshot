@@ -3,12 +3,12 @@
 set -e
 
 get_options() {
-  echo "  Record Screen (MP4)"
-  echo "  Record Region (MP4)"
-  echo "  Screenshot Full"
-  echo "  Screenshot Region"
-  echo "  Screenshot Full+delay"
-  echo "  Stop Recording"
+  echo "Record Screen (MP4)"
+  echo "Record Region (MP4)"
+  echo "Screenshot Full"
+  echo "Screenshot Region"
+  echo "Screenshot Full+delay"
+  echo "Stop Recording"
 }
 
 main() {
@@ -20,22 +20,22 @@ main() {
   fi
 
   case $choice in
-  '  Record Screen (MP4)')
+  'Record Screen (MP4)')
     wl-record -f
     ;;
-  '  Record Region (MP4)')
+  'Record Region (MP4)')
     wl-record -r
     ;;
-  '  Screenshot Full')
+  'Screenshot Full')
     wl-shot -f
     ;;
-  '  Screenshot Region')
+  'Screenshot Region')
     wl-shot -r
     ;;
-  '  Screenshot Full+delay')
+  'Screenshot Full+delay')
     wl-shot -t
     ;;
-  '  Stop Recording')
+  ' Stop Recording')
     wl-record -k
     ;;
   esac
