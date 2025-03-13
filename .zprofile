@@ -28,7 +28,6 @@ export HISTFILE="$XDG_DATA_HOME/history"
 export SSH_AUTH_SOCK="$XDG_DATA_HOME/ssh-agent.sock"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 
-
 # Start River environment
 if [ -z "$WAYLAND_DISPLAY" ] && [ $(tty) = "/dev/tty1" ]; then
   $HOME/.local/bin/river-start

@@ -12,6 +12,9 @@ alias mkdir='mkdir -pv'
 alias ..='cd ..'
 alias history='fc -l 1'
 
+# Doas
+alias sudo='doas'
+
 # Vim
 alias vi='nvim'
 alias vim='nvim'
@@ -26,23 +29,20 @@ alias tp='trash-put'
 alias tpe='trash-empty'
 alias tpr='trash-restore'
 
-
 # System Journal
-alias loger='journalctl -p 3 -xb'
-alias logf='journalctl -f'
-alias logr='sudo journalctl --rotate'
-alias logs='journalctl --disk-usage'
-alias logv='journalctl --verify'
-alias logw='sudo journalctl --vacuum-time=1s'
+#alias loger='journalctl -p 3 -xb'
+#alias logf='journalctl -f'
+#alias logr='sudo journalctl --rotate'
+#alias logs='journalctl --disk-usage'
+#alias logv='journalctl --verify'
+#alias logw='sudo journalctl --vacuum-time=1s'
 
-# yt-dlp
+# Yt-dlp
 alias yta-mp3='yt-dlp --extract-audio --audio-format mp3 '
 alias ytv-best='yt-dlp -f bestvideo+bestaudio '
 
 # Random
 alias nvm='sudo nvme smart-log /dev/nvme0'
-alias sudoe='sudoedit'
-#alias dot='/usr/bin/git --git-dir=$HOME/Documents/Projects/dots-sway.git/ --work-tree=$HOME'
 alias dot='/usr/bin/git --git-dir=$HOME/Documents/projects/dots-river.git/ --work-tree=$HOME'
 alias hg='history | grep '
 

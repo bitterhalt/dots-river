@@ -292,9 +292,9 @@ riverctl rule-add -app-id "steam" csd
 #                      START                           #
 #-----------------------------------------------------#
 
-dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY
+dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
 
-executes="waybar swayidle foot mako wl-paste swaybg /usr/libexec/polkit-gnome-authentication-agent-1"
+executes="waybar swayidle foot mako wl-paste swaybg"
 
 for execute in $executes; do
   pidof -q "$execute" && continue

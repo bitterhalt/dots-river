@@ -8,17 +8,17 @@ case $(printf "%s\n" "Lock" "Logout" "Suspend" "Reboot" "Shutdown" | bemenu_runn
 "Shutdown")
   confirm=$(echo -e "Yes\nNo" | $CONFIRM)
   if [[ "$confirm" == "Yes" ]]; then
-    loginctl poweroff
+    doas poweroff
   fi
   ;;
 "Reboot")
   confirm=$(echo -e "Yes\nNo" | $CONFIRM)
   if [[ "$confirm" == "Yes" ]]; then
-    loginctl reboot
+    doas reboot
   fi
   ;;
 "Suspend")
-  loginctl suspend
+  doas zzz
   ;;
 "Lock")
   $HOME/.config/river/scripts/locker.sh
