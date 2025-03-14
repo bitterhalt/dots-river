@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Stolen from: https://github.com/mwyvr/dotfiles/blob/main/private_dot_local/bin/executable_configure-void.sh
+
 export ADDCMD="doas xbps-install -Sy"
 export DOAS="doas"
 export THEUSER="bazz"
