@@ -6,6 +6,7 @@
   "modules-right": [
     // "mpris",
     "group/sys",
+    "tray",
     "custom/pipewire",
     "custom/mic",
     "network",
@@ -28,7 +29,7 @@
   },
   "tray": {
     "icon-size": 16,
-    "spacing": 10,
+    "spacing": 12,
   },
   "group/sys": {
     "orientation": "horizontal",
@@ -37,7 +38,7 @@
       "click-to-reveal": true,
       "transition-duration": 500,
     },
-    "modules": ["custom/markl", "cpu", "memory", "tray"],
+    "modules": ["custom/markl", "cpu", "memory"],
   },
   "battery": {
     "bat": "BAT0",

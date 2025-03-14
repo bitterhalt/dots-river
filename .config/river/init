@@ -292,7 +292,7 @@ riverctl rule-add -app-id "steam" csd
 #                      START                           #
 #-----------------------------------------------------#
 
-dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
+dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 executes="waybar swayidle foot mako wl-paste swaybg"
 
