@@ -36,7 +36,7 @@ flatpak
 font-liberation-narrow-ttf
 foot
 fortune-mod
-fuzzel
+fuzzypkg
 fzf
 galculator
 gamemode
@@ -102,7 +102,6 @@ opendoas
 p7zip
 papirus-folders
 papirus-icon-theme
-pass
 pavucontrol
 perf
 pinentry-gnome
@@ -140,6 +139,7 @@ syncthing
 timeshift
 transmission-gtk
 trash-cli
+tree
 tty-clock
 tumbler
 turnstile
@@ -161,7 +161,6 @@ wine
 wl-clipboard
 wlopm
 wlr-randr
-wtype
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xdg-user-dirs
