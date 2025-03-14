@@ -34,7 +34,7 @@ configuration() {
 
   $ADDCMD seatd
   $DOAS ln -sv /etc/sv/seatd /var/service/
-  $DOAS usermod -aG socklog $THEUSER
+  $DOAS usermod -aG _seatd $THEUSER
 
   $ADDCMD socklog-void
   $DOAS ln -sv /etc/sv/socklog-unix /var/service/
@@ -44,7 +44,6 @@ configuration() {
   ln -svf /usr/share/zoneinfo/$TIMEZONE /etc/localtime
   $ADDCMD chrony
   $DOAS ln -sv /etc/sv/chronyd /var/service/
-  $DOAS usermod -aG _seatd $THEUSER
 
   $ADDCMD turnstile
   $DOAS ln -sv /etc/sv/turnstiled /var/service/
