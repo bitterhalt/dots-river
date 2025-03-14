@@ -10,6 +10,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 
 - Distro: [Void](https://voidlinux.org/)
 - WM: [River](https://codeberg.org/river/river)
+- Session and Seat management: [seatd](https://docs.voidlinux.org/config/session-management.html#seatd) and [turnstile](https://docs.voidlinux.org/config/session-management.html#turnstile)
 - Bar: [Waybar](https://github.com/Alexays/Waybar)
 - Fonts: JetBrains Mono
 - Symbols and icons: [Nerd Font Symbols](https://www.nerdfonts.com/)
