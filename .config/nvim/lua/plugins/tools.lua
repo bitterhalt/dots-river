@@ -89,33 +89,38 @@ return {
     },
   },
 
-  -- Telescope
+  -- FzfLua
   {
-    "nvim-telescope/telescope.nvim",
-    cmd = "Telescope",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = function()
-      return {
-        defaults = {
-          layout_strategy = "horizontal",
-          layout_config = {
-            horizontal = {
-              prompt_position = "bottom",
-              preview_width = 0.5,
-            },
-            width = 0.7,
-            height = 0.7,
-          },
-        },
-      }
-    end,
+    "ibhagwan/fzf-lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    cmd = "FzfLua",
+    opts = {},
     keys = {
-      { "<leader>ff", "<CMD>Telescope find_files <CR>", desc = "Find Files" },
-      { "<leader>fa", "<CMD>Telescope find_files hidden=true <CR>", desc = "Find Also Hidden Files" },
-      { "<leader><tab>", "<CMD>Telescope buffers <CR>", desc = "List buffers" },
-      { "<leader>fr", "<CMD>Telescope oldfiles <CR>", desc = "Find recent files" },
-      { "<leader>fw", "<CMD>Telescope live_grep <CR>", desc = "Live Grep" },
-      { "<leader>ht", "<CMD>Telescope colorscheme <CR>", desc = "Browse themes" },
+      {
+        "<leader>ff",
+        "<Cmd>FzfLua files<CR>",
+        desc = "Search files",
+      },
+      {
+        "<leader><tab>",
+        "<Cmd>FzfLua buffers<CR>",
+        desc = "Search buffers",
+      },
+      {
+        "<leader>fw",
+        "<Cmd>FzfLua live_grep<CR>",
+        desc = "Search for a pattern",
+      },
+      {
+        "<leader>fr",
+        "<Cmd>FzfLua oldfiles<CR>",
+        desc = "Search recnt files",
+      },
+      {
+        "<leader>fz",
+        "<Cmd>FzfLua zoxide<CR>",
+        desc = "List recent directories",
+      },
     },
   },
 

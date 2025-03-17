@@ -120,8 +120,8 @@ return {
       footer = "",
       items = {
         { name = "n New file", action = ":ene | startinsert", section = "" },
-        { name = "r Recent files", action = ":Telescope oldfiles", section = "" },
-        { name = "f Find files", action = ":Telescope find_files", section = "" },
+        { name = "r Recent files", action = "FzfLua oldfiles", section = "" },
+        { name = "f Find files", action = "FzfLua files", section = "" },
         { name = "l Lazy", action = ":Lazy", section = "" },
         { name = "s Restore session", action = ":lua require('persistence').load()", section = "" },
         { name = "q Quit", action = ":qa!", section = "" },
