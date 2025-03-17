@@ -4,7 +4,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 
 There are no install scripts atm and things are bit messy, so I wouldn't recommend cloning my entire setup, but instead to try copying bits and pieces as you put together your own dotfiles unique to you.
 
-![image](https://github.com/user-attachments/assets/984f73a6-87c3-45e4-bcb1-baaae01ea71f)
+![image](https://github.com/user-attachments/assets/71a11303-ba84-41cd-a616-2960a35618b4)
 
 ### Software I use
 
