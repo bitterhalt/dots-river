@@ -1,23 +1,43 @@
 return {
   -- Oxocarbon
   {
-    "nyoom-engineering/oxocarbon.nvim",
+    "kepano/flexoki-neovim",
     config = function()
-      require("oxocarbon")
+      vim.cmd("colorscheme flexoki-dark")
     end,
   },
 
-  -- Lualine
+  -- Sttusline
   {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      require("lualine").setup({
-        options = {
-          theme = "auto",
-          disabled_filetypes = {
-            statusline = { "dashboard", "alpha", "ministarter" },
+    "sontungexpt/sttusline",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    event = { "BufEnter" },
+    config = function(_, opts)
+      require("sttusline").setup({
+        statusline_color = "#1C1B1A",
+        laststatus = 3,
+        disabled = {
+          filetypes = {
+            "NvimTree",
+            "lazy",
           },
+          buftypes = {},
+        },
+        components = {
+          "mode",
+          "filename",
+          "git-branch",
+          "git-diff",
+          "%=",
+          "diagnostics",
+          "lsps-formatters",
+          "copilot",
+          "indent",
+          "encoding",
+          "pos-cursor",
+          "pos-cursor-progress",
         },
       })
     end,
