@@ -28,5 +28,7 @@ use = "yazi-rs/plugins:smart-enter"
 rev = "5186af7"
 hash = "aef2b1a805b80cce573bb766f1459d88"
 
-[flavor]
-deps = []
+[[flavor.deps]]
+use = "gosxrgxx/flexoki-dark"
+rev = "3e8cfba"
+hash = "56a96293138f09da7fae25ee405a4393"

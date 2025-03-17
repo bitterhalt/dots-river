@@ -43,9 +43,9 @@ riverctl input "$mouse" pointer-accel 0
 #-----------------------------------------------------#
 
 riverctl background-color 0x000000
-riverctl border-color-focused 0x6f6f6f
+riverctl border-color-focused 0x6F6E69
 riverctl border-color-urgent 0xa2191f
-riverctl border-color-unfocused 0x262626
+riverctl border-color-unfocused 0x282726
 riverctl border-width 1
 
 #-----------------------------------------------------#
@@ -311,8 +311,7 @@ for execute in $executes; do
   "swayidle")
     "$execute" -w \
       timeout 1800 "swaylock -f" \
-      timeout 3600 "wlopm --off '*'" resume "wlopm --on '*'" \
-      before-sleep "swaylock -f" &
+      timeout 3600 "wlopm --off '*'" resume "wlopm --on '*'" &
     ;;
   *)
     "$execute" &

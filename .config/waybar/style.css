@@ -2,15 +2,14 @@
  *                      Config
  * ----------------------------------------------------- */
 
-@define-color bg #161616;
-@define-color bg2 #262626;
-@define-color bg3 #393939;
-@define-color bg4 #525252;
-@define-color fg #D8D8D8;
-@define-color fg2 #c6c6c6;
-@define-color red #DA1E28;
-@define-color blue #78A9FF;
-@define-color purple #BE95FF;
+@define-color bg #100f0f;
+@define-color bg2 #282726;
+@define-color bg3 #343331;
+@define-color bg4 #575653;
+@define-color fg #CECDC3;
+@define-color red #AF3029;
+@define-color blue #205EA6;
+@define-color purple #CE5D97;
 
 * {
   font-family:
@@ -102,7 +101,7 @@ button:hover {
   border: solid 1px @bg3;
 }
 #custom-weather {
-  color: @fg2;
+  color: @fg;
   padding-left: 10px;
 }
 #custom-sep,
@@ -112,7 +111,7 @@ button:hover {
   padding: 0 4px;
 }
 #mpris {
-  color: @fg2;
+  color: @fg;
   padding: 0 10px;
 }
 

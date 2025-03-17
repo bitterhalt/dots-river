@@ -23,10 +23,10 @@ padding=10
 ##################
 #   Colors       #
 ##################
-background-color=#161616
-text-color=#e0e0e0
-border-color=#262626
-progress-color=#262626
+background-color=#100f0f
+text-color=#CECDC3
+border-color=#282726
+progress-color=#282726
 
 ##################
 # Urgency levels #

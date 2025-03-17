@@ -1,15 +1,16 @@
 /* Global color definitions */
-@define-color window_bg_color #161616;
-@define-color window_fg_color #cecece;
-@define-color view_bg_color #161616;
-@define-color view_fg_color #cecece;
-@define-color accent_bg_color #525252;
-@define-color accent_color @window_fg_color;
+
+@define-color window_bg_color #100f0f;
+@define-color window_fg_color #CECDC3;
+@define-color view_bg_color #100f0f;
+@define-color view_fg_color #CECDC3;
+@define-color accent_bg_color #403E3C;
+@define-color accent_color #878580;
 @define-color sidebar_bg_color @view_bg_color;
 @define-color sidebar_fg_color @window_fg_color;
-@define-color headerbar_bg_color #1b1b1b;
+@define-color headerbar_bg_color #1c1b1a;
 @define-color headerbar_fg_color @window_fg_color;
-@define-color popover_bg_color #393939;
+@define-color popover_bg_color #282726;
 @define-color popover_fg_color @view_fg_color;
 @define-color dialog_bg_color @popover_bg_color;
 @define-color dialog_fg_color @popover_fg_color;

@@ -18,7 +18,7 @@ final_space = true
   newline = true
 
   [[blocks.segments]]
-    foreground = 'blue'
+    foreground = 'white'
     background = 'transparent'
     type = 'path'
     style = 'plain'
@@ -49,7 +49,7 @@ final_space = true
     background = 'transparent'
     type = 'text'
     style = 'plain'
-    foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}magenta{{end}}']
+    foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}cyan{{end}}']
 
     [blocks.segments.properties]
       cache_duration = 'none'

@@ -31,3 +31,8 @@ map [fullscreen] p print
 map [fullscreen] g goto top
 map [normal]     F toggle_fullscreen
 map [fullscreen] F toggle_fullscreen
+
+" -----------------------------------------------------------------------------
+" Zathura theme
+" -----------------------------------------------------------------------------
+include flexoki-dark
