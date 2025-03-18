@@ -22,9 +22,9 @@ case $(printf "%s\n" "Lock" "Logout" "Suspend" "Reboot" "Shutdown" | bemenu_runn
   doas zzz
   ;;
 "Lock")
-  $HOME/.config/river/scripts/locker.sh
+  "$HOME/.config/river/scripts/locker.sh"
   ;;
 "Logout")
-  riverctl exit
+  pkill -u "$(id -u -n)"
   ;;
 esac
