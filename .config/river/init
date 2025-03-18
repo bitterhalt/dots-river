@@ -12,7 +12,7 @@
 
 #browser="firefox"
 browser="librewolf"
-mail="flatpak run eu.betterbird.Betterbird"
+mail="thunderbird"
 term="footclient" # <- If you want single instance change: "footclient" > "foot"
 fterm="$term -a float-term"
 tfm="foot -e yazi"

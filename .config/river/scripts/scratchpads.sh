@@ -29,7 +29,7 @@ case "$1" in
 "discord")
   search="discord"
   tag="$chat_tag"
-  cmd="Vesktop"
+  cmd="vesktop"
   ;;
 esac
 
