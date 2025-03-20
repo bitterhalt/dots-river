@@ -32,6 +32,7 @@ exiftool
 eza
 fastfetch
 ffmpegthumbnailer
+firefox
 flatpak
 font-liberation-narrow-ttf
 foot
@@ -57,7 +58,6 @@ iotop
 j4-dmenu-desktop
 jq
 kanshi
-keepassxc
 libadwaita
 libdrm-32bit
 libgcc-32bit
@@ -106,6 +106,7 @@ pavucontrol
 perf
 pinentry-gnome
 pipewire
+pixman-devel
 pkg-config
 polkit
 protontricks
@@ -136,6 +137,7 @@ swayidle
 swayimg
 swaylock
 syncthing
+thunderbird
 timeshift
 transmission-gtk
 trash-cli
@@ -146,6 +148,7 @@ turnstile
 udiskie
 unrar
 unzip
+vesktop
 void-docs-browse
 void-live-audio
 void-repo-multilib
