@@ -404,6 +404,11 @@ on   = [ "c", "a" ]
 run  = "plugin compress"
 desc = "Archive selected files"
 
+# Mount menu
+[[manager.prepend_keymap]]
+on  = "M"
+run = "plugin mount"
+
 # Rotate image 90 degrees (does not refresh preview - bug or I am stupid)
 [[manager.prepend_keymap]]
 on = [ "<" ]
