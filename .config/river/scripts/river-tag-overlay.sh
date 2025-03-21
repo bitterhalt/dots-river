@@ -14,12 +14,12 @@ river-tag-overlay \
   --margins 2:2:2:2 \
   --background-colour "$background" \
   --border-colour "$border" \
-  --square-active-border-colour "$border" \
+  --square-active-border-colour "$background" \
   --square-urgent-border-colour "$background" \
-  --square-active-background-colour "$urgent" \
-  --square-inactive-border-colour "$border" \
-  --square-inactive-background-colour "$background" \
+  --square-active-background-colour "$occupied" \
+  --square-inactive-border-colour "$background" \
+  --square-inactive-background-colour "$border" \
   --square-urgent-background-colour "$border" \
-  --square-active-occupied-colour "$urgent" \
+  --square-active-occupied-colour "$occupied" \
   --square-inactive-occupied-colour "$occupied" \
   --square-urgent-occupied-colour "$urgent" &
