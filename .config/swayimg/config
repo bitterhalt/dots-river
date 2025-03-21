@@ -24,7 +24,7 @@ shadow = #000000a0
 ################################################################################
 [viewer]
 # Window background color (RGBA)
-window = #161616ff
+window = #100F0Fff
 # Background for transparent images (grid/RGBA)
 transparency = grid
 # Default image scale (optimal/fit/width/height/fill/real)
@@ -51,13 +51,13 @@ cache = 100
 # Fill the entire tile with thumbnail (yes/no)
 fill = yes
 # Background color of the window (RGBA)
-window = #161616ff
+window = #100F0Fff
 # Background color of the tile (RGBA)
-background = #393939ff
+background = #1C1B1Aff
 # Background color of the selected tile (RGBA)
-select = #525252ff
+select = #403E3Cff
 # Border color of the selected tile (RGBA)
-border = #262626ff
+border = #282726ff
 # Shadow color of the selected tile (RGBA)
 shadow = #000000ff
 
