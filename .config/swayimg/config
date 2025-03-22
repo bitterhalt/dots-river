@@ -60,6 +60,9 @@ select = #403E3Cff
 border = #282726ff
 # Shadow color of the selected tile (RGBA)
 shadow = #000000ff
+# Persistent cache
+pstore = yes
+
 
 ################################################################################
 # Viewer mode key binding configuration: key = action [parameters]
