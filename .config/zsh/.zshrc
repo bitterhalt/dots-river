@@ -36,12 +36,9 @@ bindkey '^x' autosuggest-toggle
 
 zle_highlight+=(paste:none)
 
-# Data dir
-mkdir -p "${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
-
 # History
 HISTSIZE=5000
-HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
+HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/.zsh_history"
 SAVEHIST=$HISTSIZE
 setopt appendhistory
 setopt sharehistory
