@@ -28,11 +28,11 @@ cryptsetup
 dbus
 dragon
 duf
+exfatprogs
 exiftool
 eza
 fastfetch
 ffmpegthumbnailer
-firefox
 flatpak
 font-liberation-narrow-ttf
 foot
@@ -87,7 +87,6 @@ mpd
 mpv
 mpv-mpris
 msttcorefonts
-musikcube
 ncmpcpp
 neovim
 nethogs
@@ -128,8 +127,10 @@ sassc
 seatd
 sheldon
 slurp
+smartmontools
 snooze
 socklog-void
+starship
 steam
 swappy
 swaybg
