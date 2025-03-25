@@ -19,6 +19,7 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export FZF_DEFAULT_OPTS_FILE="$XDG_CONFIG_HOME/fzf/fzf-opts"
 export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 export GOPATH="$XDG_DATA_HOME/go"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export HISTFILE="$XDG_DATA_HOME/history"
 export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
@@ -30,6 +31,7 @@ export SSH_AUTH_SOCK="$XDG_DATA_HOME/ssh-agent.sock"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
 
 # Export dbus address
 export DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_RUNTIME_DIR/bus"
