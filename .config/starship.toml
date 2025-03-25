@@ -16,6 +16,8 @@ error_symbol = '[\$](red)'
 truncation_length = 8
 truncation_symbol = '…/'
 style ="white"
+read_only = '  '
+read_only_style = "yellow"
 
 [git_branch]
 style = "bold green"
