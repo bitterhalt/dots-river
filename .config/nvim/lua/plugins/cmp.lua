@@ -26,7 +26,7 @@ return {
       },
       window = {
         completion = cmp.config.window.bordered({
-          winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:PmenuSel,Search:None",
+          winhighlight = "FloatBorder:BorderBG,CursorLine:PmenuSel,Search:None",
         }),
       },
       mapping = cmp.mapping.preset.insert({

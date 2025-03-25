@@ -1,5 +1,5 @@
 return {
-  -- Oxocarbon
+  -- Theme
   {
     "kepano/flexoki-neovim",
     config = function()
