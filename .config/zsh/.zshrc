@@ -14,20 +14,11 @@ if [[ -f "/opt/homebrew/bin/brew" ]] then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Check if Oh My Posh is installed
-if ! command -v oh-my-posh &> /dev/null; then
-    echo "Oh My Posh not found. Installing..."
-    curl -s https://ohmyposh.dev/install.sh | bash -s
-fi
-
 # Load sheldon plugin manager
 eval "$(sheldon source)"
 
 # Load completions
 autoload -Uz compinit && compinit
-
-# Prompt
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 
 # Keybindings
 bindkey "^R" history-incremental-pattern-search-backward
@@ -62,3 +53,6 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --group-directories-fir
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+# Prompt
+eval "$(starship init zsh)"
