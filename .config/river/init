@@ -126,8 +126,8 @@ riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
 riverctl map normal Super Right send-layout-cmd rivertile "main-ratio +0.05"
 riverctl map normal Super Left send-layout-cmd rivertile "main-ratio -0.05"
 # Increment/decrement the main count of rivertile(1)
-riverctl map normal Super+Shift Prior send-layout-cmd rivertile "main-count +1"
-riverctl map normal Super+Shift Next send-layout-cmd rivertile "main-count -1"
+riverctl map normal Super Prior send-layout-cmd rivertile "main-count +1"
+riverctl map normal Super Next send-layout-cmd rivertile "main-count -1"
 # Move views
 riverctl map -repeat normal Super+Control Left move left 25
 riverctl map -repeat normal Super+Control Down move down 25
