@@ -16,7 +16,6 @@ mail="thunderbird"
 term="footclient" # <- If you want single instance change: "footclient" > "foot"
 fterm="$term -a float-term"
 tfm="foot -e yazi"
-gfm="thunar"
 drun="j4-dmenu-desktop --dmenu='bemenu_runner --fixed-height -W 0.20 -c -B1 -n -l15 -p drun:'"
 run="bemenu_runner run --no-exec --fixed-height -W 0.20 -c -B1 -n -l15 -p run: | xargs riverctl spawn"
 emoji="$HOME/.local/bin/bemenu_emoji"
@@ -56,7 +55,7 @@ riverctl default-attach-mode bottom
 riverctl default-layout rivertile
 
 # Adjust gaps between views if you want
-rivertile="rivertile -main-ratio 0.55 -view-padding 4 -outer-padding 4"
+rivertile="rivertile -main-ratio 0.55 -view-padding 2 -outer-padding 2"
 
 #-----------------------------------------------------#
 #                      LAUNCH                         #
@@ -90,7 +89,6 @@ riverctl map normal Super+Control I spawn "$term -W 130x40 -a float-term -e fuzz
 riverctl map normal Super+Control U spawn "$term -W 100x40 -a float-term -e popupgrade"
 riverctl map normal Super+Shift C spawn "$clip"
 riverctl map normal Super+Shift Delete spawn "$fterm -W 120x35 -e htop"
-riverctl map normal Super+Shift E spawn "$gfm"
 riverctl map normal Super+Shift F11 spawn "$HOME/.config/river/scripts/swayidle-toggle.sh && $sig_1"
 riverctl map normal Super+Shift F2 spawn "noti_usage ram"
 riverctl map normal Super+Shift Print spawn "$screenshot -re"
