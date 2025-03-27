@@ -54,8 +54,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 | Super + Control + R                   | Reload config                                                                        |
 | Super + Shift + D                     | Open Bemenu as run mode                                                              |
 | Super + W                             | Open Web Browser                                                                     |
-| Super + E                             | Open TUI Filemanager                                                                 |
-| Super Shift + E                       | Open GUI Filemanager                                                                 |
+| Super + E                             | Open Filemanager                                                                     |
 | Super + {1,2,3,4,5,6,7,8,9}           | View another tag                                                                     |
 | Super + Shift + {1,2,3,4,5,6,7,8,9}   | Move focused tags to another tag view                                                |
 | Super + 0                             | View all tags                                                                        |
