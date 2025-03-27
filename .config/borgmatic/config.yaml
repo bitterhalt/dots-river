@@ -37,7 +37,6 @@ exclude_patterns:
   - /home/*/.pki
   - /home/*/.ssr
   - /home/*/.npm
-  - /home/*/Documents
   - /home/*/.steam
   - /home/*/.steampath
   - /home/*/Videos
