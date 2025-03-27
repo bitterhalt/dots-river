@@ -32,7 +32,6 @@ export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
-
 # Export dbus address
 export DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_RUNTIME_DIR/bus"
 
