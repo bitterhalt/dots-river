@@ -79,7 +79,6 @@ riverctl map normal Super N spawn "foot -e nvim ~/Documents/personal/notes/index
 riverctl map normal Super Print spawn "$screenshot -f"
 riverctl map normal Super T spawn "$fterm -W 100x30 -e nvim ~/Documents/personal/notes/todo.md"
 riverctl map normal Super W spawn "$browser"
-riverctl map normal Super+Shift W spawn "$browser --new-window"
 riverctl map normal Super+Control E spawn "$emoji"
 riverctl map normal Super+Control P spawn "wl-color-picker"
 riverctl map normal Super+Control Print spawn "$recmenu"
