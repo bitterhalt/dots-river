@@ -258,6 +258,7 @@ riverctl rule-add -app-id "blueman-manager" float
 riverctl rule-add -app-id "float-*" float
 riverctl rule-add -app-id "floatterm" float
 riverctl rule-add -app-id "galculator" float
+riverctl rule-add -app-id "gimp-*" float
 riverctl rule-add -app-id "Gimp-*" float
 riverctl rule-add -app-id "imv" float
 riverctl rule-add -app-id "io.missioncenter.MissionCenter" float
