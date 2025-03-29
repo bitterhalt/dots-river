@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Launch river-tag-overlay when waybar is killed
 if pgrep -x waybar >/dev/null; then
   killall -q waybar
   notify-send -a center_notify "Bar" "Disabled" -t 1500 -h string:x-canonical-private-synchronous:volume

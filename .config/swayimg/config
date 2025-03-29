@@ -82,6 +82,7 @@ e = zoom width
 Shift+e = zoom height
 b = exec setbg "%"
 y = exec $HOME/.config/swayimg/copy_img.sh "%"
+Shift+Delete = exec trash-put '%' && echo "File trashed: %"; skip_file
 
 ################################################################################
 # Gallery mode key binding configuration: key = action [parameters]
@@ -98,6 +99,7 @@ k = step_up
 l = step_right
 b = exec setbg "%"
 y = exec $HOME/.config/swayimg/copy_img.sh "%"
+Shift+Delete = exec trash-put '%' && echo "File trashed: %"; skip_file
 
 ################################################################################
 # Image list configuration
