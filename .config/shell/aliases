@@ -47,7 +47,7 @@ alias dot='/usr/bin/git --git-dir=$HOME/Documents/projects/dots-river.git/ --wor
 alias hg='history | grep '
 
 # XBPS
-alias xiu='sudo xbps-install -Su && flatpak update'
+alias xiu='sudo xbps-install -Su'
 alias xir='sudo xbps-remove'
 alias xbq='xbps-query -Rs'
 alias xblist='xpkg -m > ~/.local/share/void-packages'

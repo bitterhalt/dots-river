@@ -2,7 +2,7 @@
 
 printf "Beginning upgrade.\\n"
 
-doas xbps-install -Su && flatpak update
+doas xbps-install -Su
 
 printf "\\nUpgrade complete.\\nPress <Enter> to exit window.\\n\\n"
 read -r _
