@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Set env vars
 export MOZ_ENABLE_WAYLAND=1
 export QT_QPA_PLATFORM=wayland
 export ELECTRON_OZONE_PLATFORM_HINT=wayland
@@ -9,4 +10,6 @@ export XDG_CURRENT_DESKTOP=river
 export XDG_SESSION_DESKTOP=river
 
 # Start River
+
+# Note: use "exec dbus-run-session river" if you dont have turstile!
 exec river >~/.local/state/riverlog 2>&1
