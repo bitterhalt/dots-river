@@ -7,6 +7,7 @@ icons=1
 ignore-timeout=0
 layer=overlay
 sort=-time
+history=0
 
 #####################
 #       Style       #
