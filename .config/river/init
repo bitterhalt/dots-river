@@ -157,7 +157,6 @@ riverctl map -repeat normal Control+Shift Down spawn "$HOME/.config/river/script
 riverctl map -repeat normal Control+Shift Up spawn "$HOME/.config/river/scripts/volume.sh up && $sig_3"
 riverctl map -repeat normal None XF86AudioLowerVolume spawn "$HOME/.config/river/scripts/volume.sh down && $sig_3"
 riverctl map -repeat normal None XF86AudioRaiseVolume spawn "$HOME/.config/river/scripts/volume.sh up && $sig_3"
-riverctl map normal Control+Shift M spawn "$HOME/.config/river/scripts/volume.sh mute && $sig_3"
 riverctl map normal Control+Shift Left spawn "brightnessctl set +5%"
 riverctl map normal Control+Shift Right spawn "brightnessctl set +5%"
 riverctl map normal None XF86AudioMute spawn "$HOME/.config/river/scripts/volume.sh mute && $sig_3"

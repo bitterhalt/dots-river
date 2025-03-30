@@ -9,11 +9,6 @@ rev = "2730199"
 hash = "2f1053f89d1a301a648ab181d0948e38"
 
 [[plugin.deps]]
-use = "yazi-rs/plugins:diff"
-rev = "2730199"
-hash = "7a08e303167d5b655c06da6d570f0333"
-
-[[plugin.deps]]
 use = "h-hg/yamb"
 rev = "22af003"
 hash = "7cc42012a7c2099f80064d228feb8d44"
