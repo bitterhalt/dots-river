@@ -31,7 +31,6 @@ exiftool
 eza
 fastfetch
 ffmpegthumbnailer
-flatpak
 font-liberation-narrow-ttf
 foot
 fortune-mod
@@ -159,6 +158,7 @@ wayland-protocols
 wev
 wf-recorder
 wget
+wideriver
 wine
 wl-clipboard
 wlopm
