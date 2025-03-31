@@ -197,8 +197,7 @@ riverctl map normal Super+Shift 0 set-view-tags $all_tags
 scratchpad="$HOME/.config/river/scripts/scratchpads.sh"
 zen_tag=$((1 << 11))
 chat_tag=$((1 << 12))
-tfm_tag=$((1 << 13))
-dyn_tag=$((1 << 14))
+dyn_tag=$((1 << 13))
 
 scratch_tags=$((zen_tag | dyn_tag | chat_tag))
 all_but_scratch_tag=$((all_tags ^ scratch_tags))
@@ -206,8 +205,6 @@ riverctl spawn-tagmask ${all_but_scratch_tag}
 
 riverctl map normal Super F5 spawn "$scratchpad term"
 riverctl map normal Super F6 spawn "$scratchpad discord"
-riverctl map normal Super+Shift R spawn "$scratchpad yazi"
-riverctl map normal Super R toggle-focused-tags "${tfm_tag}"
 riverctl map normal Super C toggle-focused-tags "${chat_tag}"
 riverctl map normal Super+Shift Minus set-view-tags "${dyn_tag}"
 riverctl map normal Super Minus toggle-focused-tags "${dyn_tag}"

@@ -9,18 +9,11 @@ if [ -z "$1" ]; then
 fi
 
 term="foot"
-yazi="$term -W 120x40 --app-id special-yazi -e yazi"
 zerminal="$term --app-id zen-term"
 
 zen_tag=$((1 << 11))
 chat_tag=$((1 << 12))
-tfm_tag=$((1 << 13))
 case "$1" in
-"yazi")
-  search="special-yazi"
-  tag="$tfm_tag"
-  cmd="$yazi"
-  ;;
 "term")
   search="zen-term"
   tag="$zen_tag"
