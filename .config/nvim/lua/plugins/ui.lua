@@ -109,23 +109,4 @@ return {
       { "<f8>", "<CMD>NvimTreeToggle<CR>", desc = "Toggle nvim tree" },
     },
   },
-
-  -- Mini starter
-  {
-    "echasnovski/mini.starter",
-    lazy = false,
-    config = true,
-    opts = {
-      header = "⚡ Neovim",
-      footer = "",
-      items = {
-        { name = "n New file", action = ":ene | startinsert", section = "" },
-        { name = "r Recent files", action = "FzfLua oldfiles", section = "" },
-        { name = "f Find files", action = "FzfLua files", section = "" },
-        { name = "l Lazy", action = ":Lazy", section = "" },
-        { name = "s Restore session", action = ":lua require('persistence').load()", section = "" },
-        { name = "q Quit", action = ":qa!", section = "" },
-      },
-    },
-  },
 }
