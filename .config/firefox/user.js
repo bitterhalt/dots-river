@@ -18,6 +18,9 @@ user_pref("browser.privatebrowsing.vpnpromourl", ""); // I won't buy your VPN
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false); // No recommendations
 user_pref("browser.download.manager.addToRecentDocs", false); // Put them where they belong
 
+/** TABS ***/
+user_pref("browser.tabs.groups.enabled", true); // Enable tab groups
+
 /** URL BAR ***/
 user_pref("browser.urlbar.unitConversion.enabled", false);
 user_pref("browser.urlbar.trending.featureGate", false);
