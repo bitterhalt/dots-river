@@ -6,7 +6,7 @@ export PATH="$HOME/.local/bin/flatpak-alias/:$PATH"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="foot"
-export BROWSER="librewolf"
+export BROWSER="firefox"
 
 # XDG Base Directory
 export XDG_CONFIG_HOME="$HOME/.config"

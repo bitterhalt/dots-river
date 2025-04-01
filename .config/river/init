@@ -11,7 +11,7 @@
 #-----------------------------------------------------#
 
 #browser="firefox"
-browser="librewolf"
+browser="firefox"
 mail="thunderbird"
 term="footclient" # <- If you want single instance change: "footclient" > "foot"
 fterm="$term -a float-term"
@@ -295,7 +295,9 @@ executes="waybar swayidle foot mako wl-paste swaybg"
 for execute in $executes; do
   pidof -q "$execute" && continue
   case $execute in
-  "foot") "$execute" -s & ;;
+  "foot")
+    "$execute" -s &
+    ;;
   "wl-paste")
     "$execute" --watch cliphist -max-items 100 store &
     ;;
