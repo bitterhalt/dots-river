@@ -24,7 +24,6 @@ cliphist
 cowsay
 cryptsetup
 dbus
-dconf
 dragon
 duf
 exfatprogs
@@ -32,6 +31,7 @@ exiftool
 eza
 fastfetch
 ffmpegthumbnailer
+firefox
 font-liberation-narrow-ttf
 foot
 fortune-mod
@@ -53,7 +53,6 @@ gtk-engine-murrine
 htop
 innoextract
 iotop
-j4-dmenu-desktop
 jq
 kanshi
 libadwaita
@@ -61,7 +60,6 @@ libdrm-32bit
 libgcc-32bit
 libglvnd-32bit
 libnotify
-librewolf
 libsixel
 libstdc++-32bit
 libunrar
@@ -147,6 +145,7 @@ turnstile
 udiskie
 unrar
 unzip
+util-linux
 vesktop
 void-docs-browse
 void-live-audio
