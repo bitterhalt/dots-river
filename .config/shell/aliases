@@ -37,10 +37,6 @@ alias tpr='trash-restore'
 #alias logv='journalctl --verify'
 #alias logw='sudo journalctl --vacuum-time=1s'
 
-# Yt-dlp
-alias yta-mp3='yt-dlp --extract-audio --audio-format mp3 '
-alias ytv-best='yt-dlp -f bestvideo+bestaudio '
-
 # Random
 alias nvm='sudo nvme smart-log /dev/nvme0'
 alias dot='/usr/bin/git --git-dir=$HOME/Documents/projects/dots-river.git/ --work-tree=$HOME'
@@ -51,4 +47,3 @@ alias xiu='sudo xbps-install -Su'
 alias xir='sudo xbps-remove'
 alias xbq='xbps-query -Rs'
 alias xblist='xpkg -m > ~/.local/share/void-packages'
-
