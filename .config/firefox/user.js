@@ -17,7 +17,8 @@ user_pref("browser.aboutwelcome.enabled", false); // NO
 user_pref("browser.privatebrowsing.vpnpromourl", ""); // I won't buy your VPN
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false); // No recommendations
 user_pref("browser.download.manager.addToRecentDocs", false); // Put them where they belong
-user_pref("browser.tabs.tabmanager.enabled", false); // Disable all tabs dropdown menu
+user_pref("browser.tabs.tabmanager.enabled", false); // disable all tabs dropdown menu
+user_pref("media.autoplay.default", 5); // Disable media autoplay
 
 /** TABS ***/
 user_pref("browser.tabs.groups.enabled", true); // Enable tab groups
@@ -41,8 +42,6 @@ user_pref("browser.compactmode.show", true);
 user_pref("browser.privateWindowSeparation.enabled", false); // WINDOWS
 
 /** FULLSCREEN NOTICE ***/
-user_pref("full-screen-api.transition-duration.enter", "0 0"); // No useles notices I see when I am full-screen
-user_pref("full-screen-api.transition-duration.leave", "0 0");
 user_pref("full-screen-api.warning.timeout", 0);
 
 /** TELEMETRY ***/
