@@ -25,7 +25,6 @@ cowsay
 cryptsetup
 dbus
 dragon
-duf
 exfatprogs
 exiftool
 eza
@@ -52,7 +51,6 @@ grub-x86_64-efi
 gtk-engine-murrine
 htop
 innoextract
-iotop
 jq
 kanshi
 libadwaita
@@ -83,7 +81,6 @@ mpd
 mpv
 mpv-mpris
 msttcorefonts
-ncmpcpp
 neovim
 nethogs
 network-manager-applet
@@ -101,15 +98,11 @@ pavucontrol
 perf
 pinentry-gnome
 pipewire
-pixman-devel
 pkg-config
 polkit
 protontricks
 ps_mem
-python3-devel
 python3-gobject
-python3-i3ipc
-python3-pip
 python3-pipx
 python3-wheel
 python3-xlib
@@ -140,7 +133,6 @@ transmission-gtk
 trash-cli
 tree
 tty-clock
-tumbler
 turnstile
 udiskie
 unrar
@@ -153,8 +145,6 @@ void-repo-multilib
 void-repo-multilib-nonfree
 void-repo-nonfree
 vulkan-loader-32bit
-wayland-devel
-wayland-protocols
 wev
 wf-recorder
 wget
@@ -179,6 +169,5 @@ xz
 yazi
 zathura
 zathura-pdf-poppler
-zig
 zoxide
 zsh
