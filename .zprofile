@@ -1,6 +1,6 @@
 # Path
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.local/bin/flatpak-alias/:$PATH"
+export PATH="$HOME/.local/share/cargo/bin/:$PATH"
 
 # Defaults
 export EDITOR="nvim"
