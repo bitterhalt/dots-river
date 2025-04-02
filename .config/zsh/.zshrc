@@ -14,9 +14,6 @@ if [[ -f "/opt/homebrew/bin/brew" ]] then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Load sheldon plugin manager
-eval "$(sheldon source)"
-
 # Load completions
 autoload -Uz compinit && compinit
 
@@ -24,7 +21,6 @@ autoload -Uz compinit && compinit
 bindkey "^R" history-incremental-pattern-search-backward
 bindkey "^F" history-incremental-pattern-search-forward
 bindkey '^x' autosuggest-toggle
-
 zle_highlight+=(paste:none)
 
 # History
@@ -51,8 +47,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --group-directories-fir
 [ -f "$HOME/.config/shell/functions" ] && source "$HOME/.config/shell/functions"
 
 # Shell integrations
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
-
-# Prompt
-eval "$(starship init zsh)"
+eval "$(sheldon source)"            # Plugins
+eval "$(fzf --zsh)"                 # Fzf
+eval "$(zoxide init --cmd cd zsh)"  # Zoxide
+eval "$(starship init zsh)"         # Starship
