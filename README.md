@@ -2,40 +2,37 @@
 
 List of configs to my keyboard-driven system. My point was to get light weight system without useless annoyances.
 
-There are no install scripts atm and things are bit messy, so I wouldn't recommend cloning my entire setup, but instead to try copying bits and pieces as you put together your own dotfiles unique to you.
+**! ! ! IMPORTANT ! ! !**
+
+> If you have just installed Void and copied everything from here, you won't get working system just yet!
+>
+> Check out but **(Don't run)** _/.local/bin/void/void_kickstart.sh_ to get the idea what services are needed!
+>
+> Good luck!
 
 ![image](https://github.com/user-attachments/assets/71a11303-ba84-41cd-a616-2960a35618b4)
 
 ### Software I use
 
 - Distro: [Void](https://voidlinux.org/)
-- WM: [River](https://codeberg.org/river/river)
-- Session and Seat management: [seatd](https://docs.voidlinux.org/config/session-management.html#seatd) and [turnstile](https://docs.voidlinux.org/config/session-management.html#turnstile)
 - Bar: [Waybar](https://github.com/Alexays/Waybar)
-- Tag-overlay: [river-tag-overlay](https://git.sr.ht/~leon_plickat/river-tag-overlay)
+- WM: [River](https://codeberg.org/river/river)
+- Cron daemon [snooze](https://github.com/leahneukirchen/snooze)
+- Editor: [neovim](https://neovim.io/)
+- Filemanager: [Yazi](https://yazi-rs.github.io/)
 - Fonts: JetBrains Mono
-- Symbols and icons: [Nerd Font Symbols](https://www.nerdfonts.com/)
 - GTK-theme: [adw-gtk3](https://github.com/lassekongo83/adw-gtk3)
 - Icons: [Papirus Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
 - Image Viewer: [swayimg](https://github.com/artemsen/swayimg)
+- Launcher [bemenu](https://github.com/Cloudef/bemenu)
 - Media Player: [mpv](https://mpv.io/)
 - Notification daemon: [mako](https://github.com/emersion/mako)
-- Terminal [foot](https://codeberg.org/dnkl/foot)
-- Cron daemon [snooze](https://github.com/leahneukirchen/snooze)
+- Screenlocker [waylock](https://codeberg.org/wayloc)
+- Session and Seat management: [seatd](https://docs.voidlinux.org/config/session-management.html#seatd) and [turnstile](https://docs.voidlinux.org/config/session-management.html#turnstile)
 - Shell: [zsh](https://www.zsh.org/)
-- Editor: [neovim](https://neovim.io/)
-- Filemanager: [Yazi](https://yazi-rs.github.io/)
-- Launcher [bemenu](https://github.com/Cloudef/bemenu)
-
----
-
-### ! ! ! IMPORTANT ! ! !
-
-> If you have just installed Void and copy pasted everything from here, you won't get working system just yet!
->
-> Check out ~/.local/bin/void/void_kickstart.sh to get the idea what services are needed!
->
-> Good luck!
+- Symbols and icons: [Nerd Font Symbols](https://www.nerdfonts.com/)
+- Tag-overlay: [river-tag-overlay](https://git.sr.ht/~leon_plickat/river-tag-overlay)
+- Terminal [foot](https://codeberg.org/dnkl/foot)
 
 ---
 
@@ -70,7 +67,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 | Super + Left + Mouse                  | Float and move the window                            |
 | Super + Alt + {H,J,K,L}               | Change layout orientation {left,bottom,top,right}    |
 
-#### Sources where I stole most of my cool stuff
+#### Sources where I stole most of my cool stuff ⭐
 
 - [SwayKh](https://github.com/SwayKh/dotfiles/tree/main) - Showed me how to configure River 😍
 - [Official install guide](https://docs.voidlinux.org/installation/index.html) - Helped me to setup Void 👍
