@@ -44,7 +44,6 @@ gdu
 gimp
 gnome-themes-extra
 gnome-themes-standard
-gparted
 grim
 grub-i386-efi
 grub-x86_64-efi
@@ -69,7 +68,6 @@ lutris
 lvm2
 mako
 mdadm
-meld
 mesa-demos
 mesa-dri-32bit
 mesa-vaapi
@@ -125,7 +123,6 @@ swappy
 swaybg
 swayidle
 swayimg
-swaylock
 syncthing
 thunderbird
 timeshift
@@ -145,6 +142,7 @@ void-repo-multilib
 void-repo-multilib-nonfree
 void-repo-nonfree
 vulkan-loader-32bit
+waylock
 wev
 wf-recorder
 wget

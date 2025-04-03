@@ -77,7 +77,7 @@ There are no install scripts atm and things are bit messy, so I wouldn't recomme
 - [kennydodrill.com/blog](https://kennydodrill.com/blog/stable-void-linux-setup-guide/) - Helped me to setup Void 👍
 - [Mind's Forge](https://mindsforge.com/Notes/VoidInstall) - Helped me setup Wayland ⭐
 - [newmanls](https://github.com/newmanls/dotfiles) - Helped me with TONS of stuff ⭐
-- [classabbyanp](https://github.com/classabbyamp) - Helped me with TONS of stuff ⭐
+- [classabbyamp](https://github.com/classabbyamp) - Helped me with TONS of stuff ⭐
 - [aellas](https://github.com/aellas) - For TONS of ideas and ispiration ⭐ ❤️ 🐐
 
 #### Special thanks ⭐
