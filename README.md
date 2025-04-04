@@ -27,7 +27,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 - Launcher [bemenu](https://github.com/Cloudef/bemenu)
 - Media Player: [mpv](https://mpv.io/)
 - Notification daemon: [mako](https://github.com/emersion/mako)
-- Screenlocker [waylock](https://codeberg.org/wayloc)
+- Screenlocker [waylock](https://git.sr.ht/~ifreund/waylock)
 - Session and Seat management: [seatd](https://docs.voidlinux.org/config/session-management.html#seatd) and [turnstile](https://docs.voidlinux.org/config/session-management.html#turnstile)
 - Shell: [zsh](https://www.zsh.org/)
 - Symbols and icons: [Nerd Font Symbols](https://www.nerdfonts.com/)
