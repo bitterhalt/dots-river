@@ -18,7 +18,8 @@ case $(printf "%s\n" "Lock" "Logout" "Suspend" "Reboot" "Shutdown" | bemenu_runn
   fi
   ;;
 "Suspend")
-  waylocker && sleep 2
+  waylocker &
+  sleep 2 # Probably not needed, but I leave it because I had some issues with more complicated locker without this
   doas zzz
   ;;
 "Lock")
