@@ -38,7 +38,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 
 ### Main key bindings
 
-> Here is a list of the main key combinations, mostly default ones
+> Here is a list of the main key combinations
 >
 > The rest can be found in **$HOME/.config/river/init**
 >
