@@ -1,0 +1,2 @@
+timeout 1500 "waylocker"
+timeout 1800 "wlopm --off '*'" resume "wlopm --on '*'"

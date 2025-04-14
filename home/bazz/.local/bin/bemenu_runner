@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Idea stolen from: https://github.com/madic-creates/Sway-DE/blob/master/bin/bemenu-run.sh
+
+BEMENU_ARGS=(
+  -i        # Filter items case-insensitively
+  -H28      # Line-height
+  -P '*'    # Prefix
+  --cw '2'  # Width of the cursor
+  --ch '18' # Height of the cursor
+  --hp '8'  # Horizontal padding for the entries in single line mode
+  --fn 'JetBrains Mono 16px'
+  --tb '#100F0F' --tf '#24837b'
+  --fb '#100F0F' --ff '#FFFCF0'
+  --cb '#100F0F' --cf '#525252'
+  --nb '#100F0F' --nf '#CECDC3'
+  --ab '#100F0F' --af '#CECDC3'
+  --hb '#100F0F' --hf '#24837B'
+  --bdr '#282726' --cf '#323232'
+  --single-instance
+  "$@")
+
+if [ "$1" = 'run' ]; then
+  bemenu-run "${BEMENU_ARGS[@]}"
+else
+  bemenu "${BEMENU_ARGS[@]}"
+fi

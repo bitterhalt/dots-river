@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+# Small helper script to record your desktop on sway
+# Depends on: wf-recoder, slurp, vaapi
+# Github @ bitterhalt
+
+set -e
+
+SAVEDIR="${HOME}/Videos/Captures/"
+mkdir -p -- "$SAVEDIR"
+TIMESTAMP=$(date +'%Y-%m-%d-%H-%M-%S')
+FILENAME="$SAVEDIR/${TIMESTAMP}_capture.mp4"
+
+fullscreen() {
+  wf-recorder \
+    -c h264_vaapi \
+    -f "$FILENAME"
+  notify-send -t 3000 "Screen record" "File saved as $SAVEDIR"
+}
+
+region() {
+  wf-recorder \
+    -c h264_vaapi \
+    -g "$(slurp)" \
+    -f "$FILENAME"
+  notify-send -T 3000 "Screen record" "File saved as $SAVEDIR"
+}
+
+kill() {
+  killall -s SIGINT wf-recorder
+}
+
+print_help() {
+  echo "Usage: wl-record [options]"
+  echo "Options:"
+  echo "  -f, --fullscreen   Capture the fullscreen."
+  echo "  -r, --region       Select a region to capture."
+  echo "  -k, --kill         Kill record"
+  echo "  -h, --help         Show this help message."
+}
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+  -f | --fullscreen) fullscreen ;;
+  -r | --region) region ;;
+  -k | --kill) kill ;;
+  -h | --help) print_help ;;
+  *)
+    echo "Unknown option: $1"
+    print_help
+    exit 1
+    ;;
+  esac
+  shift
+done

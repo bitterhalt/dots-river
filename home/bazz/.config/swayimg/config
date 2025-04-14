@@ -1,0 +1,115 @@
+################################################################################
+# General configuration
+################################################################################
+[general]
+# Mode at startup (viewer/gallery)
+mode = viewer
+# Window position (parent or absolute coordinates, e.g. 100,200)
+size = 800,600
+# Application ID and window class name
+app_id = swayimg
+
+[font]
+# Font name
+name = JetBrains Mono
+# Font size (pt)
+size = 11
+# Font color (RGBA)
+color = #ccccccff
+# Shadow color (RGBA)
+shadow = #000000a0
+
+################################################################################
+# Viewer mode configuration
+################################################################################
+[viewer]
+# Window background color (RGBA)
+window = #100F0Fff
+# Background for transparent images (grid/RGBA)
+transparency = grid
+# Default image scale (optimal/fit/width/height/fill/real)
+scale = optimal
+# Fix position of the image on the window surface (yes/no)
+fixed = yes
+# Run slideshow at startup (yes/no)
+slideshow = no
+# Slideshow image display time (seconds)
+slideshow_time = 3
+# Number of previously viewed images to store in cache
+history = 1
+# Number of preloaded images (read ahead)
+preload = 1
+
+################################################################################
+# Gallery mode configuration
+################################################################################
+[gallery]
+# Max size of the thumbnail (pixels)
+size = 200
+# Max number of thumbnails in cache, 0 to unlimit
+cache = 100
+# Fill the entire tile with thumbnail (yes/no)
+fill = yes
+# Background color of the window (RGBA)
+window = #100F0Fff
+# Background color of the tile (RGBA)
+background = #1C1B1Aff
+# Background color of the selected tile (RGBA)
+select = #403E3Cff
+# Border color of the selected tile (RGBA)
+border = #282726ff
+# Shadow color of the selected tile (RGBA)
+shadow = #000000ff
+# Persistent cache
+pstore = yes
+
+
+################################################################################
+# Viewer mode key binding configuration: key = action [parameters]
+################################################################################
+[keys.viewer]
+q = exit
+return = mode
+f = fullscreen
+g = first_file
+Shift+g = last_file
+r = reload
+l = next_file
+h = prev_file
+Up = next_file
+Down = prev_file
+e = zoom width
+Shift+e = zoom height
+b = exec setbg "%"
+y = exec $HOME/.config/swayimg/copy_img.sh "%"
+Shift+Delete = exec trash-put '%' && echo "File trashed: %"; skip_file
+
+################################################################################
+# Gallery mode key binding configuration: key = action [parameters]
+################################################################################
+[keys.gallery]
+q = exit
+return = mode
+f = fullscreen
+g = first_file
+Shift+g = last_file
+h = step_left
+j = step_down
+k = step_up
+l = step_right
+b = exec setbg "%"
+y = exec $HOME/.config/swayimg/copy_img.sh "%"
+Shift+Delete = exec trash-put '%' && echo "File trashed: %"; skip_file
+
+################################################################################
+# Image list configuration
+################################################################################
+[list]
+# Default order (none/alpha/reverse/random)
+order = alpha
+# Looping list of images (yes/no)
+loop = yes
+# Read directories recursively (yes/no)
+recursive = no
+# Open all files in the directory of the specified file (yes/no)
+all = yes

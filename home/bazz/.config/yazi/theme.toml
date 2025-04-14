@@ -1,0 +1,9 @@
+# Theme
+[flavor]
+dark = "flexoki-dark"
+
+# Overrites
+[status]
+overall   = {}
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
