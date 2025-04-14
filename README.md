@@ -17,21 +17,21 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 - Distro: [Void](https://voidlinux.org/)
 - Bar: [Yambar](https://codeberg.org/dnkl/yambar)
 - WM: [River](https://codeberg.org/river/river)
-- Cron daemon [snooze](https://github.com/leahneukirchen/snooze)
+- Cron daemon: [snooze](https://github.com/leahneukirchen/snooze)
 - Editor: [neovim](https://neovim.io/)
 - Filemanager: [Yazi](https://yazi-rs.github.io/)
 - Fonts: JetBrains Mono
 - GTK-theme: [adw-gtk3](https://github.com/lassekongo83/adw-gtk3)
 - Image Viewer: [swayimg](https://github.com/artemsen/swayimg)
-- Launcher [bemenu](https://github.com/Cloudef/bemenu)
-- Login Manager[Greetd](https://git.sr.ht/~kennylevinsen/greetd)
+- Launcher: [bemenu](https://github.com/Cloudef/bemenu)
+- Login Manager: [Greetd](https://git.sr.ht/~kennylevinsen/greetd)
 - Media Player: [mpv](https://mpv.io/)
 - Notification daemon: [fnott](https://codeberg.org/dnkl/fnott)
-- Screenlocker [waylock](https://git.sr.ht/~ifreund/waylock)
+- Screenlocker: [waylock](https://git.sr.ht/~ifreund/waylock)
 - Session and Seat management: [seatd](https://docs.voidlinux.org/config/session-management.html#seatd) and [turnstile](https://docs.voidlinux.org/config/session-management.html#turnstile)
 - Symbols and icons: [Nerd Font Symbols](https://www.nerdfonts.com/)
 - Tag-overlay: [river-tag-overlay](https://git.sr.ht/~leon_plickat/river-tag-overlay)
-- Terminal [foot](https://codeberg.org/dnkl/foot)
+- Terminal: [foot](https://codeberg.org/dnkl/foot)
 
 ---
 
@@ -75,6 +75,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 - [newmanls](https://github.com/newmanls/dotfiles) - Helped me with TONS of stuff ⭐
 - [classabbyamp](https://github.com/classabbyamp) - Helped me with TONS of stuff ⭐
 - [aellas](https://github.com/aellas) - For TONS of ideas and ispiration ⭐ ❤️ 🐐
+- [Joris](https://codeberg.org/jorisvandijk) - For showing me how to manage my dots better ❤️ ⭐
 
 #### Special thanks ⭐
 
