@@ -3,6 +3,7 @@ return {
   -- fzfm
   {
     "rolv-apneseth/tfm.nvim",
+    cmd = "Tfm",
     opts = {
       file_manager = "yazi",
       replace_netrw = true,
@@ -15,10 +16,9 @@ return {
         y = 0.5,
       },
     },
-    lazy = true,
     keys = {
       {
-        "<f8>",
+        "<leader>e",
         "<Cmd>Tfm<CR>",
         desc = "Open file manager",
       },
