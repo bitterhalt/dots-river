@@ -37,6 +37,11 @@ push() {
   git push
 }
 
+clean() {
+  cd $dotfiles_repo
+  find $dotfiles_repo -mindepth 1 -maxdepth 1 -not -name ".git" -not -name ".gitignore" -exec rm -rf {} \;
+}
+
 case "$1" in
 "add")
   add
@@ -44,11 +49,11 @@ case "$1" in
 "push")
   push
   ;;
+"clean")
+  clean
+  ;;
 *)
-  echo "Usage: add | push"
+  echo "Usage: add | push | clean"
   exit 1
   ;;
 esac
-
-# Cleanup
-# find $dotfiles_repo -mindepth 1 -maxdepth 1 -not -name ".git" -not -name ".gitignore" -exec rm -rf {} \;
