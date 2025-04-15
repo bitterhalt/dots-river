@@ -9,12 +9,16 @@ return {
       enable_cmds = true,
       ui = {
         border = "single",
+        height = 1,
+        width = 1,
+        x = 0.5,
+        y = 0.5,
       },
     },
     lazy = true,
     keys = {
       {
-        "<leader>ee",
+        "<f8>",
         "<Cmd>Tfm<CR>",
         desc = "Open file manager",
       },

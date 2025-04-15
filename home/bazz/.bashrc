@@ -18,7 +18,7 @@ shopt -s checkwinsize            # Checks term size when bash regains control
 shopt -s histappend              # Do not overwrite history
 shopt -s no_empty_cmd_completion # Do not TAB expand empty lines
 
-bind "set show-all-if-ambiguous on"     # Lis available options in tab-manu
+bind "set show-all-if-ambiguous on"     # Lis available options in tab-menu
 bind "set completion-ignore-case on"    # Ignore upper and lowercase in TAB-completion
 bind "set colored-completion-prefix on" # Enable completion coloring
 bind "TAB:menu-complete"                # Better tab-completion

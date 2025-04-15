@@ -83,30 +83,4 @@ return {
       })
     end,
   },
-
-  -- NvimTree
-  {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      require("nvim-tree").setup({
-        update_focused_file = {
-          enable = true,
-          update_cwd = true,
-        },
-        diagnostics = {
-          enable = false,
-          show_on_dirs = false,
-        },
-        view = {
-          width = 25,
-          side = "left",
-        },
-      })
-    end,
-    keys = {
-      { "<f8>", "<CMD>NvimTreeToggle<CR>", desc = "Toggle nvim tree" },
-    },
-  },
 }
