@@ -24,6 +24,8 @@
 /home/bazz/.config/service/dbus/
 /home/bazz/.config/shell/
 /home/bazz/.config/starship.toml
+/home/bazz/.config/htop/
+/home/bazz/.config/xsettingsd/
 /home/bazz/.config/swappy/
 /home/bazz/.config/swayidle/
 /home/bazz/.config/swayimg/
