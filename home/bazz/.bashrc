@@ -17,9 +17,9 @@ shopt -s cdspell      # Autocorrects cd misspellings
 shopt -s checkwinsize # Checks term size when bash regains control
 shopt -s histappend   # Do not overwrite history
 
-bind "TAB:menu-complete"             # Better tab-completion
 bind "set show-all-if-ambiguous on"  # Lis available options in tab-manu
 bind "set completion-ignore-case on" # Ignore upper and lowercase in TAB-completion
+bind "TAB:menu-complete"             # Better tab-completion
 
 eval "$(fzf --bash)"                # CTRL-t = fzf select | CTRL-r = fzf history |  ALT-c  = fzf cd
 eval "$(starship init bash)"        # Load prompt
