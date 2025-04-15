@@ -2,11 +2,11 @@
 
 List of configs to my keyboard-driven system. My point was to get light weight system without useless annoyances.
 
-**! ! ! IMPORTANT ! ! !**
+**! ! ! ⚠️ IMPORTANT ⚠️ ! ! !**
 
-> If you have just installed Void and copied everything from here, you won't get working system just yet!
+> If you have just installed Void and copied everything from here, you won't get working system just yet.
 >
-> Check out but **(Don't run)** _/.local/bin/void/void_kickstart.sh_ to get the idea what services are needed!
+> Check out but **Don't run** _/.local/bin/void/void_kickstart.sh_ to get the idea what services are needed
 >
 > Good luck!
 
@@ -43,7 +43,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 >
 > If you have used DWM before you are already home
 
-| Keybind                               | Description                                          |
+| Key                                   | Description                                          |
 | ------------------------------------- | ---------------------------------------------------- |
 | Super + Enter                         | Open Terminal                                        |
 | Super + D                             | Open Bemenu                                          |
