@@ -5,7 +5,6 @@ MangoHud
 NetworkManager
 Signal-Desktop
 Vulkan-Tools
-Waybar
 acpi
 base-system
 bash-completion
@@ -42,6 +41,7 @@ gdu
 gimp
 gnome-themes-extra
 gnome-themes-standard
+greetd
 grim
 grub-i386-efi
 grub-x86_64-efi
@@ -83,6 +83,7 @@ p7zip
 pavucontrol
 pipewire
 pkg-config
+playerctl
 polkit
 protontricks
 ps_mem
@@ -95,7 +96,6 @@ ripgrep
 river
 rsync
 seatd
-sheldon
 slurp
 smartmontools
 snooze
@@ -113,6 +113,7 @@ transmission-gtk
 trash-cli
 tree
 tty-clock
+tuigreet
 turnstile
 udiskie
 unrar
@@ -147,8 +148,8 @@ xorg-minimal
 xterm
 xtools
 xz
+yambar
 yazi
 zathura
 zathura-pdf-poppler
 zoxide
-zsh
