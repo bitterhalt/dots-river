@@ -1,0 +1,5 @@
+#!/bin/sh
+[ -r ./conf ] && . ./conf
+[ -n "$core_services" ] && SVDIR=".." sv start $core_services
+[ -p "/run/turnstiled/1000/ready" ] && printf "/home/bazz/.config/service/turnstile-ready" > "/run/turnstiled/1000/ready"
+exec pause

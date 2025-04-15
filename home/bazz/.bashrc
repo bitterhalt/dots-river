@@ -12,14 +12,16 @@ set -o vi # vi mode
 bind -m vi-command "Control-l: clear-screen"
 bind -m vi-insert "Control-l: clear-screen"
 
-shopt -s autocd       # Change to named directory
-shopt -s cdspell      # Autocorrects cd misspellings
-shopt -s checkwinsize # Checks term size when bash regains control
-shopt -s histappend   # Do not overwrite history
+shopt -s autocd                  # Change to named directory
+shopt -s cdspell                 # Autocorrects cd misspellings
+shopt -s checkwinsize            # Checks term size when bash regains control
+shopt -s histappend              # Do not overwrite history
+shopt -s no_empty_cmd_completion # Do not TAB expand empty lines
 
-bind "set show-all-if-ambiguous on"  # Lis available options in tab-manu
-bind "set completion-ignore-case on" # Ignore upper and lowercase in TAB-completion
-bind "TAB:menu-complete"             # Better tab-completion
+bind "set show-all-if-ambiguous on"     # Lis available options in tab-manu
+bind "set completion-ignore-case on"    # Ignore upper and lowercase in TAB-completion
+bind "set colored-completion-prefix on" # Enable completion coloring
+bind "TAB:menu-complete"                # Better tab-completion
 
 eval "$(fzf --bash)"                # CTRL-t = fzf select | CTRL-r = fzf history |  ALT-c  = fzf cd
 eval "$(starship init bash)"        # Load prompt
