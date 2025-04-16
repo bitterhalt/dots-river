@@ -1,0 +1,211 @@
+# Opener
+cmd open ${{
+  case $(file --mime-type "$f" -bL) in
+    text/plain) $EDITOR "$f" ;;
+    text/x-shellscript) $EDITOR "$f" ;;
+    application/javascript) $EDITOR "$f" ;;
+    application/json) $EDITOR "$f" ;;
+    inode/x-empty) $EDITOR "$f" ;;
+    application/octet-stream) xdg-open "$f" ;;
+    text/*) $EDITOR "$f" ;;
+    *) xdg-open "$f" ;;
+  esac
+}}
+
+cmd chmod %{{
+	printf "Mode Bits: "
+	read and
+
+	for file in "$fx"
+	do
+		chmod $and "$file"
+	done
+	lf -remote 'send reload'
+}}
+
+# Jump to dir
+cmd fzf_jump ${{
+    res="$(find . -maxdepth 1 | fzf --reverse --header='Jump to location')"
+    if [ -n "$res" ]; then
+        if [ -d "$res" ]; then
+            cmd="cd"
+        else
+            cmd="select"
+        fi
+        res="$(printf '%s' "$res" | sed 's/\\/\\\\/g;s/"/\\"/g')"
+        lf -remote "send $id $cmd \"$res\""
+    fi
+}}
+
+# zoxide
+cmd zi ${{
+    result="$(zoxide query -i | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    lf -remote "send $id cd \"$result\""
+}}
+
+cmd on-cd &{{
+    zoxide add "$PWD"
+}}
+
+# Yank paths into your clipboard
+cmd yank-path $printf '%s' "$fx" | wl-copy
+cmd yank-basename $basename -a -- $fx | head -c-1 | wl-copy
+
+# Make dir
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+# Make file
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+}}
+
+# Delete items
+cmd delete %{{
+	# put items into array that we can count them
+	files=()
+	while read -r line; do files+=("$line"); done <<< "$fx"
+
+	# count how many items there are
+	len=${#files[@]}
+
+	# confirm trashing
+	if [[ $len == 1 ]]; then
+		echo -n "delete '$fx' ?"
+	else
+		echo -n "delete $len items?"
+	fi
+	echo -n " [y/N] "
+
+	# read answer
+	read -n 1 ans
+	# make it lowercase
+	ans="${ans,,}"
+
+	echo
+
+	# nuke
+	if [[ $ans == y ]]; then
+		rm -rf $fx
+		if [[ $len == 1 ]]; then
+			echo "deleted '$files'"
+		else
+			echo "deleted $len items"
+		fi
+	else
+		# needed to clear the bottom row
+		echo
+	fi
+}}
+
+# Trash items
+cmd trash %{{
+	# put items into array that we can count them
+	files=()
+	while read -r line; do files+=("$line"); done <<< "$fx"
+
+	# count how many items there are
+	len=${#files[@]}
+
+	# confirm trashing
+	if [[ $len == 1 ]]; then
+		echo -n "trash '$fx' ?"
+	else
+		echo -n "trash $len items?"
+	fi
+	echo -n " [y/N] "
+
+	# read answer
+	read -n 1 ans
+	# make it lowercase
+	ans="${ans,,}"
+
+	echo
+
+	# nuke
+	if [[ $ans == y ]]; then
+		trash-put $fx
+		if [[ $len == 1 ]]; then
+			echo "trashed '$files'"
+		else
+			echo "trashed $len items"
+		fi
+	else
+		# needed to clear the bottom row
+		echo
+	fi
+}}
+
+# Bulkrename Ranger like
+cmd bulkrename ${{
+    tmpfile_old="$(mktemp)"
+    tmpfile_new="$(mktemp)"
+
+    [ -n "$fs" ] && fs=$(basename -a $fs) || fs=$(ls)
+
+    echo "$fs" > "$tmpfile_old"
+    echo "$fs" > "$tmpfile_new"
+    $EDITOR "$tmpfile_new"
+
+    [ "$(wc -l < "$tmpfile_old")" -eq "$(wc -l < "$tmpfile_new")" ] || { rm -f "$tmpfile_old" "$tmpfile_new"; exit 1; }
+
+    paste "$tmpfile_old" "$tmpfile_new" | while IFS="$(printf '\t')" read -r src dst
+    do
+        [ "$src" = "$dst" ] || [ -e "$dst" ] || mv -- "$src" "$dst"
+    done
+
+    rm -f "$tmpfile_old" "$tmpfile_new"
+    lf -remote "send $id unselect"
+}}
+
+# Unarchive
+cmd unarchive &{{
+# This part creates the directory for extracting files
+  a="${f%%.*}"
+  mkdir -p "$a"
+
+  case "$f" in
+    *.zip) unzip -d "$a" "$f" ;;
+    *.tar.gz) tar -xzvf "$f" -C "$a" ;;
+    *.tar.xz) tar -xvf "$f" -C "$a" ;;
+    *.tar.bz2) tar -xjvf "$f" -C "$a" ;;
+    *.tar) tar -xvf "$f" -C "$a" ;;
+    *.rar) unrar x "$f" "$a" ;;
+    *.7z) 7z x "$f" -o"$a" ;;
+    *) echo "Unsupported Format" ;;
+  esac
+  lf -remote "send $id echo 'Unarchive complete for $f'"
+}}
+
+# Show progress when copying or moving
+cmd pasteBig &{{
+    set -- $(cat ~/.local/share/lf/files)
+    mode="$1"
+    shift
+    case "$mode" in
+        copy)
+            rsync -av --ignore-existing --progress -- "$@" . |
+            stdbuf -i0 -o0 -e0 tr '\r' '\n' |
+            while IFS= read -r line; do
+                line="$(printf '%s' "$line" | sed 's/\\/\\\\/g;s/"/\\"/g')"
+                lf -remote "send $id echo \"$line\""
+            done
+            ;;
+        move)
+            mv -n -- "$@" .
+            lf -remote "send clear"
+            ;;
+    esac
+}}
+
+# Edit lf config
+cmd edit-config ${{
+    $EDITOR ~/.config/lf/lfrc
+    lf -remote "send $id source ~/.config/lf/lfrc"
+}}
+

@@ -5,7 +5,7 @@ return {
     "rolv-apneseth/tfm.nvim",
     cmd = "Tfm",
     opts = {
-      file_manager = "yazi",
+      file_manager = "lf",
       replace_netrw = true,
       enable_cmds = true,
       ui = {

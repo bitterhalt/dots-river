@@ -19,7 +19,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 - WM: [River](https://codeberg.org/river/river)
 - Cron daemon: [snooze](https://github.com/leahneukirchen/snooze)
 - Editor: [neovim](https://neovim.io/)
-- Filemanager: [Yazi](https://yazi-rs.github.io/)
+- Filemanager: [lf](https://github.com/gokcehan/lf/)
 - Fonts: JetBrains Mono
 - GTK-theme: [adw-gtk3](https://github.com/lassekongo83/adw-gtk3)
 - Image Viewer: [swayimg](https://github.com/artemsen/swayimg)
