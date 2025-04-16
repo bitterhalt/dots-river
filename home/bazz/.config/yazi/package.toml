@@ -8,26 +8,6 @@ use = "yazi-rs/plugins:chmod"
 rev = "2730199"
 hash = "2f1053f89d1a301a648ab181d0948e38"
 
-[[plugin.deps]]
-use = "h-hg/yamb"
-rev = "22af003"
-hash = "7cc42012a7c2099f80064d228feb8d44"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:smart-enter"
-rev = "2730199"
-hash = "7918aab6a71caf31b58411f789195677"
-
-[[plugin.deps]]
-use = "KKV9/compress"
-rev = "60b24af"
-hash = "ee025be766240cc98e671754ac836da3"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:mount"
-rev = "2730199"
-hash = "dd97eede8e20e59cd2604e8006e470e2"
-
 [[flavor.deps]]
 use = "gosxrgxx/flexoki-dark"
 rev = "3e8cfba"

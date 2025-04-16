@@ -10,8 +10,8 @@ bg-2: &bg-2 1C1B1Aff # Background 2
 fg-1: &fg-1 CECDC3ff # Text 1
 fg-2: &fg-2 B7B5ACff # Text 2
 
-col-1: &col-1 A02F6Fff # Purple
-col-2: &col-2 24837Bff # Cyan
+purple: &purple A02F6Fff # Purple
+cyan: &cyan 24837Bff # Cyan
 symbol: &symbol Symbols Nerd Font Mono:pixelsize=14
 
 bar:
@@ -69,11 +69,11 @@ bar:
               state == urgent:
                 map:
                   <<: *river_base
-                  foreground: *col-1
+                  foreground: *purple
               state == focused:
                 map:
                   <<: *river_base
-                  foreground: *col-2
+                  foreground: *cyan
                   deco: { background: { color: *bg-2 } }
               state == visible && ~occupied:
                 map:
@@ -95,7 +95,7 @@ bar:
               ~activated: { empty: {} }
               activated:
                 - string:
-                    { left-margin: 5, text: "{app-id}", foreground: *col-2 }
+                    { left-margin: 5, text: "{app-id}", foreground: *cyan }
                 - string: { text: ": {title}", max: 70, foreground: *fg-2 }
 
   #-----------------------------------------------------#

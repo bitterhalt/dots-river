@@ -2,7 +2,7 @@
 [flavor]
 dark = "flexoki-dark"
 
-# Overrites
+# Yazi theme overrides
 [status]
 overall   = {}
 sep_left  = { open = "", close = "" }

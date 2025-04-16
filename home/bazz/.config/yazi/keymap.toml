@@ -34,7 +34,7 @@ keymap = [
 
 	# Navigation
 	{ on = "h", run = "leave", desc = "Go back to the parent directory" },
-#	{ on = "l", run = "enter", desc = "Enter the child directory" },
+	{ on = "l", run = "enter", desc = "Enter the child directory" },
 
 	{ on = "<Left>",  run = "leave",    desc = "Go back to the parent directory" },
 	{ on = "<Right>", run = "enter",    desc = "Enter the child directory" },
@@ -65,7 +65,7 @@ keymap = [
 	# Operation
 	{ on = "o",         run = "open",                        desc = "Open selected files" },
 	{ on = "O",         run = "open --interactive",          desc = "Open selected files interactively" },
-# { on = "<Enter>",   run = "open",                        desc = "Open selected files" },
+  { on = "<Enter>",   run = "open",                        desc = "Open selected files" },
 	{ on = "<S-Enter>", run = "open --interactive",          desc = "Open selected files interactively" },
 	{ on = "y",         run = "yank",                        desc = "Yank selected files (copy)" },
 	{ on = "x",         run = "yank --cut",                  desc = "Yank selected files (cut)" },
@@ -342,30 +342,6 @@ keymap = [
 	{ on = "f", run = "filter", desc = "Apply a filter for the help items" },
 ]
 
-# Smart-enter
-
-[[manager.prepend_keymap]]
-on   = "l"
-run  = "plugin smart-enter"
-# For upcoming Yazi 0.4 (nightly version):
-# run  = "plugin smart-enter"
-desc = "Enter the child directory, or open the file"
-
-[[manager.prepend_keymap]]
-on   = "<Right>"
-run  = "plugin smart-enter"
-# For upcoming Yazi 0.4 (nightly version):
-# run  = "plugin smart-enter"
-desc = "Enter the child directory, or open the file"
-
-
-[[manager.prepend_keymap]]
-on   = "<Enter>"
-run  = "plugin smart-enter"
-# For upcoming Yazi 0.4 (nightly version):
-# run  = "plugin smart-enter"
-desc = "Enter the child directory, or open the file"
-
 # Open shell
 [[manager.prepend_keymap]]
 on   = "<C-t>"
@@ -392,17 +368,6 @@ run = [ '''
 	shell 'for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list' --confirm
 ''', "yank" ]
 
-# Archive selected files
-[[manager.prepend_keymap]]
-on   = [ "c", "a" ]
-run  = "plugin compress"
-desc = "Archive selected files"
-
-# Mount menu
-[[manager.prepend_keymap]]
-on  = "M"
-run = "plugin mount"
-
 # Rotate image 90 degrees (does not refresh preview - bug or I am stupid)
 [[manager.prepend_keymap]]
 on = [ "<" ]
@@ -414,4 +379,3 @@ desc = "Rotate selected images clockwise"
 on = [ ">" ]
 run = ['shell "for file in \"$@\"; do magick \"$file\" -rotate 270 \"${file%}\"; done" --confirm', "refresh" ]
 desc = "Rotate selected images counter-clockwise"
-
