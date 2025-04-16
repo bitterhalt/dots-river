@@ -1,5 +1,8 @@
+/etc/amdfan.yml
 /etc/doas.conf
 /etc/greetd/
+/etc/modprobe.d/
+/etc/modules-load.d/nct6775.conf
 /etc/rc.local
 /home/bazz/.bash_profile
 /home/bazz/.bashrc
@@ -14,7 +17,9 @@
 /home/bazz/.config/gtk-2.0/
 /home/bazz/.config/gtk-3.0/
 /home/bazz/.config/gtk-4.0/
+/home/bazz/.config/htop/
 /home/bazz/.config/kanshi/
+/home/bazz/.config/lf
 /home/bazz/.config/mimeapps.list
 /home/bazz/.config/mpd/
 /home/bazz/.config/mpv/
@@ -24,15 +29,13 @@
 /home/bazz/.config/service/dbus/
 /home/bazz/.config/shell/
 /home/bazz/.config/starship.toml
-/home/bazz/.config/htop/
-/home/bazz/.config/xsettingsd/
 /home/bazz/.config/swappy/
 /home/bazz/.config/swayidle/
 /home/bazz/.config/swayimg/
 /home/bazz/.config/user-dirs.dirs
 /home/bazz/.config/vesktop/themes/midnight-monochrome.theme.css
+/home/bazz/.config/xsettingsd/
 /home/bazz/.config/yambar/
-/home/bazz/.config/lf
 /home/bazz/.config/yt-dlp/
 /home/bazz/.config/zathura/
 /home/bazz/.local/bin
@@ -43,8 +46,8 @@
 /home/bazz/.local/share/applications/text.desktop
 /home/bazz/.local/share/applications/video.desktop
 /home/bazz/.local/share/applications/yazi.desktop
-/home/bazz/.local/share/dotlist
 /home/bazz/.local/share/bash-completion/
+/home/bazz/.local/share/dotlist
 /home/bazz/.local/share/fonts/
 /home/bazz/.local/share/screenshots/
 /home/bazz/.local/share/void-packages
