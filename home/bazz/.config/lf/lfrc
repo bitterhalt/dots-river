@@ -1,36 +1,32 @@
-# Imports
-source ~/.config/lf/functions
-set previewer ~/.config/lf/preview.sh
-
-# Setting
-set promptfmt " %d%f"
-set shell bash
+# Settings
 set dircounts
 set drawbox
 set hidden true
 set icons true
 set ifs "\n"
 set ignorecase true
+set incfilter true
+set incsearch true
 set info size
+set mouse true
+set promptfmt " %d%f"
 set ratios 1:2:3
+set shell bash
 set shellopts '-eu'
 set sixel
 
 # Bindings
 map . set hidden!
 map <c-c> clear
-map <c-f> fzf_jump
 map <c-r> reload
 map <delete> trash
 map <enter> open
-map <esc> quit
 map <f-3> search
 map <f-5> reload
 map B bulkrename
 map C edit-config
 map D delete
 map E unarchive
-map F fzf_search
 map N yank-basename
 map O &xdg-open $f
 map P paste-async
@@ -39,18 +35,17 @@ map V push :!nvim<space>
 map X $$f
 map ad mkdir
 map af mkfile
-map c
 map cm chmod
-map d
 map e $$EDITOR "$f"
 map f search
-map m
 map o open
 map p :paste; clear
 map P pasteBig
 map x cut
 map y copy
 map z zi
+map d
+map c
 
 # Jump
 map gh cd ~
@@ -69,3 +64,7 @@ map gs cd /srv
 map gP cd /tmp
 map gp cd ~/Pictures
 map gr cd /
+
+# Imports
+source ~/.config/lf/functions
+set previewer ~/.config/lf/preview.sh

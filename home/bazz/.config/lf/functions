@@ -7,11 +7,14 @@ cmd open ${{
     application/json) $EDITOR "$f" ;;
     inode/x-empty) $EDITOR "$f" ;;
     application/octet-stream) xdg-open "$f" ;;
+    audio/*|video/x-ms-asf) mpv --audio-display=no "$f" ;;
+	  video/*) setsid -f mpv "$f" -quiet >/dev/null 2>&1 ;;
     text/*) $EDITOR "$f" ;;
     *) xdg-open "$f" ;;
   esac
 }}
 
+# Chmod
 cmd chmod %{{
 	printf "Mode Bits: "
 	read and
@@ -23,28 +26,10 @@ cmd chmod %{{
 	lf -remote 'send reload'
 }}
 
-# Jump to dir
-cmd fzf_jump ${{
-    res="$(find . -maxdepth 1 | fzf --reverse --header='Jump to location')"
-    if [ -n "$res" ]; then
-        if [ -d "$res" ]; then
-            cmd="cd"
-        else
-            cmd="select"
-        fi
-        res="$(printf '%s' "$res" | sed 's/\\/\\\\/g;s/"/\\"/g')"
-        lf -remote "send $id $cmd \"$res\""
-    fi
-}}
-
-# zoxide
+# Zoxide
 cmd zi ${{
     result="$(zoxide query -i | sed 's/\\/\\\\/g;s/"/\\"/g')"
     lf -remote "send $id cd \"$result\""
-}}
-
-cmd on-cd &{{
-    zoxide add "$PWD"
 }}
 
 # Yank paths into your clipboard
@@ -67,29 +52,24 @@ cmd mkfile ${{
 
 # Delete items
 cmd delete %{{
-	# put items into array that we can count them
 	files=()
 	while read -r line; do files+=("$line"); done <<< "$fx"
 
-	# count how many items there are
+	# Count how many items there are
 	len=${#files[@]}
 
-	# confirm trashing
+	# Confirm trashing
 	if [[ $len == 1 ]]; then
 		echo -n "delete '$fx' ?"
 	else
 		echo -n "delete $len items?"
 	fi
 	echo -n " [y/N] "
-
-	# read answer
 	read -n 1 ans
-	# make it lowercase
 	ans="${ans,,}"
-
 	echo
 
-	# nuke
+	# Nuke
 	if [[ $ans == y ]]; then
 		rm -rf $fx
 		if [[ $len == 1 ]]; then
@@ -98,18 +78,14 @@ cmd delete %{{
 			echo "deleted $len items"
 		fi
 	else
-		# needed to clear the bottom row
 		echo
 	fi
 }}
 
 # Trash items
 cmd trash %{{
-	# put items into array that we can count them
 	files=()
 	while read -r line; do files+=("$line"); done <<< "$fx"
-
-	# count how many items there are
 	len=${#files[@]}
 
 	# confirm trashing
@@ -119,15 +95,9 @@ cmd trash %{{
 		echo -n "trash $len items?"
 	fi
 	echo -n " [y/N] "
-
-	# read answer
 	read -n 1 ans
-	# make it lowercase
 	ans="${ans,,}"
-
 	echo
-
-	# nuke
 	if [[ $ans == y ]]; then
 		trash-put $fx
 		if [[ $len == 1 ]]; then
@@ -136,7 +106,6 @@ cmd trash %{{
 			echo "trashed $len items"
 		fi
 	else
-		# needed to clear the bottom row
 		echo
 	fi
 }}
@@ -165,7 +134,6 @@ cmd bulkrename ${{
 
 # Unarchive
 cmd unarchive &{{
-# This part creates the directory for extracting files
   a="${f%%.*}"
   mkdir -p "$a"
 

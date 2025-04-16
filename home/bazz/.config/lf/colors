@@ -1,20 +1,20 @@
 # vim:ft=dircolors
 
 # file types (with matching order)
-ln      36   # LINK
-or      31   # ORPHAN
-tw      34      # STICKY_OTHER_WRITABLE
-ow      34      # OTHER_WRITABLE
-st      36   # STICKY
-di      36   # DIR
-pi      33      # FIFO
-so      35   # SOCK
-bd      33   # BLK
-cd      33   # CHR
-su      32   # SETUID
-sg      32   # SETGID
-ex      32   # EXEC
-fi      00      # FILE
+ln      35    # LINK
+or      31    # ORPHAN
+tw      34    # STICKY_OTHER_WRITABLE
+ow      34    # OTHER_WRITABLE
+st      36    # STICKY
+di      01;90 # DIR
+pi      33    # FIFO
+so      35    # SOCK
+bd      33    # BLK
+cd      33    # CHR
+su      32    # SETUID
+sg      32    # SETGID
+ex      32    # EXEC
+fi      00    # FILE
 
 # archives or compressed (dircolors defaults)
 *.tar   01;31
