@@ -1,9 +1,0 @@
-# Theme
-[flavor]
-dark = "flexoki-dark"
-
-# Yazi theme overrides
-[status]
-overall   = {}
-sep_left  = { open = "", close = "" }
-sep_right = { open = "", close = "" }
