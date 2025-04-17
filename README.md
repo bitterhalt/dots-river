@@ -22,7 +22,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 - Filemanager: [lf](https://github.com/gokcehan/lf/)
 - Fonts: JetBrains Mono
 - GTK-theme: [adw-gtk3](https://github.com/lassekongo83/adw-gtk3)
-- Image Viewer: [swayimg](https://github.com/artemsen/swayimg)
+- Image Viewer: [imv](https://sr.ht/~exec64/imv)
 - Launcher: [bemenu](https://github.com/Cloudef/bemenu)
 - Login Manager: [Greetd](https://git.sr.ht/~kennylevinsen/greetd)
 - Media Player: [mpv](https://mpv.io/)
