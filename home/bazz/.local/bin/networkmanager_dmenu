@@ -12,23 +12,26 @@ Add dmenu options and default terminal if desired to
 ~/.config/networkmanager-dmenu/config.ini
 
 """
-import pathlib
-import struct
 import configparser
 import locale
 import os
-from os.path import basename, expanduser
+import pathlib
 import shlex
-from shutil import which
-import sys
-from time import sleep
-import uuid
+import struct
 import subprocess
+import sys
+import uuid
+from os.path import basename, expanduser
+from shutil import which
+from time import sleep
 
 # pylint: disable=import-error
 import gi
+
 gi.require_version('NM', '1.0')
-from gi.repository import GLib, NM  # noqa pylint: disable=wrong-import-position
+from gi.repository import (NM,  # noqa pylint: disable=wrong-import-position
+                           GLib)
+
 # pylint: enable=import-error
 
 ENV = os.environ.copy()

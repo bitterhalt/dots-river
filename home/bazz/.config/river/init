@@ -10,16 +10,16 @@
 #                      SETTINGS                       #
 #-----------------------------------------------------#
 
-#browser="firefox"
 browser="firefox"
-mail="thunderbird"
-term="footclient" # <- If you want single instance change: "footclient" > "foot"
-run="bemenu_runner run --no-exec --fixed-height -W 0.20 -c -B1 -n -l15 -p run: | xargs riverctl spawn"
-emoji="$HOME/.local/bin/bemenu_emoji"
-powermenu="$HOME/.local/bin/bemenu_power"
-screenshot="$HOME/.local/bin/wl-shot"
-recmenu="$HOME/.local/bin/bemenu_screenshot"
 clip="bemenu_clipboard"
+emoji="$HOME/.local/bin/bemenu_emoji"
+mail="thunderbird"
+powermenu="$HOME/.local/bin/bemenu_power"
+recmenu="$HOME/.local/bin/bemenu_screenshot"
+rivertile="rivertile -main-ratio 0.55 -view-padding 2 -outer-padding 2"
+run="bemenu_runner run --no-exec --fixed-height -W 0.20 -c -B1 -n -l15 -p run: | xargs riverctl spawn"
+screenshot="$HOME/.local/bin/wl-shot"
+term="footclient" # <- If you want single instance change: "footclient" > "foot"
 
 # Inputs
 mouse="pointer-9610-54-Glorious_Model_O" # <- Find your inputs by typing "riverctl list-inputs"
@@ -35,47 +35,39 @@ riverctl input "$mouse" pointer-accel 0
 
 riverctl background-color 0x000000
 riverctl border-color-focused 0x6F6E69
-riverctl border-color-urgent 0xa2191f
 riverctl border-color-unfocused 0x282726
+riverctl border-color-urgent 0xa2191f
 riverctl border-width 1
-
-#-----------------------------------------------------#
-#                      LAYOUT                         #
-#-----------------------------------------------------#
-
 riverctl default-attach-mode bottom
 riverctl default-layout rivertile
-
-# Adjust gaps between views if you want
-rivertile="rivertile -main-ratio 0.55 -view-padding 2 -outer-padding 2"
 
 #-----------------------------------------------------#
 #                      LAUNCH                         #
 #-----------------------------------------------------#
 
-riverctl map normal Super D spawn "$run"
 riverctl map normal Super+Shift p spawn "$powermenu"
-riverctl map normal Super+Control D spawn "fnottctl dismiss all"
-riverctl map normal Super Return spawn "$term"
+riverctl map normal Super+Control D spawn "fnottctl dismiss"
 riverctl map normal Super B spawn "$HOME/.config/river/scripts/barhider.sh"
 riverctl map normal Super E spawn "$term -e lf"
+riverctl map normal Super D spawn "$run"
 riverctl map normal Super F1 spawn "noti_sysnfo"
+riverctl map normal Super F10 spawn "$HOME/.config/river/scripts/mic-toggle.sh"
 riverctl map normal Super F11 spawn "$HOME/.config/river/scripts/locker.sh"
 riverctl map normal Super F12 spawn "$HOME/.config/river/scripts/dot-settings.sh"
 riverctl map normal Super F2 spawn "noti_usage cpu"
 riverctl map normal Super F4 spawn "bemenu_killer"
-riverctl map normal Super F10 spawn "$HOME/.config/river/scripts/mic-toggle.sh"
 riverctl map normal Super M spawn "$mail"
 riverctl map normal Super N spawn "foot -e nvim ~/Documents/personal/notes/index.md"
 riverctl map normal Super Print spawn "$screenshot -f"
+riverctl map normal Super Return spawn "$term"
 riverctl map normal Super T spawn "$term -a float-term -W 100x30 -e nvim ~/Documents/personal/notes/todo.md"
 riverctl map normal Super W spawn "$browser"
 riverctl map normal Super+Control E spawn "$emoji"
+riverctl map normal Super+Control I spawn "$term -W 130x40 -a float-term -e fuzzypkg"
 riverctl map normal Super+Control P spawn "wl-color-picker"
 riverctl map normal Super+Control Print spawn "$recmenu"
 riverctl map normal Super+Control S spawn "bemenu_sound"
 riverctl map normal Super+Control T spawn "noti_date"
-riverctl map normal Super+Control I spawn "$term -W 130x40 -a float-term -e fuzzypkg"
 riverctl map normal Super+Control U spawn "$term -W 100x40 -a float-term -e popupgrade"
 riverctl map normal Super+Shift C spawn "$clip"
 riverctl map normal Super+Shift Delete spawn "$term -a float-term -W 120x35 -e htop"
@@ -275,11 +267,13 @@ riverctl rule-add ssd
 riverctl rule-add -app-id "steam" csd
 
 #-----------------------------------------------------#
-#                      START                           #
+#                      START                          #
 #-----------------------------------------------------#
 
+# WLR-portals need this part
 dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
 
+# Exec-once
 executes="yambar swayidle foot mako wl-paste swaybg"
 
 for execute in $executes; do
