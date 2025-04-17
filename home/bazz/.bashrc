@@ -66,40 +66,37 @@ function ex {
 }
 
 # Aliases
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias df='df -h'
-alias duf='duf --hide special -theme ansi'
-alias free='free -m'
-alias cp='cp -iv'
-alias mv='mv -iv'
-alias rm='rm -vI'
-alias mkdir='mkdir -pv'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
-alias history='fc -l 1'
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
+alias df="df -h"
+alias duf="duf --hide special -theme ansi"
+alias free="free -m"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -vI"
+alias mkdir="mkdir -pv"
+alias ..="cd .."
+alias history="fc -l 1"
 # Doas
-alias sudo='doas'
+alias sudo="doas"
 # Vim
-alias vi='nvim'
-alias vim='nvim'
+alias vi="nvim"
+alias vim="nvim"
 # Dir / eza
-alias ls='eza -al --group-directories-first --color=always'
-alias la='eza -a --group-directories-first --color=always'
-alias ll='eza -l --group-directories-first --color=always'
+alias ls="eza -al --group-directories-first --color=always"
+alias la="eza -a --group-directories-first --color=always"
+alias ll="eza -l --group-directories-first --color=always"
 # Trash-cli
-alias tp='trash-put'
-alias tpe='trash-empty'
-alias tpr='trash-restore'
+alias tp="trash-put"
+alias tpe="trash-empty"
+alias tpr="trash-restore"
 # Random
-alias nvm='sudo nvme smart-log /dev/nvme0'
-alias hg='history | grep '
+alias nvm="sudo nvme smart-log /dev/nvme0"
+alias hg="history | grep "
 # XBPS
-alias xiu='sudo xbps-install -Su'
-alias xir='sudo xbps-remove'
-alias xbq='xbps-query -Rs'
-alias xblist='xpkg -m > ~/.local/share/void-packages'
+alias xiu="doas xbps-install -Su"
+alias xir="doas xbps-remove"
+alias xbq="xbps-query -Rs"
+alias xblist="xpkg -m > ~/.local/share/void-packages"
+alias svps="sv status ~/.config/service/* ; doas sv status /var/service/*"
