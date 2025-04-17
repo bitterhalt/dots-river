@@ -213,23 +213,24 @@ done
 #-----------------------------------------------------#
 
 # Spawn to
-riverctl rule-add -app-id "Thunderbird" tags $((1 << (3 - 1)))
-riverctl rule-add -app-id "eu.betterbird.Betterbird" tags $((1 << (3 - 1)))
-riverctl rule-add -app-id "Signal" tags $((1 << (3 - 1)))
 riverctl rule-add -app-id "Firefox" tags $((1 << (2 - 1)))
-riverctl rule-add -app-id "librewolf" tags $((1 << (2 - 1)))
+riverctl rule-add -app-id "Signal" tags $((1 << (3 - 1)))
+riverctl rule-add -app-id "Thunderbird" tags $((1 << (3 - 1)))
 riverctl rule-add -app-id "com.discordapp.Discord" tags $chat_tag
+riverctl rule-add -app-id "com.transmissionbt.transmission_*" tags $((1 << (4 - 1)))
+riverctl rule-add -app-id "eu.betterbird.Betterbird" tags $((1 << (3 - 1)))
+riverctl rule-add -app-id "librewolf" tags $((1 << (2 - 1)))
+riverctl rule-add -app-id "org.keepassxc.KeePassXC" tags $((1 << (6 - 1)))
+riverctl rule-add -app-id "steam" tags $((1 << (5 - 1)))
 riverctl rule-add -app-id "vesktop" tags $chat_tag
 riverctl rule-add -app-id "virt-manager" tags $((1 << (8 - 1)))
-riverctl rule-add -app-id "com.transmissionbt.transmission_*" tags $((1 << (4 - 1)))
-riverctl rule-add -app-id "org.keepassxc.KeePassXC" tags $((1 << (6 - 1)))
 # Floaters
 riverctl rule-add -app-id "Choose User Profile" float
 riverctl rule-add -app-id "Firefox" -title "About Mozilla Firefox" float
 riverctl rule-add -app-id "Firefox" -title "Library" float
-riverctl rule-add -app-id "librewolf" -title "Library" float
 riverctl rule-add -app-id "Firefox" -title "Picture-in-Picture" float
 riverctl rule-add -app-id "GParted" float
+riverctl rule-add -app-id "Gimp-*" float
 riverctl rule-add -app-id "KeePassXC" -title "Browser Access Request" float
 riverctl rule-add -app-id "KeePassXC" -title "Passkey credentials" float
 riverctl rule-add -app-id "YouTube Music" float
@@ -238,9 +239,9 @@ riverctl rule-add -app-id "float-*" float
 riverctl rule-add -app-id "floatterm" float
 riverctl rule-add -app-id "galculator" float
 riverctl rule-add -app-id "gimp-*" float
-riverctl rule-add -app-id "Gimp-*" float
 riverctl rule-add -app-id "imv" float
 riverctl rule-add -app-id "io.missioncenter.MissionCenter" float
+riverctl rule-add -app-id "librewolf" -title "Library" float
 riverctl rule-add -app-id "modorganizer.exe" float
 riverctl rule-add -app-id "mpv" float
 riverctl rule-add -app-id "net.lutris.Lutris" float
