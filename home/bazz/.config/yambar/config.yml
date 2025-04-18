@@ -7,6 +7,7 @@
 
 bg-1: &bg-1 100F0Fff # Background
 bg-2: &bg-2 1C1B1Aff # Background 2
+bg-3: &bg-3 282726ff # Background 3
 fg-1: &fg-1 CECDC3ff # Text 1
 fg-2: &fg-2 B7B5ACff # Text 2
 purple: &purple A02F6Fff # Purple
@@ -14,7 +15,7 @@ cyan: &cyan 24837Bff # Cyan
 symbol: &symbol Symbols Nerd Font Mono:pixelsize=14
 
 bar:
-  height: 24 # Height without border
+  height: 26 # Height without border
   location: top
   background: *bg-1
   foreground: *fg-1
@@ -73,7 +74,7 @@ bar:
                 map:
                   <<: *river_base
                   foreground: *cyan
-                  deco: { border: { size: 1, color: *bg-2 } }
+                  deco: { border: { size: 1, color: *bg-3 } }
               state == visible && ~occupied:
                 map:
                   <<: *river_base
