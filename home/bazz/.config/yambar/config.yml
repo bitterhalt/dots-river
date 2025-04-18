@@ -9,22 +9,20 @@ bg-1: &bg-1 100F0Fff # Background
 bg-2: &bg-2 1C1B1Aff # Background 2
 fg-1: &fg-1 CECDC3ff # Text 1
 fg-2: &fg-2 B7B5ACff # Text 2
-
 purple: &purple A02F6Fff # Purple
 cyan: &cyan 24837Bff # Cyan
 symbol: &symbol Symbols Nerd Font Mono:pixelsize=14
 
 bar:
-  height: 24
+  height: 24 # Height without border
   location: top
   background: *bg-1
   foreground: *fg-1
   font: JetBrains Mono:pixelsize=14
   spacing: 6
   margin: 10
-
   border:
-    width: 2
+    width: 2 # This increases the overall height
     color: *bg-1
 
   #-----------------------------------------------------#
@@ -36,8 +34,8 @@ bar:
         date-format: "%b, %d"
         time-format: "%H:%M"
         content:
-          - string: { margin: 8, text: "{date}", on-click: "noti_weather" }
-          - string: { text: "{time}", on-click: "noti_weather" }
+          - string: { margin: 8, text: "{date}" }
+          - string: { text: "{time}" }
 
   #-----------------------------------------------------#
   #                      Modules  Left                  #
@@ -70,11 +68,12 @@ bar:
                 map:
                   <<: *river_base
                   foreground: *purple
+                  deco: { border: { size: 1, color: *bg-2 } }
               state == focused:
                 map:
                   <<: *river_base
                   foreground: *cyan
-                  deco: { background: { color: *bg-2 } }
+                  deco: { border: { size: 1, color: *bg-2 } }
               state == visible && ~occupied:
                 map:
                   <<: *river_base
