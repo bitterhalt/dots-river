@@ -22,18 +22,14 @@ map <c-r> reload
 map <delete> trash
 map <esc> unselect
 map <enter> open
-map <f-3> search
 map <f-5> reload
 map B bulkrename
 map C edit-config
 map D trash
 map E unarchive
-map gg top
-map G bottom
 map N yank-basename
 map O &xdg-open $f
 map P paste-async
-map S shell
 map V push :!nvim<space>
 map X $$f
 map ad mkdir
