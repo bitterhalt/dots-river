@@ -16,7 +16,6 @@ cargo
 chafa
 chrony
 cliphist
-cowsay
 cryptsetup
 dbus
 dragon
@@ -47,8 +46,10 @@ grub-i386-efi
 grub-x86_64-efi
 gtk-engine-murrine
 htop
+imv
 jq
 kanshi
+lf
 libadwaita
 libdrm-32bit
 libgcc-32bit
@@ -71,8 +72,8 @@ mpc
 mpd
 mpv
 neovim
+nerd-fonts-symbols-ttf
 nethogs
-network-manager-applet
 nodejs
 noto-fonts-cjk
 noto-fonts-emoji
@@ -105,7 +106,6 @@ steam
 swappy
 swaybg
 swayidle
-swayimg
 syncthing
 thunderbird
 timeshift
@@ -125,6 +125,7 @@ void-live-audio
 void-repo-multilib
 void-repo-multilib-nonfree
 void-repo-nonfree
+vsv
 vulkan-loader-32bit
 waylock
 wev
@@ -149,7 +150,6 @@ xterm
 xtools
 xz
 yambar
-yazi
 zathura
 zathura-pdf-poppler
 zoxide
