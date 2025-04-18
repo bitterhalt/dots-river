@@ -26,7 +26,7 @@ map <f-3> search
 map <f-5> reload
 map B bulkrename
 map C edit-config
-map D delete
+map D trash
 map E unarchive
 map gg top
 map G bottom

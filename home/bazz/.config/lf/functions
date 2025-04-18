@@ -51,38 +51,6 @@ cmd mkfile ${{
   $EDITOR $ans
 }}
 
-# Delete items
-cmd delete %{{
-	files=()
-	while read -r line; do files+=("$line"); done <<< "$fx"
-
-	# Count how many items there are
-	len=${#files[@]}
-
-	# Confirm trashing
-	if [[ $len == 1 ]]; then
-		echo -n "delete '$fx' ?"
-	else
-		echo -n "delete $len items?"
-	fi
-	echo -n " [y/N] "
-	read -n 1 ans
-	ans="${ans,,}"
-	echo
-
-	# Nuke
-	if [[ $ans == y ]]; then
-		rm -rf $fx
-		if [[ $len == 1 ]]; then
-			echo "deleted '$files'"
-		else
-			echo "deleted $len items"
-		fi
-	else
-		echo
-	fi
-}}
-
 # Trash items
 cmd trash %{{
 	files=()
