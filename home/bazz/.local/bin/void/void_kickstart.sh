@@ -1,33 +1,16 @@
 #!/bin/sh
 
 # Stolen from: https://github.com/mwyvr/dotfiles/blob/main/private_dot_local/bin/executable_configure-void.sh
-
 export ADDCMD="doas xbps-install -Sy"
 export DOAS="doas"
 export THEUSER="bazz"
 export TIMEZONE="Europe/Helsinki"
 
-if [ "$(id -u)" -eq 0 ]; then
-  echo "Run as the regular user, not as root or sudo/doas"
-  exit 1
-fi
-
-$ADDCMD -u
-
-base_hardware() {
-
-  if lscpu | grep "GenuineIntel"; then
-    $ADDCMD void-repo-nonfree
-    $ADDCMD -u
-    $ADDCMD intel-ucode linux-firmware-intel
-  fi
-  if lscpu | grep "AuthenticAMD"; then
-    $ADDCMD linux-firmware-amd
-  fi
-
-}
-
 configuration() {
+
+  $ADDCMD void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree xmirror
+  $DOAS xmirror
+  $ADDCMD
 
   $DOAS usermod -aG wheel floppy audio video cdrom optical storage network input xbuilder $THEUSER
   $ADDCMD dbus NetworkManager polkit
@@ -48,19 +31,14 @@ configuration() {
   $DOAS ln -sv /etc/sv/chronyd /var/service/
 
   $ADDCMD turnstile
-  $DOAS ln -sv /etc/sv/turnstiled /var/service/
   mkdir -p ~/.config/service/dbus
+  $DOAS ln -sv /etc/sv/turnstiled /var/service/
   ln -s /usr/share/examples/turnstile/dbus.run ~/.config/service/dbus/run
 
-  if [ -d "/proc/acpi/button/lid" ]; then
-    $ADDCMD linux-firmware-intel mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel
-  else
-    $ADDCMD linux-firmware-amd mesa-dri vulkan-loader mesa-vulkan-radeon mesa-vaapi mesa-vdpau
-  fi
+  $ADDCMD xorg-minimal xorg-fonts mesa-dri vulkan-loader mesa-vulkan-radeon mesa-vaapi mesa-vdpau
 
-  $ADDCMD xorg-server-xwayland
-  $ADDCMD river foot kanshi bemenu Waybar mako swaybg swayidle swaylock \
-    wlopm libnotify Thunar file-roller xdg-user-dirs-gtk xdg-user-dirs \
+  $ADDCMD river foot kanshi bemenu Waybar swaybg swayidle waylock \
+    wlopm libnotify fnott lf file-roller xdg-user-dirs-gtk xdg-user-dirs \
     brightnessctl
   xdg-user-dirs-update
   xdg-user-dirs-update --force
@@ -73,12 +51,8 @@ configuration() {
   $DOAS mkdir -p /etc/pipewire/pipewire.conf.d
   $DOAS ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
   $DOAS ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
-  $DOAS mkdir -p /etc/alsa/conf.d
-  $DOAS ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d
-  $DOAS ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d
-}
 
 applications() {
-  $ADDCMD git htop firefox noto-fonts-cjk noto-fonts-ttf noto-fonts-emoji noto-fonts-ttf
+  $ADDCMD git curl gnupg rsync xtools neovim unrar 7zip htop firefox noto-fonts-cjk noto-fonts-ttf noto-fonts-emoji noto-fonts-ttf
   $ADDCMD helix go nodejs cargo
 }
