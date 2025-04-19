@@ -30,11 +30,9 @@ bar:
 
   center:
     - clock:
-        date-format: "%b, %d"
-        time-format: "%H:%M"
+        date-format: "%b %d %H:%M"
         content:
-          - string: { margin: 8, text: "{date}" }
-          - string: { text: "{time}" }
+          - string: { text: "{date}" }
 
   #-----------------------------------------------------#
   #                      Modules  Left                  #
