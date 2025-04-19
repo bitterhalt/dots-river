@@ -1,59 +1,57 @@
 #!/usr/bin/env bash
-#	  Dotfiles 3.3
-#	  Manage dotfiles with a Git repository
-#	  Dependencies: git
-#	  Usage: Just run the script. `Dotfiles-list` has the list of dotfiles to be used.
-#	  Stolen from: https://codeberg.org/jorisvandijk/dotfiles-hyprland/src/branch/main/home/joris/.local/bin/Dotfiles
+# Stolen from: https://codeberg.org/jorisvandijk/dotfiles-hyprland/src/branch/main/home/joris/.local/bin/Dotfiles
 
 # Locations
 dotfiles_repo=~/Documents/projects/river-dotfiles
 dotfiles_list=~/.local/share/dotlist
 
-# Function to add new dotfiles
+# Add new dotfiles
 add() {
   echo "[*] Adding dotfiles from list..."
-  cd $dotfiles_repo
-  while read -r dotfile; do
-    if [[ -f $dotfile ]]; then
-      cp --parents $dotfile $dotfiles_repo
-    elif [[ -d $dotfile ]]; then
-      cp --parents -r $dotfile $dotfiles_repo
+  cd "$dotfiles_repo" || {
+    echo "Failed to change directory to $dotfiles_repo"
+    exit 1
+  }
+
+  while IFS= read -r dotfile; do
+    if [[ -f "$dotfile" ]]; then
+      cp --parents "$dotfile" "$dotfiles_repo"
+      echo "Copied file: $dotfile"
+    elif [[ -d "$dotfile" ]]; then
+      cp --parents -r "$dotfile" "$dotfiles_repo"
+      echo "Copied directory: $dotfile"
+    else
+      echo "Skipped: $dotfile (not found)"
     fi
-  done <$dotfiles_list
+  done <"$dotfiles_list"
 
   git add -A
   if [[ -n $(git status -s) ]]; then
     git status
-
-    read -p "Enter a commit message: " commit_message
+    read -rp "Enter a commit message: " commit_message
     git commit -m "$commit_message"
+  else
+    echo "No changes to commit."
   fi
 }
 
-# Function to push changes
+# Push changes
 push() {
   echo "[*] Pushing to repository..."
-  cd $dotfiles_repo
-  git push
+  cd dotfiles_repo ||
+    git push && echo "Push complete." || echo "Push failed."
 }
 
-clean() {
-  cd $dotfiles_repo
-  find $dotfiles_repo -mindepth 1 -maxdepth 1 -not -name ".git" -not -name ".gitignore" -exec rm -rf {} \;
-}
-
+# Entry
 case "$1" in
-"add")
+add)
   add
   ;;
-"push")
+push)
   push
   ;;
-"clean")
-  clean
-  ;;
 *)
-  echo "Usage: add | push | clean"
+  echo "Usage: $0 {add|push}"
   exit 1
   ;;
 esac
