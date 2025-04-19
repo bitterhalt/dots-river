@@ -38,7 +38,7 @@ add() {
 # Push changes
 push() {
   echo "[*] Pushing to repository..."
-  cd dotfiles_repo ||
+  cd "$dotfiles_rep" ||
     git push && echo "Push complete." || echo "Push failed."
 }
 
