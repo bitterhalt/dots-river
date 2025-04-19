@@ -37,9 +37,13 @@ add() {
 
 # Push changes
 push() {
-  echo "[*] Pushing to repository..."
-  cd "$dotfiles_rep" ||
-    git push && echo "Push complete." || echo "Push failed."
+  echo "Pushing to repository..."
+  cd "$dotfiles_repo" || {
+    echo "Failed to change directory to $dotfiles_repo"
+    exit 1
+  }
+
+  git push && echo "Push complete." || echo "Push failed."
 }
 
 # Entry
