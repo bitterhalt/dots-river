@@ -32,7 +32,12 @@ bar:
     - clock:
         date-format: "%b %d %H:%M"
         content:
-          - string: { text: "{date}" }
+          string:
+            text: "{date}"
+            on-click:
+              left: "~/.config/yambar/scripts/calendar"
+              wheel-up: "~/.config/yambar/scripts/calendar next"
+              wheel-down: "~/.config/yambar/scripts/calendar prev"
 
   #-----------------------------------------------------#
   #                      Modules  Left                  #
