@@ -2,7 +2,7 @@
 
 List of configs to my keyboard-driven system. My point was to get light weight system without useless annoyances.
 
-**! ! ! ⚠️ IMPORTANT ⚠️ ! ! !**
+**! ! ! IMPORTANT ! ! !**
 
 > If you have just installed Void and copied everything from here, you won't get working system just yet.
 >
