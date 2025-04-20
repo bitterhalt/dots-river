@@ -118,8 +118,8 @@ bar:
         content:
           map:
             on-click:
-              left: "foot -a floatterm -e connmanctl"
-              right: "foot -a floatterm -e nethogs"
+              left: "foot -T Connman -a float-t -e connmanctl"
+              right: "foot -T Nethogs -a float-t -e nethogs"
             conditions:
               name == enp7s0:
                 map:
