@@ -4,6 +4,7 @@ ImageMagick
 MangoHud
 NetworkManager
 Signal-Desktop
+Thunar
 Vulkan-Tools
 acpi
 base-system
@@ -79,8 +80,10 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-ttf
 nvme-cli
+nwg-look
 opendoas
 p7zip
+papirus-icon-theme
 pavucontrol
 pipewire
 pkg-config
