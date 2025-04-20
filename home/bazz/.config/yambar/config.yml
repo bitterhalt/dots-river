@@ -118,7 +118,7 @@ bar:
         content:
           map:
             on-click:
-              left: "networkmanager_dmenu"
+              left: "foot -a floatterm -e connmanctl"
               right: "foot -a floatterm -e nethogs"
             conditions:
               name == enp7s0:

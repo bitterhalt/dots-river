@@ -2,7 +2,6 @@
 CPU-X
 ImageMagick
 MangoHud
-NetworkManager
 Signal-Desktop
 Thunar
 Vulkan-Tools
@@ -17,6 +16,7 @@ cargo
 chafa
 chrony
 cliphist
+connman
 cryptsetup
 dbus
 dragon

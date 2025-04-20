@@ -13,9 +13,9 @@ $ADDCMD
 $DOAS usermod -aG wheel floppy audio video cdrom optical storage network input xbuilder $THEUSER
 $DOAS unlink /var/service/wpa_supplicant
 $DOAS unlink /var/service/dhcpcd
-$ADDCMD dbus NetworkManager polkit
+$ADDCMD dbus connman polkit
 $DOAS ln -sv /etc/sv/dbus /var/service/
-$DOAS ln -sv /etc/sv/NetworkManager /var/service/
+$DOAS ln -sv /etc/sv/connmand /var/service/
 
 $ADDCMD seatd
 $DOAS ln -sv /etc/sv/seatd /var/service/
