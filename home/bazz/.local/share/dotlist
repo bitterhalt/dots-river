@@ -1,6 +1,7 @@
 /etc/amdfan.yml
 /etc/doas.conf
 /etc/greetd/
+/etc/connman/main.conf
 /etc/modprobe.d/
 /etc/xbps.d/10-sudo-ignore.conf
 /etc/modules-load.d/nct6775.conf
