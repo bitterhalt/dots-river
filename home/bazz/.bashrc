@@ -22,6 +22,7 @@ bind "set show-all-if-ambiguous on"     # Lis available options in tab-menu
 bind "set completion-ignore-case on"    # Ignore upper and lowercase in TAB-completion
 bind "set colored-completion-prefix on" # Enable completion coloring
 bind "TAB:menu-complete"                # Better tab-completion
+bind '"\e[Z": menu-complete-backward'   # Shift-Tab cycle backwards
 
 eval "$(fzf --bash)"                # CTRL-t = fzf select | CTRL-r = fzf history |  ALT-c  = fzf cd
 eval "$(starship init bash)"        # Load prompt
