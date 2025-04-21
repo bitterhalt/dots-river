@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Idea stolen from: https://github.com/madic-creates/Sway-DE/blob/master/bin/bemenu-run.sh
+# Usual cases you can replace "dmenu" part in most scripts just replacing demnu to bemenu_runner
 
 BEMENU_ARGS=(
   -i        # Filter items case-insensitively

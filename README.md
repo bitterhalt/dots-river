@@ -47,7 +47,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 | ------------------------------------- | ---------------------------------------------------- |
 | Super + Enter                         | Open Terminal                                        |
 | Super + D                             | Open Bemenu                                          |
-| Super + Shift +C                      | Open clipboard                                       |
+| Super + Shift + C                     | Open clipboard                                       |
 | Super + Control + R                   | Reload config                                        |
 | Super + W                             | Open Web Browser                                     |
 | Super + E                             | Open Filemanager                                     |
