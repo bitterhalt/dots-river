@@ -18,10 +18,11 @@ set sixel
 # Bindings
 map . set hidden!
 map <c-c> clear
+map <c-n> %dragon-drop -i -x $fx # dragon need to be installed
 map <c-r> reload
 map <delete> trash
-map <esc> unselect
 map <enter> open
+map <esc> unselect
 map <f-5> reload
 map B bulkrename
 map C edit-config
