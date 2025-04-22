@@ -117,7 +117,6 @@ bar:
     - network:
         content:
           map:
-            on-click: "foot -T Nethogs -a float-t -e nethogs"
             conditions:
               name == enp7s0:
                 map:
@@ -128,13 +127,11 @@ bar:
                       - string: { text: 󰱓, font: *symbol }
                     state == down:
                       - string: { text: 󰅛, font: *symbol }
+            on-click: "foot -T Nethogs -a float-t -e nethogs"
     - network:
         poll-interval: 5000
         content:
           map:
-            on-click:
-              left: "foot -T iwctl -a float-t -e iwctl" #  Tip: use something like iwgtk if you want GUI for wifi
-              right: "foot -T Nethogs -a float-t -e nethogs"
             default: { empty: {} }
             conditions:
               name == wlp7s0:
@@ -146,6 +143,9 @@ bar:
                       - string: { text: 󰖩, font: *symbol }
                     state == down:
                       - string: { text: , font: *symbol }
+            on-click:
+              left: "foot -T iwctl -a float-t -e iwctl" #  Tip: use something like iwgtk if you want GUI for wifi
+              right: "foot -T Nethogs -a float-t -e nethogs"
     - label:
         content:
           {
