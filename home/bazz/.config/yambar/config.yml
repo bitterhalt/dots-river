@@ -118,7 +118,7 @@ bar:
         content:
           map:
             on-click:
-              left: "foot -T Connman -a float-t -e connmanctl"
+              left: "foot -T iwctl -a float-t -e iwctl"
               right: "foot -T Nethogs -a float-t -e nethogs"
             conditions:
               name == enp7s0:
@@ -130,23 +130,24 @@ bar:
                       - string: { text: 󰱓, font: *symbol }
                     state == down:
                       - string: { text: 󰅛, font: *symbol }
-    ## WIP need to test how this works when I have wifi
-    #    - network:
-    #        content:
-    #          map:
-    #            conditions:
-    #              name == wlp3s0:
-    #                map:
-    #                  default:
-    #                    - string: { text: , font: *symbol }
-    #                  conditions:
-    #                    state == up:
-    #                      - string: { text: , font: *symbol }
-    #                    state == down:
-    #                      - string: { text: , font: *symbol }
-    #                    state == unknown:
-    #                      - string: { text: , font: *symbol }
-    ##
+    - network:
+        poll-interval: 5000
+        content:
+          map:
+            on-click:
+              left: "foot -T iwctl -a float-t -e iwctl"
+              right: "foot -T Nethogs -a float-t -e nethogs"
+            default: { empty: {} }
+            conditions:
+              name == wlp7s0:
+                map:
+                  default:
+                    - string: { text: , font: *symbol }
+                  conditions:
+                    state == up:
+                      - string: { text: , font: *symbol }
+                    state == down:
+                      - string: { text: , font: *symbol }
     - label:
         content:
           {

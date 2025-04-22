@@ -1,23 +1,25 @@
+# Settings
+encryption_passcommand: sh -c "cat ~/Documents/credentials/.borg-passphrase"
+
+# List of source directories to backup.
 source_directories:
   - /home
   - /etc
 
+# Paths of local or remote repositories to backup to.
 repositories:
   - path: /mnt/nv1tb/Backup/borg
     label: local
 
-one_file_system: true
-
-encryption_passcommand: sh -c "cat ~/Documents/credentials/.borg-passphrase"
-
+# Retention policy for how many backups to keep.
 keep_daily: 7
 keep_weekly: 4
 keep_monthly: 6
 
+# Exludes
 exclude_if_present:
   - .nobackup
   - .NOBACKUP
-
 exclude_patterns:
   - "- [Tt]rash"
   - "- [Cc]ache"
