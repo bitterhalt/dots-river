@@ -117,9 +117,7 @@ bar:
     - network:
         content:
           map:
-            on-click:
-              left: "foot -T iwctl -a float-t -e iwctl"
-              right: "foot -T Nethogs -a float-t -e nethogs"
+            on-click: "foot -T Nethogs -a float-t -e nethogs"
             conditions:
               name == enp7s0:
                 map:
@@ -135,7 +133,7 @@ bar:
         content:
           map:
             on-click:
-              left: "foot -T iwctl -a float-t -e iwctl"
+              left: "foot -T iwctl -a float-t -e iwctl" #  Tip: use something like iwgtk if you want GUI for wifi
               right: "foot -T Nethogs -a float-t -e nethogs"
             default: { empty: {} }
             conditions:
