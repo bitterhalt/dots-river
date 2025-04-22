@@ -140,10 +140,10 @@ bar:
               name == wlp7s0:
                 map:
                   default:
-                    - string: { text: , font: *symbol }
+                    - string: { text: 󰖩, font: *symbol }
                   conditions:
                     state == up:
-                      - string: { text: , font: *symbol }
+                      - string: { text: 󰖩, font: *symbol }
                     state == down:
                       - string: { text: , font: *symbol }
     - label:
