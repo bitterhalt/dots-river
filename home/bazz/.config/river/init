@@ -11,13 +11,13 @@
 #-----------------------------------------------------#
 
 browser="firefox"
-clip="bemenu_clipboard"
+clip="$HOME/.local/bin/menu_scripts/bemenu_clipboard"
 emoji="$HOME/.local/bin/menu_scripts/bemenu_emoji"
 mail="thunderbird"
 powermenu="$HOME/.local/bin/menu_scripts/bemenu_power"
 recmenu="$HOME/.local/bin/menu_scripts/bemenu_screenshot"
 rivertile="rivertile -main-ratio 0.55 -view-padding 2 -outer-padding 2"
-run="bemenu_runner run --no-exec --fixed-height -W 0.20 -c -B1 -n -l15 -p run: | xargs riverctl spawn"
+run="$HOME/.local/bin/bemenu_runner run --no-exec --fixed-height -W 0.20 -c -B1 -n -l15 -p run: | xargs riverctl spawn"
 screenshot="$HOME/.local/bin/wl-shot"
 term="footclient" # <- If you want single instance change: "footclient" > "foot"
 
