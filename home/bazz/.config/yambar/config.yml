@@ -153,7 +153,7 @@ bar:
               {
                 text: "󰐥",
                 font: *symbol,
-                left-margin: 10,
+                left-margin: 8,
                 on-click: sh -c "bemenu_power",
               },
           }
