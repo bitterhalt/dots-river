@@ -1,7 +1,6 @@
 [terminal]
 
-# vt = 7 is default on Void, use it if you have tty-1 enabled
-vt = 1
+vt = 7
 
 [default_session]
 command = "tuigreet -t -r --cmd river-start --power-shutdown 'doas poweroff' --power-reboot 'doas reboot'"
