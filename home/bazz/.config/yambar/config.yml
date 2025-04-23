@@ -129,7 +129,6 @@ bar:
                       - string: { text: 󰅛, font: *symbol }
             on-click: "foot -T Nethogs -a float-t -e nethogs"
     - network:
-        poll-interval: 5000
         content:
           map:
             default: { empty: {} }
