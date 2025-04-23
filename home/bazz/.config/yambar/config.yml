@@ -136,12 +136,12 @@ bar:
               name == wlp7s0:
                 map:
                   default:
-                    - string: { text: 󰖩, font: *symbol }
+                    - string: { text: "{name}: {state}" }
                   conditions:
                     state == up:
                       - string: { text: 󰖩, font: *symbol }
                     state == down:
-                      - string: { text: , font: *symbol }
+                      - string: { text: "{name}: {state}" }
             on-click:
               left: "foot -T iwctl -a float-t -e iwctl" #  Tip: use something like iwgtk if you want GUI for wifi
               right: "foot -T Nethogs -a float-t -e nethogs"
