@@ -1,0 +1,7 @@
+--restrict-filenames
+--trim-filenames 200
+-o ~/Videos/%(title)s.%(ext)s
+--format bestvideo[height<=?1080]+bestaudio/best
+--write-sub
+--write-auto-sub
+--sub-lang en,en-US
