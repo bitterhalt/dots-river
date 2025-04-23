@@ -45,11 +45,9 @@ riverctl default-layout rivertile
 #                      LAUNCH                         #
 #-----------------------------------------------------#
 
-riverctl map normal Super+Shift p spawn "$powermenu"
-riverctl map normal Super+Control D spawn "fnottctl dismiss"
 riverctl map normal Super B spawn "$HOME/.config/river/scripts/barhider.sh"
-riverctl map normal Super E spawn "$term -e lf"
 riverctl map normal Super D spawn "$run"
+riverctl map normal Super E spawn "$term -e lf"
 riverctl map normal Super F1 spawn "noti_sysnfo"
 riverctl map normal Super F10 spawn "$HOME/.config/river/scripts/mic-toggle.sh"
 riverctl map normal Super F11 spawn "$HOME/.config/river/scripts/locker.sh"
@@ -57,17 +55,18 @@ riverctl map normal Super F12 spawn "$HOME/.config/river/scripts/dot-settings.sh
 riverctl map normal Super F2 spawn "noti_usage cpu"
 riverctl map normal Super F4 spawn "$HOME/.local/bin/menu_scripts/bemenu_killer"
 riverctl map normal Super M spawn "$mail"
-riverctl map normal Super N spawn "foot -T notes -e nvim ~/Documents/personal/notes/index.md"
 riverctl map normal Super Print spawn "$screenshot -f"
 riverctl map normal Super Return spawn "$term"
-riverctl map normal Super+Control T spawn "$term -T TODOS -a float-t -W 100x30 -e nvim ~/Documents/personal/notes/todo.md"
+riverctl map normal Super T spawn "noti_date"
 riverctl map normal Super W spawn "$browser"
+riverctl map normal Super+Control D spawn "fnottctl dismiss"
 riverctl map normal Super+Control E spawn "$emoji"
 riverctl map normal Super+Control I spawn "$term -W 130x40 -T fuzzypkg -a float-t -e fuzzypkg"
+riverctl map normal Super+Control N spawn "foot -T notes -e nvim ~/Documents/personal/notes/index.md"
 riverctl map normal Super+Control P spawn "wl-color-picker"
 riverctl map normal Super+Control Print spawn "$recmenu"
 riverctl map normal Super+Control S spawn "$HOME/.local/bin/menu_scripts/bemenu_sound"
-riverctl map normal Super T spawn "noti_date"
+riverctl map normal Super+Control T spawn "$term -T TODOS -a float-t -W 100x30 -e nvim ~/Documents/personal/notes/todo.md"
 riverctl map normal Super+Control U spawn "$term -W 100x40 -T popupgrade -a float-t -e popupgrade"
 riverctl map normal Super+Control W spawn "noti_weather"
 riverctl map normal Super+Shift C spawn "$clip"
@@ -75,6 +74,7 @@ riverctl map normal Super+Shift Delete spawn "$term -T htop -a float-t -W 120x35
 riverctl map normal Super+Shift F11 spawn "$HOME/.config/yambar/scripts/caffeine.sh toggle"
 riverctl map normal Super+Shift F2 spawn "noti_usage ram"
 riverctl map normal Super+Shift Print spawn "$screenshot -re"
+riverctl map normal Super+Shift p spawn "$powermenu"
 
 #-----------------------------------------------------#
 #                      BINDS                          #
