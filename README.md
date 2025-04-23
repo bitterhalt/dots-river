@@ -1,14 +1,6 @@
-## My dots
+# Dotfiles
 
 List of configs to my keyboard-driven system. My point was to get light weight system without useless annoyances.
-
-**! ! ! IMPORTANT ! ! !**
-
-> If you have just installed Void and copied everything from here, you won't get working system just yet.
->
-> Check out but **Don't run** _/.local/bin/void/void_kickstart.sh_ to get the idea what services are needed
->
-> Good luck!
 
 <img src="home/bazz/.local/share/screenshots/screenshot.png" width="100%" />
 
@@ -35,7 +27,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 
 ---
 
-### Main key bindings
+#### Main key bindings
 
 > Here is a list of the main key combinations
 >
@@ -66,6 +58,14 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 | Super + F                             | Toggle fullscreen                                    |
 | Super + Left + Mouse                  | Float and move the window                            |
 | Super + Alt + {H,J,K,L}               | Change layout orientation {left,bottom,top,right}    |
+
+## Note
+
+> If you have just installed Void and copied everything from here, you won't get working system just yet.
+>
+> Check out but **Don't run** _/.local/bin/void/void_kickstart.sh_ to get the idea what services are needed
+>
+> Good luck!
 
 #### Sources where I stole most of my cool stuff ⭐
 
