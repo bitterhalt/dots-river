@@ -154,6 +154,6 @@ bar:
                 text: "󰐥",
                 font: *symbol,
                 left-margin: 8,
-                on-click: sh -c "bemenu_power",
+                on-click: "~/.local/bin/menu_scripts/bemenu_power",
               },
           }
