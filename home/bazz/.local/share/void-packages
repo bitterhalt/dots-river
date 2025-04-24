@@ -16,7 +16,6 @@ cargo
 chafa
 chrony
 cliphist
-connman
 cryptsetup
 dbus
 dragon
@@ -75,6 +74,7 @@ mpd
 mpv
 neovim
 nerd-fonts-symbols-ttf
+net-tools
 nethogs
 nodejs
 noto-fonts-cjk
@@ -140,6 +140,7 @@ wine
 wl-clipboard
 wlopm
 wlr-randr
+wpa_supplicant
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xdg-user-dirs
