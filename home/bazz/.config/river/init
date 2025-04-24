@@ -35,6 +35,7 @@ riverctl input "$mouse" pointer-accel 0
 
 riverctl background-color 0x000000
 riverctl border-color-focused 0x6F6E69
+#riverctl border-color-focused 0x24837B
 riverctl border-color-unfocused 0x282726
 riverctl border-color-urgent 0xa2191f
 riverctl border-width 1
