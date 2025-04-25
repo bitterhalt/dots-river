@@ -2,10 +2,10 @@
 /* Needs adw-gtk3: https://github.com/lassekongo83/adw-gtk3 */
 @define-color window_bg_color #100f0f;
 @define-color window_fg_color #CECDC3;
-@define-color view_bg_color #282726;
+@define-color view_bg_color #1C1B1A;
 @define-color view_fg_color @window_fg_color;
 @define-color accent_color @view_bg_color;
-@define-color accent_bg_color #1C1B1A;
+@define-color accent_bg_color #282726;
 @define-color accent_fg_color @window_fg_color;
 @define-color sidebar_bg_color @window_bg_color;
 @define-color sidebar_fg_color @window_fg_color;
