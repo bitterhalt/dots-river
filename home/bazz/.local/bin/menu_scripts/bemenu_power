@@ -26,6 +26,7 @@ case $(printf "%s\n" "Lock" "Logout" "Suspend" "Reboot" "Shutdown" | bemenu_runn
   "$HOME/.config/river/scripts/locker.sh"
   ;;
 "Logout")
+  # Bit dirty but makes sure that nothing lingers after user exits
   pkill -u "$(id -u -n)"
   ;;
 esac
