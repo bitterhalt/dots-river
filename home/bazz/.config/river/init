@@ -13,7 +13,9 @@
 browser="firefox"
 clip="$HOME/.local/bin/menu_scripts/bemenu_clipboard"
 emoji="$HOME/.local/bin/menu_scripts/bemenu_emoji"
+lang="fi"
 mail="thunderbird"
+mouse="pointer-9610-54-Glorious_Model_O" # <- Find your inputs by typing "riverctl list-inputs"
 powermenu="$HOME/.local/bin/menu_scripts/bemenu_power"
 recmenu="$HOME/.local/bin/menu_scripts/bemenu_screenshot"
 rivertile="rivertile -main-ratio 0.55 -view-padding 2 -outer-padding 2"
@@ -22,20 +24,19 @@ screenshot="$HOME/.local/bin/wl-shot"
 term="footclient" # <- If you want single instance change: "footclient" > "foot"
 
 # Inputs
-mouse="pointer-9610-54-Glorious_Model_O" # <- Find your inputs by typing "riverctl list-inputs"
-riverctl set-repeat 50 300
-riverctl keyboard-layout -options caps:escape "fi" # <- caps as escape + lang
 riverctl focus-follows-cursor normal
 riverctl input "$mouse" accel-profile flat
 riverctl input "$mouse" pointer-accel 0
+riverctl keyboard-layout -options caps:escape "$lang"
+riverctl set-repeat 50 300
 
 #-----------------------------------------------------#
 #                      LOOK                           #
 #-----------------------------------------------------#
 
 riverctl background-color 0x000000
-riverctl border-color-focused 0x6F6E69
 #riverctl border-color-focused 0x24837B
+riverctl border-color-focused 0x6F6E69
 riverctl border-color-unfocused 0x282726
 riverctl border-color-urgent 0xa2191f
 riverctl border-width 1
@@ -56,6 +57,7 @@ riverctl map normal Super F12 spawn "$HOME/.config/river/scripts/dot-settings.sh
 riverctl map normal Super F2 spawn "noti_usage cpu"
 riverctl map normal Super F4 spawn "$HOME/.local/bin/menu_scripts/bemenu_killer"
 riverctl map normal Super M spawn "$mail"
+riverctl map normal Super N spawn "foot -T notes -e nvim ~/Documents/personal/notes/index.md"
 riverctl map normal Super Print spawn "$screenshot -f"
 riverctl map normal Super Return spawn "$term"
 riverctl map normal Super T spawn "noti_date"
@@ -63,7 +65,6 @@ riverctl map normal Super W spawn "$browser"
 riverctl map normal Super+Control D spawn "fnottctl dismiss"
 riverctl map normal Super+Control E spawn "$emoji"
 riverctl map normal Super+Control I spawn "$term -W 130x40 -T fuzzypkg -a float-t -e fuzzypkg"
-riverctl map normal Super+Control N spawn "foot -T notes -e nvim ~/Documents/personal/notes/index.md"
 riverctl map normal Super+Control P spawn "wl-color-picker"
 riverctl map normal Super+Control Print spawn "$recmenu"
 riverctl map normal Super+Control S spawn "$HOME/.local/bin/menu_scripts/bemenu_sound"
