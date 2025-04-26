@@ -5,6 +5,7 @@ MangoHud
 Signal-Desktop
 Thunar
 Vulkan-Tools
+Waybar
 acpi
 base-system
 bash-completion
@@ -135,7 +136,6 @@ waylock
 wev
 wf-recorder
 wget
-wideriver
 wine
 wl-clipboard
 wlopm
@@ -154,7 +154,6 @@ xorg-minimal
 xterm
 xtools
 xz
-yambar
 zathura
 zathura-pdf-poppler
 zoxide
