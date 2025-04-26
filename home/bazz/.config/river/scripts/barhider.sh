@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
-# Launch river-tag-overlay when yambar is killed
-if pgrep -x yambar >/dev/null; then
-  killall -q yambar
+# Launch river-tag-overlay when waybar is killed
+if pgrep -x waybar >/dev/null; then
+  killall -q waybar
   notify-send -a System "Bar disabled" -t 1500 -h string:x-canonical-private-synchronous:volume
-  # Launch river-tag-overlay when yambar is killed
+  # Launch river-tag-overlay when waybar is killed
   ~/.config/river/scripts/river-tag-overlay.sh &
 else
   if pgrep -f river-tag-overlay >/dev/null; then
     killall -q river-tag-overlay
   fi
-  # Launch yambar when river-tag-overlay is killed
-  yambar &
+  # Launch waybar when river-tag-overlay is killed
+  waybar &
 fi

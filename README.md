@@ -7,7 +7,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 ### Software I use
 
 - Distro: [Void](https://voidlinux.org/)
-- Bar: [Yambar](https://codeberg.org/dnkl/yambar)
+- Bar: [Waybar](https://github.com/Alexays/Waybar)
 - WM: [River](https://codeberg.org/river/river)
 - Cron daemon: [snooze](https://github.com/leahneukirchen/snooze)
 - Editor: [neovim](https://neovim.io/)
