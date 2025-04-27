@@ -48,8 +48,8 @@
     "format-disconnected": "󰅛",
     "max-length": 30,
     "format-icons": ["󰣾", "󰣴", "󰣶", "󰣸", "󰣺"],
-    "on-click": "foot -T iwctl -a float-t -e iwctl",
-    "on-click-right": "foot -T nethogs -a float-t -e nethogs",
+    "on-click": "foot -T impala -a float-t -e -W 120x35 impala", // "You need to compile this on Void",
+    "on-click-right": "foot -T nethogs -a float-t -W 120x35 -e nethogs",
   },
   "custom/pipewire": {
     "interval": "once",
