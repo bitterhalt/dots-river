@@ -1,6 +1,7 @@
 {
   "layer": "bottom",
   "position": "top",
+  "height": 28,
   "modules-left": ["river/tags"],
   "modules-center": ["clock"],
   "modules-right": [

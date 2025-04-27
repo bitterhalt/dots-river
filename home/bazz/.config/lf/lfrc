@@ -1,4 +1,9 @@
-# Settings
+#-----------------------------------------------------#
+#                      Settings                       #
+#-----------------------------------------------------#
+source ~/.config/lf/functions
+set previewer ~/.config/lf/preview.sh
+
 set dircounts
 set drawbox
 set hidden true
@@ -15,7 +20,9 @@ set shell bash
 set shellopts '-eu'
 set sixel
 
-# Bindings
+#-----------------------------------------------------#
+#                      Bindings                       #
+#-----------------------------------------------------#
 map . set hidden!
 map <c-c> clear
 map <c-n> %dragon-drop -i -x $fx # dragon need to be installed
@@ -47,7 +54,9 @@ map z zi
 map d
 map c
 
-# Jump
+#-----------------------------------------------------#
+#                      Jump                           #
+#-----------------------------------------------------#
 map gh cd ~
 map ge cd /etc
 map gu cd /usr
@@ -65,6 +74,3 @@ map gP cd /tmp
 map gp cd ~/Pictures
 map gr cd /
 
-# Imports
-source ~/.config/lf/functions
-set previewer ~/.config/lf/preview.sh
