@@ -3,4 +3,5 @@
 waylock -ignore-empty-password \
   -init-color 0x000000 \
   -input-color 0x0c0c0c \
-  -fail-color 0xAF3029 &
+  -fail-color 0xAF3029 \
+  -fork-on-lock
