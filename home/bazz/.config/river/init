@@ -291,7 +291,7 @@ for execute in $executes; do
     "$execute" -s &
     ;;
   "wl-paste")
-    "$execute" --watch cliphist -max-items 100 store &
+    "$execute" --watch cliphist store &
     ;;
   "swaybg")
     "$execute" -m fill -i ~/.local/share/wall/bg &

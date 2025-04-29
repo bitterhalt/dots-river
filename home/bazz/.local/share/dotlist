@@ -4,6 +4,7 @@
 /etc/modprobe.d/
 /etc/modules-load.d/nct6775.conf
 /etc/rc.local
+/etc/rc.shutdown
 /etc/xbps.d/10-ignore.conf
 /home/bazz/.bash_profile
 /home/bazz/.bashrc
@@ -37,12 +38,13 @@
 /home/bazz/.config/swayimg/
 /home/bazz/.config/user-dirs.dirs
 /home/bazz/.config/vesktop/themes/midnight-monochrome.theme.css
-/home/bazz/.config/xsettingsd/
 /home/bazz/.config/waybar/
+/home/bazz/.config/xsettingsd/
 /home/bazz/.config/yambar/
 /home/bazz/.config/yt-dlp/
 /home/bazz/.config/zathura/
 /home/bazz/.local/bin
+/home/bazz/.local/share/Sounds/
 /home/bazz/.local/share/Sounds/
 /home/bazz/.local/share/applications/img.desktop
 /home/bazz/.local/share/applications/mimeinfo.cache
@@ -52,7 +54,6 @@
 /home/bazz/.local/share/applications/yazi.desktop
 /home/bazz/.local/share/bash-completion/
 /home/bazz/.local/share/dotlist
-/home/bazz/.local/share/Sounds/
 /home/bazz/.local/share/fonts/
 /home/bazz/.local/share/screenshots/
 /home/bazz/.local/share/void-packages
