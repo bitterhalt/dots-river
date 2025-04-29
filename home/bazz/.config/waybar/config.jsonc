@@ -6,9 +6,9 @@
   "modules-center": ["clock"],
   "modules-right": [
     "group/trayer",
+    "network",
     "custom/pipewire",
     "custom/mic",
-    "network",
     "custom/swayidle",
     "custom/power",
   ],
