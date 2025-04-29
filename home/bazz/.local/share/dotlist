@@ -24,7 +24,8 @@
 /home/bazz/.config/kanshi/
 /home/bazz/.config/lf
 /home/bazz/.config/mimeapps.list
-/home/bazz/.config/mpd/
+/home/bazz/.config/mpd/mpd.conf
+/home/bazz/.config/mpd/mpd.conf
 /home/bazz/.config/mpv/
 /home/bazz/.config/nvim/
 /home/bazz/.config/river/
