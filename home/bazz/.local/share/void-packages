@@ -108,7 +108,6 @@ snooze
 socklog-void
 starship
 steam
-swappy
 swaybg
 swayidle
 syncthing
@@ -140,7 +139,6 @@ wine
 wl-clipboard
 wlopm
 wlr-randr
-wpa_supplicant
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xdg-user-dirs

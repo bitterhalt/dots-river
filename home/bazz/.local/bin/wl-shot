@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Small helper script to take Screenshots in Sway
-# Depends on: grim, swappy, and slurp
+# Depends on: grim, slurp
 # Github @ bitterhalt
 
 set -e
@@ -24,10 +24,6 @@ region() {
   pw-play "$HOME/.local/share/Sounds/camera-shutter.oga"
 }
 
-region-edit() {
-  grim -g "$(slurp)" - | swappy -f -
-}
-
 timer() {
   sleep 5
   grim "$FILENAME"
@@ -41,7 +37,6 @@ print_help() {
   echo "Options:"
   echo "  -f,  --fullscreen           Capture the fullscreen."
   echo "  -r,  --region               Select a region to capture."
-  echo "  -re, --fullscreen-edit      Capture region and edit output with swappy"
   echo "  -t,  --timer                Capture fullscreen after a 3-second delay."
   echo "  -h,  --help                 Show this help message."
 }
@@ -50,7 +45,6 @@ while [[ $# -gt 0 ]]; do
   case "$1" in
   -f | --fullscreen) fullscreen ;;
   -r | --region) region ;;
-  -re | --region-edit) region-edit ;;
   -t | --timer) timer ;;
   -h | --help) print_help ;;
   *)

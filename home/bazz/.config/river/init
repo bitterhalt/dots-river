@@ -81,7 +81,7 @@ riverctl map normal Super+Shift Delete spawn "$term -T htop -a float-t -W 120x35
 riverctl map normal Super+Shift E spawn "Thunar"
 riverctl map normal Super+Shift F11 spawn "$HOME/.config/river/scripts/swayidle-toggle.sh && $sig_1"
 riverctl map normal Super+Shift F2 spawn "noti_usage ram"
-riverctl map normal Super+Shift Print spawn "$screenshot -re"
+riverctl map normal Super+Shift Print spawn "$screenshot -r"
 riverctl map normal Super+Shift p spawn "$powermenu"
 
 #-----------------------------------------------------#
