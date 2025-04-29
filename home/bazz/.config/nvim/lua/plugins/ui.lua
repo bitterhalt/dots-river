@@ -33,11 +33,7 @@ return {
           "%=",
           "diagnostics",
           "lsps-formatters",
-          "copilot",
-          "indent",
           "encoding",
-          "pos-cursor",
-          "pos-cursor-progress",
         },
       })
     end,

@@ -39,8 +39,9 @@ return {
     opts = {
       ensure_installed = {
         "html",
-        --"lua_ls",
+        "lua_ls",
         "ts_ls",
+        "bashls",
       },
       handlers = {
         function(server_name)
