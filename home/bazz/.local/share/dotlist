@@ -5,6 +5,7 @@
 /etc/modules-load.d/nct6775.conf
 /etc/rc.local
 /etc/xbps.d/10-sudo-ignore.conf
+/etc/xbps.d/10-font-awesome-ignore.conf
 /etc/xbps.d/10-wpa_supplicant-ignore.conf
 /home/bazz/.bash_profile
 /home/bazz/.bashrc
