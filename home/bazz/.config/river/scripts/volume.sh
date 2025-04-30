@@ -15,6 +15,12 @@ down)
   ;;
 mute)
   wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+  if wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -qi 'MUTED'; then
+    notify-send -a System "Audio muted" -t 1500 -h string:x-canonical-private-synchronous:volume
+  else
+    pw-play "${HOME}/.local/share/Sounds/audio-volume-change.oga" &
+    notify-send -a System "Audio active" -t 1500 -h string:x-canonical-private-synchronous:volume
+  fi
   ;;
 *)
   echo "Usage: $0 {up|down|mute}"
