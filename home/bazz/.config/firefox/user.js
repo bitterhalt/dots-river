@@ -20,9 +20,6 @@ user_pref("browser.download.manager.addToRecentDocs", false); // Put them where 
 user_pref("browser.tabs.tabmanager.enabled", false); // disable all tabs dropdown menu
 user_pref("media.autoplay.default", 5); // Disable media autoplay
 
-/** TABS ***/
-user_pref("browser.tabs.groups.enabled", true); // Enable tab groups
-
 /** URL BAR ***/
 user_pref("browser.urlbar.unitConversion.enabled", false);
 user_pref("browser.urlbar.trending.featureGate", false);
