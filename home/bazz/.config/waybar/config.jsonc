@@ -95,7 +95,7 @@
     "interval": "once",
     "signal": 2,
     "tooltip": false,
-    "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+    "on-click": "~/.config/river/scripts/mic-toggle.sh; pkill -SIGRTMIN+2 waybar",
     "on-click-right": "pavucontrol",
   },
   "custom/markr": {

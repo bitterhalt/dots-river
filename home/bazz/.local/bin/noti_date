@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-notify-send -t 5000 -a System "Date  Time" "$(date '+%d.%m %H:%M')"
+notify-send -t 10000 -a System "Date  Time" "$(date '+%d.%m %H:%M')"
