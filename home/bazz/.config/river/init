@@ -32,7 +32,7 @@ riverctl focus-follows-cursor normal
 riverctl input "$mouse" accel-profile flat
 riverctl input "$mouse" pointer-accel 0
 riverctl keyboard-layout -options caps:escape "$lang"
-riverctl set-repeat 50 300
+#riverctl set-repeat 50 300
 
 #-----------------------------------------------------#
 #                      LOOK                           #
