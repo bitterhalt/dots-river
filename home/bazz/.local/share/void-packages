@@ -73,6 +73,7 @@ mesa-vulkan-radeon-32bit
 mpc
 mpd
 mpv
+multitail
 neovim
 nerd-fonts-symbols-ttf
 net-tools
@@ -124,6 +125,7 @@ unrar
 unzip
 util-linux
 vesktop
+vivaldi
 void-docs-browse
 void-live-audio
 void-repo-multilib
