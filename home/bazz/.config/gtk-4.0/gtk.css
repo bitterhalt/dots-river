@@ -9,11 +9,12 @@
 @define-color sidebar_bg_color @window_bg_color;
 @define-color sidebar_fg_color @window_fg_color;
 @define-color sidebar_backdrop_color @window_bg_color;
-@define-color secondary_sidebar_bg_color @accent_bg_color;
+@define-color secondary_sidebar_bg_color @view_bg_color;
 @define-color secondary_sidebar_fg_color @view_fg_color;
 @define-color secondary_sidebar_backdrop_color @view_bg_color;
-@define-color headerbar_bg_color @window_bg_color;
+@define-color headerbar_bg_color @view_bg_color;
 @define-color headerbar_fg_color @window_fg_color;
+@define-color headerbar_backdrop_color @window_bg_color;
 @define-color popover_bg_color #282726;
 @define-color popover_fg_color @view_fg_color;
 @define-color dialog_bg_color @popover_bg_color;
