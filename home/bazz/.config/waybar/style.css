@@ -90,7 +90,7 @@ button:hover {
 #tray,
 #network {
   color: @fg;
-  padding: 0 8px;
+  padding: 0 10px;
 }
 
 #tray menu {
@@ -102,10 +102,6 @@ button:hover {
 #custom-markr {
   color: @bg-4;
   padding: 0 4px;
-}
-#mpris {
-  color: @fg;
-  padding: 0 10px;
 }
 
 #custom-clock,
