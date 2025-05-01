@@ -39,6 +39,7 @@ map E unarchive
 map N yank-basename
 map O &xdg-open $f
 map P paste-async
+map P pasteBig
 map V push :!nvim<space>
 map X $$f
 map ad mkdir
@@ -48,7 +49,6 @@ map e $$EDITOR "$f"
 map f search
 map o open
 map p :paste; clear
-map P pasteBig
 map x cut
 map y copy
 map z zi
@@ -58,20 +58,20 @@ map c
 #-----------------------------------------------------#
 #                      Jump                           #
 #-----------------------------------------------------#
-map gh cd ~
-map ge cd /etc
-map gu cd /usr
-map gl cd -r .
-map gL cd -r %f
-map go cd /opt
-map gv cd /var
-map gm cd /mnt
-map gd cd ~/Downloads
 map gD cd ~/Documents
-map gl cd ~/.local
-map gc cd ~/.config
-map gs cd /srv
+map gL cd -r %f
 map gP cd /tmp
+map gc cd ~/.config
+map gd cd ~/Downloads
+map ge cd /etc
+map gh cd ~
+map gl cd -r .
+map gl cd ~/.local
+map gm cd /mnt
+map go cd /opt
 map gp cd ~/Pictures
 map gr cd /
+map gs cd /srv
+map gu cd /usr
+map gv cd /var
 
