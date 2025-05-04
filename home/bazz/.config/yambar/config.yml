@@ -127,7 +127,7 @@ bar:
                       - string: { text: 󰱓, font: *symbol }
                     state == down:
                       - string: { text: 󰅛, font: *symbol }
-            on-click: "foot -T Nethogs -a float-t -e nethogs"
+            on-click: "foot -a Nethogs -e nethogs"
     - network:
         poll-interval: 10000
         content:
@@ -151,8 +151,8 @@ bar:
                     state == down:
                       - string: { text: "{name}: {state}" }
             on-click:
-              left: "foot -T impala -a float-t -e impala" #  Tip: use something like iwgtk if you want GUI for wifi
-              right: "foot -T Nethogs -a float-t -e nethogs"
+              left: "foot -a impala-wifi -e impala" #  Tip: use something like iwgtk if you want GUI for wifi
+              right: "foot -a Nethogs -e nethogs"
     - label:
         content:
           {

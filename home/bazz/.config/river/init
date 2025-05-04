@@ -49,7 +49,7 @@ riverctl default-layout rivertile
 
 riverctl map normal Super B spawn "$HOME/.config/river/scripts/barhider.sh"
 riverctl map normal Super D spawn "$run"
-riverctl map normal Super E spawn "$term -T lf -e lf"
+riverctl map normal Super E spawn "foot -T lf -e lf"
 riverctl map normal Super F1 spawn "noti_sysnfo"
 riverctl map normal Super F10 spawn "$HOME/.config/river/scripts/mic-toggle.sh"
 riverctl map normal Super F11 spawn "$HOME/.config/river/scripts/locker.sh"
@@ -73,7 +73,7 @@ riverctl map normal Super+Control S spawn "$HOME/.local/bin/menu_scripts/bemenu_
 riverctl map normal Super+Control U spawn "$term -W 100x40 -T popupgrade -a float-t -e popupgrade"
 riverctl map normal Super+Control W spawn "noti_weather"
 riverctl map normal Super+Shift C spawn "$clip"
-riverctl map normal Super+Shift Delete spawn "$term -T htop -a float-t -W 120x35 -e htop"
+riverctl map normal Super+Shift Delete spawn "$term -a HTOP -W 120x35 -e htop"
 riverctl map normal Super+Shift E spawn "Thunar"
 riverctl map normal Super+Shift F11 spawn "$HOME/.config/river/scripts/swayidle-toggle.sh"
 riverctl map normal Super+Shift F2 spawn "noti_usage ram"
@@ -235,12 +235,15 @@ riverctl rule-add -app-id "Firefox" -title "Library" float
 riverctl rule-add -app-id "Firefox" -title "Picture-in-Picture" float
 riverctl rule-add -app-id "GParted" float
 riverctl rule-add -app-id "Gimp-*" float
+riverctl rule-add -app-id "HTOP" float
+riverctl rule-add -app-id "Nethogs" float
 riverctl rule-add -app-id "YouTube Music" float
 riverctl rule-add -app-id "blueman-manager" float
 riverctl rule-add -app-id "float-*" float
 riverctl rule-add -app-id "galculator" float
 riverctl rule-add -app-id "gimp" float
 riverctl rule-add -app-id "gimp-*" float
+riverctl rule-add -app-id "impala-wifi" float
 riverctl rule-add -app-id "imv" float
 riverctl rule-add -app-id "io.missioncenter.MissionCenter" float
 riverctl rule-add -app-id "librewolf" -title "Library" float
