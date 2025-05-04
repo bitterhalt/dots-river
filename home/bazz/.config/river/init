@@ -22,10 +22,6 @@ rivertile="rivertile -main-ratio 0.55 -view-padding 2 -outer-padding 2"
 run="$HOME/.local/bin/bemenu_runner run --no-exec --fixed-height -W 0.20 -c -B1 -n -l15 -p run: | xargs riverctl spawn"
 screenshot="$HOME/.local/bin/wl-shot"
 term="footclient" # <- If you want single instance change: "footclient" > "foot"
-# Bar signals
-sig_1="pkill -SIGRTMIN+1 waybar"
-sig_2="pkill -SIGRTMIN+2 waybar"
-sig_3="pkill -SIGRTMIN+3 waybar"
 
 # Inputs
 riverctl focus-follows-cursor normal
@@ -55,7 +51,7 @@ riverctl map normal Super B spawn "$HOME/.config/river/scripts/barhider.sh"
 riverctl map normal Super D spawn "$run"
 riverctl map normal Super E spawn "$term -T lf -e lf"
 riverctl map normal Super F1 spawn "noti_sysnfo"
-riverctl map normal Super F10 spawn "$HOME/.config/river/scripts/mic-toggle.sh && $sig_2"
+riverctl map normal Super F10 spawn "$HOME/.config/river/scripts/mic-toggle.sh"
 riverctl map normal Super F11 spawn "$HOME/.config/river/scripts/locker.sh"
 riverctl map normal Super F12 spawn "$HOME/.config/river/scripts/dot-settings.sh"
 riverctl map normal Super F2 spawn "noti_usage cpu"
@@ -79,7 +75,7 @@ riverctl map normal Super+Control W spawn "noti_weather"
 riverctl map normal Super+Shift C spawn "$clip"
 riverctl map normal Super+Shift Delete spawn "$term -T htop -a float-t -W 120x35 -e htop"
 riverctl map normal Super+Shift E spawn "Thunar"
-riverctl map normal Super+Shift F11 spawn "$HOME/.config/river/scripts/swayidle-toggle.sh && $sig_1"
+riverctl map normal Super+Shift F11 spawn "$HOME/.config/river/scripts/swayidle-toggle.sh"
 riverctl map normal Super+Shift F2 spawn "noti_usage ram"
 riverctl map normal Super+Shift Print spawn "$screenshot -r"
 riverctl map normal Super+Shift p spawn "$powermenu"
@@ -145,13 +141,13 @@ riverctl map normal Super+Alt K send-layout-cmd rivertile "main-location top"
 riverctl map normal Super+Alt H send-layout-cmd rivertile "main-location left"
 riverctl map normal Super+Alt L send-layout-cmd rivertile "main-location right"
 # XF86
-riverctl map -repeat normal Control+Shift Down spawn "$HOME/.config/river/scripts/volume.sh down && $sig_3"
-riverctl map -repeat normal Control+Shift Up spawn "$HOME/.config/river/scripts/volume.sh up && $sig_3"
-riverctl map -repeat normal None XF86AudioLowerVolume spawn "$HOME/.config/river/scripts/volume.sh down && $sig_3"
-riverctl map -repeat normal None XF86AudioRaiseVolume spawn "$HOME/.config/river/scripts/volume.sh up && $sig_3"
+riverctl map -repeat normal Control+Shift Down spawn "$HOME/.config/river/scripts/volume.sh down"
+riverctl map -repeat normal Control+Shift Up spawn "$HOME/.config/river/scripts/volume.sh up"
+riverctl map -repeat normal None XF86AudioLowerVolume spawn "$HOME/.config/river/scripts/volume.sh down"
+riverctl map -repeat normal None XF86AudioRaiseVolume spawn "$HOME/.config/river/scripts/volume.sh up"
 riverctl map normal Control+Shift Left spawn "brightnessctl set +5%"
 riverctl map normal Control+Shift Right spawn "brightnessctl set +5%"
-riverctl map normal None XF86AudioMute spawn "$HOME/.config/river/scripts/volume.sh mute && $sig_3"
+riverctl map normal None XF86AudioMute spawn "$HOME/.config/river/scripts/volume.sh mute"
 riverctl map normal None XF86AudioNext spawn "$HOME/.config/river/scripts/mediactrl.sh --nxt"
 riverctl map normal None XF86AudioPlay spawn "$HOME/.config/river/scripts/mediactrl.sh --play"
 riverctl map normal None XF86AudioPrev spawn "$HOME/.config/river/scripts/mediactrl.sh --prv"
@@ -282,7 +278,7 @@ riverctl rule-add -app-id "steam" csd
 dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
 
 # Exec-once
-executes="waybar swayidle foot mako wl-paste swaybg"
+executes="yambar swayidle foot mako wl-paste swaybg"
 
 for execute in $executes; do
   pidof -q "$execute" && continue

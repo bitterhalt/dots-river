@@ -5,7 +5,7 @@
   "modules-left": ["river/tags"],
   "modules-center": ["clock"],
   "modules-right": [
-    "group/trayer",
+    "tray",
     "network",
     "custom/pipewire",
     "custom/mic",
@@ -18,15 +18,6 @@
   "tray": {
     "icon-size": 16,
     "spacing": 12,
-  },
-  "group/trayer": {
-    "orientation": "horizontal",
-    "drawer": {
-      "transition-left-to-right": true,
-      "click-to-reveal": true,
-      "transition-duration": 500,
-    },
-    "modules": ["custom/markl", "tray"],
   },
   "battery": {
     "bat": "BAT0",

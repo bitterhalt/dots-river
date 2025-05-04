@@ -19,7 +19,7 @@ toggle)
   if pgrep -x "swayidle" >/dev/null; then
     icon="󰤄"
   else
-    icon="󱐋"
+    text="󱐋"
   fi
   echo "icon|string|$icon"
   echo ""
