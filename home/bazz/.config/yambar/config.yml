@@ -143,11 +143,11 @@ bar:
                       ramp:
                         tag: quality
                         items:
-                          - string: { text: "󰣾 ", font: *symbol }
-                          - string: { text: "󰣴", font: *symbol }
-                          - string: { text: "󰣶", font: *symbol }
-                          - string: { text: "󰣸", font: *symbol }
-                          - string: { text: "󰣺", font: *symbol }
+                          - string: { text: 󰣾, font: *symbol }
+                          - string: { text: 󰣴, font: *symbol }
+                          - string: { text: 󰣶, font: *symbol }
+                          - string: { text: 󰣸, font: *symbol }
+                          - string: { text: 󰣺, font: *symbol }
                     state == down:
                       - string: { text: "{name}: {state}" }
             on-click:
