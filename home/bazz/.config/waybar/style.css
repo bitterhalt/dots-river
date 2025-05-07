@@ -3,6 +3,7 @@
  * ----------------------------------------------------- */
 
 @define-color bg #100f0f;
+@define-color bg-1 #1C1B1A;
 @define-color bg-2 #282726;
 @define-color bg-3 #343331;
 @define-color bg-4 #575653;
@@ -77,6 +78,7 @@ button:hover {
 
 #tags button.urgent {
   color: @purple;
+  border: solid 1px @bg-1;
 }
 
 /* -----------------------------------------------------
