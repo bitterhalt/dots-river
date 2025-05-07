@@ -10,6 +10,7 @@
     "custom/pipewire",
     "custom/mic",
     "custom/swayidle",
+    "battery",
     "custom/power",
   ],
   "river/tags": {
