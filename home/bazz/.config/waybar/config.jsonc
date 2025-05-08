@@ -5,12 +5,13 @@
   "modules-left": ["river/tags"],
   "modules-center": ["clock"],
   "modules-right": [
-    "tray",
+    "group/sys",
     "network",
     "custom/pipewire",
     "custom/mic",
     "custom/swayidle",
     "battery",
+    "tray",
     "custom/power",
   ],
   "river/tags": {
@@ -91,6 +92,25 @@
     "signal": 2,
     "on-click": "~/.config/river/scripts/mic-toggle.sh; pkill -SIGRTMIN+2 waybar",
     "on-click-right": "pavucontrol",
+  },
+  "cpu": {
+    "interval": 10,
+    "format": "󰘚 {usage}%",
+    "max-length": 10,
+  },
+  "memory": {
+    "interval": 30,
+    "format": "󰍛 {percentage}%",
+    "max-length": 10,
+  },
+  "group/sys": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 600,
+      "transition-to-left": true,
+      "click-to-reveal": true,
+    },
+    "modules": ["custom/markl", "cpu", "memory"],
   },
   "custom/markr": {
     "interval": "once",

@@ -89,6 +89,8 @@ button:hover {
 #custom-pipewire,
 #custom-mic,
 #custom-swayidle,
+#cpu,
+#memory,
 #tray,
 #network {
   color: @fg;
