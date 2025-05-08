@@ -50,6 +50,8 @@
     "exec": "~/.config/waybar/scripts/pipewire.sh",
     "on-click-right": "pavucontrol",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-scroll-up": "~/.config/river/scripts/volume.sh up; pkill -SIGRTMIN+3 waybar",
+    "on-scroll-down": "~/.config/river/scripts/volume.sh down; pkill -SIGRTMIN+3 waybar",
     "signal": 3,
   },
   "clock": {
