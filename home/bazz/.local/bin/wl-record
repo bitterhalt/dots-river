@@ -19,10 +19,10 @@ fullscreen() {
 
 region() {
   wf-recorder \
-    -c h264_vaapi \
+    -c libx264rgb \
     -g "$(slurp)" \
     -f "$FILENAME"
-  notify-send -T 3000 "Screen record" "File saved as $SAVEDIR"
+  notify-send -t 3000 "Screen record" "File saved as $SAVEDIR" -i "$FILENAME"
 }
 
 kill() {
