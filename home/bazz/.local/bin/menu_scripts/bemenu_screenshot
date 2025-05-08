@@ -35,7 +35,7 @@ main() {
   'Screenshot Full+delay')
     wl-shot -t
     ;;
-  ' Stop Recording')
+  'Stop Recording')
     wl-record -k
     ;;
   esac
