@@ -21,56 +21,60 @@ exclude_if_present:
   - .nobackup
   - .NOBACKUP
 exclude_patterns:
-  - "- [Tt]rash"
-  - "- [Cc]ache"
   - "*.pyc"
   - "*/.vim*.tmp"
+  - "- [Cc]ache"
+  - "- [Tt]rash"
+  - /etc/audit/audit
+  - /etc/credstore
+  - /etc/credstore.encrypted
+  - /etc/gshadow
+  - /etc/gshadow-
+  - /etc/libaudit.conf
+  - /etc/libvirt
+  - /etc/pacman.d
+  - /etc/qemu
   - /etc/ssl
-  - /home/*/Applications
-  - /home/*/.local/share/libvirt
-  - /home/*/Music
-  - /home/*/Sync
-  - /home/*/.playonlinux
   - /home/*/.cache
+  - /home/*/.dbus
   - /home/*/.grsync
   - /home/*/.lesshst
+  - /home/*/.local/share/Steam
+  - /home/*/.local/share/Trash
+  - /home/*/.local/share/libvirt
+  - /home/*/.npm
   - /home/*/.nv
   - /home/*/.nvidia-settings-rc
   - /home/*/.pki
+  - /home/*/.playonlinux
   - /home/*/.ssr
-  - /home/*/.npm
   - /home/*/.steam
   - /home/*/.steampath
-  - /home/*/Videos
   - /home/*/.steampid
   - /home/*/.themes
+  - /home/*/.var
   - /home/*/.wget-hsts
   - /home/*/.wine
-  - /home/*/applications
+  - /home/*/Applications
+  - /home/*/Desktop
   - /home/*/Downloads
-  - /home/*/public
-  - /home/*/recentdocuments
-  - /home/*/steam*
-  - /home/*/temp
-  - /home/*/vortex
+  - /home/*/Music
+  - /home/*/Pictures
+  - /home/*/Public
+  - /home/*/Sync
+  - /home/*/Videos
+  - /home/*/applications
   - /home/*/baloo
   - /home/*/dropbox
   - /home/*/gdrive
   - /home/*/icons
   - /home/*/onedrive
+  - /home/*/public
+  - /home/*/recentdocuments
+  - /home/*/steam*
+  - /home/*/temp
   - /home/*/trash
-  - /etc/libvirt
-  - /etc/credstore
-  - /etc/pacman.d
-  - /etc/gshadow
-  - /etc/gshadow-
-  - /etc/audit/audit
-  - /etc/libaudit.conf
-  - /etc/libvirt
-  - /etc/qemu
-  - /etc/credstore.encrypted
-  - /home/*/.local/share/Steam
-  - /home/*/.local/share/Trash
+  - /home/*/vortex
 
 exclude_caches:
   true
