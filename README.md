@@ -42,7 +42,8 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 | Super + Shift + C                     | Open clipboard                                       |
 | Super + Control + R                   | Reload config                                        |
 | Super + W                             | Open Web Browser                                     |
-| Super + E                             | Open Filemanager                                     |
+| Super + E                             | Open TUI-Filemanager (lf)                            |
+| Super + Control+ E                    | Open GUI-Filemanager (Thunar)                        |
 | Super + {1,2,3,4,5,6,7,8,9}           | View another tag                                     |
 | Super + Shift + {1,2,3,4,5,6,7,8,9}   | Move focused tags to another tag view                |
 | Super + 0                             | View all tags                                        |
