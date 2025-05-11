@@ -5,46 +5,48 @@
     "separator": ": ",
   },
   "modules": [
+    "break",
+    "title",
     {
       "type": "os",
-      "key": " OS  ",
+      "key": "OS  ",
       "keyColor": "36", // = color1
     },
     {
       "type": "kernel",
-      "key": " KER ",
+      "key": "KER ",
       "keyColor": "36",
     },
     {
       "type": "uptime",
-      "key": " UP  ",
+      "key": "UP  ",
       "keyColor": "36", // = color1
     },
     {
       "type": "command",
-      "key": " AGE ",
+      "key": "AGE ",
       "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
       "keyColor": "36", // = color1
     },
     {
       "type": "packages",
       "format": "{}",
-      "key": " PKG ",
+      "key": "PKG ",
       "keyColor": "36",
     },
     {
       "type": "shell",
-      "key": " SH  ",
+      "key": "SH  ",
       "keyColor": "36",
     },
     {
       "type": "terminal",
-      "key": " TER ",
+      "key": "TER ",
       "keyColor": "36",
     },
     {
       "type": "wm",
-      "key": " WM  ",
+      "key": "WM  ",
       "keyColor": "36",
     },
   ],
