@@ -10,10 +10,9 @@ $ADDCMD void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree xmirror
 $DOAS xmirror
 $ADDCMD
 
-$ADDCMD iwd
 $DOAS usermod -aG wheel floppy audio video cdrom optical storage network input xbuilder $THEUSER
 $DOAS unlink /var/service/wpa_supplicant
-$ADDCMD dbus connman polkit
+$ADDCMD dbus iwd polkit
 $DOAS ln -sv /etc/sv/dbus /var/service/
 $DOAS ln -sv /etc/sv/iwd /var/service/
 
