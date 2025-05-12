@@ -8,6 +8,7 @@
 @define-color bg-3 #343331;
 @define-color bg-4 #575653;
 @define-color fg #CECDC3;
+@define-color fg-1 #878580;
 @define-color red #AF3029;
 @define-color purple #A02F6F;
 @define-color cyan #24837B;
@@ -104,7 +105,7 @@ button:hover {
 #custom-sep,
 #custom-markl,
 #custom-markr {
-  color: @bg-4;
+  color: @fg-1;
   padding: 0 4px;
 }
 
