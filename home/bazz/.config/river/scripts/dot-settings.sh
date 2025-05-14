@@ -3,20 +3,22 @@
 # Menu options
 ARCHIVE="RIVER
 FOOT
+FNOTT
 FUZZEL
 WAYBAR
-ZSH
+BASH
 NEOVIM
 "
-CHOICE=$(printf "$ARCHIVE" | fuzzel -d -a top --y 5 -w 30 -l 6 -p "Edit settings: ")
+CHOICE=$(printf "$ARCHIVE" | fuzzel -d -a top --y 5 -w 30 -l 7 -p "Edit settings: ")
 
 TERMCMD=("foot")
 
 case $CHOICE in
-FUZZEL) $TERMCMD -e nvim $HOME/.config/fuzzel/fuzzel.ini ;;
+BASH) $TERMCMD -e nvim $HOME/.bashrc ;;
+FNOTT) $TERMCMD -e nvim $HOME/.config/fnott/fnott.ini ;;
 FOOT) $TERMCMD -e nvim $HOME/.config/foot/foot.ini ;;
+FUZZEL) $TERMCMD -e nvim $HOME/.config/fuzzel/fuzzel.ini ;;
 NEOVIM) $TERMCMD -e nvim $HOME/.config/nvim/init.lua ;;
-WAYBAR) $TERMCMD -e nvim $HOME/.config/waybar/config.jsonc ;;
 RIVER) $TERMCMD -e nvim $HOME/.config/river/init ;;
-ZSH) $TERMCMD -e nvim $HOME/.config/zsh/.zshrc ;;
+WAYBAR) $TERMCMD -e nvim $HOME/.config/waybar/config.jsonc ;;
 esac

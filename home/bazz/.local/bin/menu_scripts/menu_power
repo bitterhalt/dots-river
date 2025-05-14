@@ -4,7 +4,7 @@ set -euo pipefail
 
 CONFIRM="fuzzel -d -a top-right --x 5 --y 5 -l2 -p Sure? "
 
-case $(printf "%s\n" "Lock" "Logout" "Suspend" "Reboot" "Shutdown" | fuzzel -d -a top-right --x 5 --y 5 -l5 -p "Quit? ") in
+case $(printf "%s\n" "Lock" "Logout" "Suspend" "Reboot" "Shutdown" | fuzzel -d -a top-right --x 5 --y 5 -l5 -p "exit: ") in
 "Shutdown")
   confirm=$(echo -e "Yes\nNo" | $CONFIRM)
   if [[ "$confirm" == "Yes" ]]; then
