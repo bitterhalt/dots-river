@@ -2,14 +2,28 @@
 #                      rsync-excludes                 #
 #-----------------------------------------------------#
 
+.dbus
+.local/state/nvim
 .state
 .steampath
 .steampid
 .var
+/etc/.pwd.lock
+/etc/NetworkManager
+/etc/gshadow
+/etc/gshadow-
+/etc/kernel.d
 /etc/libvirt
+/etc/passwd-
+/etc/polkit-1/rules.d
 /etc/qemu
+/etc/securetty
+/etc/shadow
+/etc/shadow-
+/etc/ssh/
 GOG.com
 Signal
+Videos
 cargo
 flatpak
 go
@@ -20,9 +34,10 @@ net.lutris.Lutris
 pipx
 reshade
 runit
-umu
 supervise
+temp
 themes
+umu
 vesktop/sessionData/
 vesktop/sessionData/Cache/Cache_Data/index-dir/
 vesktop/sessionData/Cache/Cache_Data/index-dir/the-real-index
