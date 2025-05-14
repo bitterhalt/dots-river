@@ -3,7 +3,7 @@
 # Menu options
 ARCHIVE="RIVER
 FOOT
-BEMENU
+FUZZEL
 WAYBAR
 ZSH
 NEOVIM
@@ -13,7 +13,7 @@ CHOICE=$(printf "$ARCHIVE" | fuzzel -d -l 6 -p "Edit settings: ")
 TERMCMD=("foot")
 
 case $CHOICE in
-BEMENU) $TERMCMD -e nvim $HOME/.local/bin/bemenu_runner ;;
+FUZZEL) $TERMCMD -e nvim $HOME/.config/fuzzel/fuzzel.ini ;;
 FOOT) $TERMCMD -e nvim $HOME/.config/foot/foot.ini ;;
 NEOVIM) $TERMCMD -e nvim $HOME/.config/nvim/init.lua ;;
 WAYBAR) $TERMCMD -e nvim $HOME/.config/waybar/config.jsonc ;;
