@@ -23,7 +23,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 - Login Manager: [Greetd](https://git.sr.ht/~kennylevinsen/greetd)
 - Media Player: [mpv](https://mpv.io/)
 - Notification daemon: [fnott](https://codeberg.org/dnkl/fnott)
-- Screenlocker: [waylock](https://git.sr.ht/~ifreund/waylock)
+- Screenlocker: [swaylock](https://github.com/swaywm/swaylock)
 - Session and Seat management: [seatd](https://docs.voidlinux.org/config/session-management.html#seatd) and [turnstile](https://docs.voidlinux.org/config/session-management.html#turnstile)
 - Symbols and icons: [Nerd Font Symbols](https://www.nerdfonts.com/)
 - Tag-overlay: [river-tag-overlay](https://git.sr.ht/~leon_plickat/river-tag-overlay)
