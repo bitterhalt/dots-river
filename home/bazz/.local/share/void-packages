@@ -31,6 +31,7 @@ fnott
 font-liberation-narrow-ttf
 foot
 fortune-mod
+fuzzel
 fuzzypkg
 fzf
 galculator
@@ -111,6 +112,7 @@ starship
 steam
 swaybg
 swayidle
+swaylock
 syncthing
 tealdeer
 thunderbird
@@ -134,7 +136,6 @@ void-repo-multilib-nonfree
 void-repo-nonfree
 vsv
 vulkan-loader-32bit
-waylock
 wev
 wf-recorder
 wget

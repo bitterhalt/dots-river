@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+chosen=$(cut -d ';' -f1 ~/.local/share/emoji/emoji | fuzzel -d -l 15 -p "select: " | sed "s/ .*//")
+
+[ -z "$chosen" ] && exit
+
+if [ -n "$1" ]; then
+  wl-copy "$chosen"
+else
+  printf "$chosen" | wl-copy
+  notify-send "$chosen Copied to clipboard!" &
+fi

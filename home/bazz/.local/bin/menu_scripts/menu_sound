@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Select audio sink node
+node=$(pw-dump Node | jq -r '.[]|select(.info.props|.["media.class"] == "Audio/Sink" and has("device.api"))|.info.props["node.description"]' | fuzzel -d -w 50 -l 6 -p "Switch audio device: ")
+[ -z "$node" ] && exit 0
+
+# Get object ID for selected node
+id=$(pw-dump Node | jq --arg desc "$node" -r '.[]|select(.info.props|."api.alsa.pcm.stream" == "playback" and ."node.description" == $desc)|.info.props["object.id"]')
+[ -z "$id" ] && exit 0
+
+# Set the selected node as default
+wpctl set-default "$id"
+notify-send -a center_notify "Audio notify" "Audio device changed"
