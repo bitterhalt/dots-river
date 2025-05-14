@@ -2,7 +2,7 @@
 
 set -e
 
-MENU="fuzzel -d -w 50 -l 15 "
+MENU="fuzzel -d -a top --y 5  -w 50 -l 15 "
 
 selected="$(ps -a -u $USER |
   $MENU --prompt "Kill process:" |

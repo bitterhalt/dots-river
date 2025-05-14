@@ -8,7 +8,7 @@ WAYBAR
 ZSH
 NEOVIM
 "
-CHOICE=$(printf "$ARCHIVE" | fuzzel -d -l 6 -p "Edit settings: ")
+CHOICE=$(printf "$ARCHIVE" | fuzzel -d -a top --y 5 -w 30 -l 6 -p "Edit settings: ")
 
 TERMCMD=("foot")
 

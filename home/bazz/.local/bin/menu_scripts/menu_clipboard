@@ -14,6 +14,6 @@ wipe)
   exit 0
   ;;
 *)
-  cliphist list | fuzzel -d -w 50 -l15 -p "clipboard: " | cliphist decode | wl-copy
+  cliphist list | fuzzel -d -a top --y 5 -w 50 -l15 -p "clipboard: " | cliphist decode | wl-copy
   ;;
 esac
