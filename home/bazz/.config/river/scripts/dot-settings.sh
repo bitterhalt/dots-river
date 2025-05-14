@@ -7,15 +7,14 @@ BEMENU
 WAYBAR
 ZSH
 NEOVIM
-MAKO"
-CHOICE=$(printf "$ARCHIVE" | bemenu_runner -n -B1 -l9 -H0 -p "Edit settings:")
+"
+CHOICE=$(printf "$ARCHIVE" | fuzzel -d -l 6 -p "Edit settings: ")
 
 TERMCMD=("foot")
 
 case $CHOICE in
 BEMENU) $TERMCMD -e nvim $HOME/.local/bin/bemenu_runner ;;
 FOOT) $TERMCMD -e nvim $HOME/.config/foot/foot.ini ;;
-MAKO) $TERMCMD -e nvim $HOME/.config/mako/config ;;
 NEOVIM) $TERMCMD -e nvim $HOME/.config/nvim/init.lua ;;
 WAYBAR) $TERMCMD -e nvim $HOME/.config/waybar/config.jsonc ;;
 RIVER) $TERMCMD -e nvim $HOME/.config/river/init ;;

@@ -74,7 +74,7 @@
     "interval": "once",
     "format": "󰐥",
     "tooltip": false,
-    "on-click": "~/.local/bin/menu_scripts/bemenu_power",
+    "on-click": "~/.local/bin/menu_scripts/menu_power",
   },
   "custom/swayidle": {
     "interval": "once",
