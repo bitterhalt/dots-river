@@ -4,7 +4,6 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 
 <img src="home/bazz/.local/share/screenshots/screenshot.png" width="100%" />
 <img src="home/bazz/.local/share/screenshots/screenshot2.png" width="100%" />
-<img src="home/bazz/.local/share/screenshots/screenshot3.png" width="100%" />
 <img src="home/bazz/.local/share/screenshots/screenshot4.png" width="50%" />
 <img src="home/bazz/.local/share/screenshots/screenshot5.png" width="50%" />
 
@@ -26,7 +25,6 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 - Screenlocker: [swaylock](https://github.com/swaywm/swaylock)
 - Session and Seat management: [seatd](https://docs.voidlinux.org/config/session-management.html#seatd) and [turnstile](https://docs.voidlinux.org/config/session-management.html#turnstile)
 - Symbols and icons: [Nerd Font Symbols](https://www.nerdfonts.com/)
-- Tag-overlay: [river-tag-overlay](https://git.sr.ht/~leon_plickat/river-tag-overlay)
 - Terminal: [foot](https://codeberg.org/dnkl/foot)
 
 ---
