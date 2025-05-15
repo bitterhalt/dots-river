@@ -7,10 +7,9 @@
 # https://codeberg.org/river/wiki
 
 #-----------------------------------------------------#
-#                      SETTINGS                       #
+#                      VARIABLES                      #
 #-----------------------------------------------------#
 
-# Variables
 browser="firefox"
 clip="$HOME/.local/bin/menu_scripts/menu_clipboard"
 emoji="$HOME/.local/bin/menu_scripts/menu_emoji"
