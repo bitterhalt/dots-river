@@ -10,10 +10,9 @@
 #                      SETTINGS                       #
 #-----------------------------------------------------#
 
+# Variables
 browser="firefox"
 clip="$HOME/.local/bin/menu_scripts/menu_clipboard"
-drun="fuzzel"
-run="find $(echo $PATH | sed 's/:/ /g') -type f -printf '%P\n' | fuzzel -d -p 'run: ' | xargs riverctl spawn" # List only binaries
 emoji="$HOME/.local/bin/menu_scripts/menu_emoji"
 lang="fi"
 mail="thunderbird"
@@ -23,6 +22,10 @@ recmenu="$HOME/.local/bin/menu_scripts/menu_screenshot"
 rivertile="rivertile -main-ratio 0.55 -view-padding 2 -outer-padding 2"
 screenshot="$HOME/.local/bin/wl-shot"
 term="footclient" # <- If you want single instance change: "footclient" > "foot"
+
+# App launcher
+drun="fuzzel"
+run="find $(echo $PATH | sed 's/:/ /g') -type f -printf '%P\n' | fuzzel -d -p 'run: ' | xargs riverctl spawn" # List only binaries
 
 # Bar signals
 sig_1="pkill -SIGRTMIN+1 waybar"
