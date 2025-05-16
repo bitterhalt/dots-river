@@ -12,11 +12,11 @@
 /home/bazz/.config/bat/
 /home/bazz/.config/borgmatic/
 /home/bazz/.config/cron.weekly/
-/home/bazz/.config/fastfetch/config.jsonc
+/home/bazz/.config/fastfetch/
 /home/bazz/.config/firefox/
-/home/bazz/.config/fuzzel/
 /home/bazz/.config/fnott/
 /home/bazz/.config/foot/
+/home/bazz/.config/fuzzel/
 /home/bazz/.config/fzf/
 /home/bazz/.config/gtk-2.0/
 /home/bazz/.config/gtk-3.0/
@@ -25,7 +25,6 @@
 /home/bazz/.config/kanshi/
 /home/bazz/.config/lf
 /home/bazz/.config/mimeapps.list
-/home/bazz/.config/mpd/mpd.conf
 /home/bazz/.config/mpd/mpd.conf
 /home/bazz/.config/mpv/
 /home/bazz/.config/multitail/config
