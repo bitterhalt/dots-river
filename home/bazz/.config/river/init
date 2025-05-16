@@ -132,12 +132,6 @@ riverctl map normal Super+Control Left send-layout-cmd rivertile "main-ratio -0.
 # Increment/decrement the main count of rivertile(1)
 riverctl map normal Super Prior send-layout-cmd rivertile "main-count +1"
 riverctl map normal Super Next send-layout-cmd rivertile "main-count -1"
-
-# Resize views
-riverctl map -repeat normal Super+Alt Left resize horizontal -25
-riverctl map -repeat normal Super+Alt Down resize vertical 25
-riverctl map -repeat normal Super+Alt Up resize vertical -25
-riverctl map -repeat normal Super+Alt Right resize horizontal 25
 # Super + Left Mouse Button to move views
 riverctl map-pointer normal Super BTN_LEFT move-view
 # Super + Right Mouse Button to resize views
@@ -167,6 +161,37 @@ riverctl map normal None XF86AudioPrev spawn "$HOME/.config/river/scripts/mediac
 riverctl map normal None XF86AudioStop spawn "$HOME/.config/river/scripts/mediactrl.sh --stop"
 riverctl map normal None XF86Calculator spawn "galculator"
 riverctl map normal Super+Control M spawn "$HOME/.config/river/scripts/mediactrl.sh --noti"
+
+#-----------------------------------------------------#
+#                      MODE                           #
+#-----------------------------------------------------#
+
+riverctl declare-mode move
+riverctl map normal Super+Shift R enter-mode move
+riverctl map move Super+Shift R enter-mode normal
+riverctl map move Super Escape enter-mode normal
+
+# Move floating windows
+riverctl map -repeat move None H move left 25
+riverctl map -repeat move None J move down 25
+riverctl map -repeat move None K move up 25
+riverctl map -repeat move None L move right 25
+# Arrows
+riverctl map -repeat move None Left move left 25
+riverctl map -repeat move None Down move down 25
+riverctl map -repeat move None Up move up 25
+riverctl map -repeat move None Right move right 25
+
+# Resize floating windows
+riverctl map -repeat move Control H resize horizontal -25
+riverctl map -repeat move Control J resize vertical -25
+riverctl map -repeat move Control K resize vertical 25
+riverctl map -repeat move Control L resize horizontal 25
+# Arrows
+riverctl map -repeat move Control Left resize horizontal -25
+riverctl map -repeat move Control Down resize vertical -25
+riverctl map -repeat move Control Up resize vertical 25
+riverctl map -repeat move Control Right resize horizontal 25
 
 #-----------------------------------------------------#
 #                      TAGS                           #
