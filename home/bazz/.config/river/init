@@ -97,16 +97,24 @@ riverctl map normal Super+Shift p spawn "$powermenu"
 riverctl map -repeat normal Super Q close
 # Reload config
 riverctl map normal Super+Control R spawn "$HOME/.config/river/init && notify-send -t 5000 -a System 'River' 'Config reloaded'"
-# Focus the next/previous view in the layout stack
+# Focus the next/previous/left/right view in the layout stack
 riverctl map normal Super J focus-view next
 riverctl map normal Super K focus-view previous
+riverctl map normal Super H focus-view left
+riverctl map normal Super L focus-view right
 riverctl map normal Super Down focus-view next
 riverctl map normal Super Up focus-view previous
-# Swap the focused view with the next/previous view in the layout stack
+riverctl map normal Super Left focus-view left
+riverctl map normal Super Right focus-view right
+# Swap the focused view with the next/previous/left/right
 riverctl map normal Super+Shift J swap next
 riverctl map normal Super+Shift K swap previous
+riverctl map normal Super+Shift H swap left
+riverctl map normal Super+Shift L swap right
 riverctl map normal Super+Shift Down swap next
 riverctl map normal Super+Shift Up swap previous
+riverctl map normal Super+Shift Right swap right
+riverctl map normal Super+Shift Left swap left
 # Focus the next/previous output
 riverctl map normal Super Period focus-output next
 riverctl map normal Super Comma focus-output previous
@@ -117,18 +125,14 @@ riverctl map normal Super+Shift Comma send-to-output previous
 riverctl map normal Super BackSpace zoom
 riverctl map normal Super z zoom
 # Decrease/increase the main ratio of rivertile(1)
-riverctl map normal Super L send-layout-cmd rivertile "main-ratio +0.05"
-riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
-riverctl map normal Super Right send-layout-cmd rivertile "main-ratio +0.05"
-riverctl map normal Super Left send-layout-cmd rivertile "main-ratio -0.05"
+riverctl map normal Super+Control L send-layout-cmd rivertile "main-ratio +0.05"
+riverctl map normal Super+Control H send-layout-cmd rivertile "main-ratio -0.05"
+riverctl map normal Super+Control Right send-layout-cmd rivertile "main-ratio +0.05"
+riverctl map normal Super+Control Left send-layout-cmd rivertile "main-ratio -0.05"
 # Increment/decrement the main count of rivertile(1)
 riverctl map normal Super Prior send-layout-cmd rivertile "main-count +1"
 riverctl map normal Super Next send-layout-cmd rivertile "main-count -1"
-# Move views
-riverctl map -repeat normal Super+Control Left move left 25
-riverctl map -repeat normal Super+Control Down move down 25
-riverctl map -repeat normal Super+Control Up move up 25
-riverctl map -repeat normal Super+Control Right move right 25
+
 # Resize views
 riverctl map -repeat normal Super+Alt Left resize horizontal -25
 riverctl map -repeat normal Super+Alt Down resize vertical 25
