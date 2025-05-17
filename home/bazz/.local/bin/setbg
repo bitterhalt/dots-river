@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# Stolen from: https://github.com/newmanls/dotfiles/blob/master/.local/bin/setbg
-
 set -euo pipefail
 
 bg="${HOME}/.local/share/wall/bg"
@@ -19,5 +17,8 @@ if [ "${1:-}" ]; then
   esac
 fi
 
-pkill swaybg
-swaybg -m fill -i "${bg}" &
+swww img "${bg}" \
+  --transition-type=any \
+  --transition-step=60 \
+  --transition-fps=60 \
+  --transition-duration=.7

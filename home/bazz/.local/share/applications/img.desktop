@@ -1,5 +1,5 @@
 [Desktop Entry]
 Type=Application
 Name=Image viewer
-Exec=/usr/bin/imv-dir %f
+Exec=/usr/bin/swayimg %f
 MimeType=image/jpeg;image/png;image/gif;image/tiff;image/x-tga;image/bmp;image/webp;

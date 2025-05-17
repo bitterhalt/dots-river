@@ -319,7 +319,7 @@ riverctl rule-add -app-id "steam" csd
 dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
 
 # Exec-once
-executes="waybar swayidle foot mako wl-paste swaybg"
+executes="waybar swayidle foot mako wl-paste swww-daemon"
 
 for execute in $executes; do
   pidof -q "$execute" && continue
@@ -329,9 +329,6 @@ for execute in $executes; do
     ;;
   "wl-paste")
     "$execute" --watch cliphist store &
-    ;;
-  "swaybg")
-    "$execute" -m fill -i ~/.local/share/wall/bg &
     ;;
   "swayidle")
     "$execute" -w &
