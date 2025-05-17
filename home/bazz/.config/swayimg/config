@@ -29,8 +29,6 @@ window = #100F0Fff
 transparency = grid
 # Default image scale (optimal/fit/width/height/fill/real)
 scale = optimal
-# Fix position of the image on the window surface (yes/no)
-fixed = yes
 # Run slideshow at startup (yes/no)
 slideshow = no
 # Slideshow image display time (seconds)
