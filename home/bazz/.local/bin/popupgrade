@@ -4,5 +4,5 @@ printf "Beginning upgrade.\\n"
 
 doas xbps-install -Su
 
-printf "\\nUpgrade complete.\\nPress <Enter> to exit window.\\n\\n"
+printf "\nUpgrade complete!\n\033[0;31m\nPress <Enter> to exit window.\n\n\033[0m"
 read -r _

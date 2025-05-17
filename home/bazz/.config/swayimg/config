@@ -43,7 +43,7 @@ preload = 1
 ################################################################################
 [gallery]
 # Max size of the thumbnail (pixels)
-size = 200
+size = 180
 # Max number of thumbnails in cache, 0 to unlimit
 cache = 100
 # Fill the entire tile with thumbnail (yes/no)
@@ -60,7 +60,6 @@ border = #282726ff
 shadow = #000000ff
 # Persistent cache
 pstore = yes
-
 
 ################################################################################
 # Viewer mode key binding configuration: key = action [parameters]
