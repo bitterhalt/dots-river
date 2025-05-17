@@ -14,7 +14,7 @@
     },
   },
   "display": {
-    "separator": " ",
+    "separator": ": ",
   },
   "modules": [
     "break",

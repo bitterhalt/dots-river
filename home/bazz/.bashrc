@@ -69,38 +69,39 @@ function ex {
 }
 
 # Aliases
-alias grep="grep --color=auto"
-alias fgrep="fgrep --color=auto"
-alias egrep="egrep --color=auto"
+alias ..="cd .."
+alias cp="cp -iv"
 alias df="df -h"
 alias duf="duf --hide special -theme ansi"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
 alias free="free -m"
-alias cp="cp -iv"
+alias grep="grep --color=auto"
+alias history="fc -l 1"
+alias mkdir="mkdir -pv"
 alias mv="mv -iv"
 alias rm="rm -vI"
-alias mkdir="mkdir -pv"
-alias ..="cd .."
-alias history="fc -l 1"
 # Doas
 alias sudo="doas"
 # Vim
 alias vi="nvim"
 alias vim="nvim"
 # Dir / eza
-alias ls="eza -al --group-directories-first --color=always"
 alias la="eza -a --group-directories-first --color=always"
 alias ll="eza -l --group-directories-first --color=always"
+alias ls="eza -al --group-directories-first --color=always"
 # Trash-cli
 alias tp="trash-put"
 alias tpe="trash-empty"
 alias tpr="trash-restore"
 # Random
-alias nvm="sudo nvme smart-log /dev/nvme0"
 alias hg="history | grep "
+alias nvm="sudo nvme smart-log /dev/nvme0"
 # XBPS
-alias xiu="doas xbps-install -Su"
-alias xir="doas xbps-remove"
-alias xbq="xbps-query -Rs"
-alias xblist="xpkg -m > ~/.local/share/void-packages"
 alias sva="vsv -d ~/.config/service/ ; doas vsv"
 alias svh="vsv -d ~/.config/service/"
+alias xbc="doas xbps-remove -Oo"
+alias xblist="xpkg -m > ~/.local/share/void-packages"
+alias xbq="xbps-query -Rs"
+alias xir="doas xbps-remove"
+alias xiu="doas xbps-install -Su"
