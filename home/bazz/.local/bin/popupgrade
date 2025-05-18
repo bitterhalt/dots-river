@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-printf "Beginning upgrade.\\n"
+printf "Beginning upgrade.\n\n"
 
 doas xbps-install -Su
 
