@@ -2,7 +2,7 @@
 # Stolen from: https://codeberg.org/jorisvandijk/dotfiles-hyprland/src/branch/main/home/joris/.local/bin/Dotfiles
 
 # Locations
-dotfiles_repo=~/Documents/projects/river-dotfiles
+dotfiles_repo=~/Documents/projects/dotfiles
 dotfiles_list=~/.local/share/dotlist
 
 # Add new dotfiles
