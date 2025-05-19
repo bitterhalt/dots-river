@@ -103,19 +103,8 @@ cmd bulkrename ${{
 
 # Unarchive
 cmd unarchive &{{
-  a="${f%%.*}"
-  mkdir -p "$a"
-
-  case "$f" in
-    *.zip) unzip -d "$a" "$f" ;;
-    *.tar.gz) tar -xzvf "$f" -C "$a" ;;
-    *.tar.xz) tar -xvf "$f" -C "$a" ;;
-    *.tar.bz2) tar -xjvf "$f" -C "$a" ;;
-    *.tar) tar -xvf "$f" -C "$a" ;;
-    *.rar) unrar x "$f" "$a" ;;
-    *.7z) 7z x "$f" -o"$a" ;;
-    *) echo "Unsupported Format" ;;
-  esac
+    set -f
+    atool -x $fx
   lf -remote "send $id echo 'Unarchive complete for $f'"
 }}
 
