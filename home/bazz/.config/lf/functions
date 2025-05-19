@@ -1,4 +1,6 @@
-# Opener
+#-----------------------------------------------------#
+#                     Open                           #
+#-----------------------------------------------------#
 cmd open ${{
   case $(file --mime-type "$f" -bL) in
     text/plain) $EDITOR "$f" ;;
@@ -15,7 +17,9 @@ cmd open ${{
   esac
 }}
 
-# Chmod
+#-----------------------------------------------------#
+#                     Chmod                           #
+#-----------------------------------------------------#
 cmd chmod %{{
 	printf "Mode Bits: "
 	read and
@@ -27,16 +31,23 @@ cmd chmod %{{
 	lf -remote 'send reload'
 }}
 
-# Zoxide
+#-----------------------------------------------------#
+#                     Zoxide                          #
+#-----------------------------------------------------#
 cmd zi ${{
     result="$(zoxide query -i | sed 's/\\/\\\\/g;s/"/\\"/g')"
     lf -remote "send $id cd \"$result\""
 }}
 
-# Yank paths into your clipboard
+#-----------------------------------------------------#
+#                     Yank names or paths             #
+#-----------------------------------------------------#
 cmd yank-path $printf '%s' "$fx" | wl-copy
 cmd yank-basename $basename -a -- $fx | head -c-1 | wl-copy
 
+#-----------------------------------------------------#
+#                     Make files                      #
+#-----------------------------------------------------#
 # Make dir
 cmd mkdir ${{
   printf "Directory Name: "
@@ -51,13 +62,14 @@ cmd mkfile ${{
   $EDITOR $ans
 }}
 
-# Trash items
+#-----------------------------------------------------#
+#                      Trash items                    #
+#-----------------------------------------------------#
 cmd trash %{{
 	files=()
 	while read -r line; do files+=("$line"); done <<< "$fx"
 	len=${#files[@]}
 
-	# confirm trashing
 	if [[ $len == 1 ]]; then
 		echo -n "trash '$fx' ?"
 	else
@@ -79,7 +91,9 @@ cmd trash %{{
 	fi
 }}
 
-# Bulkrename Ranger like
+#-----------------------------------------------------#
+#                      Bulkrename                     #
+#-----------------------------------------------------#
 cmd bulkrename ${{
     tmpfile_old="$(mktemp)"
     tmpfile_new="$(mktemp)"
@@ -101,14 +115,18 @@ cmd bulkrename ${{
     lf -remote "send $id unselect"
 }}
 
-# Unarchive
+#-----------------------------------------------------#
+#                      Unarchive                      #
+#-----------------------------------------------------#
 cmd unarchive &{{
     set -f
     atool -x $fx
   lf -remote "send $id echo 'Unarchive complete for $f'"
 }}
 
-# Show progress when copying or moving
+#-----------------------------------------------------#
+#                      Paste (rsync)                  #
+#-----------------------------------------------------#
 cmd pasteBig &{{
     set -- $(cat ~/.local/share/lf/files)
     mode="$1"
@@ -129,7 +147,9 @@ cmd pasteBig &{{
     esac
 }}
 
-# Edit lf config
+#-----------------------------------------------------#
+#                      Edit lf config                 #
+#-----------------------------------------------------#
 cmd edit-config ${{
     $EDITOR ~/.config/lf/lfrc
     lf -remote "send $id source ~/.config/lf/lfrc"
