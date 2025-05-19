@@ -7,5 +7,5 @@ DEST_ETC="/mnt/wd1tb/backup/host/etc"
 mkdir -p "$DEST_HOME"
 mkdir -p "$DEST_ETC"
 
-rsync -avu --exclude-from="$EXCLUDE_FILE" "$HOME" "$DEST_HOME/"
-rsync -avu --exclude-from="$EXCLUDE_FILE" /etc "$DEST_ETC/"
+rsync -avu --delete --exclude-from="$EXCLUDE_FILE" "$HOME" "$DEST_HOME/"
+rsync -avu --delete --exclude-from="$EXCLUDE_FILE" /etc "$DEST_ETC/"
