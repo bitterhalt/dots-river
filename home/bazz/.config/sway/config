@@ -74,42 +74,39 @@ input "type:touchpad" {
 #                      Binds                          #
 #-----------------------------------------------------#
 
+bindsym $mod+Return exec $term
 bindsym $mod+d exec $drun
 bindsym $mod+e exec foot -e lf
 bindsym $mod+m exec $mail
+bindsym $mod+n exec $term -e nvim ~/Documents/personal/notes/index.md
 bindsym $mod+p exec $run
+bindsym $mod+t exec ~/.local/bin/noti_date
 bindsym $mod+w exec $browser
 bindsym $mod+tab exec $winmenu
-bindsym $mod+shift+p exec $powermenu
 bindsym $mod+F1 exec ~/.local/bin/noti_sysnfo
-bindsym $mod+F2 exec ~/.local/bin/noti_usage cpu
-bindsym $mod+F4 exec $killer
-bindsym $mod+F9 exec ~/.config/sway/scripts/mic-toggle.sh && $sig_2
-bindsym $mod+f3 exec $keyhint
-bindsym $mod+f7 exec $screenshot
 bindsym $mod+F11 exec ~/.config/sway/scripts/locker.sh
 bindsym $mod+F12 exec ~/.config/sway/scripts/dot-settings.sh
-bindsym $mod+shift+F11 exec ~/.config/sway/scripts/swayidle-toggle.sh && $sig_1
 bindsym $mod+shift+F2 exec ~/.local/bin/noti_usage ram
-bindsym $mod+shift+F7 exec ~/.local/bin/sway-record -k
-bindsym $mod+ctrl+u exec foot -e popupgrade
-bindsym $mod+ctrl+e exec $emojimenu
-bindsym $mod+shift+c exec $clip
-bindsym $mod+shift+f exec $fontfinder
-bindsym $mod+ctrl+i exec foot -a fuzzypkg -e fuzzypkg
+bindsym $mod+F2 exec ~/.local/bin/noti_usage cpu
+bindsym $mod+F3 exec ~/.config/sway/scripts/keyhint.sh
+bindsym $mod+F4 exec $killer
+bindsym $mod+F7 exec $screenshot
+bindsym $mod+F9 exec ~/.config/sway/scripts/mic-toggle.sh && $sig_2
+bindsym $mod+shift+F11 exec ~/.config/sway/scripts/swayidle-toggle.sh && $sig_1
 bindsym $mod+Print exec ~/.local/bin/wl-shot -f
-bindsym $mod+shift+Print exec ~/.local/bin/wl-shot -r
-bindsym $mod+c [app_id="vesktop"] scratchpad show
-bindsym $mod+ctrl+p exec ~/.local/bin/wl-color-picker
-bindsym $mod+ctrl+t exec ~/.local/bin/noti_date
+bindsym $mod+Insert smart_gaps toggle
 bindsym $mod+ctrl+a exec ~/.config/sway/scripts/autotiling-toggle.sh
+bindsym $mod+ctrl+e exec $emojimenu
+bindsym $mod+ctrl+i exec foot -a fuzzypkg -e fuzzypkg
+bindsym $mod+ctrl+p exec ~/.local/bin/wl-color-picker
+bindsym $mod+ctrl+s exec ~/.local/bin/menu_scripts/menu_sound
+bindsym $mod+ctrl+u exec foot -e popupgrade
+bindsym $mod+shift+Print exec ~/.local/bin/wl-shot -r
+bindsym $mod+shift+c exec $clip
 bindsym $mod+shift+delete exec $term -a floatterm -e htop
-bindsym $mod+shift+n exec $term -a quick_note -e ~/.local/bin/quick_note
-bindsym $mod+n exec $term -e nvim ~/Documents/personal/notes/index.md
-bindsym $mod+t exec $term -a floatterm -e nvim ~/Documents/personal/notes/todo.md
-
-# Start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+shift+e exec thunar
+bindsym $mod+shift+n exec $term -a floatterm -e nvim ~/Documents/personal/notes/todo.md
+bindsym $mod+shift+p exec $powermenu
 
 # Kill focused window
 bindsym $mod+q kill
@@ -172,10 +169,8 @@ bindsym $mod+shift+0 move container to workspace number 10
 bindsym $mod+b splith
 bindsym $mod+v splitv
 
-# Switch the current container between different layout styles
-bindsym $mod+shift+s layout stacking
-bindsym $mod+shift+t layout tabbed
-bindsym $mod+shift+e layout toggle split
+# Toggle the current container between different layout styles
+bindsym $mod+shift+t layout toggle split tabbed stacking
 
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen
@@ -199,6 +194,7 @@ bindsym $mod+shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 bindsym $mod+shift+x exec pgrep -f '^foot -a scpterm' >/dev/null 2>&1 || foot -a scpterm
 bindsym $mod+x [app_id="scpterm"] scratchpad show
+bindsym $mod+c [app_id="vesktop"] scratchpad show
 
 # Resizing containers
 bindsym $mod+ctrl+Right resize shrink width 10 px
