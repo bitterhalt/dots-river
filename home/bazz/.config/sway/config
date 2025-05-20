@@ -79,7 +79,7 @@ bindsym $mod+d exec $drun
 bindsym $mod+e exec foot -e lf
 bindsym $mod+m exec $mail
 bindsym $mod+n exec $term -e nvim ~/Documents/personal/notes/index.md
-bindsym $mod+p exec $run
+bindsym $mod+shift+d exec $run
 bindsym $mod+t exec ~/.local/bin/noti_date
 bindsym $mod+w exec $browser
 bindsym $mod+tab exec $winmenu
