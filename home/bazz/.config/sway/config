@@ -100,7 +100,7 @@ bindsym $mod+ctrl+e exec $emojimenu
 bindsym $mod+ctrl+i exec foot -a fuzzypkg -e fuzzypkg
 bindsym $mod+ctrl+p exec ~/.local/bin/wl-color-picker
 bindsym $mod+ctrl+s exec ~/.local/bin/menu_scripts/menu_sound
-bindsym $mod+ctrl+u exec foot -e popupgrade
+bindsym $mod+ctrl+u exec foot -a floatterm -e popupgrade
 bindsym $mod+shift+Print exec ~/.local/bin/wl-shot -r
 bindsym $mod+shift+c exec $clip
 bindsym $mod+shift+delete exec $term -a floatterm -e htop
@@ -248,11 +248,12 @@ for_window [app_id="file-roller"] floating enable
 for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, sticky enable, resize set width 30 ppt height 40 ppt
 for_window [app_id="floatterm"] floating enable, resize set width 40 ppt height 60 ppt
 for_window [app_id="fuzzypkg"] floating enable, resize set width 60 ppt height 70 ppt
-for_window [app_id="scpterm"] floating enable, resize set width 60 ppt height 70 ppt
 for_window [app_id="imv"] floating enable
 for_window [app_id="mpv"] floating enable
 for_window [app_id="nwg-look"] floating enable, resize set width 40 ppt height 50 ppt
 for_window [app_id="pavucontrol"] floating enable, resize set width 40 ppt height 50 ppt
+for_window [app_id="popupgrade"] floating enable
+for_window [app_id="scpterm"] floating enable, resize set width 60 ppt height 70 ppt
 for_window [app_id="vesktop"] floating enable
 for_window [app_id="virt-manager"] floating enable
 for_window [app_id="yad"] floating enable
