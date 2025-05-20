@@ -20,5 +20,5 @@ down)
 esac
 
 notify-send -t 1500 "󰃞 ${PCT}%" \
-  -a vol_notify_c \
+  -a System \
   -h string:x-dunst-stack-tag:volume

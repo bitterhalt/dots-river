@@ -253,13 +253,11 @@ for_window [app_id="imv"] floating enable
 for_window [app_id="mpv"] floating enable
 for_window [app_id="nwg-look"] floating enable, resize set width 40 ppt height 50 ppt
 for_window [app_id="pavucontrol"] floating enable, resize set width 40 ppt height 50 ppt
-for_window [app_id="quick_note"] floating enable, resize set width 40 ppt height 60 ppt
 for_window [app_id="vesktop"] floating enable
 for_window [app_id="virt-manager"] floating enable
 for_window [app_id="yad"] floating enable
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [class="Gimp"] floating enable
-for_window [class="Lxappearance"] floating enable
 for_window [class="Nsxiv"] floating enable, resize set width 60 ppt height 80 ppt
 for_window [class="Xsane" instance="xsane"] floating enable
 for_window [class="Yad" instance="yad"] floating enable
@@ -273,7 +271,6 @@ for_window [title="File Operation Progress"] floating enable, border pixel 1, re
 for_window [title="KeePassXC - Browser Access Request"] floating enable, move position center, focus
 for_window [title="KeePassXC - Passkey credentials"] floating enable, move position center, focus
 for_window [title="Picture-in-Picture"] floating enable, sticky enable
-for_window [title="fzf-switcher"] floating enable
 for_window [window_role="About"] floating enable
 for_window [window_role="GtkFileChooserDialog"] move position center
 for_window [window_role="GtkFileChooserDialog"] resize set 590 340
@@ -304,7 +301,7 @@ set $black   #000000
 set $white   #ffffff
 
 # Class                 Border  Backgr. Text    Indigator Child border
-client.focused          $bg3    $bg     $cyan     $bg3      $bg3
+client.focused          $bg3    $bg     $cyan   $bg3      $bg3
 client.focused_inactive $bg2    $bg     $bg3    $bg2      $bg2
 client.unfocused        $bg2    $bg     $bg3    $bg2      $bg2
 client.urgent           $bg2    $red    $white  $red      $red
