@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Times the screen off and puts it to background
 swayidle \
-  timeout 10 "swaymsg 'output * power off'" \
+  timeout 120 "swaymsg 'output * power off'" \
   resume "swaymsg 'output * power on'" &
 # Locks the screen immediately
 swaylock
