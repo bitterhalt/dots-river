@@ -11,7 +11,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 
 - Distro: [Void](https://voidlinux.org/)
 - Bar: [Waybar](https://github.com/Alexays/Waybar)
-- WM: [Sway](https://github.com/swaywm/sway)
+- WM: **River** or **Sway** Depends on the day and your mood. They both do the same thing.y)
 - Cron daemon: [snooze](https://github.com/leahneukirchen/snooze)
 - Editor: [neovim](https://neovim.io/)
 - Filemanager: [lf](https://github.com/gokcehan/lf/)
