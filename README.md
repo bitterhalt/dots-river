@@ -11,7 +11,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 
 - Distro: [Void](https://voidlinux.org/)
 - Bar: [Waybar](https://github.com/Alexays/Waybar)
-- WM: [River](https://codeberg.org/river/river)
+- WM: [Sway](https://github.com/swaywm/sway)
 - Cron daemon: [snooze](https://github.com/leahneukirchen/snooze)
 - Editor: [neovim](https://neovim.io/)
 - Filemanager: [lf](https://github.com/gokcehan/lf/)
@@ -33,34 +33,24 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 
 > Here is a list of the main key combinations
 >
-> The rest can be found in **$HOME/.config/river/init**
->
-> If you have used DWM before you are already home
+> The rest can be found in **$HOME/.config/sway/config**
 
-| Key                                   | Description                                          |
-| ------------------------------------- | ---------------------------------------------------- |
-| Super + Enter                         | Open Terminal                                        |
-| Super + D                             | Open Bemenu                                          |
-| Super + Shift + C                     | Open clipboard                                       |
-| Super + Control + R                   | Reload config                                        |
-| Super + W                             | Open Web Browser                                     |
-| Super + E                             | Open TUI-Filemanager (lf)                            |
-| Super + Control+ E                    | Open GUI-Filemanager (Thunar)                        |
-| Super + {1,2,3,4,5,6,7,8,9}           | View another tag                                     |
-| Super + Shift + {1,2,3,4,5,6,7,8,9}   | Move focused tags to another tag view                |
-| Super + 0                             | View all tags                                        |
-| Super + Control + {1,2,3,4,5,6,7,8,9} | Toggle/"combine" different tag views                 |
-| Super + Shift + P                     | Open Powermenu                                       |
-| Super + {J,K}                         | Focus the next/previous view                         |
-| Super + Shift + {J,K}                 | Swap the focused view                                |
-| Super + {, .}                         | Focus next/previous output                           |
-| Super + Shift {, .}                   | Send focused view to the next/previous output        |
-| Super + BackSpace                     | Bump the focused view to the top of the layout stack |
-| Super + {L,H}                         | Decrease/increase the main ratio of Rivertile        |
-| Super + Shift + {Prior,Next}          | Increment/decrement the main count of Rivertile      |
-| Super + F                             | Toggle fullscreen                                    |
-| Super + Left + Mouse                  | Float and move the window                            |
-| Super + Alt + {H,J,K,L}               | Change layout orientation {left,bottom,top,right}    |
+| Key                                 | Description                               |
+| ----------------------------------- | ----------------------------------------- |
+| Super + Enter                       | Open Terminal                             |
+| Super + D                           | Open application Launcher                 |
+| Super + Shift + C                   | Open clipboard                            |
+| Super + Control + R                 | Reload config                             |
+| Super + W                           | Open Web Browser                          |
+| Super + E                           | Open TUI-Filemanager (lf)                 |
+| Super + Control+ E                  | Open GUI-Filemanager (Thunar)             |
+| Super + {1,2,3,4,5,6,7,8,9}         | View another workspace                    |
+| Super + Shift + {1,2,3,4,5,6,7,8,9} | Move focused windows to another workspace |
+| Super + 0                           | View all tags                             |
+| Super + Shift + P                   | Open Powermenu                            |
+| Super + {H,J,K,L}                   | Focus the next/previous view              |
+| Super + Shift + {H,J,K,L}           | Swap the focused view                     |
+| Super + F                           | Toggle fullscreen                         |
 
 ## Note
 

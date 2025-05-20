@@ -13,6 +13,7 @@
 /home/bazz/.config/borgmatic/
 /home/bazz/.config/cron.weekly/
 /home/bazz/.config/fastfetch/
+/home/bazz/.config/sway/
 /home/bazz/.config/firefox/
 /home/bazz/.config/fnott/
 /home/bazz/.config/foot/
@@ -25,6 +26,7 @@
 /home/bazz/.config/kanshi/
 /home/bazz/.config/lf
 /home/bazz/.config/mimeapps.list
+/home/bazz/.config/swaynag/
 /home/bazz/.config/mpd/mpd.conf
 /home/bazz/.config/mpv/
 /home/bazz/.config/multitail/config
@@ -42,7 +44,6 @@
 /home/bazz/.config/vesktop/themes
 /home/bazz/.config/waybar/
 /home/bazz/.config/xsettingsd/
-/home/bazz/.config/yambar/
 /home/bazz/.config/yt-dlp/
 /home/bazz/.config/zathura/
 /home/bazz/.local/bin

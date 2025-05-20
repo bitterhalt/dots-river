@@ -52,6 +52,37 @@ button:hover {
 }
 
 /* -----------------------------------------------------
+ *                  Sway Workspaces
+ * ----------------------------------------------------- */
+#workspaces {
+  background-color: @bg;
+  padding: 0px 5px;
+}
+
+#workspaces button {
+  font-weight: normal;
+  padding: 0px 5px;
+  margin: 1px 0px;
+  border-radius: 0px;
+  border: solid 1px @bg;
+}
+
+#workspaces button.focused {
+  color: @cyan;
+  font-weight: normal;
+  border: solid 1px @bg-2;
+}
+
+#workspaces button.urgent {
+  color: @purple;
+  border: solid 1px @bg-1;
+}
+
+#mode {
+  color: @cyan;
+  padding: 0 10px;
+}
+/* -----------------------------------------------------
  *                  River Tags
  * ----------------------------------------------------- */
 
