@@ -29,29 +29,6 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 
 ---
 
-#### Main key bindings
-
-> Here is a list of the main key combinations
->
-> The rest can be found in **$HOME/.config/sway/config**
-
-| Key                                 | Description                               |
-| ----------------------------------- | ----------------------------------------- |
-| Super + Enter                       | Open Terminal                             |
-| Super + D                           | Open application Launcher                 |
-| Super + Shift + C                   | Open clipboard                            |
-| Super + Control + R                 | Reload config                             |
-| Super + W                           | Open Web Browser                          |
-| Super + E                           | Open TUI-Filemanager (lf)                 |
-| Super + Control+ E                  | Open GUI-Filemanager (Thunar)             |
-| Super + {1,2,3,4,5,6,7,8,9}         | View another workspace                    |
-| Super + Shift + {1,2,3,4,5,6,7,8,9} | Move focused windows to another workspace |
-| Super + 0                           | View all tags                             |
-| Super + Shift + P                   | Open Powermenu                            |
-| Super + {H,J,K,L}                   | Focus the next/previous view              |
-| Super + Shift + {H,J,K,L}           | Swap the focused view                     |
-| Super + F                           | Toggle fullscreen                         |
-
 ## Note
 
 > If you have just installed Void and copied everything from here, you won't get working system just yet.
