@@ -2,6 +2,9 @@
 # General configuration
 ################################################################################
 [general]
+
+# Show border
+decoration = yes
 # Mode at startup (viewer/gallery)
 mode = viewer
 # Window position (parent or absolute coordinates, e.g. 100,200)
@@ -18,6 +21,7 @@ size = 11
 color = #ccccccff
 # Shadow color (RGBA)
 shadow = #000000a0
+
 
 ################################################################################
 # Viewer mode configuration
@@ -55,7 +59,7 @@ background = #1C1B1Aff
 # Background color of the selected tile (RGBA)
 select = #403E3Cff
 # Border color of the selected tile (RGBA)
-border = #282726ff
+border = #A02F6Fff
 # Shadow color of the selected tile (RGBA)
 shadow = #000000ff
 # Persistent cache
