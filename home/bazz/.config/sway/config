@@ -234,10 +234,11 @@ bindsym XF86MonBrightnessDown exec sh -c "brightnessctl set 5%-; ~/.config/sway/
 assign [app_id="Firefox"] 2
 assign [app_id="LibreWolf"] 2
 assign [app_id="Thunderbird"] 3
+assign [class="Signal"] 3
 assign [app_id="com.transmissionbt.transmission_*"] 4
 assign [app_id="virt-manager"] 8
-assign [class="Signal"] 3
 assign [class="steam"] 5
+assign [app_id="net.lutris.Lutris"] 5
 
 # Floaters
 for_window [app_id="(?i)(?:blueman-manager|azote|gnome-disks|nwg-shell-config)"] floating enable
