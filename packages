@@ -8,6 +8,7 @@ Vulkan-Tools
 Waybar
 acpi
 atool
+autotiling
 base-system
 bash-completion
 bat
@@ -50,7 +51,6 @@ gtk-engine-murrine
 htop
 iwd
 jq
-kanshi
 lf
 libadwaita
 libdrm-32bit
@@ -100,7 +100,6 @@ qt5-wayland
 qt6-wayland
 radeontop
 ripgrep
-river
 rsync
 seatd
 slurp
@@ -109,6 +108,7 @@ snooze
 socklog-void
 starship
 steam
+sway
 swayidle
 swayimg
 swaylock
@@ -141,7 +141,6 @@ wf-recorder
 wget
 wine
 wl-clipboard
-wlopm
 wlr-randr
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
