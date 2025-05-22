@@ -177,14 +177,11 @@ bindsym $mod+shift+t layout toggle split tabbed stacking
 bindsym $mod+f fullscreen
 
 # Toggle the current focus between tiling and floating mode
-bindsym $mod+shift+space floating toggle
+bindsym $mod+space floating toggle
 bindsym --whole-window $mod+button2 floating toggle
 
 # Show floating window in all workspaces
 bindsym $mod+y sticky toggle
-
-# Swap focus between the tiling area and the floating area
-bindsym $mod+space focus mode_toggle
 
 # Move focus to the parent container
 bindsym $mod+a focus parent
