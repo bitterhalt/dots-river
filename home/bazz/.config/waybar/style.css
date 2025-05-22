@@ -81,6 +81,8 @@ button:hover {
 #mode {
   color: @cyan;
   padding: 0 10px;
+  margin: 1px 0px;
+  border: solid 1px @bg-2;
 }
 /* -----------------------------------------------------
  *                  River Tags
