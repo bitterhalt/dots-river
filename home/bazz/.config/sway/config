@@ -2,7 +2,7 @@
 #                      Sway config                    #
 #-----------------------------------------------------#
 
-font pango: JetBrainsMono Nerd Font 10
+font pango: JetBrains Mono 10
 
 # Center window title
 title_align center
