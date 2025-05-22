@@ -17,6 +17,11 @@
   "sway/workspaces": {
     "disable-scroll": true,
   },
+  "sway/window": {
+    "format": "{}",
+    "max-length": 60,
+    "icon": false,
+  },
   "tray": {
     "icon-size": 16,
     "spacing": 12,
