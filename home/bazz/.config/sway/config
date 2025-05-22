@@ -91,7 +91,7 @@ bindsym $mod+F2 exec ~/.local/bin/noti_usage cpu
 bindsym $mod+F3 exec ~/.config/sway/scripts/keyhint.sh
 bindsym $mod+F4 exec $killer
 bindsym $mod+F7 exec $screenshot
-bindsym $mod+F9 exec ~/.config/sway/scripts/mic-toggle.sh && $sig_2
+bindsym $mod+F10 exec ~/.config/sway/scripts/mic-toggle.sh && $sig_2
 bindsym $mod+shift+F11 exec ~/.config/sway/scripts/swayidle-toggle.sh && $sig_1
 bindsym $mod+Print exec ~/.local/bin/wl-shot -f
 bindsym $mod+Insert smart_gaps toggle
