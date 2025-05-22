@@ -316,7 +316,7 @@ client.background       $fg
 #-----------------------------------------------------#
 
 exec swayidle -w
-exec autotiling
+exec autotiling -l 2
 exec swww-daemon
 exec foot --server
 exec_always ~/.config/waybar/scripts/waybar-launcher.sh
