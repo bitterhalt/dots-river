@@ -11,7 +11,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 
 - Distro: [Void](https://voidlinux.org/)
 - Bar: [Waybar](https://github.com/Alexays/Waybar)
-- WM: **River** or **Sway** Depends on the day and your mood. They both do the same thing.y)
+- WM: **River** or **Sway** (Depends on the day and your mood. They both do the same thing)
 - Cron daemon: [snooze](https://github.com/leahneukirchen/snooze)
 - Editor: [neovim](https://neovim.io/)
 - Filemanager: [lf](https://github.com/gokcehan/lf/)
@@ -19,7 +19,7 @@ List of configs to my keyboard-driven system. My point was to get light weight s
 - GTK-theme: [adw-gtk3](https://github.com/lassekongo83/adw-gtk3)
 - Image Viewer: [swayimg](https://github.com/artemsen/swayimg)
 - Launcher: [fuzzel](https://codeberg.org/dnkl/fuzzel)
-- Login Manager: [Greetd](https://git.sr.ht/~kennylevinsen/greetd)
+- Login Manager: [tuigreet](https://github.com/apognu/tuigreet)
 - Media Player: [mpv](https://mpv.io/)
 - Notification daemon: [fnott](https://codeberg.org/dnkl/fnott)
 - Screenlocker: [swaylock](https://github.com/swaywm/swaylock)
