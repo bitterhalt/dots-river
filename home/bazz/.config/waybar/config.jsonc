@@ -2,16 +2,21 @@
   "layer": "bottom",
   "position": "top",
   "height": 28,
-  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-left": [
+    "sway/workspaces",
+    "sway/mode",
+    // "sway/scratchpad",
+    "sway/window",
+  ],
   "modules-center": ["clock"],
   "modules-right": [
     "group/sys",
+    "tray",
     "network",
     "custom/pipewire",
     "custom/mic",
     "custom/swayidle",
     "battery",
-    "tray",
     "custom/power",
   ],
   "sway/workspaces": {
@@ -19,9 +24,18 @@
   },
   "sway/window": {
     "format": "{}",
-    "max-length": 60,
-    "icon": false,
+    "max-length": 70,
+    "icon": true,
+    "icon-size": 20,
   },
+  "sway/scratchpad": {
+    "format": "{icon} {count}",
+    "show-empty": false,
+    "format-icons": ["", ""],
+    "tooltip": true,
+    "tooltip-format": "{app} {title}",
+  },
+
   "tray": {
     "icon-size": 16,
     "spacing": 12,
