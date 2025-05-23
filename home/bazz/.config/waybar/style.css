@@ -1,7 +1,6 @@
 /* -----------------------------------------------------
  *                      Config
  * ----------------------------------------------------- */
-
 @define-color bg-1 #100f0f;
 @define-color bg-2 #1C1B1A;
 @define-color bg-3 #282726;
@@ -29,7 +28,6 @@
 /* -----------------------------------------------------
  *                      Bar
  * ----------------------------------------------------- */
-
 window#waybar {
   color: @text-1;
   background-color: @bg-1;
@@ -38,7 +36,6 @@ window#waybar {
 /* -----------------------------------------------------
  *                      Tooltip
  * ----------------------------------------------------- */
-
 tooltip {
   background: @bg-1;
   border: solid 1px @bg-3;
@@ -59,7 +56,6 @@ button:hover {
   background-color: @bg-1;
   padding: 0px 5px;
 }
-
 #workspaces button {
   color: @text-2;
   font-weight: normal;
@@ -68,7 +64,6 @@ button:hover {
   border-radius: 0px;
   border: solid 1px @bg-1;
 }
-
 #workspaces button.focused {
   color: @cyan;
   font-weight: normal;
@@ -79,16 +74,11 @@ button:hover {
   color: @purple;
   border: solid 1px @bg-1;
 }
-
 #mode {
   color: @cyan;
   padding: 0 10px;
   margin: 1px 0px;
   border: solid 1px @bg-3;
-}
-#scratchpad {
-  color: @text-2;
-  padding: 0 4px;
 }
 #window {
   color: @text-2;
@@ -97,7 +87,6 @@ button:hover {
 /* -----------------------------------------------------
  *                      Modules
  * ----------------------------------------------------- */
-
 #battery,
 #custom-pipewire,
 #custom-mic,
@@ -109,7 +98,6 @@ button:hover {
   color: @text-1;
   padding: 0 10px;
 }
-
 #tray menu {
   background-color: @bg-1;
   border: solid 1px @bg-3;
@@ -120,13 +108,11 @@ button:hover {
   color: @text-3;
   padding: 0 4px;
 }
-
 #custom-clock,
 #clock {
   color: @text-1;
   padding: 0 10px;
 }
-
 #custom-power {
   color: @text-1;
   padding: 0 10px;
