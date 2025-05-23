@@ -1,7 +1,6 @@
 #-----------------------------------------------------#
 #                      Sway config                    #
 #-----------------------------------------------------#
-
 font pango: JetBrains Mono 10
 
 # Center window title
@@ -44,7 +43,6 @@ set $sig_3 pkill -SIGRTMIN+3 waybar
 #-----------------------------------------------------#
 #                      Input/output                   #
 #-----------------------------------------------------#
-
 output DP-1 {
     mode 1920x1080@60Hz
 }
@@ -73,7 +71,6 @@ input "type:touchpad" {
 #-----------------------------------------------------#
 #                      Binds                          #
 #-----------------------------------------------------#
-
 bindsym $mod+Return exec $term
 bindsym $mod+d exec $drun
 bindsym $mod+e exec foot -e lf
@@ -226,7 +223,6 @@ bindsym XF86MonBrightnessDown exec sh -c "brightnessctl set 5%-; ~/.config/sway/
 #-----------------------------------------------------#
 #                      Rules                          #
 #-----------------------------------------------------#
-
 # Assign workspaces
 assign [app_id="Firefox"] 2
 assign [app_id="LibreWolf"] 2
@@ -293,7 +289,6 @@ for_window [app_id="mpv"] inhibit_idle fullscreen
 #-----------------------------------------------------#
 #                      Colors                         #
 #-----------------------------------------------------#
-
 set $bg      #100F0F
 set $bg2     #282726
 set $bg3     #6F6E69
@@ -315,7 +310,6 @@ client.background       $fg
 #-----------------------------------------------------#
 #                      Auto start                     #
 #-----------------------------------------------------#
-
 exec swayidle -w
 exec autotiling -l 2
 exec swww-daemon
