@@ -315,9 +315,9 @@ exec swayidle -w
 exec autotiling -l 2
 exec swww-daemon
 exec foot --server
-exec_always ~/.config/waybar/scripts/waybar-launcher.sh
 exec wl-paste --watch cliphist store
-exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec_always ~/.config/waybar/scripts/waybar-launcher.sh
+exec_always dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 # This line is for Arch users
 # https://wiki.archlinux.org/title/Sway#Configuration
