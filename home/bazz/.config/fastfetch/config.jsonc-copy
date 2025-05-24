@@ -21,44 +21,44 @@
     {
       "type": "os",
       "key": "OS  ",
-      "keyColor": "cyan",
+      "keyColor": "36",
     },
     {
       "type": "kernel",
       "key": "KER ",
-      "keyColor": "cyan",
+      "keyColor": "36",
     },
     {
       "type": "uptime",
       "key": "UP  ",
-      "keyColor": "cyan",
+      "keyColor": "36",
     },
     {
       "type": "command",
       "key": "AGE ",
       "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
-      "keyColor": "cyan",
+      "keyColor": "36",
     },
     {
       "type": "packages",
       "format": "{}",
       "key": "PKG ",
-      "keyColor": "cyan",
+      "keyColor": "36",
     },
     {
       "type": "shell",
       "key": "SH  ",
-      "keyColor": "cyan",
+      "keyColor": "36",
     },
     {
       "type": "terminal",
       "key": "TER ",
-      "keyColor": "cyan",
+      "keyColor": "36",
     },
     {
       "type": "wm",
       "key": "WM  ",
-      "keyColor": "cyan",
+      "keyColor": "36",
     },
   ],
 }
