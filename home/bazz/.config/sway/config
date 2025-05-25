@@ -237,22 +237,25 @@ assign [app_id="net.lutris.Lutris"] 5
 # Floaters
 for_window [app_id="(?i)(?:blueman-manager|azote|gnome-disks|nwg-shell-config)"] floating enable
 for_window [app_id="(?i)(?:pavucontrol|nm-connection-editor|gsimplecal|galculator)"] floating enable
+for_window [app_id="blueman-manager"] floating enable
 for_window [app_id="blueman-manager"] floating enable, resize set width 40 ppt height 30 ppt
 for_window [app_id="brave-calendar"] floating enable, resize set width 40 ppt height 50 ppt
 for_window [app_id="file-roller"] floating enable
 for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, sticky enable, resize set width 30 ppt height 40 ppt
 for_window [app_id="floatterm"] floating enable, resize set width 40 ppt height 60 ppt
 for_window [app_id="fuzzypkg"] floating enable, resize set width 60 ppt height 70 ppt
+for_window [app_id="gimp"] floating enable, border pixel 1
 for_window [app_id="imv"] floating enable
 for_window [app_id="mpv"] floating enable
+for_window [app_id="net.lutris.Lutris"] floating enable
 for_window [app_id="nwg-look"] floating enable, resize set width 40 ppt height 50 ppt
 for_window [app_id="pavucontrol"] floating enable, resize set width 40 ppt height 50 ppt
 for_window [app_id="popupgrade"] floating enable
 for_window [app_id="scpterm"] floating enable, resize set width 60 ppt height 70 ppt
-for_window [app_id="vesktop"] floating enable
+for_window [app_id="signal"] floating enable
+for_window [app_id="vesktop"] floating enablefor_window [app_id="vesktop"] floating enable
 for_window [app_id="virt-manager"] floating enable
 for_window [app_id="yad"] floating enable
-for_window [app_id="gimp"] floating enable, border pixel 1
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [class="Gimp"] floating enable
 for_window [class="Nsxiv"] floating enable, resize set width 60 ppt height 80 ppt
@@ -268,6 +271,8 @@ for_window [title="File Operation Progress"] floating enable, border pixel 1, re
 for_window [title="KeePassXC - Browser Access Request"] floating enable, move position center, focus
 for_window [title="KeePassXC - Passkey credentials"] floating enable, move position center, focus
 for_window [title="Picture-in-Picture"] floating enable, sticky enable
+for_window [title="ProtonUp-Qt - Wine/Proton Installer"] floating enable
+for_window [title="modorganizer.exe"] floating enable
 for_window [window_role="About"] floating enable
 for_window [window_role="GtkFileChooserDialog"] move position center
 for_window [window_role="GtkFileChooserDialog"] resize set 590 340
@@ -316,6 +321,7 @@ exec autotiling -l 2
 exec swww-daemon
 exec foot --server
 exec wl-paste --watch cliphist store
+exec sleep 6 && transmission-gtk
 exec_always ~/.config/waybar/scripts/waybar-launcher.sh
 exec_always dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
