@@ -21,18 +21,23 @@ set $down j
 set $up k
 set $right l
 
-set $term footclient
 set $browser firefox
-set $mail thunderbird
-set $winmenu ~/.local/bin/menu_scripts/menu_sway_window
-set $lock ~/.config/sway/scripts/screenlocker.sh
-set $killer ~/.local/bin/menu_scripts/menu_killer
-set $drun fuzzel
-set $run find $(echo $PATH | sed 's/:/ /g') -type f -printf '%P\n' | fuzzel -d -p 'run: ' | xargs swaymsg exec >/dev/null 2>&1
-set $powermenu ~/.local/bin/menu_scripts/menu_power
-set $screenshot ~/.local/bin/menu_scripts/menu_screenshot
-set $emojimenu ~/.local/bin/menu_scripts/menu_emoji
 set $clip ~/.local/bin/menu_scripts/menu_clipboard
+set $drun fuzzel
+set $editor foot -e nvim
+set $emojimenu ~/.local/bin/menu_scripts/menu_emoji
+set $gfm thunar
+set $killer ~/.local/bin/menu_scripts/menu_killer
+set $lock ~/.config/sway/scripts/screenlocker.sh
+set $mail thunderbird
+set $powermenu ~/.local/bin/menu_scripts/menu_power
+set $run find $(echo $PATH | sed 's/:/ /g') -type f -printf '%P\n' | fuzzel -d -p 'run: ' | xargs swaymsg exec >/dev/null 2>&1
+set $screenshot ~/.local/bin/menu_scripts/menu_screenshot
+set $term footclient
+set $tuifm foot -e lf
+set $winmenu ~/.local/bin/menu_scripts/menu_sway_window
+set $xbps-intaller foot -e fuzzypkg
+set $xbps-updater foot -e popupgrade
 
 # Bar signals
 set $sig_1 pkill -SIGRTMIN+1 waybar
@@ -73,38 +78,38 @@ input "type:touchpad" {
 #-----------------------------------------------------#
 bindsym $mod+Return exec $term
 bindsym $mod+d exec $drun
-bindsym $mod+e exec foot -e lf
+bindsym $mod+e exec $tuifm
 bindsym $mod+m exec $mail
 bindsym $mod+n exec $term -e nvim ~/Documents/personal/notes/index.md
-bindsym $mod+shift+d exec $run
 bindsym $mod+t exec ~/.local/bin/noti_date
-bindsym $mod+v exec $term -e nvim
+bindsym $mod+v exec $editor
 bindsym $mod+w exec $browser
 bindsym $mod+tab exec $winmenu
 bindsym $mod+F1 exec ~/.local/bin/noti_sysnfo
+bindsym $mod+F10 exec ~/.config/sway/scripts/mic-toggle.sh && $sig_2
 bindsym $mod+F11 exec ~/.config/sway/scripts/locker.sh
 bindsym $mod+F12 exec ~/.config/sway/scripts/dot-settings.sh
-bindsym $mod+shift+F2 exec ~/.local/bin/noti_usage ram
 bindsym $mod+F2 exec ~/.local/bin/noti_usage cpu
 bindsym $mod+F3 exec ~/.config/sway/scripts/keyhint.sh
 bindsym $mod+F4 exec $killer
 bindsym $mod+F8 exec $screenshot
-bindsym $mod+F10 exec ~/.config/sway/scripts/mic-toggle.sh && $sig_2
-bindsym $mod+shift+F11 exec ~/.config/sway/scripts/swayidle-toggle.sh && $sig_1
-bindsym $mod+Print exec ~/.local/bin/wl-shot -f
 bindsym $mod+Insert smart_gaps toggle
+bindsym $mod+Print exec ~/.local/bin/wl-shot -f
 bindsym $mod+ctrl+a exec ~/.config/sway/scripts/autotiling-toggle.sh
+bindsym $mod+ctrl+d exec fnottctl dismiss
 bindsym $mod+ctrl+e exec $emojimenu
-bindsym $mod+ctrl+i exec foot -a fuzzypkg -e fuzzypkg
+bindsym $mod+ctrl+i exec $xbps-intaller
 bindsym $mod+ctrl+p exec ~/.local/bin/wl-color-picker
 bindsym $mod+ctrl+s exec ~/.local/bin/menu_scripts/menu_sound
-bindsym $mod+ctrl+u exec foot -a floatterm -e popupgrade
-bindsym $mod+ctrl+d exec fnottctl dismiss
+bindsym $mod+ctrl+u exec $xbps-updater
 bindsym $mod+ctrl+w exec ~/.local/bin/noti_weather
+bindsym $mod+shift+F11 exec ~/.config/sway/scripts/swayidle-toggle.sh && $sig_1
+bindsym $mod+shift+F2 exec ~/.local/bin/noti_usage ram
 bindsym $mod+shift+Print exec ~/.local/bin/wl-shot -r
 bindsym $mod+shift+c exec $clip
+bindsym $mod+shift+d exec $run
 bindsym $mod+shift+delete exec $term -a floatterm -e htop
-bindsym $mod+shift+e exec thunar
+bindsym $mod+shift+e exec $gfm
 bindsym $mod+shift+n exec $term -a floatterm -e nvim ~/Documents/personal/notes/todo.md
 bindsym $mod+shift+p exec $powermenu
 
