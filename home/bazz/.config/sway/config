@@ -78,6 +78,7 @@ bindsym $mod+m exec $mail
 bindsym $mod+n exec $term -e nvim ~/Documents/personal/notes/index.md
 bindsym $mod+shift+d exec $run
 bindsym $mod+t exec ~/.local/bin/noti_date
+bindsym $mod+v exec $term -e nvim
 bindsym $mod+w exec $browser
 bindsym $mod+tab exec $winmenu
 bindsym $mod+F1 exec ~/.local/bin/noti_sysnfo
@@ -164,8 +165,8 @@ bindsym $mod+shift+8 move container to workspace number 8
 bindsym $mod+shift+9 move container to workspace number 9
 
 # Layout stuff
-bindsym $mod+b splith
-bindsym $mod+v splitv
+bindsym $mod+period splith
+bindsym $mod+comma splitv
 
 # Toggle the current container between different layout styles
 bindsym $mod+shift+t layout toggle split tabbed stacking

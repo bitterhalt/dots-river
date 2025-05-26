@@ -96,7 +96,6 @@ alias tpr="trash-restore"
 # Random
 alias hg="history | grep "
 alias nvm="sudo nvme smart-log /dev/nvme0"
-alias btm="btm -b"
 # XBPS
 alias sva="vsv -d ~/.config/service/ ; doas vsv"
 alias svh="vsv -d ~/.config/service/"
