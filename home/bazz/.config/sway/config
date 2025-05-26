@@ -36,8 +36,8 @@ set $screenshot ~/.local/bin/menu_scripts/menu_screenshot
 set $term footclient
 set $tuifm foot -e lf
 set $winmenu ~/.local/bin/menu_scripts/menu_sway_window
-set $xbps-intaller foot -e fuzzypkg
-set $xbps-updater foot -e popupgrade
+set $xbps-intaller foot -a floatterm -e fuzzypkg
+set $xbps-updater foot -a floatterm -e popupgrade
 
 # Bar signals
 set $sig_1 pkill -SIGRTMIN+1 waybar
@@ -248,7 +248,7 @@ for_window [app_id="blueman-manager"] floating enable, resize set width 40 ppt h
 for_window [app_id="brave-calendar"] floating enable, resize set width 40 ppt height 50 ppt
 for_window [app_id="file-roller"] floating enable
 for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, sticky enable, resize set width 30 ppt height 40 ppt
-for_window [app_id="floatterm"] floating enable, resize set width 40 ppt height 60 ppt
+for_window [app_id="floatterm"] floating enable, resize set width 45 ppt height 60 ppt
 for_window [app_id="fuzzypkg"] floating enable, resize set width 60 ppt height 70 ppt
 for_window [app_id="gimp"] floating enable, border pixel 1
 for_window [app_id="imv"] floating enable
@@ -295,7 +295,7 @@ for_window [app_id="Firefox"] border pixel 1
 for_window [app_id="Thunderbird"] border pixel 1
 
 # Inhibit idle
-for_window [app_id="firefox"] inhibit_idle fullscreen
+for_window [app_id="Firefox"] inhibit_idle fullscreen
 for_window [app_id="mpv"] inhibit_idle fullscreen
 
 #-----------------------------------------------------#
