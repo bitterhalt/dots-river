@@ -254,6 +254,7 @@ for_window [app_id="gimp"] floating enable, border pixel 1
 for_window [app_id="imv"] floating enable
 for_window [app_id="mpv"] floating enable
 for_window [app_id="net.lutris.Lutris"] floating enable
+for_window [app_id="xdg-desktop-portal-gtk"] floating enable
 for_window [app_id="nwg-look"] floating enable, resize set width 40 ppt height 50 ppt
 for_window [app_id="pavucontrol"] floating enable, resize set width 40 ppt height 50 ppt
 for_window [app_id="popupgrade"] floating enable
