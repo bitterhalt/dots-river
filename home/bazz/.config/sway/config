@@ -13,7 +13,11 @@ default_border pixel 1
 gaps inner 4
 gaps outer 0
 
-# Variables
+#-----------------------------------------------------#
+#                      Variables                      #
+#-----------------------------------------------------#
+
+# Vim keys for moving
 set $mod Mod4
 set $alt Mod1
 set $left h
@@ -21,21 +25,32 @@ set $down j
 set $up k
 set $right l
 
+# Terminal
+set $term footclient
+
+# Locker
+set $lock ~/.config/sway/scripts/screenlocker.sh
+
+# Browsing
 set $browser firefox
+set $mail thunderbird
+
+# File management
+set $gfm thunar
+set $tuifm foot -e lf
+
+# Dmenu scripts
 set $clip ~/.local/bin/menu_scripts/menu_clipboard
 set $drun fuzzel
 set $editor foot -e nvim
 set $emojimenu ~/.local/bin/menu_scripts/menu_emoji
-set $gfm thunar
 set $killer ~/.local/bin/menu_scripts/menu_killer
-set $lock ~/.config/sway/scripts/screenlocker.sh
-set $mail thunderbird
 set $powermenu ~/.local/bin/menu_scripts/menu_power
 set $run find $(echo $PATH | sed 's/:/ /g') -type f -printf '%P\n' | fuzzel -d -p 'run: ' | xargs swaymsg exec >/dev/null 2>&1
 set $screenshot ~/.local/bin/menu_scripts/menu_screenshot
-set $term footclient
-set $tuifm foot -e lf
 set $winmenu ~/.local/bin/menu_scripts/menu_sway_window
+
+# Xbps coodies
 set $xbps-intaller foot -a floatterm -e fuzzypkg
 set $xbps-updater foot -a floatterm -e popupgrade
 
@@ -254,14 +269,15 @@ for_window [app_id="gimp"] floating enable, border pixel 1
 for_window [app_id="imv"] floating enable
 for_window [app_id="mpv"] floating enable
 for_window [app_id="net.lutris.Lutris"] floating enable
-for_window [app_id="xdg-desktop-portal-gtk"] floating enable
 for_window [app_id="nwg-look"] floating enable, resize set width 40 ppt height 50 ppt
 for_window [app_id="pavucontrol"] floating enable, resize set width 40 ppt height 50 ppt
+for_window [app_id="pcsx2"] floating enable
 for_window [app_id="popupgrade"] floating enable
 for_window [app_id="scpterm"] floating enable, resize set width 55 ppt height 60 ppt
 for_window [app_id="signal"] floating enable
 for_window [app_id="vesktop"] floating enablefor_window [app_id="vesktop"] floating enable
 for_window [app_id="virt-manager"] floating enable
+for_window [app_id="xdg-desktop-portal-gtk"] floating enable
 for_window [app_id="yad"] floating enable
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [class="Gimp"] floating enable
