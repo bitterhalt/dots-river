@@ -273,7 +273,7 @@ for_window [app_id="pcsx2"] floating enable
 for_window [app_id="popupgrade"] floating enable
 for_window [app_id="scpterm"] floating enable, resize set width 55 ppt height 60 ppt
 for_window [app_id="signal"] floating enable
-for_window [app_id="vesktop"] floating enablefor_window [app_id="vesktop"] floating enable
+for_window [app_id="vesktop"] floating enable
 for_window [app_id="virt-manager"] floating enable
 for_window [app_id="xdg-desktop-portal-gtk"] floating enable
 for_window [app_id="yad"] floating enable
