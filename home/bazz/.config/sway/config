@@ -46,7 +46,6 @@ set $editor foot -e nvim
 set $emojimenu ~/.local/bin/menu_scripts/menu_emoji
 set $killer ~/.local/bin/menu_scripts/menu_killer
 set $powermenu ~/.local/bin/menu_scripts/menu_power
-set $run find $(echo $PATH | sed 's/:/ /g') -type f -printf '%P\n' | fuzzel -d -p 'run: ' | xargs swaymsg exec >/dev/null 2>&1
 set $screenshot ~/.local/bin/menu_scripts/menu_screenshot
 set $winmenu ~/.local/bin/menu_scripts/menu_sway_window
 
@@ -122,7 +121,6 @@ bindsym $mod+shift+F11 exec ~/.config/sway/scripts/swayidle-toggle.sh && $sig_1
 bindsym $mod+shift+F2 exec ~/.local/bin/noti_usage ram
 bindsym $mod+shift+Print exec ~/.local/bin/wl-shot -r
 bindsym $mod+shift+c exec $clip
-bindsym $mod+shift+d exec $run
 bindsym $mod+shift+delete exec $term -a floatterm -e htop
 bindsym $mod+shift+e exec $gfm
 bindsym $mod+shift+n exec $term -a floatterm -e nvim ~/Documents/personal/notes/todo.md
