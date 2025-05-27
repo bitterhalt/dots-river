@@ -1,29 +1,16 @@
 #-----------------------------------------------------#
-#                      Sway config                    #
-#-----------------------------------------------------#
-font pango: JetBrains Mono 10
-
-# Center window title
-title_align center
-
-# Disable window borders
-default_border pixel 1
-
-# Gaps
-gaps inner 4
-gaps outer 0
-
-#-----------------------------------------------------#
-#                      Variables                      #
+#                      Sway settings                   #
 #-----------------------------------------------------#
 
 # Vim keys for moving
-set $mod Mod4
-set $alt Mod1
 set $left h
 set $down j
 set $up k
 set $right l
+
+# Modifier
+set $mod Mod4
+set $alt Mod1
 
 # Terminal
 set $term footclient
@@ -49,7 +36,7 @@ set $powermenu ~/.local/bin/menu_scripts/menu_power
 set $screenshot ~/.local/bin/menu_scripts/menu_screenshot
 set $winmenu ~/.local/bin/menu_scripts/menu_sway_window
 
-# Xbps coodies
+# Xbps goodies
 set $xbps-intaller foot -a floatterm -e fuzzypkg
 set $xbps-updater foot -a floatterm -e popupgrade
 
@@ -58,6 +45,21 @@ set $sig_1 pkill -SIGRTMIN+1 waybar
 set $sig_2 pkill -SIGRTMIN+2 waybar
 set $sig_3 pkill -SIGRTMIN+3 waybar
 
+# Font
+font pango: JetBrains Mono 10
+
+# Center window title
+title_align center
+
+# Disable window borders
+default_border pixel 1
+
+# Gaps
+gaps inner 4
+gaps outer 0
+
+# Timeout to hide inactive cursor (Milliseconds)
+# seat seat0 hide_cursor 10000
 
 #-----------------------------------------------------#
 #                      Input/output                   #
@@ -252,6 +254,7 @@ assign [app_id="com.transmissionbt.transmission_*"] 4
 assign [app_id="virt-manager"] 8
 assign [class="steam"] 5
 assign [app_id="net.lutris.Lutris"] 5
+assign [app_id="pcsx2"] 5
 
 # Floaters
 for_window [app_id="(?i)(?:blueman-manager|azote|gnome-disks|nwg-shell-config)"] floating enable
@@ -344,7 +347,7 @@ exec foot --server
 exec wl-paste --watch cliphist store
 exec sleep 6 && transmission-gtk
 exec_always ~/.config/waybar/scripts/waybar-launcher.sh
-exec_always dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec_always dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 # This line is for Arch users
 # https://wiki.archlinux.org/title/Sway#Configuration
