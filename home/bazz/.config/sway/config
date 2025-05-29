@@ -59,11 +59,12 @@ gaps inner 4
 gaps outer 0
 
 # Timeout to hide inactive cursor (Milliseconds)
-# seat seat0 hide_cursor 10000
+seat seat0 hide_cursor 10000
 
 #-----------------------------------------------------#
-#                      Input/output                   #
+#                      Devices                        #
 #-----------------------------------------------------#
+# Display
 output DP-1 {
     mode 1920x1080@60Hz
 }
@@ -77,7 +78,6 @@ input type:keyboard {
 # Mouse
 input type:pointer {
     accel_profile "flat"
-#    dwt enabled
     pointer_accel 0
 }
 
@@ -223,7 +223,6 @@ bindsym $mod+ctrl+k resize grow height 10 px
 bindsym $mod+ctrl+j resize shrink height 10 px
 bindsym $mod+ctrl+h resize grow width 10 px
 
-
 # Media keys
 bindsym XF86AudioRaiseVolume exec ~/.config/sway/scripts/volume.sh up && $sig_3
 bindsym XF86AudioLowerVolume exec ~/.config/sway/scripts/volume.sh down && $sig_3
@@ -315,6 +314,7 @@ for_window [app_id="Thunderbird"] border pixel 1
 # Inhibit idle
 for_window [app_id="Firefox"] inhibit_idle fullscreen
 for_window [app_id="mpv"] inhibit_idle fullscreen
+for_window [app_id="pcsx2"] inhibit_idle fullscreen
 
 #-----------------------------------------------------#
 #                      Colors                         #
