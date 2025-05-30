@@ -258,7 +258,6 @@ assign [app_id="pcsx2"] 5
 # Floaters
 for_window [app_id="(?i)(?:blueman-manager|azote|gnome-disks|nwg-shell-config)"] floating enable
 for_window [app_id="(?i)(?:pavucontrol|nm-connection-editor|gsimplecal|galculator)"] floating enable
-for_window [app_id="blueman-manager"] floating enable
 for_window [app_id="blueman-manager"] floating enable, resize set width 40 ppt height 30 ppt
 for_window [app_id="brave-calendar"] floating enable, resize set width 40 ppt height 50 ppt
 for_window [app_id="file-roller"] floating enable
