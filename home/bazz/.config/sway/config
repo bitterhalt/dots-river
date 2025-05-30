@@ -132,7 +132,7 @@ bindsym $mod+shift+p exec $powermenu
 bindsym $mod+q kill
 
 # Hide/restart waybar
-bindsym $mod+shift+b exec ~/.config/sway/scripts/barhider.sh
+bindsym $mod+b exec ~/.config/sway/scripts/barhider.sh
 
 # When the modifier key is held down, you may hold left click to move windows, and right click to resize them
 floating_modifier $mod normal
