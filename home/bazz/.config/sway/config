@@ -58,6 +58,10 @@ default_border pixel 1
 gaps inner 4
 gaps outer 0
 
+# Smart gaps/borders
+smart_borders off
+smart_gaps off
+
 # Timeout to hide inactive cursor (Milliseconds)
 seat seat0 hide_cursor 10000
 
