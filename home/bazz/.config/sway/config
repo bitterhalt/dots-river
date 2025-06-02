@@ -110,7 +110,7 @@ bindsym $mod+F10 exec ~/.config/sway/scripts/mic-toggle.sh && $sig_2
 bindsym $mod+F11 exec ~/.config/sway/scripts/locker.sh
 bindsym $mod+F12 exec ~/.config/sway/scripts/dot-settings.sh
 bindsym $mod+F2 exec ~/.local/bin/noti_usage cpu
-bindsym $mod+F3 exec ~/.config/sway/scripts/keyhint.sh
+bindsym $mod+F3 exec cat ~/.config/sway/config | grep 'bindsym' | grep -v '^\s*#' | sed 's/bindsym / /' | fuzzel -d -a top --y 4 -w 50 -l 25 -p "Search: "
 bindsym $mod+F4 exec $killer
 bindsym $mod+F8 exec $screenshot
 bindsym $mod+Insert smart_gaps toggle
