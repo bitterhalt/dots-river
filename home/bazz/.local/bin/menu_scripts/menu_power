@@ -2,7 +2,7 @@
 # https://github.com/bitterhalt
 set -euo pipefail
 
-CONFIRM="fuzzel -d -a top-right --x 5 --y 5 -w 10 -l2 -p Sure? "
+CONFIRM="fuzzel -d -a top-right --x 4 --y 4 -w 10 -l2 -p Sure? "
 
 case $(printf "%s\n" "Lock" "Logout" "Suspend" "Reboot" "Shutdown" | fuzzel -d -a top-right --x 5 --y 5 -l5 -w 10 -p "exit: ") in
 "Shutdown")
