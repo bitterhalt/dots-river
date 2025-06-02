@@ -1,9 +1,11 @@
 return {
   -- Theme
   {
-    "kepano/flexoki-neovim",
+    "cpplain/flexoki.nvim",
+    lazy = false,
+    priority = 1000,
     config = function()
-      vim.cmd("colorscheme flexoki-dark")
+      vim.cmd("colorscheme flexoki")
     end,
   },
 
@@ -16,7 +18,7 @@ return {
       require("lualine").setup({
         options = {
           icons_enabled = true,
-          theme = "auto",
+          theme = "flexoki",
           component_separators = { left = "", right = "" },
           section_separators = { left = "", right = "" },
           disabled_filetypes = {
