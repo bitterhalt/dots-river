@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 set -e
 # Wayland color picker script that grabs color-code from image and pastes it to wl-clipboard with tiny notification
