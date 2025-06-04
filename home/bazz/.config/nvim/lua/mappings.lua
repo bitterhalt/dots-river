@@ -41,4 +41,4 @@ vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>ls", "<CMD>Lazy sync<CR>")
 
 -- Close buffers
-vim.keymap.set("n", "<S-q>", "<cmd>Bdelete<CR>")
+vim.keymap.set("n", "<S-q>", "<cmd>bdelete<CR>")
