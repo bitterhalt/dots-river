@@ -20,6 +20,7 @@ return {
       })
     end,
   },
+
   --Winbar
   {
     "ramilito/winbar.nvim",

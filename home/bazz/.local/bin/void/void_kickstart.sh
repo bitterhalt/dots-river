@@ -36,8 +36,8 @@ ln -s /usr/share/examples/turnstile/dbus.run ~/.config/service/dbus/run
 
 $ADDCMD xorg-minimal xorg-fonts mesa-dri vulkan-loader mesa-vulkan-radeon mesa-vaapi mesa-vdpau
 
-$ADDCMD river foot kanshi bemenu Waybar swaybg swayidle waylock \
-  wlopm libnotify fnott lf file-roller xdg-user-dirs-gtk xdg-user-dirs \
+$ADDCMD sway foot kanshi bemenu Waybar swaybg swayidle swaylock \
+  libnotify fnott lf file-roller xdg-user-dirs-gtk xdg-user-dirs \
   brightnessctl xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr
 xdg-user-dirs-update
 xdg-user-dirs-update --force
