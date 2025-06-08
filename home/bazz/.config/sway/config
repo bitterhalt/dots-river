@@ -192,8 +192,8 @@ bindsym $mod+shift+9 move container to workspace number 9
 bindsym $mod+period splith
 bindsym $mod+comma splitv
 
-# Toggle the current container between different layout styles
-bindsym $mod+shift+t layout toggle split tabbed stacking
+# Toggle the current container between split and tabbed layout
+bindsym $mod+shift+t layout toggle split tabbed
 
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen
