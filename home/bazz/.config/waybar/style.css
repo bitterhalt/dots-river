@@ -5,6 +5,7 @@
 @define-color bg-2 #1C1B1A;
 @define-color bg-3 #282726;
 @define-color bg-4 #343331;
+@define-color bg-5 #403E3C;
 @define-color text-1 #CECDC3;
 @define-color text-2 #B7B5AC;
 @define-color text-3 #9F9D96;
@@ -61,27 +62,25 @@ button:hover {
   padding: 0px 5px;
   margin: 1px 0px;
   border-radius: 0px;
-  border: solid 1px @bg-1;
 }
 #workspaces button.focused {
   color: @cyan;
   font-weight: normal;
-  border: solid 1px @bg-3;
+  box-shadow: inset 0 0 0 1px @bg-3;
 }
 
 #workspaces button.urgent {
   color: @purple;
-  border: solid 1px @bg-1;
 }
 #mode {
   color: @cyan;
   padding: 0 10px;
   margin: 1px 0px;
-  border: solid 1px @bg-3;
+  box-shadow: inset 0 0 0 1px @bg-3;
 }
 #window {
   color: @text-2;
-  padding: 0 5px;
+  padding: 0 10px;
 }
 /* -----------------------------------------------------
  *                      Modules
