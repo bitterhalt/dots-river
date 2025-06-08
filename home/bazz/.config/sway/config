@@ -333,7 +333,7 @@ set $black   #000000
 set $white   #ffffff
 
 # Class                 Border  Backgr. Text    Indigator Child border
-client.focused          $bg3    $bg     $cyan   $bg3      $bg3
+client.focused          $bg3    $bg     $fg   $bg3      $bg3
 client.focused_inactive $bg2    $bg     $bg3    $bg2      $bg2
 client.unfocused        $bg2    $bg     $bg3    $bg2      $bg2
 client.urgent           $bg2    $red    $white  $red      $red
