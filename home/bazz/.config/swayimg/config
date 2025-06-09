@@ -75,37 +75,40 @@ pstore = yes
 # Viewer mode key binding configuration: key = action [parameters]
 ################################################################################
 [keys.viewer]
-q = exit
-return = mode
+Down = prev_file
+Equal = thumb +20
+Minus = thumb -20
+Plus = thumb +20
+Shift+Delete = exec trash-put '%' && echo "File trashed: %"; skip_file
+Shift+e = zoom height
+Shift+g = last_file
+Up = next_file
+b = exec setbg "%"
+e = zoom width
 f = fullscreen
 g = first_file
-Shift+g = last_file
-r = reload
-l = next_file
 h = prev_file
-Up = next_file
-Down = prev_file
-e = zoom width
-Shift+e = zoom height
-b = exec setbg "%"
+l = next_file
+q = exit
+r = reload
+return = mode
 y = exec $HOME/.config/swayimg/copy_img.sh "%"
-Shift+Delete = exec trash-put '%' && echo "File trashed: %"; skip_file
 ################################################################################
 # Gallery mode key binding configuration: key = action [parameters]
 ################################################################################
 [keys.gallery]
-q = exit
-return = mode
+Shift+Delete = exec trash-put '%' && echo "File trashed: %"; skip_file
+Shift+g = last_file
+b = exec setbg "%"
 f = fullscreen
 g = first_file
-Shift+g = last_file
 h = step_left
 j = step_down
 k = step_up
 l = step_right
-b = exec setbg "%"
+q = exit
+return = mode
 y = exec $HOME/.config/swayimg/copy_img.sh "%"
-Shift+Delete = exec trash-put '%' && echo "File trashed: %"; skip_file
 ################################################################################
 # Image list configuration
 ################################################################################
