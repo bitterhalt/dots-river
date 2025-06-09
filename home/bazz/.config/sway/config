@@ -51,7 +51,7 @@ font pango: JetBrains Mono 10
 # Center window title
 title_align center
 
-# Disable window borders
+# Border size
 default_border pixel 1
 
 # Gaps
@@ -63,7 +63,7 @@ smart_borders off
 smart_gaps off
 
 # Timeout to hide inactive cursor (Milliseconds)
-seat seat0 hide_cursor 10000
+seat seat0 hide_cursor 15000
 
 #-----------------------------------------------------#
 #                      Devices                        #
@@ -333,7 +333,7 @@ set $black   #000000
 set $white   #ffffff
 
 # Class                 Border  Backgr. Text    Indigator Child border
-client.focused          $bg3    $bg     $fg   $bg3      $bg3
+client.focused          $bg3    $bg     $fg     $cyan     $cyan
 client.focused_inactive $bg2    $bg     $bg3    $bg2      $bg2
 client.unfocused        $bg2    $bg     $bg3    $bg2      $bg2
 client.urgent           $bg2    $red    $white  $red      $red
