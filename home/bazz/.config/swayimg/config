@@ -2,16 +2,19 @@
 # General configuration
 ################################################################################
 [general]
-
 # Show border
 decoration = yes
 # Mode at startup (viewer/gallery)
 mode = viewer
 # Window position (parent or absolute coordinates, e.g. 100,200)
-size = 800,600
+position = parent
+# Window position (parent or absolute coordinates, e.g. 100,200)
+size = parent
 # Application ID and window class name
 app_id = swayimg
-
+################################################################################
+# Font
+################################################################################
 [font]
 # Font name
 name = JetBrains Mono
@@ -21,8 +24,6 @@ size = 11
 color = #ccccccff
 # Shadow color (RGBA)
 shadow = #000000a0
-
-
 ################################################################################
 # Viewer mode configuration
 ################################################################################
@@ -33,6 +34,11 @@ window = #100F0Fff
 transparency = grid
 # Default image scale (optimal/fit/width/height/fill/real)
 scale = optimal
+# Initial image position on the window
+# (top/center/bottom/left/right/topleft/topright/bottomleft/bottomright/free)
+position = center
+# Anti-aliasing mode (none/box/bilinear/bicubic/mks13)
+antialiasing = mks13
 # Run slideshow at startup (yes/no)
 slideshow = no
 # Slideshow image display time (seconds)
@@ -41,7 +47,6 @@ slideshow_time = 3
 history = 1
 # Number of preloaded images (read ahead)
 preload = 1
-
 ################################################################################
 # Gallery mode configuration
 ################################################################################
@@ -52,6 +57,8 @@ size = 180
 cache = 100
 # Fill the entire tile with thumbnail (yes/no)
 fill = yes
+# Anti-aliasing mode for thumbnails (none/box/bilinear/bicubic/mks13)
+antialiasing = mks13
 # Background color of the window (RGBA)
 window = #100F0Fff
 # Background color of the tile (RGBA)
@@ -64,7 +71,6 @@ border = #A02F6Fff
 shadow = #000000ff
 # Persistent cache
 pstore = yes
-
 ################################################################################
 # Viewer mode key binding configuration: key = action [parameters]
 ################################################################################
@@ -84,7 +90,6 @@ Shift+e = zoom height
 b = exec setbg "%"
 y = exec $HOME/.config/swayimg/copy_img.sh "%"
 Shift+Delete = exec trash-put '%' && echo "File trashed: %"; skip_file
-
 ################################################################################
 # Gallery mode key binding configuration: key = action [parameters]
 ################################################################################
@@ -101,7 +106,6 @@ l = step_right
 b = exec setbg "%"
 y = exec $HOME/.config/swayimg/copy_img.sh "%"
 Shift+Delete = exec trash-put '%' && echo "File trashed: %"; skip_file
-
 ################################################################################
 # Image list configuration
 ################################################################################
