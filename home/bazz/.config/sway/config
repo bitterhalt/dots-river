@@ -1,6 +1,9 @@
 #-----------------------------------------------------#
-#                      Sway settings                   #
+#                      Sway settings                  #
 #-----------------------------------------------------#
+
+# Enable if you use Swayfx tweaks
+#include ~/.config/sway/swayfx
 
 # Vim keys for moving
 set $left h
