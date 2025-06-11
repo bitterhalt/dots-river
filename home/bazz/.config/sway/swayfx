@@ -1,9 +1,8 @@
 # General tweaks to windows
 blur disable
 shadows enable
-shadows_on_csd disable
-corner_radius 6
-titlebar_separator disable
+shadows_on_csd enable
+corner_radius 5
 
 # Waybar
 layer_effects "waybar" shadows enable
